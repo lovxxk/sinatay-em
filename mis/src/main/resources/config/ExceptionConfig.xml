@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ExceptionConfig>
+	<!-- 用户异常的配置 -->
+	<UserExceptions Code="01" Description="用户自定义异常">
+		<!-- 1、业务类异常 -->
+		<UserException Code="0100" Description="业务类异常">
+			<SubUserException Code="010000" Description="service-user模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>异常描述</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010001" Description="service-maintain模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>service-maintain模块异常描述000</ExceptionDesc>
+				</ConcreteException>
+				<ConcreteException Grade="1">
+					<ExceptionCode>001</ExceptionCode>
+					<ExceptionDesc>service-maintain模块异常描述001</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010002" Description="service-communication模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>异常描述</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010003" Description="service-card模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>异常描述</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010004" Description="service-epolicy模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>异常描述</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010005" Description="service-claim模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>异常描述</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010006" Description="service-policy模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>异常描述</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010007" Description="manage-productDirectory模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>异常描述</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010008" Description="manage-car模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>异常描述</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010009" Description="manage-card模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>异常描述</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010010" Description="manage-product模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>异常描述</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010011" Description="common-bizConfig模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>异常描述</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010012" Description="common-publishInfo模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>异常描述</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010013" Description="common-basicBizInfo模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>在配置文件kind.xml里配置的固定的险别代码不能为空</ExceptionDesc>
+				</ConcreteException>
+				<ConcreteException>
+					<ExceptionCode>001</ExceptionCode>
+					<ExceptionDesc>读取kind.xml出现异常</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010014" Description="common-party模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>thirdParterID的值不能为空</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010015" Description="common-credit模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>异常描述</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010016" Description="Payment-Common模块异常">
+				<ConcreteException Grade="1">
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>支付</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010017" Description="marketing模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>活动ActivityId不能为空</ExceptionDesc>
+				</ConcreteException>
+				<ConcreteException>
+					<ExceptionCode>001</ExceptionCode>
+					<ExceptionDesc>规则引擎中返回的数据中，活动类型为空</ExceptionDesc>
+				</ConcreteException>
+				<ConcreteException>
+					<ExceptionCode>002</ExceptionCode>
+					<ExceptionDesc>当活动方式ActivityPattern=2,面向前N名客户时，N的值不能为空</ExceptionDesc>
+				</ConcreteException>
+				<ConcreteException>
+					<ExceptionCode>003</ExceptionCode>
+					<ExceptionDesc>字符串日期转化为Date日期错误</ExceptionDesc>
+				</ConcreteException>
+				<ConcreteException>
+					<ExceptionCode>004</ExceptionCode>
+					<ExceptionDesc>规则引擎返回的参数当中地域deptID不能为空</ExceptionDesc>
+				</ConcreteException>
+				<ConcreteException>
+					<ExceptionCode>005</ExceptionCode>
+					<ExceptionDesc>规则引擎返回的参数当中险种riskCode不能为空</ExceptionDesc>
+				</ConcreteException>
+				<ConcreteException>
+					<ExceptionCode>006</ExceptionCode>
+					<ExceptionDesc>规则引擎返回的参数当中商品代码itemID不能为空</ExceptionDesc>
+				</ConcreteException>
+				<ConcreteException>
+					<ExceptionCode>007</ExceptionCode>
+					<ExceptionDesc>规则引擎返回的参数当中活动类型面向前N名客户但是N的值为空</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010018" Description="sale模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>异常描述</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010019" Description="sys-workflow模块异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>异常描述</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+			<SubUserException Code="010020" Description="sys-interfacePortal模块异常">
+				<ConcreteException Grade="1">
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>interfacePortal</ExceptionDesc>
+				</ConcreteException>
+				<ConcreteException Grade="1">
+					<ExceptionCode>001</ExceptionCode>
+					<ExceptionDesc>interfacePortal</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+		</UserException>
+
+		<!-- 2、数据校验类异常 -->
+		<UserException Code="0101" Description="数据校验类异常">
+			<SubUserException Code="010101" Description="mis数据校验类异常">
+				<ConcreteException>
+					<ExceptionCode>000</ExceptionCode>
+					<ExceptionDesc>数据校验异常1</ExceptionDesc>
+				</ConcreteException>
+				<ConcreteException>
+					<ExceptionCode>001</ExceptionCode>
+					<ExceptionDesc>数据校验异常2</ExceptionDesc>
+				</ConcreteException>
+			</SubUserException>
+		</UserException>
+
+		<!-- 3、权限异常 -->
+		<UserException Code="0102" Description="权限异常">
+			<SubUserException Code="010200" Description="sys-permission模块异常">
+				<ConcreteException Grade="1" isShowExceptionCode="true" isShowExceptionDesc="true">
+					<ExceptionCode>001</ExceptionCode>
+					<ExceptionDesc>保存机构信息出现异常</ExceptionDesc>
+				</ConcreteException>
+				<!-- 角色 GeRole-->
+				
+				<!-- 用户 GeOperator -->
+				
+				<!-- 用户组 GeGroup-->
+				
+				<!-- 用户组类型 GeGroupType-->
+				
+				<!-- 权限 GeAuthority-->
+				
+				<!-- 企业权限  GeEnterpriseAuthority-->
+				
+				<!-- 机构 GeDepartment -->
+				
+				<!-- 区域 GeArea-->
+				
+				<!-- 机构关联 GeDeptAttribute-->
+				
+				<!-- 机构组角色 GeDeptGroupRole-->
+				
+				<!-- 机构属性 GeDeptInfo-->
+				
+				<!-- 前台用户权限 GeUserAuthority-->
+				
+				
+			</SubUserException>
+		</UserException>
+	</UserExceptions>
+
+	<!-- 异常处理的配置 -->
+<!-- 	<HandleException>
+		<TelNums>
+			<Tel>152xxxxxxx1</Tel>
+			<Tel>152xxxxxxx2</Tel>
+			<Tel>152xxxxxxx3</Tel>
+		</TelNums>
+		<EmailAddresses>
+			<Email>test1@163.com</Email>
+			<Email>test2@163.com</Email>
+			<Email>test3@163.com</Email>
+		</EmailAddresses>
+	</HandleException>
+	 -->
+	<!-- 异常处理级别的配置 -->
+	<ExceptionGrades>
+		<ExceptionGrade IsSendSms="0" IsSendEmail="0"
+			Description="异常不严重">0</ExceptionGrade>
+		<ExceptionGrade IsSendSms="0" IsSendEmail="1"
+			Description="异常严重">1</ExceptionGrade>
+		<ExceptionGrade IsSendSms="1" IsSendEmail="0"
+			Description="异常很严重">2</ExceptionGrade>
+		<ExceptionGrade IsSendSms="1" IsSendEmail="1"
+			Description="异常最严重">3</ExceptionGrade>
+	</ExceptionGrades>
+</ExceptionConfig>

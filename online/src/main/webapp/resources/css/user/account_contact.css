@@ -1,0 +1,210 @@
+.right_content .title{
+	height:35px;
+	background: #e6e6e6;
+	line-height:35px;
+}
+.right_content .title .block{
+	width:4px;
+	height:35px;
+	float:left;
+	background: #3f67bf;
+	margin-right:18px;
+}
+
+.right_content .title p{
+	float:left;
+	color:#333;
+	font-size:14px;
+	font-weight: bold;
+}
+
+.right_content .title .more{
+	float:right;
+	margin-right:15px;
+}
+.right_content .title .more a{
+	color:#999999;
+}
+
+.member_area{
+	margin: 0 20px;
+	border-bottom:1px solid #cccccc; 
+}
+
+.member_area .input_area{
+	padding:20px 0;
+}
+
+.member_area .input_area .input_row{
+	height:36px;
+}
+
+.member_area .input_area .input_label{
+	width:140px;
+	float:left;
+	line-height:36px;
+	text-align: right;
+	margin-right: 14px;
+}
+.member_area .input_area .input_label .required{
+	color:#ff0000;
+	margin-right:14px;
+}
+.member_area .input_area .input_row .input_text{
+	height:23px;
+	border:1px solid #c9c9c9;
+	margin-top:5px;
+	padding-left:5px;
+	font-family:"Microsoft Yahei";
+}
+.member_area .input_area .input_row .tip_label{
+	float:left;
+	padding:0 5px;
+	line-height:36px;
+}
+
+.input_row.cellphone .input_text{
+	width:123px;
+}
+
+.input_row.telephone .input_text.areacode{
+	width:53px;
+}
+
+.input_row.telephone .input_text.phonenum{
+	width:113px;
+	margin-left:7px;
+}
+.input_row.email .input_text{
+	width:186px;
+}
+
+
+.input_row.address .input_text.province{
+	width:63px;
+	float:left;
+}
+.input_row.address .input_text.city{
+	width:53px;
+	float:left;
+}
+
+.input_row.complete_address .input_text{
+	width:423px;
+}
+
+.input_row.postcode .input_text{
+	width:93px;
+}
+
+.action{
+	margin-top:24px;
+	height:38px;
+	margin-bottom:29px;
+}
+
+.action .save{
+	margin-left:158px;
+	width:137px;
+	height:38px;
+	position:relative;
+	background: url(../../image/policy/next_step.png) no-repeat;
+	border:none;
+	float:left;
+	font-size:16px;
+	color:#fff;
+	line-height:38px;
+	font-weight:bold;
+	font-family:"Microsoft Yahei";
+}
+
+.saved_info{
+	margin:0 20px;
+	margin-bottom:50px;
+}
+
+.saved_info .info_title{
+	line-height:60px;
+	height:60px;
+	font-weight: bold;
+} 
+
+.saved_info .info_area .info_col{
+	float:left;
+	text-align: left;
+	position: relative;
+}
+
+.saved_info .info_row{
+	overflow: hidden;
+	padding:14px 0;
+}
+
+.saved_info .info_area .phone{
+	width:120px;
+}
+.saved_info .info_area .email{
+	width:160px;
+}
+.saved_info .info_area .telephone{
+	width:140px;
+}
+.saved_info .info_area .bind_account{
+	width:170px;
+}
+.saved_info .info_area .bind{
+	width:100px;
+}
+.saved_info .info_area .operation{
+	width:70px;
+	text-align: center;
+}
+
+.saved_info .info_area .area{
+	width:179px;
+}
+.saved_info .info_area .street_info{
+	width:335px;
+}
+.saved_info .info_area .postcode{
+	width:150px;
+	margin-left:25px;
+}
+
+
+.saved_info .info_area .info_value{
+	border-top:1px dashed #cccccc;
+}
+
+.saved_info .info_area .info_value .info_col.operation{
+	color:#0066cc;
+}
+.saved_info .info_area .operation a{
+	color:#0066cc;
+}
+
+.saved_info .info_area .bind_btn{
+	width:65px;
+	height:20px;
+	background: url(../../image/user/member/bind_bg.png) no-repeat;
+	position: relative;
+	color:#fff;
+	text-align: center;
+	line-height:20px;
+}
+
+.product_list{
+	margin-top:22px;
+	overflow: hidden;
+	padding:0 2px;
+	
+	margin-bottom:60px;
+}
+
+.product_list .product{
+	float:left;
+	width:240px;
+	height:120px;
+	background: #e6e6e6;
+	margin:0 13px;
+}

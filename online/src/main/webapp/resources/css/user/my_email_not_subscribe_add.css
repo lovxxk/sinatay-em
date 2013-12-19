@@ -1,0 +1,271 @@
+.right_content .title{
+	height:35px;
+	background: #e6e6e6;
+	line-height:35px;
+}
+.right_content .title .block{
+	width:4px;
+	height:35px;
+	float:left;
+	background: #3f67bf;
+	margin-right:18px;
+}
+
+.right_content .title p{
+	float:left;
+	color:#333;
+	font-size:14px;
+	font-weight: bold;
+}
+
+.right_content .title .more{
+	float:right;
+	margin-right:15px;
+}
+.right_content .title .more a{
+	color:#999999;
+}
+
+p.p1{
+	font-size:14px;
+	margin:33px;
+	line-height:28px;
+	font-size:14px;
+	color:#333;
+}
+
+p.p2{
+	font-weight:bold;
+	color:#ff3333;
+	margin:0 33px;
+	line-height:24px;
+}
+
+.email_list{
+	margin:23px 17px;
+}
+.email_list .head{
+	height:40px;
+	background: #3f67bf;
+	line-height:40px;
+	font-size:14px;
+	font-weight:bold;
+	color:#fff;
+	padding-left:24px;
+}
+.email_list .content{
+	border-bottom:1px solid #d1d1d1;
+	border-right:1px solid #d1d1d1;
+	height:35px;
+	font-size:12px;
+	color:#666666;
+	text-align: left;
+	text-indent: 17px;
+}
+.email_list .content.tip{
+	font-weight:bold;
+	text-align: center;
+	text-indent: 0;
+}
+
+.email_list .content .content_col{
+	float:left;
+	border-left:1px solid #d1d1d1;
+	height:35px;
+	line-height:35px;
+}
+
+.email_list .content .content_col .checkbox{
+	float:left;
+	margin-left:11px;
+	margin-top:11px;
+}
+
+
+.email_list .content.select .content_col {
+	background: #f3f3f3;
+}
+
+.email_list .content .content_col.num{
+	width:162px;
+}
+
+.email_list .content .content_col.name{
+	width:270px;
+}
+
+.email_list .content .content_col.email{
+	width:334px;
+}
+
+.email_list .content .content_col.email .edit{
+	float:left;
+	width:240px;
+}
+
+.email_list .content .content_col.email .text_show{
+	
+}
+
+.email_list .content .content_col.email .edit_input{
+	height:19px;
+	width:220px;
+	padding:2px;
+	border-top:1px solid #cfcfcf;
+	border-left:1px solid #cfcfcf;
+	line-height:16px;
+	background: #ededed;
+	display: none;
+}
+
+.email_list .content .content_col.email .edit_btn{
+	float:right;
+	width:36px;
+	text-align: left;
+	text-indent: 0;
+	cursor: pointer;
+}
+
+.email_list .content.select .content_col.email .edit_btn{
+	color:#3f67bf;
+}
+
+.email_list .content .content_col.email .edit_btn .save_edit{
+	display: none;
+}
+
+.email_list .no_policy{
+	padding:60px 0 70px 260px;
+	border:1px solid #cfcfcf;
+	border-top:0;
+}
+
+.email_list .no_policy p{
+	height:18px;
+	line-height:18px;
+	background: url(../../image/user/member/alert.png) no-repeat left;
+	padding-left:28px;
+	font-size:16px;
+	color:#000;
+}
+
+.email_list .no_policy p a{
+	font-size:12px;
+	color:#666;
+	text-decoration: underline;
+	margin-left:20px;
+}
+.no_subscribe{
+	text-align: right;
+	margin:0 23px;
+	padding-bottom:43px;
+	padding-right:7px;
+	border-bottom:1px dashed #cccccc;
+}
+.no_subscribe .num{
+	color:#ff3333;
+	margin:0 3px;
+}
+.no_subscribe .subscribe{
+	color:#ff3333;
+	margin:0 3px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+
+
+
+.action{
+	height:38px;
+	width:137px;
+	margin:45px auto 70px;
+}
+
+.action .subscribe{
+	width:137px;
+	height:38px;
+	position:relative;
+	background: url(../../image/btn/return_index.png) no-repeat;
+	border:none;
+	float:left;
+	font-size:16px;
+	color:#fff;
+	line-height:38px;
+	font-weight:bold;
+	font-family:"Microsoft Yahei";
+	cursor: pointer;
+	text-align: center;
+}
+
+
+.product_list{
+	margin-top:22px;
+	overflow: hidden;
+	padding:0 2px;
+	margin-bottom:60px;
+}
+
+.product_list .product{
+	float:left;
+	width:240px;
+	height:120px;
+	background: #e6e6e6;
+	margin:0 13px;
+}
+
+.query_email{
+	padding-left:48px;
+	color:#333;
+	margin-bottom:60px;
+}
+.query_email p{
+	margin-top:43px;
+	margin-bottom:36px;
+}
+
+.query_email .input_row{
+	height:36px;
+}
+
+.query_email .input_row .input_label{
+	width:110px;
+	float:left;
+	line-height:36px;
+	text-align: right;
+	margin-right: 4px;
+}
+
+.query_email .input_row .tip_label{
+	float:left;
+	padding:0 5px;
+	line-height:36px;
+}
+
+.query_email .input_row .input_text{
+	height:23px;
+	border:1px solid #c9c9c9;
+	margin-top:5px;
+	padding-left:5px;
+	font-family:"Microsoft Yahei";
+	float:left;
+}
+.action{
+	margin-top:28px;
+	height:38px;
+}
+
+.action .query{
+	margin-left:114px;
+	width:137px;
+	height:38px;
+	position:relative;
+	background: url(../../image/btn/return_index.png) no-repeat;
+	border:none;
+	float:left;
+	font-size:16px;
+	color:#fff;
+	line-height:38px;
+	font-weight:bold;
+	font-family:"Microsoft Yahei";
+}

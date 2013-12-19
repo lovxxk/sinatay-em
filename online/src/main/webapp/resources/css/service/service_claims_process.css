@@ -1,0 +1,142 @@
+
+.service_area{
+	background: #fff;
+	padding-bottom: 74px;
+}
+.service_area .title{
+	height:40px;
+	line-height:40px;
+	background: #3f67bf;
+}
+
+.service_area .title p{
+	float:left;
+	color:#fff;
+	font-size:14px;
+	font-weight: bold;
+	padding-left:23px;
+}
+
+.service_area .title .more{
+	float:right;
+	margin-right:15px;
+}
+.service_area .title .more a{
+	color:#fff;
+}
+
+.claims_process{
+	border-bottom:1px dashed #ccc;
+	margin:0 48px 0 50px;
+}
+.claims_process .left_img{
+	width:179px;
+	height:549px;
+	margin-top:100px;
+	float:left;
+	background: url(../../image/service/claims_process.png) no-repeat;
+}
+
+.claims_process .process_list{
+	margin-left:179px;
+}
+
+.claims_process .process_list .process{
+	border-bottom:1px dashed #ccc;
+	margin-left:32px;
+	color:#333;
+	line-height:22px;
+	padding-top:30px;
+}
+
+.claims_process .process_list .process .high_light{
+	color:#ff3333;
+}
+.claims_process .process_list .process .high_light:hover{
+	text-decoration: underline;
+}
+.claims_process .process_list .process.tip{
+	height:24px;
+	padding-top:18px;
+	border-bottom:0;
+	margin-right:20px;
+}
+
+.claims_process .process_list .process.p1{
+	height:135px;
+}
+
+.claims_process .process_list .process.p2{
+	height:97px;
+}
+.claims_process .process_list .process.p3{
+	height:79px;
+}
+.claims_process .process_list .process.p4{
+	height:99px;
+}
+.claims_process .process_list .process.p5{
+	height:109px;
+	border-bottom:0;
+}
+
+.service_promise{
+	margin:0 48px 0 50px;
+}
+
+.service_promise .promise_label{
+	float:left;
+	width:210px;
+}
+.service_promise .promise_label .p_block{
+	width:6px;
+	height:6px;
+	background: #3f67bf;
+	margin-left:27px;
+	margin-top:48px;
+	float:left;
+}
+
+.service_promise .promise_label .p_label{
+	font-size:18px;
+	color:#333;
+	margin-left:48px;
+	margin-top:38px;
+}
+
+.service_promise .promise_item{
+	margin-left:210px;
+	overflow:hidden; 
+	padding-top:40px;
+}
+
+.service_promise .promise_item .promise{
+	height:14px;
+	font-weight:bold;
+	color:#333;
+	background: url(../../image/service/claims_promise_icon.png) no-repeat;
+	float:left;
+	padding-left:18px;
+	margin-bottom:17px;
+	line-height: 14px;
+}
+
+.service_promise .promise_item .promise.pro1{
+	background-position: 0 0;
+	width:155px;
+}
+.service_promise .promise_item .promise.pro2{
+	background-position: 0 -14px;
+	width:136px;
+}
+.service_promise .promise_item .promise.pro3{
+	background-position: 0 -28px;
+}
+.service_promise .promise_item .promise.pro4{
+	width:155px;
+	background-position: 0 -42px;
+}
+.service_promise .promise_item .promise.pro5{
+	background-position: 0 -56px;
+	width:136px;
+}

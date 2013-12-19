@@ -1,0 +1,26 @@
+.st_quote.radio_main{
+	height:30px;
+	text-align: center;
+	cursor: pointer;
+	color:#333;
+}
+
+.st_quote.radio_main.disabled{
+	background: #c9c9c9;
+	color:#fff;
+}
+
+.st_quote.radio_main::selection { background-color:rgba(255,255,255,0);}
+.st_quote.radio_main::-moz-selection {  background-color:rgba(255,255,255,0);} 
+.st_quote.radio_main::-webkit-selection {  background-color:rgba(255,255,255,0);}
+
+.st_quote.radio_main .radio_label{
+	border:1px solid #c9c9c9;
+	line-height:28px;
+}
+
+.st_quote.radio_main.checked .radio_label{
+	border:2px solid #cc3333;
+	line-height:26px;
+	background: url(select.png) right bottom no-repeat;
+}

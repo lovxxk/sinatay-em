@@ -1,0 +1,13 @@
+.wait_confirm{
+	padding:8px 22px 50px;
+}
+
+.wait_confirm .wait{
+	background: url(../../image/policy/wait_confirm.png) left top no-repeat;
+	padding-left:169px;
+	padding-top:25px;
+	text-align: left;
+	font-size:16px;
+	line-height:30px;
+	font-weight:bold;
+}

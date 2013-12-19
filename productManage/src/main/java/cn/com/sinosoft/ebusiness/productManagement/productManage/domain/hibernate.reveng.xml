@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+  <table-filter match-name="GE_PAYMENT" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PRODUCTSALEDEPPAYMENT" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PRODUCT_APPLICANTCONFIG" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PRODUCT_BENEFICIARYCONFIG" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PRODUCT_CONFIGMAIN" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PRODUCT_EMERGENCY_CONFIG" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PRODUCT_EXTRAINFO" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PRODUCT_INFORMBOOK" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PRODUCT_INSUREDCONFIG" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PRODUCT_MAIN" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PRODUCT_PRODEPT" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PAGEELEMENTCONFIG" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PAGECONFIG" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PAGECONFIGRELATE" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_FLOWCONFIG" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_FLOWCONFIGRELATE" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_WEBFLOWPAGEELEMENT" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_WEBFLOWPAGE" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_WEBFLOW" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PRODUCTDUTY" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PRODUCTRISK" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_RISKCONFIG" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_DUTYCONFIG" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_ADDRESSEE_CONFIG" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PRODUCTMAIN_PROCESS" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PRODUCT_ATTR_ALLOWVALUES" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PRODUTY_ATTR_ALLOWVAL" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_PRO_INSURED_OCCUPATION" package="cn.com.sinosoft.ebusiness.productManagement.productManage.domain"/>
+  <table-filter match-name="GE_SALE_PRODUCT" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PRODUCTDUTY" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PRODUCTRISK" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PRO_ADDRESSEE_CONFIG" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PRO_APPLICANTCONFIG" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PRO_ATTR_ALLOWVALUES" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PRO_BENEFICIARYCONFIG" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PRO_DUTY_ATTR_ALLOWVAL" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PRO_EMERGENCY_CONFIG" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PRO_EXTRAINFO" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PRO_INFORMBOOK" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PRO_INSUREDCONFIG" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PRO_PRODEPT" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PRO_WEBFLOW" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PRO_WEBFLOWPAGE" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PRO_WEBFLOWPAGEELEMENT" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PROSALEDEPPAYMENT" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+<table-filter match-name="GE_SALE_PRO_INSURED_OCCUPATION" package="cn.com.sinosoft.ebusiness.productManagement.saleProduct.domain"/>
+</hibernate-reverse-engineering>
+

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="productDirectory" extends="footTraceInterceptor" namespace="/productDirectory">
+	
+		<action name="addProductDirectory" class="productDirectoryAction" method="addProductDirectory">
+			<result name="success">
+				/business/cmpProductManage/productDirectory/directory/create/frmCreate.jsp
+			</result>
+		</action>
+		
+		<action name="createGeDirectory" class="productDirectoryAction" method="getDataFromDic">
+			<result name="success">
+				/business/cmpProductManage/productDirectory/directory/create/frmCreate.jsp
+			</result>
+		</action>
+		
+		<action name="findBusinessArea" class="productDirectoryAction" method="findBusinessArea">
+		</action>
+		
+		<action name="delProductDirectory" class="productDirectoryAction" method="delProductDirectory">
+			<result name="success">
+				/global/inc/tipInfo.jsp
+			</result>
+		</action>
+		
+		<action name="updateProductShelf" class="productDirectoryAction" method="updateProductShelf">
+			<result name="success">
+				/global/inc/tipInfo.jsp
+			</result>
+		</action>
+		
+		<action name="findGeDirectoryByEId" class="productDirectoryAction" method="findGeDirectoryByEId">
+			<result name="success">
+				/business/cmpProductManage/productDirectory/directory/update/index.jsp
+			</result>
+		</action>
+		
+		<action name="productDetail" class="productDirectoryAction" method="findGeDirectoryByEId">
+			<result name="success">
+				/business/cmpProductManage/productDirectory/directory/search/productDetail.jsp
+			</result>
+		</action>
+		
+		<action name="updateGeDirectory" class="productDirectoryAction" method="updateGeDirectory">
+			<result name="success">
+				/global/inc/alertInfo.jsp?type=update
+			</result>
+		</action>
+		
+		<action name="addGeDirectoryAttributeInfo" class="productDirectoryAction" method="addGeDirectoryAttributeInfo">
+			<result name="success">
+				/business/cmpProductManage/productDirectory/directoryAttribute/create/success.jsp
+			</result>
+		</action>
+		
+		<action name="updateGeDirectoryAttributeInfo" class="productDirectoryAction" method="updateGeDirectoryAttributeInfo">
+			<result name="success">
+				/business/cmpProductManage/productDirectory/directoryAttribute/search/success.jsp
+			</result>
+		</action>
+		
+		<action name="findGeDirectoryAttributeInfoByAttrId" class="productDirectoryAction" method="findGeDirectoryAttributeInfoByAttrId">
+			<result name="success">
+				/business/cmpProductManage/productDirectory/directoryAttribute/search/directoryAttribute.jsp
+			</result>
+		</action>
+		
+		<action name="addProductDirectoryAttributeRelate" class="productDirectoryAction" method="addProductDirectoryAttributeRelate">
+		</action>
+		
+		<action name="findProductDirectoryByEId" class="productDirectoryAction" method="findProductDirectoryByEId">
+		</action>
+		
+		<action name="delGeDirectoryAttribute" class="productDirectoryAction" method="delGeDirectoryAttribute">
+		</action>
+		
+		<action name="isHaveGeDirectoryAttributeInfoByAttrId" class="productDirectoryAction" method="isHaveGeDirectoryAttributeInfoByAttrId">
+		</action>
+		
+		<action name="findProductDirectory" class="productDirectoryAction" method="findProductDirectory">
+			<result name="success">
+				/business/cmpProductManage/productDirectory/directory/search/search.jsp
+			</result>
+		</action>
+		
+		<action name="findGeDirectoryAttributeRelateByEId" class="productDirectoryAction" method="findGeDirectoryAttributeRelateByEId">
+			<result name="success">
+				/business/cmpProductManage/productDirectory/directory/search/productDirectoryAttributeTree.jsp
+			</result>
+		</action>
+		<action name="directoryAttributeTree" class="productDirectoryAction" method="directoryAttributeTree">
+			<result name="success">
+				/business/cmpProductManage/productDirectory/directoryAttribute/create/directoryAttributeTree.jsp
+			</result>
+		</action>
+		<action name="findNetsalesProduct" class="productDirectoryAction" method="findNetSalesProduct">
+			<result name="success">/business/cmpProductManage/productDirectory/directory/create/selectProductList/netsalesProductSearch.jsp</result>
+		</action>
+		
+		<action name="findCardProduct" class="productDirectoryAction" method="findCardProduct" >
+			<result name="success">/business/cmpProductManage/productDirectory/directory/create/selectProductList/cardProductSearch.jsp</result>
+		</action>
+		
+		<action name="findCarProduct" class="productDirectoryAction" method="findCarProduct" >
+			<result name="success">/business/cmpProductManage/productDirectory/directory/create/selectProductList/carProductSearch.jsp</result>
+		</action>
+		
+		<action name="findDirectoryAttributeInfo" class="productDirectoryAction" method="findDirectoryAttributeInfo" >
+			<result name="success">/business/cmpProductManage/productDirectory/productsDisplay/productsDisplay.jsp</result>
+		</action>
+		
+		<action name="findDirectoryByEids" class="productDirectoryAction" method="findDirectoryByEids" >
+			<result name="success">/business/cmpProductManage/productDirectory/productsDisplay/productsDisplayNew.jsp</result>
+		</action>
+		
+		<action name="findNoRecommendProduct" class="productDirectoryAction" method="findNoRecommendProduct">
+			<result name="success">/business/cmpProductManage/productDirectory/directory/recommendProduct/noRecommendProduct.jsp</result>
+		</action>
+		
+		<action name="findRecommendProduct" class="productDirectoryAction" method="findRecommendProduct">
+			<result name="success">/business/cmpProductManage/productDirectory/directory/recommendProduct/recommendProduct.jsp</result>
+		</action>
+		
+		<action name="addRecommendProduct" class="productDirectoryAction" method="addRecommendProduct">
+			<result name="success">/business/cmpProductManage/productDirectory/directory/recommendProduct/success.jsp</result>
+		</action>
+		
+	</package>
+</struts>

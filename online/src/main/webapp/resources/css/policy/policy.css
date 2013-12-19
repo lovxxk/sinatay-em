@@ -1,0 +1,733 @@
+.head_mid .main_title{
+	display: none;
+}
+
+.middle .h_layout{
+	padding-bottom:58px;
+}
+
+.middle .nav_index{
+	height:42px;
+}
+.middle .nav_index li{
+	line-height:42px;
+	font-size:13px;
+	display:inline;
+}
+.middle .nav_index li a{
+	color:#535353;
+}
+
+.policy_instro{
+	font-size:16px;
+	line-height:18px;
+	text-align: center;
+}
+
+.policy_navbar{
+	background: url(../../image/policy/policy_nav_fill.png) no-repeat;
+	height:40px;
+	margin-top:12px;
+}
+
+.policy_navbar div{
+	float:left;
+	line-height:40px;
+	font-size:14px;
+	width:333px;
+	text-align: center;
+	color:#666666;
+	cursor:default;
+}
+
+.policy_navbar div.active{
+	color:#fff;
+	font-weight: bold;
+}
+
+.policy_area{
+	
+}
+
+.policy_area .title{
+	background: #d1d1d1;
+	color:#333333;
+	font-size:14px;
+	font-weight:bold;
+	height:40px;
+	padding-left:26px;
+	line-height:40px;
+}
+
+.policy_area .title div{
+	float:left;
+}
+
+.policy_area .title .doubt{
+	width:24px;
+	height:24px;
+	margin-top:8px;
+	margin-left:10px;
+	background: url(../../image/policy/doubt_icon.png) no-repeat;
+	position: relative;
+}
+
+.policy_area .title .doubt .doubt_info{
+	display: none;
+	position:absolute;
+	width:298px;
+	height:40px;
+	background: #aaa;
+	left:33px;
+	background: url(../../image/policy/doubt_info_bg.png) no-repeat;
+	color:#999;
+	line-height:20px;
+	padding:4px 12px 4px 18px;
+	font-size:12px;
+	font-weight:normal;
+	word-wrap:break-all;
+}
+
+.policy_area .title .doubt:hover .doubt_info{
+	display: block;
+}
+
+.insured_info .title>div{
+	float:left;
+}
+
+.insured_info .title .click{
+	margin-left:36px;
+	color:#ff0005;
+	font-size:12px;
+}
+
+.insured_info .title .click_box{
+	width:13px;
+	height:13px;
+	line-height:12px;
+	border:1px solid #999999;
+	font-weight:normal;
+	background: #fff;
+	font-size:16px;
+	color:#7f7f7f;
+	cursor: pointer;
+	margin-top:12px;
+	margin-left:2px;
+}
+
+.policy_detail{
+	margin-top:18px;
+	background: #FFF;
+}
+.applicant_info{
+	margin-top:25px;
+}
+.insured_info{
+	margin-top:45px;
+}
+.beneficiary_info{
+	margin-top:25px;
+}
+.reference_info{
+	margin-top:45px;
+}
+
+.policy_detail .detail_row{
+	height:35px;
+	border:1px solid #d1d1d1;
+	border-top:0;
+	line-height:35px;
+}
+
+.policy_detail .detail_row .name{
+	width:260px;
+	float:left;
+	height:35px;
+	border-right:1px solid #d1d1d1;
+	text-align: right;
+	padding-right:10px;
+}
+
+.policy_detail .detail_row .value{
+	height:35px;
+	margin-left:271px;
+	text-align: center;
+}
+
+.policy_area .input_area{
+	margin-top:20px;
+}
+.policy_area .input_row{
+	height:36px;
+/* 	position: relative; */
+}
+
+.policy_area .input_row .input_label{
+	width:114px;
+	float:left;
+	line-height:36px;
+	text-align: right;
+	margin-right: 14px;
+}
+.policy_area .input_row .input_label .required{
+	color:#ff0000;
+	margin-right:14px;
+}
+
+.policy_area .input_row .tip_label{
+	float:left;
+	padding:0 5px;
+	line-height:36px;
+}
+
+.policy_area .input_row .input_text{
+	height:23px;
+	border:1px solid #c9c9c9;
+	margin-top:5px;
+	padding-left:5px;
+	font-family:"Microsoft Yahei";
+	float:left;
+	
+	/*ie7 fix*/
+	*height:19px;
+	*line-height:16px;
+	*padding-top:4px;
+}
+
+.input_row.name .input_text{
+	width:123px;
+}
+
+.input_row.email .input_text{
+	width:183px;
+}
+
+.input_row.id_type .input_text{
+	width:93px;
+}
+
+.input_row.id .input_text{
+	width:303px;
+}
+
+.input_row.birthday .input_text{
+	float:left;
+}
+
+.input_row.birthday .input_text.year{
+	width:53px;
+}
+.input_row.birthday .input_text.month{
+	width:33px;
+}
+.input_row.birthday .input_text.day{
+	width:33px;
+}
+
+.input_row.validity .input_text{
+	float:left;
+}
+
+.input_row.validity .input_text.year{
+	width:53px;
+}
+.input_row.validity .input_text.month{
+	width:33px;
+}
+.input_row.validity .input_text.day{
+	width:33px;
+}
+
+
+.sex .label_sex{
+	line-height:36px;
+	float:left;
+	width:24px;
+	margin-left:2px;
+}
+
+.sex .input_sex{
+	width:15px;
+	height:14px;
+	float:left;
+	margin-left:2px;
+	margin-top:11px;
+	background: url(../../image/policy/policy_radio.png) no-repeat;
+	background-position:-15px 0 ; 
+	cursor:pointer;
+}
+
+.sex .input_sex.selected{
+	background-position:0 0 ;
+}
+
+
+.input_row.resident_area .input_text{
+	width:128px;
+}
+
+.input_row.cellphone .input_text{
+	width:128px;
+}
+
+.input_row.address .input_text{
+	width:508px;
+}
+
+.input_row.postcode .input_text{
+	width:128px;
+}
+
+.insured_info .input_area.insured{
+	display: none;
+	margin-top:0;
+	margin-bottom:16px;
+}
+.insured_info .input_area.effect{
+	border-top:2px solid #3f67bf;
+	padding-top:15px;
+	padding-bottom:8px;
+	margin-bottom:16px;
+	margin-top:0;
+}
+
+.insured_info .input_area.effect .effect_time input{
+	float:left;
+}
+
+.insured_info .contact_list{
+	background: #eee0d0;
+}
+
+.insured_info .contact_list .contact{
+	float:left;
+	width:85px;
+}
+.insured_info .contact_list .contact .contact_check{
+	float:left;
+	margin-top: 10px;
+	margin-right: 5px;
+}
+
+.insured_info .contact_list .contact label{
+	line-height:36px;
+}
+
+.insured_info .input_row.relation{
+	margin-top:10px;
+}
+
+.insured_info .input_row.relation .input_text{
+	width:88px;
+	float:left;
+}
+.insured_info .input_row.relation .save_contact{
+	float:left;
+	line-height:36px;
+	margin-left:19px;
+}
+
+.insured_info .select_job{
+	float:left;
+	position: relative;
+}
+
+.insured_info .select_job .selected_job{
+	line-height:36px;
+	color:#ff3333;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.insured_info .select_job #search_result{
+	overflow-y:scroll; 
+	max-height:200px;
+}
+.insured_info .select_job .select_panel{
+	position:absolute;
+	top:6px;
+	left:120px;
+	display: none;
+	z-index: 1000;
+}
+
+.insured_info .select_job .select_close{
+	width:30px;
+	height:30px;
+	background: url(../../image/policy/job_close.png) no-repeat;
+	cursor: pointer;
+	position: absolute;
+	top:0;
+	right:0;
+}
+
+
+.insured_info .select_job .left_icon{
+	width:7px;
+	height:7px;
+	float: left;
+	margin-top: 11px;
+	background: url(../../image/policy/select_icon.png) no-repeat;
+}
+
+.insured_info .select_job .right_area{
+	background: #fff;
+	border:1px solid #c9c9c9;
+	margin-left: 6px;
+}
+
+.insured_info .select_job .right_area .fixed_info{
+	margin-left:14px;
+	margin-right:30px;
+	
+	padding:17px 10px 10px;
+	width:455px;
+	overflow: hidden;
+	border-bottom:1px solid #c9c9c9;
+}
+
+.insured_info .select_job .right_area .job_item{
+	width:151px;
+	float:left;
+	line-height:30px;
+	text-decoration: underline;
+	text-align: left;
+	cursor: pointer;
+	color:#3f67bf;
+}
+.insured_info .select_job .right_area .search_info{
+	overflow: hidden;
+	padding:14px 10px 25px;
+	margin-left:14px;
+	margin-right:10px;
+	width:455px;
+}
+
+.insured_info .select_job .right_area .search_info .search_job{
+	height:48px;
+	position: relative;
+	overflow: hidden;
+}
+
+.insured_info .select_job .right_area .search_info .search_box{
+	width: 345px;
+	height: 30px;
+	float: left;
+	position: relative;
+	zoom: 1;
+	background: #c3c3c3;
+	border-radius: 3px 0 0 3px;
+	margin-top:8px;
+	margin-left:29px;
+}
+
+.insured_info .select_job .right_area .search_info label{
+	position: absolute;
+	left: 28px;
+	top: 7px;
+	z-index: 1;
+	color: #BBB;
+}
+
+.insured_info .select_job .right_area .search_info input{
+	font-size: 12px;
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	width: 311px;
+	height: 24px;
+	line-height: 18px;
+	padding: 2px;
+	padding-left:30px;
+	background: #FFF;
+	vertical-align: middle;
+	border: 0;
+	border-radius: 2px 0 0 2px;
+	color:#000;
+}
+.insured_info .select_job .right_area .search_info .search_icon{
+	width:15px;
+	height:16px;
+	position: absolute;
+	background: url(../../image/search_icon.png) no-repeat center;
+	top: 8px;
+	left: 10px;
+}
+
+.insured_info .select_job .right_area .search_info .search_btn{
+	float: left;
+	width: 65px;
+	height: 20px;
+	cursor: pointer;
+	border: 0;
+	font-size: 12px;
+	margin-top:12px;
+	color: #FFF;
+	text-align: center;
+	font-family:"Microsoft Yahei";
+	background: url(../../image/policy/job_search_btn.png) no-repeat;
+	position: relative;
+}
+
+
+.save_contact label{
+	float:left;
+	margin-left:7px;
+}
+.save_contact .save_check{
+	float:left;
+	margin-top:10px;
+}
+
+.reference_info .input_area{
+	margin-top:10px;
+}
+
+.reference_info .reference_list .reference{
+	float:left;
+	width:85px;
+}
+.reference_info .reference_list .reference .reference_check{
+	float:left;
+	margin-top:10px;
+	margin-right:5px;
+}
+
+.reference_info .reference_list .reference label{
+	line-height:36px;
+}
+
+.input_row.type .label_beneficiary{
+	line-height:36px;
+	float:left;
+	width:50px;
+	margin-left:4px;
+}
+
+.input_row.type .input_beneficiary{
+	width:15px;
+	height:14px;
+	float:left;
+	margin-left:2px;
+	margin-top:11px;
+	background: url(../../image/policy/policy_radio.png) no-repeat;
+	background-position:-15px 0 ; 
+	cursor:pointer;
+}
+
+.input_row.type .input_beneficiary.selected{
+	background-position:0 0 ;
+}
+
+.beneficiary_info .input_area{
+	border-top:2px solid #3f67bf;
+	background: #fff;
+	padding-top:15px;
+	padding-bottom:8px;
+	margin-top:0;
+	margin-bottom:27px;
+}
+
+#inputBnfDemo{
+	display: none;
+}
+.beneficiary_info .beneficiary_type{
+	margin:8px;
+}
+.beneficiary_info .input_col{
+	float:left;
+/* 	width:260px; */
+}
+
+.beneficiary_info .input_col.ben_relation{
+	/*width:auto;*/
+	width:750px;
+}
+.beneficiary_info .input_col.name{
+	width:750px;
+}
+.beneficiary_info .input_col.id_type{
+	width:750px;
+}
+.beneficiary_info .input_col.id{
+	width:750px;
+}
+.beneficiary_info .input_col.birthday{
+	width:750px;
+}
+.beneficiary_info .input_col.sex{
+	width:750px;
+}
+.beneficiary_info .input_col.sequence{
+	width:750px;
+}
+.beneficiary_info .input_col.proportion{
+	width:750px;
+}
+
+.beneficiary_info .input_row .delete{
+	float:right;
+	color:#0066cc;
+	cursor: pointer;
+	margin-right:20px;
+}
+
+.beneficiary_info .input_col.ben_relation .input_text{
+	width:108px;
+}
+
+.beneficiary_info .input_col.id{
+	width:750px;
+}
+.beneficiary_info .input_col.id .input_text{
+	width:278px;
+}
+
+.beneficiary_info .input_col.name .input_text{
+	width:88px;
+}
+	
+.beneficiary_info .input_col.id_type .input_text{
+	width:98px;
+}
+
+.beneficiary_info .input_col.sequence .input_text{
+	width:38px;
+	float: left;
+	margin-right:5px;
+	margin-left:5px;
+}
+
+.beneficiary_info .input_col.proportion .input_text{
+	width:58px;
+	float: left;
+	margin-right:5px;
+}
+.beneficiary_info .input_col label.tip{
+	line-height:36px;
+	float:left;
+	margin-left:2px;
+/* 	position:relative; */
+/* 	top:12px; */
+}
+
+.beneficiary_info .add_beneficiary{
+	height:26px;
+	margin-left: 850px;
+	padding-top: 5px;
+}
+.beneficiary_info .add_beneficiary div{
+	width:98px;
+	height:26px;
+	background: url(../../image/policy/add_beneficiary.png) no-repeat;
+	position:relative;
+	color:#fff;
+	line-height:26px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.reference_list{
+	padding-left:45px;
+}
+
+.action{
+	margin-top:80px;
+	height:38px;
+/* 	position:relative; */
+/* 	margin-left:352px; */
+	text-align: center;
+}
+
+.action .save_info{
+	width:137px;
+	height:38px;
+	position:relative;
+	background: url(../../image/policy/save_info.png) no-repeat;
+/* 	float:left; */
+	font-size:16px;
+	margin-right:25px;
+	color:#fff;
+	line-height:38px;
+	font-weight:bold;
+	text-align: center;
+	cursor:pointer;
+	
+	display: inline-block;
+	
+	*zoom:1;
+	*display:inline;
+}
+
+.action .next_step{
+/* 	margin-left:162px; */
+	width:137px;
+	height:38px;
+	position:relative;
+	background: url(../../image/policy/next_step.png) no-repeat;
+	border:none;
+	font-size:16px;
+	color:#fff;
+	line-height:38px;
+	font-weight:bold;
+	text-align: center;
+	font-family:"Microsoft Yahei";
+	cursor:pointer;
+	
+	display: inline-block;
+	
+	*zoom:1;
+	*display:inline;
+}
+
+
+.input_row.provinceCity .input_text{
+	width:83px; 
+	margin-right:6px;
+}
+
+.input_row.provinceCity input{
+	border:1px solid #c9c9c9;
+	height:19px;
+	line-height:16px;
+	padding:2px;
+	float:left;
+	width:83px; 
+	margin-right:6px;
+}
+
+.kuang1{
+}
+
+.kuang1 .kuang_main{
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	overflow: hidden;
+	line-height:22px;
+}
+
+.kuang1 .kuang_main .kuang_text{
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	float:left;
+	width:800px;
+	padding:10px 20px;
+}
+.kuang1 .kuang_main .kuang_radio{
+	padding-top:15px;
+	padding-left:15px;
+	float:left;
+}
+
+
+.alert_content_login {
+	min-height: 50px;
+	line-height: 40px;
+	color: #333;
+	font-size: 20px;
+	word-break: break-all;
+	padding-bottom: 20px;
+	border-bottom: 1px dashed #CCC;
+	background: url(../../../global/js/common/alert/alert.png) no-repeat 2px 10px;
+}

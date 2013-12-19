@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="login" extends="struts-default" namespace="/login">
+		<action name="login" class="userPersonalLoginAction" method="login">
+			<result name="login">/web/user/login/login.jsp</result>
+		</action>
+		<action name="userPersonalLogin" class="userPersonalLoginAction" method="userPersonalLogin">
+			<result name="login" type="redirect">/memberCenter/homePage.do</result>
+			<result name="error">/web/user/login/login.jsp</result>
+		</action>
+<!-- 		<action name="alipayLogin" class="userPersonalLoginAction" method="alipayLogin"> -->
+<!-- 			<result name="success">/web/user/userPersonalDetail.jsp</result> -->
+<!-- 		</action> -->
+		<action name="alipayLoginSuccess" class="userPersonalLoginAction" method="alipayLoginSuccess">
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="qqLogin" class="userPersonalLoginAction" method="QQLogin">
+			
+		</action>
+		<action name="QQLoginSuccess" class="userPersonalLoginAction" method="QQLoginSuccess">
+			<result name="success">/index.jsp</result>
+		</action>
+		
+		<action name="sinaLogin" class="userPersonalLoginAction" method="sinaLogin"></action>
+		<action name="sinaLoginSuccess" class="userPersonalLoginAction" method="sinaLoginSuccess">
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="resetPassword" class="userPersonalLoginAction" method="resetPassword">
+				<result name="success" type="redirectAction">
+					<param name="actionName">resetPasswordConfirm</param>
+					<param name="email">${customer.email}</param>
+				</result>
+		</action>
+		<action name="resetPasswordConfirm" class="userPersonalLoginAction" method="resetPasswordConfirm">
+			<result name="success">/web/user/login/resetPasswordConfirm.jsp</result>
+		</action>
+		<action name="validateMailOrPhone" class="userPersonalLoginAction" method="validateMailOrPhone">
+			<result name="success"></result>
+		</action>
+		<action name="loginOut" class="userPersonalLoginAction" method="loginOut">
+			<result name="success">/web/user/login/index.jsp</result>
+		</action>
+		<action name="remeber" class="userPersonalLoginAction" method="remeber"></action>
+		
+		<action name="checkLogin" class="userPersonalLoginAction" method="checkLogin">
+		</action>
+		
+		<action name="serviceLogin" class="userPersonalLoginAction" method="serviceLogin">
+		</action>
+		<!-- 身份证号登录 -->
+		<action name="idNumLogin" class="userPersonalLoginAction" method="idNumLogin"></action>
+		<!-- 登录页面校验是否是身份证号登录 -->
+		<action name="checkSubmitLoginForm" class="userPersonalLoginAction" method="checkSubmitLoginForm"></action>
+		<action name="checkUserName" class="userPersonalLoginAction" method="checkUserName"></action>
+	</package>
+	<include file="../spring/applicationContext-action.xml"></include>
+</struts>

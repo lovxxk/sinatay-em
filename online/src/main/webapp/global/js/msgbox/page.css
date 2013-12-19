@@ -1,0 +1,56 @@
+/*css badoo style pagination*/
+div.badoo {
+	font-family: arial, helvetica, sans-serif;
+	background-color: #fff;
+	height:35px;
+	color:#666666;
+	text-align: center;
+	padding:47px 0;
+	font-size: 12px;
+}
+
+div.badoo a {
+	background: #e5e5e5;
+	color:#666666;
+	min-width:35px;
+	margin-left:2px;
+	margin-right:3px;
+	height:35px;
+	text-align: center;
+	line-height:35px;
+	padding:10px 15px;
+}
+
+div.badoo a:hover {
+	color:#ffffff;
+	background: #3f67bf;
+}
+
+div.badoo a:active {
+/* 	border-right: #ff5a00 2px solid; */
+/* 	border-top: #ff5a00 2px solid; */
+/* 	border-left: #ff5a00 2px solid; */
+/* 	color: #ff5a00; */
+/* 	border-bottom: #ff5a00 2px solid; */
+}
+
+div.badoo span{
+	background: #e5e5e5;
+	color:#666666;
+	min-width:35px;
+	margin-left:2px;
+	margin-right:3px;
+	height:35px;
+	text-align: center;
+	line-height:35px;
+	padding:10px 15px;
+}
+
+div.badoo span.current {
+	color:#ffffff;
+	background: #3f67bf;
+}
+
+div.badoo span.disabled {
+	display: none;
+}

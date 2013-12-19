@@ -1,0 +1,19 @@
+<%@ page contentType="text/html;charset=gbk" %>
+<%@ include file="/global/ui/taglibs.jsp"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<title>您的权限不够，无法访问！</title>
+<style type="text/css">
+.prompt_warpper{width:470px; height:240px; clear:both; margin:0px auto; padding-top:185px;}
+</style>
+</head>
+
+<body>
+<div align="center">
+	<div class="prompt_warpper"><img src="${ctx }/global/images/prompt_img2.jpg" border="0" /></div>
+</div>
+</body>
+</html>

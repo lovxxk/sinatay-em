@@ -1,0 +1,24 @@
+.success_result .tip_left{
+	width:243px;
+	float:left;
+	background: url(../../image/user/mailsuccess.png) center no-repeat;
+	height:400px;
+}
+.success_result p.info_top{
+	line-height:75px;
+}
+.success_result p{
+	margin-left:55px;
+}
+.return_index_mail{
+	width:125px;
+	height:22px;
+	line-height:22px;
+	background: url(../../image/btn/phone_vali_bg.png) no-repeat center;
+	border:none;
+	position:relative;
+	cursor: pointer;
+	color:#fff;
+	font-size:12px;
+	margin:0 5px;
+}

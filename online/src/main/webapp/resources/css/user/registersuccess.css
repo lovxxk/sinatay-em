@@ -1,0 +1,19 @@
+.success_result .tip_left{
+	width:243px;
+	float:left;
+	background: url(../../image/user/registersuccess.png) center no-repeat;
+	height:400px;
+}
+.success_result p.info_top{
+	line-height:75px;
+}
+.success_result p{
+	margin-left:55px;
+}
+.return_index_mail{
+	margin:10px 0 0 50px;
+}
+.return_index_mail button{
+	width:116px;
+	height:30px;
+}

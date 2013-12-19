@@ -1,0 +1,311 @@
+
+.head_mid .main_title{
+	display: none;
+}
+
+.middle .h_layout{
+	padding-bottom:66px;
+}
+
+.middle .nav_index{
+	height:42px;
+}
+.middle .nav_index li{
+	line-height:42px;
+	font-size:13px;
+	display:inline;
+}
+.middle .nav_index li a {
+	color: #3c3c3c;
+}
+.middle .nav_index li a:hover {
+	color:#3f67bf;
+}
+
+.detail_main{
+	background: #fff;
+	padding:0 20px 100px;
+	margin:10px 10px 0;
+}
+
+.detail_main .base_info{
+	height:100px;
+}
+
+.detail_main .base_info .title{
+	line-height:100px;
+	font-size:22px;
+	color:#333;
+	float:left;
+	margin-left:25px;
+}
+
+.detail_main .base_info .balance{
+	float:right;
+	height:80px;
+	padding-top:20px;
+}
+.detail_main .base_info .balance .money{
+	float:right;
+	margin-top:14px;
+	margin-right:10px;
+}
+.detail_main .base_info .balance .label{
+	color:#333;
+}
+
+.detail_main .base_info .balance .int{
+	color:#e4393c;
+	font-size:22px;
+	font-weight: bold;
+}
+
+.detail_main .base_info .balance .decimal{
+	color:#e4393c;
+	font-weight: bold;
+}
+
+.detail_main .base_info .balance .receive{
+	width:137px;
+	height:38px;
+	position:relative;
+	background: url(../../image/user/member/receive.png) no-repeat;
+	float:right;
+	font-size:16px;
+	color:#fff;
+	line-height:38px;
+	font-weight:bold;
+	font-family:"Microsoft Yahei";
+	text-align: center;
+	cursor: pointer;
+	margin-top:4px;
+}
+
+.order_info{
+	margin-bottom:25px;
+}
+.order_info .order_num{
+	height:69px;
+	border-top:2px solid #3f67bf;
+	background: #dbe6ff;
+	margin-bottom:3px;
+	color:#3f67bf;
+}
+.order_info .order_num span{
+	text-indent: 28px;
+	font-size:20px;
+	line-height: 69px;
+	float:left;
+}
+
+.order_info .info_row .info_col{
+	height:41px;
+	width:312px;
+	float:left;
+	background: #dbe6ff;
+	margin-right:2px;
+}
+
+.order_info .effect_save{
+	height:26px;
+	line-height:18px;
+	border:1px solid #ccc;
+	padding:0 4px;
+	margin-left:5px;
+}
+
+.order_info .info_row .info_col.last{
+	margin-right:0px;
+}
+.order_info .info_row .info_col.first{
+	text-indent: 28px;
+}
+.order_info .info_row .info_col.visit{
+	width:626px;
+}
+
+.order_info .info_row .info_col .input_text{
+	width:121px;
+	height:19px;
+	padding:2px;
+	border:1px solid #c9c9c9;
+}
+
+.order_info .info1{
+	margin-bottom:8px;
+}
+
+.order_info .info1 .info_row{
+	height:41px;
+	margin-bottom:2px;
+}
+
+.order_info .info1 .info_row{
+	line-height:41px;
+/* 	text-indent: 16px; */
+}
+
+.order_info .info1 .info_row span.tip{
+	font-weight:bold;
+	margin-left:16px;
+}
+.order_info .info1 .info_row .info_col.first{
+	text-indent: 12px;
+}
+
+
+.order_info .info2 .info_row{
+	height:41px;
+	margin-bottom:2px;
+	line-height:41px;
+	text-indent: 16px;
+}
+
+.order_info .info2 .info_row.name{
+	font-weight:bold;
+}
+
+.order_info .info2 .info_row.name .info_col{
+	background: #dbe6ff;
+}
+.order_info .info2 .info_row.value .info_col{
+	background: #efefef;
+}
+
+
+
+.info_area{
+	margin-bottom:20px;
+}
+
+.info_area .title{
+	height:40px;
+	text-indent: 22px;
+	background: #3f67bf;
+	line-height:40px;
+	color:#fff;
+}
+
+.info_area .title .title_name{
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.info_area .title .edit{
+	float:right;
+}
+.info_area .title .edit .to_edit{
+	display: block;
+	margin-right:35px;
+	cursor: pointer;
+}
+.info_area .title .edit .save_edit{
+	display: none;
+	width:88px;
+	height:26px;
+	background: url(../../image/user/member/save_edit.png) no-repeat;
+	line-height:26px;
+	margin-top:7px;
+	margin-right:13px;
+	position:relative;
+	cursor: pointer;
+}
+
+.info_area .input_row{
+	height:35px;
+	border-bottom:1px solid #d1d1d1;
+	border-right:1px solid #d1d1d1;
+}
+
+.info_area .input_row .input_col{
+	width: 469px;
+	float:left;
+}
+
+.info_area .input_row .input_col .input_label{
+	height:35px;
+	width:106px;
+	border-left:1px solid #d1d1d1;
+	float:left;
+	line-height:35px;
+	text-align: right;
+	margin-right: 14px;
+	font-weight:bold;
+}
+.info_area .input_row .input_col .input_text{
+	height:35px;
+	width:300px;
+	border-left:1px solid #d1d1d1;
+	float:left;
+}
+
+.info_area .input_row .input_col .input_text .text_show{
+	line-height:35px;
+	margin-left:20px;
+}
+
+.info_area .input_row .input_col .input_text .edit_input{
+	line-height:18px;
+	padding:2px;
+	padding-left:6px;
+	margin-left:14px;
+	border-top:1px solid #cfcfcf;
+	border-left:1px solid #cfcfcf;
+	border-bottom:0;
+	border-right:0;
+	background: #ededed;
+	width:310px;
+	margin-top:6px;
+	display: none;
+}
+
+.info_area .input_row.address .input_col{
+	width:100%;
+}
+
+.info_area .input_row.address .input_col .input_text{
+	width:600px;
+}
+
+.info_area.beneficiary_info{
+	margin-bottom:46px;
+}
+
+.info_area.beneficiary_info .input_row.name{
+	font-weight:bold;
+}
+.info_area.beneficiary_info .input_row .input_col.sequence{
+	width:150px;
+}
+
+.info_area.beneficiary_info .input_row .input_col.beneficiary_name{
+	width:150px;
+}
+
+.info_area.beneficiary_info .input_row .input_col.quotient{
+	width:160px;
+}
+
+.info_area.beneficiary_info .input_row .input_col{
+	text-align:center;
+	line-height:35px;
+	border-left: 1px solid #d1d1d1;
+}
+ul.auth{
+	margin: 0 auto;
+	text-align: left;
+	padding: 0 60px;
+	margin-bottom: 10px;
+	font-size:14px;
+}
+ul.auth li {
+	height: 30px;
+	line-height: 30px;
+}
+ul.auth li a{
+	float: right;
+	text-decoration: underline;
+	color: blue;
+	cursor: pointer;
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="register" extends="struts-default" namespace="/register">
+		<action name="userPersonalRegister" class="userPersonalRegisterAction" method="userPersonalRegister">
+			<result name="success">/web/user/register/index.jsp</result>
+		</action>
+		
+		<action name="saveUserPersonal" class="userPersonalRegisterAction" method="saveUserPersonal">
+<!-- 			<result name="success">/web/user/register/registerSuccess.jsp</result> -->
+			<result name="error">redirect:userPersonalShow.do</result>
+<!-- 			邮箱注册 -->
+			<result name="email" type="redirect">/register/registerSuccess.do?id=${customer.userID }</result>
+<!-- 			手机注册 -->
+			<result name="phone" type="redirect">/register/mobileRegisterSuccess.do?id=${customer.userID }</result>
+		</action>
+		
+<!-- 		通过邮箱注册，注册成功 -->
+		<action name="registerSuccess" class="userPersonalRegisterAction" method="registerSuccess">
+			<result name="success">/web/user/mail/success/index.jsp</result>
+		</action>
+<!-- 		通过手机注册，注册成功 -->
+		<action name="mobileRegisterSuccess" class="userPersonalRegisterAction" method="mobileRegisterSuccess">
+			<result name="success">/web/user/register/success/index.jsp</result>
+		</action>
+		<action name="userPersonalShow" class="userPersonalRegisterAction" method="userPersonalShow">
+			<result name="success">/web/user/register/registerSuccess.jsp</result>
+		</action>
+
+		<action name="checkAjaxAction" class="userPersonalRegisterAction" method="checkAjax"/>
+		
+		<!-- 获取手机验证码 -->
+		<action name="getUserPersonalPhonePwd" class="userPersonalRegisterAction" method="getUserPersonalPhonePwd"></action>
+		
+		<!-- 通过邮箱激活-->
+		<action name="userPersonalAcivate" class="userPersonalRegisterAction" method="userPersonalAcivate">
+			<result name="error">/web/user/activation/fail/index.jsp</result>
+			<result name="success">/web/user/activation/success/index.jsp</result>
+		</action>
+		<action name="sendEmailToActive" class="userPersonalRegisterAction" method="sendEmailToActive">
+			<result name="success" type="redirect">/register/registerSuccess.do?id=${customer.userID }</result>
+		</action>
+		<action name="existCustomerByUserAccount" class="userPersonalRegisterAction" method="existCustomerByUserAccount"></action>
+		
+		<action name="resetSendEmail" class="userPersonalRegisterAction" method="resetSendEmail"></action>
+		
+		<!-- 注册获取加密后的验证码 -->
+		<action name="getPwdCode" class="userPersonalRegisterAction" method="getPwdCode"></action>
+		<action name="registerCheckPwd" class="userPersonalRegisterAction" method="registerCheckPwd"></action>
+	</package>
+	<include file="../spring/applicationContext-action.xml"></include>
+</struts>

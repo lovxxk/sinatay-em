@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GBK"?>
+<TranData>
+	<BaseInfo><!-- 交易日期 CD01 -->
+		<TransrDate>20131211</TransrDate><!-- 交易时间 CD02 -->
+		<TransrTime>08:35:10</TransrTime><!-- 柜员代码 -->
+		<TellerNo>0001</TellerNo><!-- 交易流水号 -->
+		<TransrNo>DHF20131211000000003</TransrNo><!-- 销售渠道 CD03 -->
+		<SaleChannel>W</SaleChannel><!-- 销售方式 CD26 -->
+		<SellType>20</SellType><!-- 处理标志 CD04 -->
+		<FunctionFlag>ST000052</FunctionFlag><!-- 信息来源 CD28 -->
+		<Source>DHF</Source>
+	</BaseInfo>
+	<TranResponse><!-- 返回标志 CD25 -->
+		<Flag>0</Flag><!-- 返回信息 -->
+		<Desc>交易成功!</Desc>
+		<LCCont><!-- 保单号 -->
+			<ContNo>D00000000155</ContNo><!-- 投保单号 -->
+			<ProposalContNo>340110000000017</ProposalContNo><!-- 总保费 -->
+			<Prem>1.6</Prem>
+		</LCCont>
+	</TranResponse>
+</TranData>

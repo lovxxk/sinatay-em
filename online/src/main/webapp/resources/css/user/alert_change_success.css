@@ -1,0 +1,18 @@
+.alert_subscribe{
+	text-align: left;
+}
+
+.alert_subscribe .success{
+	width:100px;
+	float:left;
+	height:100px;
+	background: url(../../image/user/member/ok.png) no-repeat center; 
+}
+
+.alert_subscribe .main_content{
+	padding-top:20px;
+	font-size:16px;
+	line-height:30px;
+	margin-left:100px;
+	height:100px;
+}

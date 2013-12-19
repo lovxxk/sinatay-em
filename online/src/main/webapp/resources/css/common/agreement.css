@@ -1,0 +1,87 @@
+.head_mid .main_title{
+	display: none;
+}
+
+.middle .h_layout{
+	padding-bottom:66px;
+}
+
+.middle .nav_index{
+	height:42px;
+}
+.middle .nav_index li{
+	line-height:42px;
+	font-size:13px;
+	display:inline;
+}
+.middle .nav_index li a{
+	color:#535353;
+}
+
+.agree_body{
+	background: #fff;
+	padding:50px 35px 60px;
+}
+
+.agree_body h1{
+	font-family:"Microsoft Yahei";
+	font-size:22px;
+	font-weight:normal;
+	text-align: center;
+	padding-bottom:36px;
+	margin-bottom:30px;
+	border-bottom:1px dashed #ccc;
+}
+
+.agree_body p{
+	line-height:22px;
+}
+
+.agree_body p.h4{
+	font-weight:bold;
+}
+
+.agree_body p.p2{
+	text-indent: 4em;
+}
+.notice{
+	color: red;
+	font-style: normal;
+	background: none;
+}
+.link_sign_area{
+	margin-top: 26px;
+}
+.link_area{
+	font-weight:bold;
+	width: 50%;
+	float: left;
+}
+.sign_area{
+	padding-top:20px;
+	text-align: right;
+}
+table.benifit_show{
+	border: 1px solid #000000;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+table.benifit_show th,td{
+	font-weight: normal;
+	text-align: center;
+	border: 1px solid #000000;
+	padding: 4px 16px;
+}
+table.benifit_show th,td{
+	padding: 4px 10px;
+}
+#insuranceNotice .p2{
+	text-indent: 1em;
+}
+p.notice{
+	margin-top: 22px;
+}
+p.tip{
+	text-align: right;
+	margin-top: 50px;
+}

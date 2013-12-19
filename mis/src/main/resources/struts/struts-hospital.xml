@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="hospital" extends="struts-default" namespace="/hospital" >
+		<action name="addHospital" class="hospitalManageAction" method="addHospital" >
+			<result name="success">
+				/global/inc/cartipInfo.jsp?type=create
+			</result>
+		</action>
+		<action name="findHospital" class="hospitalManageAction" method="findHospital" >
+			<result name="success">
+				/business/hospitalManage/search/frmSearch.jsp
+			</result>
+		</action>
+		<action name="findHospital2" class="hospitalManageAction" method="findHospital2" >
+			<result name="success">
+				/business/hospitalManage/search/search.jsp
+			</result>
+		</action>
+		<action name="viewHospital" class="hospitalManageAction" method="viewHospital" >
+			<result name="success">
+				/business/hospitalManage/search/HospitalView.jsp
+			</result>
+		</action>
+		<action name="prepareUpdateHospital" class="hospitalManageAction" method="prepareUpdateHospital" >
+			<result name="success">
+				/business/hospitalManage/update/hospitalUpdate.jsp
+			</result>
+		</action>
+		<action name="updateHospital" class="hospitalManageAction" method="updateHospital" >
+			<result name="success">/global/inc/cartipInfo.jsp?type=update</result>
+		</action>
+		<action name="deleteHospital" class="hospitalManageAction" method="deleteHospital" >
+			<result name="success">/global/inc/cartipInfo.jsp</result>
+		</action>
+		<action name="loadArea" class="hospitalManageAction" method="loadArea" />
+	</package>
+</struts>

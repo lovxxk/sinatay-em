@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="update" extends="struts-default" namespace="/edit">
+		<!-- 编辑个人资料 -->
+		<action name="editUserPersonal" class="userPersonalEditAction" method="editUserPersonal">
+			<result name="edit">/web/user/member/account/personalInfo/index.jsp</result>
+		</action>
+		
+		<action name="changePassword" class="userPersonalEditAction" method="changePassword">
+			<result name="success" type="redirect">
+				/web/user/member/account/changePassword/index.jsp?changeResult=${changeResult}
+			</result>
+		</action>
+		
+		<!-- 更新资料 -->
+		<action name="update" class="userPersonalEditAction" method="update">
+			<result name="success" type="redirect">/edit/updateSuccess.do</result>
+			<result name="error">/web/user/member/account/personalInfo/index.jsp</result>
+		</action>
+		<!-- 更新成功 -->
+		<action name="updateSuccess" class="userPersonalEditAction" method="updateSucces">
+			<result name="success" type="redirect">/memberCenter/homePage.do</result>
+		</action>
+		<action name="validatePhoneDynamicPwd" class="userPersonalEditAction" method="validatePhoneDynamicPwd"></action>
+		<action name="getPhoneDynamicNumber" class="userPersonalEditAction" method="getPhoneDynamicNumber"></action>
+		<!-- 补充录入手机号或者邮箱地址 -->
+		<action name="supplyUserPersonal" class="userPersonalEditAction" method="supplyUserPersonal">
+			<result name="success" type="redirect">/edit/accountInfo.do</result>
+		</action>
+		<!-- 账户信息 -->
+		<action name="accountInfo" class="userPersonalEditAction" method="accountInfo">
+			<result name="success">/web/user/member/account/accountInfo/index.jsp</result>
+		</action>
+		<!-- 通过邮箱发送验证码 -->
+		<action name="sendCodeByEmail" class="userPersonalEditAction" method="sendCodeByEmail"></action>
+		<!-- 验证是否绑定过保单 -->
+		<action name="checkBindPolicy" class="userPersonalEditAction" method="checkBindPolicy"></action>
+		<action name="existCustomerByUserAccount" class="userPersonalEditAction" method="existCustomerByUserAccount"></action>
+		<action name="checkEmailValidateCode" class="userPersonalEditAction" method="checkEmailValidateCode"></action>
+		<action name="getUserPersonalPhonePwd" class="userPersonalEditAction" method="getUserPersonalPhonePwd"></action>
+	</package>
+	<include file="../spring/applicationContext-action.xml"></include>
+</struts>

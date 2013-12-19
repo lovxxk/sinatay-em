@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:s="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd"
+	default-lazy-init="true">
+	
+	<description>SpringSecurity安全配置</description>
+	
+	<s:http auto-config="false" use-expressions="true" entry-point-ref="authenticationProcessingFilterEntryPoint">
+		<s:intercept-url pattern="/system/userManage/passport/login/**" filters="none" />
+		<s:intercept-url pattern="/global/**" filters="none" />
+		<s:intercept-url pattern="/services/**" filters="none" />
+		<s:intercept-url pattern="/misLogin/checkAjax.do" filters="none" />
+		<s:intercept-url pattern="/authorityManage/validateLogin.do" filters="none" />
+		
+		<!-- dataDictionary start -->
+		<s:intercept-url pattern="/system/configManage/dataDictionary/create/**" access="hasAnyRole('ROLE_S_DDIC_I')" />
+		<s:intercept-url pattern="/business/businessManage/dataDictionary/create.do" access="hasAnyRole('ROLE_S_DDIC_I')" />
+		<s:intercept-url pattern="/system/configManage/dataDictionary/search/**" access="hasAnyRole('ROLE_S_DDIC_M')" />
+		<s:intercept-url pattern="/system/configManage/dataDictionary/update/**" access="hasAnyRole('ROLE_S_DDIC_U')" />
+		<s:intercept-url pattern="/business/businessManage/dataDictionary/update.do" access="hasAnyRole('ROLE_S_DDIC_U')" />
+		<!-- dataDictionary end -->
+		
+		<!-- userManager start -->
+		<s:intercept-url pattern="/system/userManage/user/search/**" access="hasAnyRole('ROLE_S_USER_M')" />
+		<s:intercept-url pattern="/system/userManage/user/create/**" access="hasAnyRole('ROLE_S_USER_I')" />
+		<s:intercept-url pattern="/system/userManage/create.do" access="hasAnyRole('ROLE_S_USER_I')" />
+		<s:intercept-url pattern="/system/userManage/user/update/**" access="hasAnyRole('ROLE_S_USER_U')" />
+		<s:intercept-url pattern="/system/userManage/updateGeOperator.do" access="hasAnyRole('ROLE_S_USER_U')" />
+		<s:intercept-url pattern="/system/userManage/deleteGeOperator.do" access="hasAnyRole('ROLE_S_USER_D')" />
+		<!-- userManager end -->
+		
+		<!-- roleManage start -->
+		<s:intercept-url pattern="/system/roleManage/role/search/**" access="hasAnyRole('ROLE_S_ROLE_M')" />
+		<s:intercept-url pattern="/system/roleManage/role/create/**" access="hasAnyRole('ROLE_S_ROLE_I')" />
+		<s:intercept-url pattern="/system/roleManage/createGeRole.do" access="hasAnyRole('ROLE_S_ROLE_I')" />
+		<s:intercept-url pattern="/system/roleManage/role/detail/**" access="hasAnyRole('ROLE_S_ROLE_U')" />
+		<s:intercept-url pattern="/system/roleManage/role/update/**" access="hasAnyRole('ROLE_S_ROLE_U')" />
+		<s:intercept-url pattern="/system/roleManage/updateGeRole.do" access="hasAnyRole('ROLE_S_ROLE_U')" />
+		<s:intercept-url pattern="/system/roleManage/deleteGeRole.do" access="hasAnyRole('ROLE_S_ROLE_D')" />
+		<!-- roleManage end -->
+		
+		<!-- groupManage start -->
+		<s:intercept-url pattern="/system/groupManage/group/search/**" access="hasAnyRole('ROLE_S_GROUP_M')" />
+		<s:intercept-url pattern="/system/groupManage/group/create/**" access="hasAnyRole('ROLE_S_GROUP_I')" />
+		<s:intercept-url pattern="/system/groupManage/create.do" access="hasAnyRole('ROLE_S_GROUP_I')" />
+		<s:intercept-url pattern="/system/groupManage/group/update/**" access="hasAnyRole('ROLE_S_GROUP_U')" />
+		<s:intercept-url pattern="/system/groupManage/update.do" access="hasAnyRole('ROLE_S_GROUP_U')" />
+		<s:intercept-url pattern="/system/groupManage/delete.do" access="hasAnyRole('ROLE_S_GROUP_D')" />
+		<!-- groupManage end -->
+		
+		<!-- departmentManage start -->
+		<s:intercept-url pattern="/system/departmentManage/departmentAuthorityQuery/**" access="hasAnyRole('ROLE_PERSONALUSER')" />
+		<s:intercept-url pattern="/system/departmentManage/**" access="hasAnyRole('ROLE_S_DEMA_M')" />
+<!-- 		<s:intercept-url pattern="/departmentManage/createGeDepartment.do" access="hasAnyRole('ROLE_S_DEMA_M')" /> -->
+		<s:intercept-url pattern="/departmentManage/createGeDepartment.do" access="hasAnyRole('ROLE_S_DEMA_M_I')" />
+		<s:intercept-url pattern="/departmentManage/updatesGeDepartment.do" access="hasAnyRole('ROLE_S_DEMA_U')" />
+		<s:intercept-url pattern="/departmentManage/deleteGeDepartment.do" access="hasAnyRole('ROLE_S_DEMA_D')" />
+		
+		
+		<!-- departmentManage end -->
+		
+		<!-- feature start -->
+		<s:intercept-url pattern="/system/configManage/feature/search/**" access="hasAnyRole('ROLE_S_FEAT_M')" />
+		<s:intercept-url pattern="/system/configManage/feature/create/**" access="hasAnyRole('ROLE_S_FEAT_I')" />
+		<s:intercept-url pattern="/business/businessManage/feature/create.do" access="hasAnyRole('ROLE_S_FEAT_I')" />
+		<s:intercept-url pattern="/system/configManage/feature/update/**" access="hasAnyRole('ROLE_S_FEAT_U')" />
+		<s:intercept-url pattern="/business/businessManage/feature/update.do" access="hasAnyRole('ROLE_S_FEAT_U')" />
+		<s:intercept-url pattern="/business/businessManage/feature/deleteAll.do" access="hasAnyRole('ROLE_S_FEAT_D')" />
+		<!-- feature end -->
+		
+		<!-- SMSConfig start -->
+		<s:intercept-url pattern="/system/configManage/SMSConfig/search/**" access="hasAnyRole('ROLE_S_SMSC_M')" />
+		<s:intercept-url pattern="/system/configManage/SMSConfig/create/**" access="hasAnyRole('ROLE_S_SMSC_I')" />
+		<s:intercept-url pattern="/system/configManage/SMSConfig/addSmsPrepare.do" access="hasAnyRole('ROLE_S_SMSC_I')" />
+		<s:intercept-url pattern="/system/configManage/SMSConfig/update/**" access="hasAnyRole('ROLE_S_SMSC_U')" />
+		<s:intercept-url pattern="/system/configManage/SMSConfig/updatePrepare.do" access="hasAnyRole('ROLE_S_SMSC_U')" />
+		<!-- SMSConfig end -->
+		
+		<!-- emailConfig start -->
+		<s:intercept-url pattern="/system/configManage/emailConfig/search/**" access="hasAnyRole('ROLE_S_ECON_M')" />
+		<s:intercept-url pattern="/system/configManage/emailConfig/create/**" access="hasAnyRole('ROLE_S_ECON_I')" />
+		<s:intercept-url pattern="/system/configManage/emailConfig/addDeptMailPrepare.do" access="hasAnyRole('ROLE_S_ECON_I')" />
+		<s:intercept-url pattern="/system/configManage/emailConfig/update/**" access="hasAnyRole('ROLE_S_ECON_U')" />
+		<s:intercept-url pattern="/system/configManage/emailConfig/updatePrepare.do" access="hasAnyRole('ROLE_S_ECON_U')" />
+		<!-- emailConfig end -->
+		
+		<!-- productDirectory start -->
+		<s:intercept-url pattern="/business/cmpProductManage/productDirectory/directory/create/**" access="hasAnyRole('ROLE_B_PDIR_I')" />
+		<s:intercept-url pattern="/productDirectory/addProductDirectory.do" access="hasAnyRole('ROLE_B_PDIR_I')" />
+		<s:intercept-url pattern="/business/cmpProductManage/productDirectory/directoryAttribute/create/**" access="hasAnyRole('ROLE_B_PDIR_A')" />
+		<s:intercept-url pattern="/productDirectory/addGeDirectoryAttributeInfo.do" access="hasAnyRole('ROLE_B_PDIR_A')" />
+		<s:intercept-url pattern="/business/cmpProductManage/productDirectory/directory/search/**" access="hasAnyRole('ROLE_B_PDIR_M')" />
+		
+		<s:intercept-url pattern="/business/cmpProductManage/productDirectory/directory/search/productDirectoryAttributeTree.jsp" access="hasAnyRole('ROLE_B_PDIR_B')" />
+		<s:intercept-url pattern="productDirectory/addProductDirectoryAttributeRelate.do" access="hasAnyRole('ROLE_B_PDIR_B')" />
+		<s:intercept-url pattern="/business/cmpProductManage/productDirectory/directory/recommendProduct/**" access="hasAnyRole('ROLE_B_PDIR_T')" />
+		
+		<s:intercept-url pattern="/productDirectory/addRecommendProduct.do" access="hasAnyRole('ROLE_B_PDIR_T')" />
+		<s:intercept-url pattern="/productDirectory/findNoRecommendProduct.do" access="hasAnyRole('ROLE_B_PDIR_T')" />
+		<s:intercept-url pattern="/productDirectory/findRecommendProduct.do" access="hasAnyRole('ROLE_B_PDIR_T')" />
+		<s:intercept-url pattern="/business/cmpProductManage/productDirectory/directory/update/**" access="hasAnyRole('ROLE_B_PDIR_U')" />
+		<s:intercept-url pattern="/productDirectory/updateGeDirectory.do" access="hasAnyRole('ROLE_B_PDIR_U')" />
+		<s:intercept-url pattern="/productDirectory/delProductDirectory.do" access="hasAnyRole('ROLE_B_PDIR_D')" />
+		<s:intercept-url pattern="/productDirectory/updateProductShelf.do" access="hasAnyRole('ROLE_B_PDIR_S')" />
+		<s:intercept-url pattern="/productDirectory/updateProductShelf.do" access="hasAnyRole('ROLE_B_PDIR_X')" />
+		<!-- productDirectory end -->
+		
+		<!-- blacklist start -->
+		<s:intercept-url pattern="/business/customerManage/blacklist/frmCreate.do" access="hasAnyRole('ROLE_B_BLIS_I')" />
+		<s:intercept-url pattern="/business/customerManage/blacklist/create/frmCreate.jsp" access="hasAnyRole('ROLE_B_BLIS_I')" />
+		<s:intercept-url pattern="/business/customerManage/blacklist/addGeBlackList.do" access="hasAnyRole('ROLE_B_BLIS_I')" />
+		<s:intercept-url pattern="/business/customerManage/blacklist/search/**" access="hasAnyRole('ROLE_B_BLIS_M')" />
+		<s:intercept-url pattern="/business/customerManage/blacklist/update/**" access="hasAnyRole('ROLE_B_BLIS_U')" />
+		<s:intercept-url pattern="/business/customerManage/blacklist/updateGeBlackList.do" access="hasAnyRole('ROLE_B_BLIS_U')" />
+		<s:intercept-url pattern="/business/customerManage/blacklist/delete.do" access="hasAnyRole('ROLE_B_BLIS_D')" />
+		<!-- blacklist end -->
+		
+		<!-- logisticsManage start -->
+		<s:intercept-url pattern="/business/businessManage/logisticsManage/search/**" access="hasAnyRole('ROLE_B_WLMA_S')" />
+		<s:intercept-url pattern="/business/businessManage/logisticsManage/bind/logistics.jsp" access="hasAnyRole('ROLE_B_WLMA_M')" />
+		<!-- logisticsManage end -->
+		
+		<!-- personalUser start -->
+		<s:intercept-url pattern="/business/customerManage/personalUser/search/**" access="hasAnyRole('ROLE_B_PUSE_M')" />
+		<s:intercept-url pattern="/business/customerManage/personalUser/update/**" access="hasAnyRole('ROLE_B_PUSE_U')" />
+		<s:intercept-url pattern="/business/customerManage/personalUser/updateGeUserPersonal.do" access="hasAnyRole('ROLE_B_PUSE_U')" />
+		<s:intercept-url pattern="/business/customerManage/personalUser/unbound/**" access="hasAnyRole('ROLE_B_PUSE_B')" />
+		<s:intercept-url pattern="/business/customerManage/personalUser/unBoundPolicy.do" access="hasAnyRole('ROLE_B_PUSE_B')" />
+		<!-- personalUser end -->
+		
+		<!-- party start -->
+		<s:intercept-url pattern="/party/prepareAddThirdParterInfoAndThirdParterContact.do" access="hasAnyRole('ROLE_B_PTPI_I')" />
+		<s:intercept-url pattern="/business/customerManage/party/thirdParterInfo/create/**" access="hasAnyRole('ROLE_B_PTPI_I')" />
+		<s:intercept-url pattern="/party/addThirdParterInfoAndThirdParterContact.do" access="hasAnyRole('ROLE_B_PTPI_I')" />
+		<s:intercept-url pattern="/business/customerManage/party/thirdParterInfo/search/**" access="hasAnyRole('ROLE_B_PTPI_M')" />
+		<s:intercept-url pattern="/business/customerManage/party/thirdParterInfo/update/**" access="hasAnyRole('ROLE_B_PTPI_U')" />
+		<s:intercept-url pattern="/party/updateThirdParterInfoAndThirdParterContact.do" access="hasAnyRole('ROLE_B_PTPI_U')" />
+		
+		<s:intercept-url pattern="/party/deleteThirdParterInfoAndThridParterContact.do" access="hasAnyRole('ROLE_B_PTPI_D')" />
+		<s:intercept-url pattern="/party/prepareAddGeThirdParterService.do" access="hasAnyRole('ROLE_B_PTPI_A','ROLE_B_AAGA')" />
+		<s:intercept-url pattern="/business/customerManage/party/thirdParterService/create/**" access="hasAnyRole('ROLE_B_PTPI_A')" />
+		<s:intercept-url pattern="/party/addGeThirdParterService.do" access="hasAnyRole('ROLE_B_PTPI_A')" />
+		<s:intercept-url pattern="/business/customerManage/party/thirdParterService/search/**" access="hasAnyRole('ROLE_B_PTPI_P')" />
+		
+		<s:intercept-url pattern="/business/customerManage/party/thirdParterService/update/**" access="hasAnyRole('ROLE_B_PTPI_PU')" />
+		<s:intercept-url pattern="/party/updateGeThirdParterService.do" access="hasAnyRole('ROLE_B_PTPI_PU')" />
+		<s:intercept-url pattern="/party/deleteGeThirdPartterService.do" access="hasAnyRole('ROLE_B_PTPI_PD')" />
+		<!-- party end -->
+		
+		<!-- marketingManag start -->
+		<s:intercept-url pattern="/business/cmpProductManage/productDirectory/directory/recommendProduct/**" access="hasAnyRole('ROLE_B_AAGA')" />
+		<s:intercept-url pattern="/marketing/prepareAddGeAddServiceActivity.do" access="hasAnyRole('ROLE_B_AAGA')" />
+		<s:intercept-url pattern="/business/marketingManage/create/**" access="hasAnyRole('ROLE_B_AAGA')" />
+		<s:intercept-url pattern="/marketing/addAddGeAddServiceActivityAndRule.do" access="hasAnyRole('ROLE_B_AAGA')" />
+		<s:intercept-url pattern="/business/marketingManage/search/**" access="hasAnyRole('ROLE_B_AAGA')" />
+		<s:intercept-url pattern="/business/marketingManage/update/**" access="hasAnyRole('ROLE_B_AAGA')" />
+		<s:intercept-url pattern="/marketing/updateAddGeAddServiceActivity.do" access="hasAnyRole('ROLE_B_AAGA')" />
+		<s:intercept-url pattern="/marketing/deleteAddGeAddServiceActivity.do" access="hasAnyRole('ROLE_B_AAGA')" />
+		<!-- marketingManag end -->
+		
+		<!-- thirdParterServiceGiveManage start -->
+		<s:intercept-url pattern="/business/customerManage/party/thirdParterServiceGiveManage/search/index.jsp " access="hasAnyRole('ROLE_B_TPSG_M')" />
+		<s:intercept-url pattern="/party/updateGeThirdParterSerialNumberValidInd.do" access="hasAnyRole('ROLE_B_TPSG_M_Z')" />
+		<!-- thirdParterServiceGiveManage end -->
+		
+		<!-- misAuthorityManage start -->
+		<s:intercept-url pattern="/system/authorityManage/misAuthorityManage/**" access="hasAnyRole('ROLE_S_AUMA_MIS')" />
+		<s:intercept-url pattern="/authorityManage/createMisAuthority.do" access="hasAnyRole('ROLE_S_AUMA_MIS')" />
+		<s:intercept-url pattern="/authorityManage/updatesMisAuthority.do" access="hasAnyRole('ROLE_S_AUMA_MIS')" />
+		<s:intercept-url pattern="/authorityManage/deleteMisAuthority.do" access="hasAnyRole('ROLE_S_AUMA_MIS')" />
+		<!-- misAuthorityManage end -->
+		
+		<!-- onlineUserAuthorityManage start -->
+		<s:intercept-url pattern="/system/authorityManage/onlineUserAuthorityManage/**" access="hasAnyRole('ROLE_S_AUMA_OUSER')" />
+		<s:intercept-url pattern="/authorityManage/createOnlineUserAuthority.do" access="hasAnyRole('ROLE_S_AUMA_OUSER')" />
+		<s:intercept-url pattern="/authorityManage/updatesOnlineUserAuthority.do" access="hasAnyRole('ROLE_S_AUMA_OUSER')" />
+		<s:intercept-url pattern="/authorityManage/deleteOnlineUserAuthority.do" access="hasAnyRole('ROLE_S_AUMA_OUSER')" />
+		<!-- onlineUserAuthorityManage end -->
+		
+		<!-- onlineUserLevelManage start -->
+		<s:intercept-url pattern="/system/authorityManage/onlineUserLevelManage/**" access="hasAnyRole('ROLE_S_AUMA_A')" />
+		<s:intercept-url pattern="/system/authorityManage/onlineUserLevelManage/setAuthority/**" access="hasAnyRole('ROLE_S_AUMA_A_CA')" />
+		<s:intercept-url pattern="/authorityManage/updateLevelAuthoritys.do" access="hasAnyRole('ROLE_S_AUMA_A_CA')" />
+		<s:intercept-url pattern="/authorityManage/searchGePersonalLevel.do" access="hasAnyRole('ROLE_S_AUMA_A')" />
+		<s:intercept-url pattern="/system/frontUserManage/updatesAuthority.do" access="hasAnyRole('ROLE_S_AUMA_A')" />
+		<!-- onlineUserLevelManage end -->
+		
+		<!-- onlineEnterpriseAuthorityManage start -->
+		<s:intercept-url pattern="/system/authorityManage/onlineEnterpriseAuthorityManage/**" access="hasAnyRole('ROLE_S_AUMA_EA')" />
+		<s:intercept-url pattern="/authorityManage/createOnlineEnterpriseAuthority.do" access="hasAnyRole('ROLE_S_AUMA_EA')" />
+		<s:intercept-url pattern="/authorityManage/updatesOnlineEnterpriseAuthority.do" access="hasAnyRole('ROLE_S_AUMA_EA')" />
+		<s:intercept-url pattern="/authorityManage/deleteOnlineEnterpriseAuthority.do" access="hasAnyRole('ROLE_S_AUMA_EA')" />
+		<!-- onlineEnterpriseAuthorityManage end -->
+		
+		<!-- onlineEnterpriseAuthorityManage start -->
+		<s:intercept-url pattern="/system/authorityManage/onlineEnterpriseLevelManage/**" access="hasAnyRole('ROLE_S_AUMA_EAL')" />
+		<s:intercept-url pattern="/authorityManage/updateEnterpriseLevelAuthoritys.do" access="hasAnyRole('ROLE_S_AUMA_EAL')" />
+		<s:intercept-url pattern="/authorityManage/searchEnterpriseGePersonalLevel.do" access="hasAnyRole('ROLE_S_AUMA_EAL')" />
+		<s:intercept-url pattern="/system/frontUserManage/updatesAuthority.do" access="hasAnyRole('ROLE_S_AUMA_EAL')" />
+		<!-- onlineEnterpriseAuthorityManage end -->
+		
+		<!-- discount manage start-->
+		<s:intercept-url pattern="/business/marketingManage/discountManage/update/**" access="hasAnyRole('ROLE_B_DZMA_E')" />
+		<s:intercept-url pattern="/marketing/updateGeDiscountManage.do" access="hasAnyRole('ROLE_B_DZMA_E')" />
+		<s:intercept-url pattern="/marketing/delGeDiscountManage.do" access="hasAnyRole('ROLE_B_DZMA_D')" />
+		<s:intercept-url pattern="/business/marketingManage/discountManage/search/**" access="hasAnyRole('ROLE_B_DZMA_M')" />
+		<!-- discount manage start-->
+		
+		
+		<s:intercept-url pattern="*.do" access="hasAnyRole('ROLE_PERSONALUSER')" />
+		<s:intercept-url pattern="/**" access="hasAnyRole('ROLE_PERSONALUSER')" />
+		<s:custom-filter  position="FORM_LOGIN_FILTER" ref="activeAuthenticationFilter"/>
+		<s:logout logout-success-url="/system/userManage/passport/login/index.jsp" />
+	</s:http>
+	
+	<bean id="activeAuthenticationFilter" class="cn.com.sinosoft.ebusiness.sys.permission.service.spring.ActiveAuthenticationFilter">
+	  <property name="authenticationManager" ref="authenticationManager"/>
+	  <property name="authenticationSuccessHandler" ref="successHandler"></property>
+	  <property name="authenticationFailureHandler" ref="failureHandler"></property>
+	</bean>
+	
+	<bean id="successHandler" class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+ 		<property name="defaultTargetUrl" value="/misLogin/login.do"/>
+ 		<property name="alwaysUseDefaultTargetUrl" value="true" />
+	</bean>
+
+	<bean id="failureHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+ 		<property name="defaultFailureUrl" value="/system/userManage/passport/login/index.jsp?error=yes"/>
+	</bean>
+
+	<s:authentication-manager alias="authenticationManager">
+		<s:authentication-provider user-service-ref="userDetailsService">
+			<s:password-encoder hash="md5"/> 
+		</s:authentication-provider>
+	</s:authentication-manager>
+
+	<bean id="userDetailsService" class="cn.com.sinosoft.ebusiness.sys.permission.service.spring.UserDetailsServiceImpl" />
+	<bean id="md5" class="cn.com.sinosoft.ebusiness.sys.permission.service.spring.MD5CapitalPasswordEncoder"/>
+	
+    <bean id="authenticationProcessingFilterEntryPoint" class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">  
+         <property name="loginFormUrl" value="/system/userManage/passport/login/loginOutTime.jsp"></property>  
+    </bean>  
+</beans>
+	
+	

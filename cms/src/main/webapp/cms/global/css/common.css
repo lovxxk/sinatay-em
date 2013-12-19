@@ -1,0 +1,316 @@
+body{
+	height:100%;
+	margin:0;
+	font-size:12px;
+	text-align:center;
+}
+/*menu样式*/
+.menu_btn_wh{
+	width:132px;
+	height:24px;
+	font-size:13px;
+	color:#b2e2ed;
+	font-weight:bold;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+	vertical-align:middle;
+}
+.bf{
+	background:url(../images/cms_menu_bg.jpg);
+}
+a.menu_btn:link{
+	width:132px;
+	height:24px;
+	font-size:13px;
+	color:#b2e2ed;
+	font-weight:bold;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+	vertical-align:middle;
+	text-decoration:none;
+	background:url(../images/cms_menu_bg.jpg);
+}
+a.menu_btn:visited{
+	font-size:13px;
+	font-weight:bold;
+	color:#b2e2ed;
+	text-decoration:none;
+	background:url(../images/cms_menu_bg.jpg);
+}
+a.menu_btn:active{
+	font-size:13px;
+	font-weight:bold;
+	color:#b2e2ed;
+	text-decoration:none;
+	background:url(../images/cms_menu_bg.jpg);
+}
+a.menu_btn:hover{
+	font-size:13px;
+	color:#deebf3;
+	font-weight:bold;
+	text-decoration:none;
+	background:url(../images/cms_menu_on.jpg);
+}
+
+
+/*leftpanel一级栏目样式*/
+.left_top1{
+	font-size:12px;
+	font-family:宋体;
+	background:url(../images/cms_left_top1_bg.jpg);
+	color:#ffffff;
+}
+/*leftpanel二级栏目样式*/
+.left_top2{
+	font-size:12px;
+	font-family:宋体;
+	padding-left:10px;
+	background:url(../images/cms_left_top2_bg.jpg);
+	color:#b2e2ee;
+}
+/*leftpanel三级栏目样式*/
+.left_top3{
+	font-size:12px;
+	font-family:宋体;
+	background:url(../images/cms_left_top3_bg.jpg);
+	color:#516d94;
+}
+
+
+/*leftpanel背景*/
+.left_bg{
+	background:url(../images/cms_left_bg.jpg);
+	background-repeat:repeat-x;
+}
+
+
+/*按钮样式1*/
+.btnFocus1{
+	background:url(../images/cms_btn_search.jpg);
+    BACKGROUND-REPEAT: no-repeat;
+	font-weight:bold;
+    CURSOR: pointer;
+    WIDTH: 99px;
+    FONT-SIZE: 9pt;
+    HEIGHT: 21px;
+    TEXT-ALIGN: center;
+    PADDING-TOP: 4px;
+}
+/*按钮样式2*/
+.btnFocus2{
+	background:url(../images/cms_btn_clear.jpg);
+    BACKGROUND-REPEAT: no-repeat;    
+	font-weight:bold;
+    CURSOR: pointer;
+    WIDTH: 99px;
+    FONT-SIZE: 9pt;
+    HEIGHT: 21px;
+    TEXT-ALIGN: center;
+    PADDING-TOP: 4px;
+}
+
+
+
+.table_Show{
+	border: 0px solid #29a46d;
+	border-collapse:collapse; 
+/*	background:#d2d2d2;*/
+}
+
+/*表格样式*/
+.td_in1{
+	text-align:center;
+	font-size:12px;
+	font-family:宋体;
+	background:#eaece1;
+	color:#000000;
+	border-left: 1px solid #a1a29c;
+	border-right: 1px solid #a1a29c; 
+	border-top: 1px solid #a1a29c; 
+	border-bottom: 1px solid #a1a29c;
+}
+.td_in2{
+	font-size:12px;
+	font-family:宋体;
+	color:#000000;
+	border-left: 1px solid #a1a29c;
+	border-right: 1px solid #a1a29c; 
+	border-top: 1px solid #a1a29c; 
+	border-bottom: 1px solid #a1a29c;
+}
+.td_in2_center{
+	text-align:center;
+	font-size:12px;
+	font-family:宋体;
+	color:#000000;
+	border-left: 1px solid #a1a29c;
+	border-right: 1px solid #a1a29c; 
+	border-top: 1px solid #a1a29c; 
+	border-bottom: 1px solid #a1a29c;
+}
+.td_in4{
+	font-size:12px;
+	font-family:宋体;
+	color:#000000;
+	border-left: 1px solid #a1a29c;
+	border-right: 1px solid #a1a29c; 
+	border-top: 1px solid #a1a29c; 
+	border-bottom: 1px solid #a1a29c;
+}
+.td_in5{
+	font-size:12px;
+	font-family:宋体;
+	color:#000000;
+	border-left: 0px solid #a1a29c;
+	border-right: 0px solid #a1a29c; 
+	border-top: 1px solid #a1a29c; 
+	border-bottom: 0px solid #a1a29c;
+}
+.td_in6{
+	font-size:12px;
+	font-family:宋体;
+	color:#000000;
+	border-left: 0px solid #a1a29c;
+	border-right: 0px solid #a1a29c; 
+	border-top: 0px solid #a1a29c; 
+	border-bottom: 1px solid #a1a29c;
+}
+
+/*标准字样式*/
+.font_t1{
+	color:#000000;
+	font-size:12px;
+	font-family:宋体;
+}
+/*按钮样式*/
+.btn_1{
+	background:url(../images/cms_btn.gif) no-repeat left top;
+	width:60px; 
+	height:22px; 
+	font-size:12px;
+	font-family:宋体;
+	text-align:center;
+	letter-spacing:5px;
+	cursor:pointer;
+}
+/*输入文本样式*/
+.inp_text{
+	width:140px; 
+	height:22px; 
+	font-size:12px;
+	font-family:宋体;
+}
+/*上传文件样式*/
+.inp_file{
+	width:170px; 
+	height:22px; 
+	font-size:12px;
+	font-family:宋体;
+}
+.input_width1{
+	font-size:12px;
+	width:50px;
+}
+.inp_file_long{
+	width:590px; 
+	height:22px; 
+	font-size:12px;
+	font-family:宋体;
+}
+/*输入文本框样式设置*/
+.inp_user{
+	BORDER-LEFT-STYLE:none;
+	BORDER-RIGHT-STYLE:none;
+	BORDER-TOP-STYLE:none;
+	BORDER-bottom-STYLE:none;
+	width:216px;
+	height:21px;
+	background:url(../images/cms_login_user.jpg) no-repeat left top;
+}
+
+/*输入密码文本框样式设置*/
+.inp_pass{
+	BORDER-LEFT-STYLE:none;
+	BORDER-RIGHT-STYLE:none;
+	BORDER-TOP-STYLE:none;
+	BORDER-bottom-STYLE:none;
+	width:216px;
+	height:21px;
+	background:url(../images/cms_login_pass.jpg) no-repeat left top;
+}
+
+
+/*登陆按钮样式设置*/
+.btn_login{
+	background:url(../images/cms_login_btn_login.gif) no-repeat left top;
+	width:82px; 
+	height:21px; 
+	font-weight:bold;
+	font-size:13px;
+	font-family:宋体;
+	vertical-align:middle;
+	text-align:center;
+	letter-spacing:5px;
+	cursor:pointer;
+}
+/*登陆按钮样式设置*/
+.login_wel{
+	font-size:12px;
+	font-family:Arial;
+	font-weight:bold;
+}
+
+.login_wel2{
+	font-size:12px;
+	font-family:宋体;
+	color:#0a557a;
+}
+.login_tips{
+	font-size:12px;
+	font-family:宋体;+
+	text-decoration: underline;
+	color:#ff4e4e;
+}
+
+/*普通按钮样式设置*/
+.btn_ord{
+	background:url(../images/cms_login_btn_login.gif) no-repeat left top;
+	width:82px; 
+	height:21px; 
+	font-size:12px;
+	font-family:宋体;
+	vertical-align:middle;
+	text-align:center;
+	letter-spacing:5px;
+	cursor:pointer;
+}
+.btn_ord2{
+	background:url(../images/cms_login_btn_login2.gif) no-repeat left top;
+	width:99px; 
+	height:21px; 
+	font-size:12px;
+	font-family:宋体;
+	vertical-align:middle;
+	text-align:left;
+	cursor:pointer;
+	padding-left:20px;
+}
+.btn_ord3{
+	background:url(../images/cms_login_btn_login2.gif) no-repeat left top;
+	width:99px; 
+	height:21px; 
+	font-size:12px;
+	font-family:宋体;
+	vertical-align:middle;
+	text-align:left;
+	cursor:pointer;
+	padding-left:30px;
+}
+.table_border_grey{
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc; 
+	border-top: 1px solid #cccccc; 
+	border-bottom: 1px solid #cccccc;
+}

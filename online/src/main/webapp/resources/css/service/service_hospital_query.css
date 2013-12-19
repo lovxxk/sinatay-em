@@ -1,0 +1,257 @@
+.service_area{
+	background: #fff;
+	height:935px;
+}
+.service_area .title{
+	height:40px;
+	line-height:40px;
+	background: #3f67bf;
+}
+
+.service_area .title p{
+	float:left;
+	color:#fff;
+	font-size:14px;
+	font-weight: bold;
+	padding-left:23px;
+}
+
+.service_area .title .more{
+	float:right;
+	margin-right:15px;
+}
+.service_area .title .more a{
+	color:#fff;
+}
+
+.query_form{
+	padding:30px 0;
+	border-bottom:1px dashed #cccccc;
+	margin-left:50px;
+	margin-right:48px;
+	height:26px;
+}
+
+.query_form input{
+	border:1px solid #c9c9c9;
+	height:19px;
+	line-height:16px;
+	padding:2px;
+	float:left;
+}
+
+.query_form .required{
+	color:#ff0000;
+	margin-right:7px;
+}
+
+.query_form label{
+	color:#333;
+	font-weight:bold;
+	float:left;
+	line-height:26px;
+}
+
+.query_form .province_label{
+	margin-right:8px;
+}
+
+.query_form .name_label{
+	margin-left:32px;
+	margin-right:8px;
+}
+
+.query_form #query_province{
+	width:84px;
+	margin-right:8px;
+}
+
+.query_form #query_city{
+	width:94px;
+}
+.query_form #hospital_name{
+	width:184px;
+}
+
+.query_form .query{
+	float:right;
+	margin:1px 1px 0 0;
+	width:65px;
+	height:20px;
+	background: url(../../image/btn/job_search_btn.png) no-repeat;
+	text-align: center;
+	color:#fff;
+	position: relative;
+}
+
+.hospital_list{
+	padding:30px 0;
+	margin-left:50px;
+	margin-right:48px;
+}
+
+
+
+.hospital_list .hospital{
+	border-bottom:1px solid #d1d1d1;
+	border-right:1px solid #d1d1d1;
+	height:35px;
+	font-size:12px;
+	color:#3c3c3c;
+	text-align: left;
+	text-indent: 15px;
+}
+.hospital_list .hospital.tip{
+	font-weight:bold;
+	text-align: center;
+	text-indent: 0;
+	background: #d1d1d1;
+	height:40px;
+	line-height:40px;
+}
+
+.hospital_list .hospital .content_col{
+	float:left;
+	border-left:1px solid #d1d1d1;
+	height:35px;
+	line-height:35px;
+}
+
+
+.hospital_list .hospital .content_col.num{
+	width:42px;
+	text-align: center;
+	text-indent: 0;
+}
+
+.hospital_list .hospital .content_col.name{
+	width:249px;
+}
+
+.hospital_list .hospital .content_col.address{
+	width:365px;
+}
+
+.hospital_table{
+	width:662px;
+	color:#3c3c3c;
+	font-size:12px;
+    border-collapse:collapse;
+	word-break:break-all;
+	word-wrap:break-word;
+}
+ 
+.hospital_table td{
+	padding:10px 0px 10px 15px;
+	border:1px solid #d1d1d1;
+} 
+.hospital_table .no{
+	padding:0px;
+	text-align: center;
+	width:42px;
+}
+.hospital_table .hosName{
+	width:249px;
+}
+.hospital_table .hosAddr{
+	width:367px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page_index{
+	height:35px;
+	text-align: center;
+	margin-top:60px;
+	margin-bottom:47px;
+}
+.page_index .page{
+	background: #e5e5e5;
+	color:#666666;
+	width:35px;
+	margin-left:2px;
+	margin-right:3px;
+	height:35px;
+	text-align: center;
+	line-height:35px;
+	display:inline-block;
+	
+	*zoom:1;
+	*display:inline;
+}
+
+.page_index .page a{
+	color:#666666;
+	display: block;
+	height:35px;
+}
+.page_index .page:hover{
+	background: #3f67bf;
+}
+
+.page_index .page:hover a{
+	color:#ffffff;
+}
+
+.page_index .page.now{
+	background: #3f67bf;
+}
+
+.page_index .page.now a{
+	color:#ffffff;
+}
+
+.page_index .next_page,.page_index .prev_page{
+	width:45px;
+}
+
+.page_index .next_page a,.page_index .prev_page a{
+	width:100%;
+	height:100%;
+	background: url(../../image/user/member/page.png) center no-repeat;
+}
+
+.page_index .next_page a{
+	background-position: -45px 0;
+}
+
+.page_index .prev_page a{
+	background-position: 0 0;
+}
+
+.page_index .next_page a:hover{
+	background-position: -45px -35px;
+}
+
+.page_index .prev_page a:hover{
+	background-position: 0 -35px;
+}
+
+.click_btn{
+	cursor: pointer;
+}
+
+.service_area .tips{
+	padding:10px 0;
+	border-bottom:1px dashed #cccccc;
+	margin-left:50px;
+	margin-right:48px;
+	padding-right:10px;
+	color:#3c3c3c;
+}

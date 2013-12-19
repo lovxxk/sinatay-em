@@ -1,0 +1,11 @@
+body{padding:0px; margin:0px; font-size:12px; background-color:#FFFFFF; font-family:Arial;}
+div{padding:0px; margin:0px;}
+ul,li{padding:0px; margin:0px; list-style-type:none;}
+
+.stpess_navigation{width:810px; height:60px; clear:both; margin:0px auto;}
+.stpli_a,.stpli_b{float:left; width:150px; height:30px;}
+.stpli_a{background:url(../images/stpess_pic1.jpg) no-repeat;}
+.stpli_b{background:url(../images/stpess_pic2.jpg) no-repeat;}
+.stpli_spanleft{float:left; color:#ffffff; font-weight:bold; font-size:22px; width:28px; text-align:center; line-height:28px; font-family:"ËÎÌו";}
+.stpli_spanright1,.stpli_spanright2{float:left; color:#4d4d4d; font-weight:bold; font-size:14px; padding-left:18px; line-height:28px;}
+.stpli_spanright2{letter-spacing:16px;}

@@ -1,0 +1,52 @@
+body{
+	background: #f0f8fb;
+}
+
+.main_404{
+	background: url(../../image/error/404_bg.jpg) no-repeat top;
+	height:1000px;
+	position:relative;
+}
+.warning_bg{
+	width:100%;
+	height:370px;
+	background: url(../../image/error/404_warning.png) no-repeat  center 250px;
+	position:absolute;
+	z-index:1;
+	top:0;
+}
+.sorry{
+	height:350px;
+	border-bottom:1px #aae1ff solid; 
+	width:830px;
+	margin:0 auto;
+}
+.note_info{
+	border-top:1px #fff solid; 
+	width:625px;
+	margin:0 auto;
+	padding-left:205px;
+	padding-top:45px;
+	color:#999999;
+}
+
+.note_info .en{
+	font-size:29px;
+	margin-bottom:22px;
+	font-family:'Calibri';
+}
+.note_info .cn{
+	margin-bottom:36px;
+}
+
+.note_info .link{
+	margin-bottom:12px;
+}
+
+.note_info .link a{
+	color:#999;
+}
+
+.note_info .link a:hover{
+	color:#0066cc;
+}

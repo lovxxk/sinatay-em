@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="business.customerManage.blacklist" extends="footTraceInterceptor" namespace="/business/customerManage/blacklist">
+		<action name="frmCreate" class="geBlackListAction" method="frmCreate">
+			<result name="success">
+				/business/customerManage/blacklist/create/frmCreate.jsp
+			</result>
+		</action>
+		<action name="frmSearch" class="geBlackListAction" method="frmSearch">
+			<result name="success">
+				/business/customerManage/blacklist/search/frmSearch.jsp
+			</result>
+		</action>
+		<action name="queryBlackListByDisPage" class="geBlackListAction" method="queryBlackListByDisPage">
+			<result name="success">
+				/business/customerManage/blacklist/search/search.jsp
+			</result>
+		</action>
+		<action name="delete" class="geBlackListAction" method="deleteGeBlackList">
+			<result name="success">
+				/global/inc/tipInfo.jsp
+			</result>
+		</action>
+		<action name="queryGeBlackListForShow" class="geBlackListAction" method="queryGeBlackListForShow">
+			<result name="success">
+				/business/customerManage/blacklist/show/index.jsp
+			</result>
+		</action>
+		<action name="queryGeBlackListForUpdate" class="geBlackListAction" method="queryGeBlackListForUpdate">
+			<result name="success">
+				/business/customerManage/blacklist/update/index.jsp
+			</result>
+		</action>
+		<action name="updateGeBlackList" class="geBlackListAction" method="updateGeBlackList">
+			<result name="success">
+				/global/inc/tipInfo.jsp?type=update
+			</result>
+		</action>
+		<action name="addGeBlackList" class="geBlackListAction" method="addGeBlackList">
+			<result name="success">
+				/global/inc/tipInfo.jsp?type=create
+			</result>
+		</action>
+	</package>
+</struts>

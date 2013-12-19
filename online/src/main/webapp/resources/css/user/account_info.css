@@ -1,0 +1,177 @@
+.right_content .title{
+	height:35px;
+	background: #e6e6e6;
+	line-height:35px;
+}
+.right_content .title .block{
+	width:4px;
+	height:35px;
+	float:left;
+	background: #3f67bf;
+	margin-right:18px;
+}
+
+.right_content .title p{
+	float:left;
+	color:#333;
+	font-size:14px;
+	font-weight: bold;
+}
+
+.right_content .title .more{
+	float:right;
+	margin-right:15px;
+}
+.right_content .title .more a{
+	color:#999999;
+}
+
+.base_info{
+	margin:27px 0 50px;
+	padding-left:95px;
+}
+
+.base_info p{
+	height:36px;
+	line-height:36px;
+	color:#333;
+}
+
+.base_info p .info{
+	float:left;
+	width:288px;
+}
+
+.base_info p .info .label{
+	float:left;
+	width:60px;
+}
+
+.base_info p a{
+	color:#0066cc;
+	font-weight:bold;
+}
+.base_info p a:hover{
+	text-decoration: underline;
+}
+
+.security{
+	padding:0 20px;
+	margin-top:23px;
+	margin-bottom:167px;
+}
+.security .security_item{
+	height:80px;
+	border-bottom:1px dashed #cccccc;
+}
+
+.security .security_item .status{
+	float:left;
+	width:100px;
+	text-align: center;
+}
+
+.security .security_item.password .status{
+	line-height:80px;
+}
+
+.security .security_item.password .status.mid .intensity{
+	font-weight:bold;
+	color:#ff3333;
+}
+
+.security .security_item.password .status.low .intensity{
+	font-weight:bold;
+	color:#aaaaaa;
+}
+
+.security .security_item.password .status.high .intensity{
+	font-weight:bold;
+	color:#22ff33;
+}
+
+.security .security_item.identity .status,.security .security_item.cellphone .status{
+	height:28px;
+	padding-top:52px;
+}
+
+.security .security_item.identity .status.finished{
+	background: url(../../image/user/member/ok.png) center 15px  no-repeat;
+}
+
+.security .security_item.identity .status.unfinish{
+	background: url(../../image/user/member/warning.png) center 15px no-repeat;
+}
+
+.security .security_item.cellphone .status.bind{
+	background: url(../../image/user/member/ok.png) center 15px no-repeat;
+}
+.security .security_item.cellphone .status.unbind{
+	background: url(../../image/user/member/warning.png) center 15px no-repeat;
+}
+
+.security .security_item .name{
+	line-height:80px;
+	float:left;
+	text-align: center;
+	width:140px;
+	font-weight:bold;
+	color:#333;
+}
+.security .security_item .description{
+	float:left;
+	color:#3c3c3c;
+	width:410px;
+	height:58px;
+	padding:20px 15px 0;
+	line-height:20px;
+}
+.security .security_item .operation{
+	width:80px;
+	line-height:80px;
+	float:left;
+	text-align: center;
+}
+.security .security_item .operation a{
+	color:#0066cc;
+	font-weight:bold;
+}
+
+.security .security_item .operation a:hover{
+	text-decoration: underline;
+}
+
+.product_list{
+	margin-top:22px;
+	overflow: hidden;
+	padding:0 2px;
+	margin-bottom:60px;
+}
+
+.product_list .product{
+	float:left;
+	width:240px;
+	height:120px;
+	background: #e6e6e6;
+	margin:0 13px;
+}
+
+
+.alert_subscribe{
+	text-align: left;
+}
+
+.alert_subscribe .success{
+	width:100px;
+	float:left;
+	height:100px;
+	background: url(../../image/user/member/ok.png) no-repeat center; 
+}
+
+.alert_subscribe .main_content{
+	padding-top:20px;
+	font-size:16px;
+	line-height:60px;
+	margin-left:100px;
+	height:100px;
+}

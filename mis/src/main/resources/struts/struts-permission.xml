@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 默认 -->
+	<package name="default" namespace="/" extends="footTraceInterceptor" >
+		<action name="importData" class="importDataAction" method="importProcess">
+			<result name="success">/system/authorityManage/index.jsp</result>
+		</action>
+		<action name="userImportData" class="importDataAction" method="userImportProcess" />
+	</package>
+
+	<!--权限管理 -->
+	<package name="authorityManage" namespace="/authorityManage" extends="footTraceInterceptor" >
+		<!-- mis -->
+		<action name="validateLogin" class="geAuthorityAction" method="validateLogin" />
+		<action name="findMisAuthorityInfo" class="geAuthorityAction" method="findMisAuthorityInfo">
+			<result name="success">
+				/system/authorityManage/misAuthorityManage/select/select.jsp
+			</result>
+		</action>
+		<action name="findRoleByAuth" class="geAuthorityAction" method="findRoleByAuth">
+		</action>
+		<action name="frmCreateMisAuthority" class="geAuthorityAction" method="frmCreateMisAuthority">
+			<result name="success">
+				/system/authorityManage/misAuthorityManage/create/frmCreate.jsp
+			</result>
+		</action>
+		<action name="createMisAuthority" class="geAuthorityAction" method="createMisAuthority">
+			<result name="success">
+				/system/authorityManage/misAuthorityManage/create/createInfo.jsp
+			</result>
+		</action>
+		<action name="findMisAuthorityForUpdate" class="geAuthorityAction" method="findMisAuthorityForUpdate">
+			<result name="success">
+				/system/authorityManage/misAuthorityManage/update/frmUpdate.jsp
+			</result>
+		</action>
+		<action name="updatesMisAuthority" class="geAuthorityAction" method="updatesMisAuthority">
+			<result name="success">
+				/system/authorityManage/misAuthorityManage/update/updateInfo.jsp
+			</result>
+		</action>
+		<action name="deleteMisAuthority" class="geAuthorityAction" method="deleteMisAuthority">
+			<result name="success">
+				/system/authorityManage/misAuthorityManage/delete/deleteInfo.jsp
+			</result>
+		</action>
+		<action name="findMisAuthorityTreeForManager" class="geAuthorityAction" method="findMisAuthorityTree"></action>
+		<action name="findLeftMenu" class="geAuthorityAction" method="findLeftMenu"></action>
+		
+		<!-- user -->
+		<action name="findOnlineUserAuthorityInfo" class="geUserAuthorityAction" method="findOnlineUserAuthorityInfo">
+			<result name="success">
+				/system/authorityManage/onlineUserAuthorityManage/select/select.jsp
+			</result>
+		</action>
+		<action name="frmCreateOnlineUserAuthority" class="geUserAuthorityAction" method="frmCreateOnlineUserAuthority">
+			<result name="success">
+				/system/authorityManage/onlineUserAuthorityManage/create/frmCreate.jsp
+			</result>
+		</action>
+		<action name="createOnlineUserAuthority" class="geUserAuthorityAction" method="createOnlineUserAuthority">
+			<result name="success">
+				/system/authorityManage/onlineUserAuthorityManage/create/createInfo.jsp
+			</result>
+		</action>
+		<action name="findOnlineUserAuthorityForUpdate" class="geUserAuthorityAction" method="findOnlineUserAuthorityForUpdate">
+			<result name="success">
+				/system/authorityManage/onlineUserAuthorityManage/update/frmUpdate.jsp
+			</result>
+		</action>
+		<action name="updatesOnlineUserAuthority" class="geUserAuthorityAction" method="updatesOnlineUserAuthority">
+			<result name="success">
+				/system/authorityManage/onlineUserAuthorityManage/update/updateInfo.jsp
+			</result>
+		</action>
+		<action name="deleteOnlineUserAuthority" class="geUserAuthorityAction" method="deleteOnlineUserAuthority">
+			<result name="success">
+				/system/authorityManage/onlineUserAuthorityManage/delete/deleteInfo.jsp
+			</result>
+		</action>
+		<action name="findOnlineUserAuthorityTreeForManager" class="geUserAuthorityAction" method="findOnlineUserAuthorityTreeUnChecked">
+			<result name="success">
+				/system/authorityManage/onlineUserAuthorityManage/onlineUserAuthorityManageTree.jsp
+			</result>
+		</action>
+		<action name="searchGePersonalLevel" class="geUserAuthorityAction" method="searchGePersonalLevel">
+			<result name="success">
+				/system/authorityManage/onlineUserLevelManage/search.jsp
+			</result>
+		</action>
+		<action name="findTreeData" class="geUserAuthorityAction" method="findTreeData"></action>
+		<action name="updateLevelAuthoritys" class="geUserAuthorityAction" method="updateLevelAuthoritys">
+			<result name="success">
+				/system/authorityManage/onlineUserLevelManage/setAuthority/updateInfo.jsp
+			</result>
+		</action>
+		
+		<!-- enterprise -->
+		<action name="findOnlineEnterpriseAuthorityInfo" class="geEnterpriseAuthorityAction" method="findOnlineEnterpriseAuthorityInfo">
+			<result name="success">
+				/system/authorityManage/onlineEnterpriseAuthorityManage/select/select.jsp
+			</result>
+		</action>
+		<action name="frmCreateOnlineEnterpriseAuthority" class="geEnterpriseAuthorityAction" method="frmCreateOnlineEnterpriseAuthority">
+			<result name="success">
+				/system/authorityManage/onlineEnterpriseAuthorityManage/create/frmCreate.jsp
+			</result>
+		</action>
+		<action name="createOnlineEnterpriseAuthority" class="geEnterpriseAuthorityAction" method="createOnlineEnterpriseAuthority">
+			<result name="success">
+				/system/authorityManage/onlineEnterpriseAuthorityManage/create/createInfo.jsp
+			</result>
+		</action>
+		<action name="findOnlineEnterpriseAuthorityForUpdate" class="geEnterpriseAuthorityAction" method="findOnlineEnterpriseAuthorityForUpdate">
+			<result name="success">
+				/system/authorityManage/onlineEnterpriseAuthorityManage/update/frmUpdate.jsp
+			</result>
+		</action>
+		<action name="updatesOnlineEnterpriseAuthority" class="geEnterpriseAuthorityAction" method="updatesOnlineEnterpriseAuthority">
+			<result name="success">
+				/system/authorityManage/onlineEnterpriseAuthorityManage/update/updateInfo.jsp
+			</result>
+		</action>
+		<action name="deleteOnlineEnterpriseAuthority" class="geEnterpriseAuthorityAction" method="deleteOnlineEnterpriseAuthority">
+			<result name="success">
+				/system/authorityManage/onlineEnterpriseAuthorityManage/delete/deleteInfo.jsp
+			</result>
+		</action>
+		
+		<action name="findOnlineEnterpriseAuthorityTreeForManager" class="geEnterpriseAuthorityAction" method="findOnlineEnterpriseAuthorityTreeUnChecked">
+			<result name="success">
+				/system/authorityManage/onlineEnterpriseAuthorityManage/onlineEnterpriseAuthorityManageTree.jsp
+			</result>
+		</action>
+		
+		<action name="searchEnterpriseGePersonalLevel" class="geEnterpriseAuthorityAction" method="searchGePersonalLevel">
+			<result name="success">
+				/system/authorityManage/onlineEnterpriseLevelManage/search.jsp
+			</result>
+		</action>
+		<action name="findEnterpriseTreeData" class="geEnterpriseAuthorityAction" method="findTreeData"></action>
+		<action name="updateEnterpriseLevelAuthoritys" class="geEnterpriseAuthorityAction" method="updateLevelAuthoritys">
+			<result name="success">
+				/system/authorityManage/onlineEnterpriseLevelManage/setAuthority/updateInfo.jsp
+			</result>
+		</action>
+	</package>
+	
+	<!-- 用户组管理 -->
+	<package name="groupManage" namespace="/system/groupManage" extends="footTraceInterceptor">
+		<action name="createGeGroup" class="groupAction" method="createGeGroup">
+			<result name="success">/global/inc/alertInfo.jsp?type=create</result>
+		</action>
+		<action name="queryGeGroupByDisPage" class="groupAction"
+			method="queryGeGroupByDisPage">
+			<result name="success">/system/groupManage/group/search/search.jsp</result>
+		</action>
+		<action name="queryGeGroupForUpdate" class="groupAction"
+			method="queryGeGroupForUpdate">
+			<result name="success">/system/groupManage/group/update/index.jsp</result>
+		</action>
+		<action name="queryGeGroupDetail" class="groupAction"
+			method="queryGeGroupDetail">
+			<result name="success">/system/groupManage/group/detail/detail.jsp</result>
+		</action>
+		<action name="userByGroup" class="groupAction" method="userByGroup">
+		</action>
+		<action name="roleByGroup" class="groupAction" method="roleByGroup">
+		</action>
+
+		<action name="update" class="groupAction" method="updateGeGroup">
+			<result name="success">/global/inc/alertInfo.jsp?type=update</result>
+		</action>
+		<action name="delete" class="groupAction" method="deleteGeGroup">
+			<result name="success">/global/inc/alertInfo.jsp?type=delete</result>
+		</action>
+		<action name="queryGeGroupOperatorsForUpdate" class="groupAction" method="queryGeGroupOperatorsForUpdate">
+			<result name="success">/system/groupManage/group/userSet/index.jsp</result>
+		</action>
+		<action name="queryGeGroupDeptOperators" class="groupAction" method="queryGeGroupDeptOperators">
+			<result name="success">/system/groupManage/group/userSet/index.jsp</result>
+		</action>
+		<action name="updateGeGroupOperators" class="groupAction" method="updateGeGroupOperators">
+			<result name="success">/system/groupManage/group/userSet/index.jsp</result>
+		</action>
+		<action name="queryGeGroupAuthorityForUpdate" class="groupAction" method="queryGeGroupAuthorityForUpdate">
+			<result>/system/groupManage/group/authoritySet/index.jsp</result>
+		</action>
+		<action name="updateGroupRoleDept" class="groupAction" method="updateGroupRoleDept">
+			<result name="success">/system/groupManage/group/authoritySet/index.jsp</result>
+		</action>
+		
+		<action name="getAllRolesByDept" class="groupAction" method="getAllRolesByDept">
+			<result name="success">/system/groupManage/group/create/frmCreate.jsp</result>
+		</action>
+		
+		<action name="deleteGroupRole" class="groupAction" method="deleteGroupRole">
+			<result name="success">/system/groupManage/group/authoritySet/index.jsp</result>
+		</action>
+		<action name="groupDeptAuthDetailTree" class="groupAction" method="groupDeptAuthDetailTree">
+		</action>
+		<action name="operatorSetDeptAuthTree" class="groupAction" method="operatorSetDeptAuthTree">
+		</action>
+		<action name="authoritySetDeptAuthTree" class="groupAction" method="authoritySetDeptAuthTree">
+		</action>
+		<action name="createType" class="groupAction" method="createType">
+			<result name="success">/global/inc/alertInfo.jsp?type=create</result>
+		</action>
+		<action name="queryGeGroupTypeByDisPage" class="groupAction"
+			method="queryGeGroupTypeByDisPage">
+			<result name="success">/system/groupManage/groupTypeManage/search/search.jsp</result>
+		</action>
+		<action name="queryGeGroupTypeForUpdate" class="groupAction"
+			method="queryGeGroupTypeForUpdate">
+			<result name="success">/system/groupManage/groupTypeManage/update/index.jsp</result>
+		</action>
+		<action name="queryTypeDetail" class="groupAction"
+			method="queryGeGroupTypeForUpdate">
+			<result name="success">/system/groupManage/groupTypeManage/detail/detail.jsp</result>
+		</action>
+		<action name="updateType" class="groupAction" method="updateType">
+			<result name="success">/global/inc/alertInfo.jsp?type=update</result>
+		</action>
+		<action name="preCreate" class="groupAction" method="preCreate">
+			<result name="success">/system/groupManage/group/create/frmCreate.jsp</result>
+		</action>
+		<action name="preSearch" class="groupAction" method="preSearch">
+			<result name="success">/system/groupManage/group/search/frmSearch.jsp</result>
+		</action>
+		<action name="deleteType" class="groupAction" method="deleteType">
+			<result name="success">/global/inc/alertInfo.jsp?type=delete</result>
+		</action>
+		<action name="deleteUserFromGroup" class="groupAction" method="deleteUserFromGroup"></action>
+		<action name="geGroupById" class="groupAction" method="geGroupById"></action>
+	</package>
+
+	<!-- 用户管理 -->
+	<package name="userManage" namespace="/system/userManage" extends="footTraceInterceptor">
+		<action name="preCreate" class="geOperatorAction" method="preCreate">
+			<result name="success">/system/userManage/user/create/frmCreate.jsp</result>
+		</action>
+		<action name="create" class="geOperatorAction" method="createGeOperator">
+			<result name="success">/global/inc/tipInfo.jsp?type=create</result>
+			<result name="successToGroup">/system/userManage/user/create/successToGroup.jsp</result>
+		</action>
+		<action name="toAddUserToGroup" class="geOperatorAction" method="toAddUserToGroup">
+			<result name="success">/system/userManage/user/create/frmCreate.jsp</result>
+		</action>
+		<action name="queryGeGroupForUser" class="geOperatorAction" method="queryGeGroupForUser">
+			<result name="success">/system/userManage/user/detail/editGroup.jsp</result>
+		</action>
+	  	<action name="createResult" class="geOperatorAction" method="createResult">
+			<result name="success">/global/inc/tipInfo.jsp?type=create</result>
+		</action>
+		<action name="updateGroupForUser" class="geOperatorAction" method="updateGroupForUser">
+		</action>
+		<action name="addUserToGroup" class="geOperatorAction" method="addUserToGroup"></action>
+		<action name="queryGroups" class="geOperatorAction" method="queryGroups"></action>
+		<action name="queryGeOperatorForUpdate" class="geOperatorAction" method="queryGeOperatorForUpdate">
+			<result name="success">/system/userManage/user/update/index.jsp</result>
+		</action>
+		<action name="queryGeOperatorForDetail" class="geOperatorAction" method="queryGeOperatorForDetail">
+			<result name="success">/system/userManage/user/detail/detail.jsp</result>
+		</action>
+		<action name="findGroupByAuth" class="geOperatorAction" method="findGroupByAuth">
+		</action>
+		<action name="queryContainUserGroups" class="geOperatorAction" method="queryContainUserGroups">
+		</action>
+		<action name="updateGeOperator" class="geOperatorAction" method="updateGeOperator">
+			<result name="success">/global/inc/tipInfo.jsp?type=update</result>
+		</action>
+		<action name="queryGeOperatorByDisPage" class="geOperatorAction" method="queryGeOperatorByDisPage">
+			<result name="success">/system/userManage/user/search/search.jsp</result>
+		</action>
+		<action name="deleteGeOperator" class="geOperatorAction" method="deleteGeOperator">
+			<result name="success">/global/inc/tipInfo.jsp?type=delete</result>
+		</action>
+		<action name="updatePassword" class="geOperatorAction" method="updatePassword">
+			<result name="success">/global/inc/tipInfo.jsp?type=create</result>
+		</action>
+		<!-- 权限树 -->
+		<action name="geUserDept" class="geOperatorAction" method="geUserDept">
+			<result name="success">/system/departmentManage/departmentAuthorityQuery/authDeptQueryForUser.jsp</result>
+		</action>
+		<action name="operatorManageDeptTree" class="geOperatorAction" method="operatorManageDeptTree" />
+		
+		<action name="updateOpPassword" class="geOperatorAction" method="updateOpPassword" />
+		<action name="getOperatorbyId" class="geOperatorAction" method="getOperatorbyId" />
+		
+	</package>
+	
+	<!-- 角色管理 -->
+	<package name="roleManage" namespace="/system/roleManage"
+		extends="footTraceInterceptor">
+		<action name="createGeRole" class="geRoleAction" method="createGeRole">
+			<result name="success">/global/inc/alertInfo.jsp?type=create</result>
+		</action>
+		<action name="queryGeRoleForUpdate" class="geRoleAction"
+			method="queryGeRoleForUpdate">
+			<result name="success">/system/roleManage/role/update/index.jsp</result>
+		</action>
+		<action name="updateGeRole" class="geRoleAction" method="updateGeRole">
+			<result name="success">/global/inc/alertInfo.jsp?type=update</result>
+		</action>
+		<action name="queryGeRoleByDisPage" class="geRoleAction"
+			method="queryGeRoleByDisPage">
+			<result name="success">/system/roleManage/role/search/search.jsp</result>
+		</action>
+		<action name="deleteGeRole" class="geRoleAction" method="deleteGeRole">
+			<result name="success">/global/inc/alertInfo.jsp?type=delete</result>
+		</action>
+		<action name="detail" class="geRoleAction" method="detail">
+			<result>/system/roleManage/role/detail/detail.jsp</result>
+		</action>
+		<action name="findGroupByAuth" class="geRoleAction" method="findGroupByAuth"></action>
+		<action name="findRoleAuthority" class="geRoleAction" method="findRoleAuthority"></action>
+		<action name="findRoleAuthorityDetail" class="geRoleAction" method="findRoleAuthorityDetail"></action>
+		<action name="getRolebyId" class="geRoleAction" method="getRolebyId"></action>
+	</package>
+	
+	<!-- 机构管理 -->
+	<package name="departmentManage" namespace="/departmentManage" extends="footTraceInterceptor">
+		<action name="findGeDepartmentInfo" class="geDepartmentAction" method="findGeDepartmentInfo">
+			<result name="success">
+				/system/departmentManage/select/select.jsp
+			</result>
+		</action>
+		<action name="frmCreateGeDepartment" class="geDepartmentAction" method="frmCreateGeDepartment">
+			<result name="success">
+				/system/departmentManage/create/frmCreate.jsp
+			</result>
+		</action>
+		<action name="createGeDepartment" class="geDepartmentAction" method="createGeDepartment">
+			<result name="success">
+				/system/departmentManage/create/createInfo.jsp
+			</result>
+		</action>
+		<action name="findGeDepartmentForUpdate" class="geDepartmentAction" method="findGeDepartmentForUpdate">
+			<result name="success">
+				/system/departmentManage/update/frmUpdate.jsp
+			</result>
+		</action>
+		<action name="updatesGeDepartment" class="geDepartmentAction" method="updatesGeDepartment">
+			<result name="success">
+				/system/departmentManage/update/updateInfo.jsp
+			</result>
+		</action>
+		<action name="deleteGeDepartment" class="geDepartmentAction" method="deleteGeDepartment">
+			<result name="success">
+				/system/departmentManage/delete/deleteInfo.jsp
+			</result>
+		</action>
+		
+		<action name="findGeDepartmentTreeForManager" class="geDepartmentAction" method="findGeDepartmentTreeUnChecked">
+			<result name="success">
+				/system/departmentManage/departmentManageTree.jsp
+			</result>
+		</action>
+		<action name="getGeDepartmentAuthorityQueryTree" class="geDepartmentAction" method="findGeDepartmentTreeWithChecked">
+			<result name="success">
+				/system/departmentManage/departmentAuthorityQuery/index.jsp
+			</result>
+		</action>
+		<action name="findGeDepartmentTreeForGroupRoleDep" class="geDepartmentAction" method="findGeDepartmentTreeForGroupRoleDep">
+			<result name="success">
+				/system/userManage/user/create/userManageComTree.jsp
+			</result>
+		</action>
+		<action name="getBussAreas" class="geDepartmentAction" method="getBussAreas">
+		</action>
+		<action name="findDeptmentTree" class="geDepartmentAction" method="findDeptmentTree"></action>
+	</package>
+	
+	<!-- 区域管理 -->
+	<package name="areaAction" namespace="/areaAction" extends="footTraceInterceptor">
+			<action name="findMisAreaTreeForManager" class="geAreaAction" method="findMisAreaTreeForManager">
+			<result name="success">
+				/system/areaManage/misAreaManageTree.jsp
+			</result>
+		</action>
+		<action name="findGeAreaActionTree" class="geAreaAction" method="findGeAreaActionTree">
+			<result name="success">
+				/system/departmentManage/create/areaManageTree.jsp
+			</result>
+		</action>
+		<action name="findAreaManage" class="geAreaAction" method="findAreaManage">
+			<result name="success">
+				/system/areaManage/select/select.jsp
+			</result>
+		</action>
+		<action name="frmCreateGeArea" class="geAreaAction" method="findAreaManage">
+			<result name="success">
+				/system/areaManage/create/frmCreate.jsp
+			</result>
+		</action>
+		<action name="createArea" class="geAreaAction" method="createArea">
+			<result name="success">
+				/system/areaManage/create/createInfo.jsp
+			</result>
+		</action>
+		<action name="findGeAreaForUpdate" class="geAreaAction" method="findAreaManage">
+			<result name="success">
+				/system/areaManage/update/frmUpdate.jsp
+			</result>
+		</action>
+		<action name="updatesGeArea" class="geAreaAction" method="updatesGeArea">
+			<result name="success">
+				/system/areaManage/update/updateInfo.jsp
+			</result>
+		</action>
+		<action name="deleteGeArea" class="geAreaAction" method="deleteGeArea">
+			<result name="success">
+				/system/areaManage/delete/deleteInfo.jsp
+			</result>
+		</action>
+	
+	</package>
+	
+	<!-- 机构属性管理 -->
+	<package name="deptInfo" namespace="/system/deptInfoManage"
+		extends="footTraceInterceptor">
+		<action name="createDeptInfo" class="geDeptInfoAction" method="createDeptInfo">
+			<result name="success">/global/inc/tipInfo.jsp?type=create</result>
+		</action>
+		<action name="queryDeptInfoForUpdate" class="geDeptInfoAction"
+			method="detail">
+			<result name="success">/system/deptInfoManage/update/index.jsp</result>
+		</action>
+		<action name="updateDeptInfo" class="geDeptInfoAction" method="updateDeptInfo">
+			<result name="success">/global/inc/alertInfo.jsp?type=update</result>
+		</action>
+		<action name="queryDeptInfoByDisPage" class="geDeptInfoAction"
+			method="queryDeptInfoByDisPage">
+			<result name="success">/system/deptInfoManage/search/search.jsp</result>
+		</action>
+		<action name="queryDepAttByDisPage" class="geDeptInfoAction"
+			method="queryDeptInfoByDisPage">
+			<result name="success">/system/departmentManage/deptAttribute/deptInfo/search.jsp</result>
+		</action>
+		<action name="deleteDeptInfo" class="geDeptInfoAction" method="deleteDeptInfo">
+			<result name="success">/global/inc/tipInfo.jsp?type=delete</result>
+		</action>
+		<action name="detail" class="geDeptInfoAction" method="detail">
+			<result>/system/deptInfoManage/detail/detail.jsp</result>
+		</action>
+		<action name="findDeptInfoById" class="geDeptInfoAction" method="findDeptInfoById">
+		</action>
+	</package>
+	<!-- 机构关联 -->
+	<package name="deptAttribute" namespace="/system/deptAttribute"
+		extends="footTraceInterceptor">
+		<action name="createDeptAttribute" class="geDeptAttributeAction" method="createDeptAttribute">
+			<result>/system/departmentManage/deptAttribute/create/createInfo.jsp</result>
+		</action>
+		<action name="queryDeptAttributeByDisPage" class="geDeptAttributeAction"
+			method="queryDeptAttributeByDisPage">
+			<result name="success">/system/departmentManage/deptAttribute/search/search.jsp</result>
+		</action>
+		<action name="findDeptAttributeForDetail" class="geDeptAttributeAction" method="findDeptAttributeForDetail">
+			<result name="success">
+				/system/departmentManage/deptAttribute/detail/detail.jsp
+			</result>
+		</action>
+		<action name="findDeptAttributeForUpdate" class="geDeptAttributeAction" method="findDeptAttributeForDetail">
+			<result name="success">
+				/system/departmentManage/deptAttribute/update/frmUpdate.jsp
+			</result>
+		</action>
+		<action name="updateDeptAttribute" class="geDeptAttributeAction" method="updateDeptAttribute">
+			<result name="success">
+				/system/departmentManage/deptAttribute/update/updateInfo.jsp
+			</result>
+		</action>
+		<action name="deleteDeptAttribute" class="geDeptAttributeAction" method="deleteDeptAttribute">
+			<result name="success">
+				/system/departmentManage/deptAttribute/detele/deleteInfo.jsp
+			</result>
+		</action>
+	</package>
+	<!-- 机构权限查询条件 -->
+	<package name="deptAuthority" namespace="/deptAuthority" extends="footTraceInterceptor">
+		<action name="DeptAuthIdQuery" class="deptAuthIdQueryAction" method="selectDeptAuthId">
+			<result name="success">/system/departmentManage/departmentAuthorityQuery/authDeptQuery.jsp</result>
+		</action>
+		
+		<action name="selectDeptAuthIdForMailConfig" class="deptAuthIdQueryAction" method="selectDeptAuthIdForMailConfig">
+			<result name="success">/system/departmentManage/departmentAuthorityQuery/authDeptQueryForMailConfig.jsp</result>
+		</action>
+		
+		<action name="findQueryDeptAuthTree" class="deptAuthIdQueryAction" method="findQueryDeptAuthId">
+			<result name="success">/system/departmentManage/departmentAuthorityQuery/authDeptQuery.jsp</result>
+		</action>
+		<action name="findAuthority" class="deptAuthIdQueryAction" method="findAuthority">
+		</action>
+	</package>
+
+	<!--<package name="configManage" namespace="/system/configManage"
+		extends="struts-default">
+		<action name="showTree" class="geDepartmentAction" method="getGeDepartmentTree">
+			<result>/system/configManage/dept/frmCreate.jsp</result>
+		</action>
+		<action name="setDept" class="geDepartmentAction" method="getGeDepartmentTreeCheckBox">
+			<result>/system/configManage/dept/deptQuery/index.jsp</result>
+		</action>
+	</package>
+	-->
+	<!-- 后台登陆 -->
+	<package name="misLogin" extends="footTraceInterceptor" namespace="/misLogin">
+		<action name="login" class="loginAction" method="login">
+			<result name="success">/system/userManage/passport/loginSuccess.jsp</result>
+		</action>
+		<action name="checkAjax" class="loginAction" method="checkAjax" />
+	</package>
+</struts>
+	

@@ -1,0 +1,112 @@
+.right_content .title{
+	height:35px;
+	background: #e6e6e6;
+	line-height:35px;
+}
+.right_content .title .block{
+	width:4px;
+	height:35px;
+	float:left;
+	background: #3f67bf;
+	margin-right:18px;
+}
+
+.right_content .title p{
+	float:left;
+	color:#333;
+	font-size:14px;
+	font-weight: bold;
+}
+
+.right_content .title .more{
+	float:right;
+	margin-right:15px;
+}
+.right_content .title .more a{
+	color:#999999;
+}
+
+h2.p1{
+	font-size:14px;
+	font-weight:bold;
+	color:#ff3333;
+	margin:33px 0 33px 26px;
+}
+
+.benefit{
+	margin:0 26px;
+	padding-bottom:16px;
+	border-bottom:1px dashed #ccc;
+}
+
+.benefit h4{
+	margin-bottom:10px;
+}
+
+.benefit p{
+	line-height:36px;
+}
+.benefit p span{
+	color:#3f67bf;
+	font-weight:bold;
+	margin-right:14px;
+}
+
+
+.support{
+	margin:16px 26px;
+	line-height:28px;
+}
+.support h4{
+	margin-bottom:10px;
+}
+
+.support p{
+	text-indent:2em;
+	padding-right:130px;
+}
+.support p a:hover{
+	text-decoration: underline;
+}
+
+.action{
+	height:38px;
+	width:137px;
+	margin:45px auto 70px;
+}
+
+.action .open{
+	width:137px;
+	height:38px;
+	position:relative;
+	background: url(../../image/btn/return_index.png) no-repeat;
+	border:none;
+	float:left;
+	font-size:16px;
+	color:#fff;
+	line-height:38px;
+	font-weight:bold;
+	font-family:"Microsoft Yahei";
+	cursor: pointer;
+	text-align: center;
+}
+
+
+.product_list{
+	margin-top:22px;
+	overflow: hidden;
+	padding:0 2px;
+	margin-bottom:60px;
+}
+
+.product_list .product{
+	float:left;
+	width:240px;
+	height:120px;
+	background: #e6e6e6;
+	margin:0 13px;
+}
+
+.alert_sub_content span:hover{
+	text-decoration: underline;
+}

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="productManage" extends="struts-default" namespace="/productManage">
+		
+		
+		<action name="toShowContent" class="productManageAction" method="toShowContent">
+			<result name="success">/business/cmpProductManage/productManage/update/informBook/editor.jsp</result>
+		</action>
+		
+		<action name="getElementByPageId" class="productManageAction" method="getElementByPageId">
+		</action>
+		<action name="delPaymentByPaymentCode" class="productManageAction" method="delPaymentByPaymentCode">
+			<result name="success">
+				/global/inc/tipInfo.jsp
+			</result>
+		</action>
+		<action name="searchFromWorkFlow" class="productManageAction" method="searchFromWorkFlow">
+			<result>/business/cmpProductManage/productManage/search/search.jsp</result>
+		</action>
+		<action name="subDetail" class="productManageAction" method="subDetail">
+			<result name="success">/global/inc/tipInfo.jsp?type=update</result>
+		</action>
+		
+		<action name="getWaitDoingCount" class="productManageAction" method="getWaitDoingCount">
+		</action>
+		<action name="toAddProductRisk" class="productManageAction" method="toAddProductRisk">
+			<result>/business/cmpProductManage/productManage/update/productRisk/create/addProductRiskTree.jsp</result>
+		</action>
+		<action name="addRiskDuty" class="productManageAction" method="addRiskDuty">
+		</action>
+		<action name="toUpdateRisk" class="productManageAction" method="toUpdateRisk">
+			<result name="success">/business/cmpProductManage/productManage/riskDuty/update/updateRisk.jsp</result>
+		</action>
+		<action name="updateRisk" class="productManageAction" method="updateRisk">
+			<result name="success">/business/cmpProductManage/productManage/riskDuty/update/risk.jsp</result>
+		</action>
+		<action name="toUpdateDuty" class="productManageAction" method="toUpdateDuty">
+			<result name="success">/business/cmpProductManage/productManage/riskDuty/update/updateDuty.jsp</result>
+		</action>
+		<action name="updateDuty" class="productManageAction" method="updateDuty">
+			<result name="success">/business/cmpProductManage/productManage/riskDuty/update/duty.jsp</result>
+		</action>
+		
+		<action name="delRisk" class="productManageAction" method="delRisk">
+		</action>
+		<action name="delDuty" class="productManageAction" method="delDuty">
+		</action>
+		<action name="toDetailRisk" class="productManageAction" method="toDetailRisk">
+			<result name="success">/business/cmpProductManage/productManage/riskDuty/update/risk.jsp</result>
+		</action>
+		<action name="toDetailDuty" class="productManageAction" method="toDetailDuty">
+			<result name="success">/business/cmpProductManage/productManage/riskDuty/update/duty.jsp</result>
+		</action>
+		<action name="toProductDetailOverview" class="productManageAction" method="toProductDetailOverview">
+			<result name="success">/business/cmpProductManage/productManage/update/allLook.jsp</result>
+		</action>
+		<action name="saveDetailOverview" class="productManageAction" method="saveDetailOverview">
+		</action>
+		<action name="copyData" class="productManageAction" method="copyData">
+		</action>
+		
+		
+		
+		
+		<action name="toCreateProduct" class="productManageAction" method="toCreateProduct">
+			<result>/business/cmpProductManage/productManage/create/index.jsp</result>
+		</action>
+		
+		<action name="createProduct" class="productManageAction" method="createProduct">
+			<result name="success">/business/cmpProductManage/productManage/create/index.jsp</result>
+		</action>
+		<action name="isHaveGeProduct" class="productManageAction" method="isHaveGeProduct">
+		</action>
+		<action name="toSearchProduct" class="productManageAction" method="toSearchProduct">
+			<result>/business/cmpProductManage/productManage/search/index.jsp</result>
+		</action>
+		<action name="searchAllProduct" class="productManageAction" method="searchAllProduct">
+			<result>/business/cmpProductManage/productManage/search/search.jsp</result>
+		</action>
+		<action name="saveOrUpdateFlow" class="productManageAction" method="saveOrUpdateFlow">
+			<result>/business/cmpProductManage/productManage/flow/success.jsp</result>
+		</action>
+		<action name="toEditDetail" class="productManageAction" method="toEditDetail">
+			<result>/business/cmpProductManage/productManage/update/index.jsp</result>
+			<result name="none" type="plainText"></result>
+		</action>
+		<action name="toConfigProductDetail" class="productManageAction" method="toConfigProductDetail">
+			<result>/business/cmpProductManage/productManage/update/basicInfo/index.jsp</result>
+		</action>
+		<action name="toConfigProductRisk" class="productManageAction" method="toConfigProductRisk">
+			<result>/business/cmpProductManage/productManage/update/productRisk/search/productRiskTree.jsp</result>
+		</action>
+		<action name="saveOrUpdateProductDetail" class="productManageAction" method="saveOrUpdateProductDetail">
+			<result>/business/cmpProductManage/productManage/update/basicInfo/success.jsp</result>
+		</action>
+		<action name="toConfigQuestion" class="productManageAction" method="toConfigQuestion">
+			<result>/business/cmpProductManage/productManage/update/question/index.jsp</result>
+		</action>
+		<action name="toConfigProductQuote" class="productManageAction" method="toConfigProductQuote">
+			<result>/business/cmpProductManage/productManage/update/calculation/index.jsp</result>
+		</action>
+		<action name="toConfigLegalNotices" class="productManageAction" method="toConfigLegalNotices">
+			<result>/business/cmpProductManage/productManage/update/legalNotice/index.jsp</result>
+		</action>
+		<action name="saveOrUpdateLegalNotice" class="productManageAction" method="saveOrUpdateLegalNotice">
+			<result>/business/cmpProductManage/productManage/update/legalNotice/success.jsp</result>
+		</action>
+		<action name="toConfigInformBook" class="productManageAction" method="toConfigInformBook">
+			<result>/business/cmpProductManage/productManage/update/informBook/index.jsp</result>
+		</action>
+		<action name="saveOrUpdateConfigInformBook" class="productManageAction" method="saveOrUpdateConfigInformBook">
+			<result>/business/cmpProductManage/productManage/update/informBook/success.jsp</result>
+		</action>
+		<action name="toConfigProposalNotices" class="productManageAction" method="toConfigProposalNotices">
+			<result>/business/cmpProductManage/productManage/update/proposalNotice/index.jsp</result>
+		</action>
+		<action name="saveOrUpdateProposalNotice" class="productManageAction" method="saveOrUpdateProposalNotice">
+			<result>/business/cmpProductManage/productManage/update/proposalNotice/success.jsp</result>
+		</action>
+		<action name="toConfigPolicy" class="productManageAction" method="toConfigPolicy">
+			<result>/business/cmpProductManage/productManage/update/policyConfig/index.jsp</result>
+		</action>
+		<action name="saveOrUpdatePolicyConfig" class="productManageAction" method="saveOrUpdatePolicyConfig">
+			<result>/business/cmpProductManage/productManage/update/policyConfig/success.jsp</result>
+		</action>
+		
+		<!-- policy config begin-->
+		<action name="toConfigAddressee" class="productManageAction" method="toConfigAddressee">
+			<result>/business/cmpProductManage/productManage/update/policyConfig/addresseeConfig/index.jsp</result>
+		</action>
+		<action name="saveOrUpdateAddresseeConfig" class="productManageAction" method="saveOrUpdateAddresseeConfig">
+			<result>/business/cmpProductManage/productManage/update/policyConfig/addresseeConfig/success.jsp</result>
+		</action>
+		<action name="toConfigEmergency" class="productManageAction" method="toConfigEmergency">
+			<result>/business/cmpProductManage/productManage/update/policyConfig/emergencyConfig/index.jsp</result>
+		</action>
+		<action name="saveOrUpdateEmergencyConfig" class="productManageAction" method="saveOrUpdateEmergencyConfig">
+			<result>/business/cmpProductManage/productManage/update/policyConfig/emergencyConfig/success.jsp</result>
+		</action>
+		<action name="toConfigApplicant" class="productManageAction" method="toConfigApplicant">
+			<result>/business/cmpProductManage/productManage/update/policyConfig/applicantConfig/index.jsp</result>
+		</action>
+		<action name="saveOrUpdateApplicantConfig" class="productManageAction" method="saveOrUpdateApplicantConfig">
+			<result>/business/cmpProductManage/productManage/update/policyConfig/applicantConfig/success.jsp</result>
+		</action>
+		<action name="toConfigInsured" class="productManageAction" method="toConfigInsured">
+			<result>/business/cmpProductManage/productManage/update/policyConfig/insuredConfig/index.jsp</result>
+		</action>
+		<action name="saveOrUpdateInsuredConfig" class="productManageAction" method="saveOrUpdateInsuredConfig">
+			<result>/business/cmpProductManage/productManage/update/policyConfig/insuredConfig/success.jsp</result>
+		</action>
+		<action name="toConfigBeneficiary" class="productManageAction" method="toConfigBeneficiary">
+			<result>/business/cmpProductManage/productManage/update/policyConfig/beneficiaryConfig/index.jsp</result>
+		</action>
+		<action name="saveOrUpdateBeneficiaryConfig" class="productManageAction" method="saveOrUpdateBeneficiaryConfig">
+			<result>/business/cmpProductManage/productManage/update/policyConfig/beneficiaryConfig/success.jsp</result>
+		</action>
+		<action name="toConfigPolicyDisplay" class="productManageAction" method="toConfigPolicyDisplay">
+			<result>/business/cmpProductManage/productManage/update/policyConfig/policyDisplayConfig/index.jsp</result>
+		</action>
+		<action name="saveOrUpdatePolicyDisplayConfig" class="productManageAction" method="saveOrUpdatePolicyDisplayConfig">
+			<result>/business/cmpProductManage/productManage/update/policyConfig/policyDisplayConfig/success.jsp</result>
+		</action>
+		<!-- policy config end-->
+		
+		<action name="toPreview" class="productManageAction" method="toPreview">
+			<result>/business/cmpProductManage/productManage/update/preview/index.jsp</result>
+		</action>
+		<action name="toAudit" class="productManageAction" method="toAudit">
+			<result>/business/cmpProductManage/productManage/audit/index.jsp</result>
+		</action>
+		<action name="toPublish" class="productManageAction" method="toPublish">
+			<result>/business/cmpProductManage/productManage/publish/index.jsp</result>
+		</action>
+		
+		<action name="updateProductStatus" class="productManageAction" method="updateProductStatus">
+			<result name="AuditSuccess">/global/inc/alertInfo.jsp?type=update</result>
+			<result name="fail">/business/cmpProductManage/productManage/publish/fail.jsp</result>
+		</action>
+		
+		<action name="deleteOneProduct" class="productManageAction" method="deleteOneProduct">
+			<result type="chain">searchAllProduct</result>
+		</action>
+		<action name="authoritySetDeptAuthTree" class="productManageAction" method="authoritySetDeptAuthTree">
+		</action>
+		
+		<!-- productCompont DutyKind begin-->
+			<action name="initAddRiskPage" class="productManageAction" method="initAddRiskPage">
+				<result name="success">
+					/business/cmpProductManage/productManage/riskConfig/create/createRiskConfig.jsp
+				</result>
+			</action>
+			<action name="addGeRiskConfig" class="productManageAction" method="addGeRiskConfig">
+				<result name="success" type="redirect" >
+	           	 	initAddRiskPage.do?addResult=${addResult}
+	            </result> 
+			</action>
+			<action name="isHaveGeRiskConfig" class="productManageAction" method="isHaveGeRiskConfig">
+			</action>
+			<action name="findDataFromDic" class="productManageAction" method="findDataFromDic">
+			</action>
+			<action name="riskDetail" class="productManageAction" method="findGeRiskConfigByRiskCode">
+				<result name="success">
+					/business/cmpProductManage/productManage/riskConfig/search/riskDetail.jsp
+				</result>
+			</action>
+			<action name="findGeRiskConfigByRiskCode" class="productManageAction" method="findGeRiskConfigByRiskCode">
+				<result name="success">
+					/business/cmpProductManage/productManage/riskConfig/update/index.jsp
+				</result>
+			</action>
+			<action name="updateGeRiskConfig" class="productManageAction" method="updateGeRiskConfig">
+				<result name="success">
+					/global/inc/alertInfo.jsp?type=update
+				</result>
+			</action>
+			<action name="findGeRiskConfig" class="productManageAction" method="findGeRiskConfig">
+				<result name="success">
+					/business/cmpProductManage/productManage/riskConfig/search/search.jsp
+				</result>
+			</action>
+		<!-- productCompont DutyKind end-->
+			<action name="findProductWebFlow" class="productManageAction" method="findProductWebFlow">
+				<result>/business/cmpProductManage/productManage/flow/index.jsp</result>
+			</action>
+		<!-- webFlowConfig start -->
+			
+		<!-- webFlowConfig end -->
+		<action name="createPayment" class="productManageAction" method="createPayment">
+			<result>/business/cmpProductManage/productManage/payment/create/createPayment.jsp</result>
+		</action>
+		<action name="isHavePayment" class="productManageAction" method="isHavePayment">
+		</action>
+		<action name="findPayment" class="productManageAction" method="findPayment">
+			<result name="success">
+				/business/cmpProductManage/productManage/payment/search/search.jsp
+			</result>
+		</action>
+		<action name="paymentDetail" class="productManageAction" method="findPaymentDetailByPaymentCode">
+			<result name="success">
+				/business/cmpProductManage/productManage/payment/search/paymentDetail.jsp
+			</result>
+		</action>
+		<action name="findPaymentDetailByPaymentCode" class="productManageAction" method="findPaymentDetailByPaymentCode">
+			<result name="success">
+				/business/cmpProductManage/productManage/payment/update/index.jsp
+			</result>
+		</action>
+		<action name="updateGePayment" class="productManageAction" method="updateGePayment">
+			<result name="success">
+				/global/inc/alertInfo.jsp?type=update
+			</result>
+		</action>
+		<action name="paymentAreaTree" class="productManageAction" method="paymentAreaTree">
+		</action>
+		<!-- webFlow detail Config start -->
+			<action name="findProductWebFlowElement" class="productManageAction" method="findProductWebFlowElement">
+				<result>/business/cmpProductManage/productManage/update/index.jsp</result>
+			</action>
+			<action name="saveProductWebFlow" class="productManageAction" method="saveProductWebFlow">
+			</action>
+		<!-- webFlow detail Config end -->
+		<!-- pageElementFileUpload start -->
+			<action name="calculationPageFileUpload" class="productManageAction" method="pageElementFileUpload">
+				<result>/business/cmpProductManage/productManage/update/calculation/index.jsp</result>
+			</action>
+			<action name="productRulePageFileUpload" class="productManageAction" method="pageElementFileUpload">
+				<result>/business/cmpProductManage/productManage/update/productRule/index.jsp</result>
+			</action>
+			<action name="questionPageDoFileUpload" class="productManageAction" method="pageElementFileUpload">
+				<result>/business/cmpProductManage/productManage/update/question/message.jsp</result>
+			</action>
+		<!-- pageElementFileUpload end -->
+			<action name="paymentAreaDetailTree" class="productManageAction" method="paymentAreaDetailTree">
+			</action>
+		<!-- riskDuty start -->
+			<action name="isExistRiskCode" class="productManageAction" method="isExistRiskCode">
+			</action>
+			<action name="isExistDutyCode" class="productManageAction" method="isExistDutyCode">
+			</action>
+		<!-- riskDuty end -->
+	</package>
+	
+	<package name="business.cmpProductManage.productPictureManage" extends="struts-default" namespace="/business/cmpProductManage/productPictureManage">
+		<action name="addGeProductPicture" class="geProductPictureAction" method="addGeProductPicture">
+			<result name="success">
+				/global/inc/tipInfo.jsp?type=create
+			</result>
+		</action>
+		<!--
+		<action name="frmSearch" class="geProductPictureAction" method="frmSearch">
+			<result name="success">
+				/business/cmpProductManage/productPictureManage/search/frmSearch.jsp
+			</result>
+		</action>
+		-->
+		<action name="queryGeProductPictureByDisPage" class="geProductPictureAction" method="queryGeProductPictureByDisPage">
+			<result name="success">
+				/business/cmpProductManage/productPictureManage/search/search.jsp
+			</result>
+		</action>
+		<action name="queryGeProductPictureForShow" class="geProductPictureAction" method="queryGeProductPictureForShow">
+			<result name="success">
+				/business/cmpProductManage/productPictureManage/show/index.jsp
+			</result>
+		</action>
+		<action name="queryGeProductPictureDetailForUpdate" class="geProductPictureAction" method="queryGeProductPictureDetailForUpdate">
+			<result name="success">
+				/business/cmpProductManage/productPictureManage/update/index.jsp
+			</result>
+		</action>
+		<action name="updateGeProductPictureDetail" class="geProductPictureAction" method="updateGeProductPictureDetail">
+			<result name="success">
+				/global/inc/tipInfo.jsp?type=update
+			</result>
+		</action>
+		<action name="delete" class="geProductPictureAction" method="deleteGeProductPictureDetail">
+			<result name="success">
+				/global/inc/tipInfo.jsp
+			</result>
+		</action>
+		<action name="updateGeProductPictureDetail" class="geProductPictureAction" method="updateGeProductPictureDetail">
+			<result name="success">
+				/global/inc/tipInfo.jsp?type=update
+			</result>
+		</action>
+	</package>
+</struts>

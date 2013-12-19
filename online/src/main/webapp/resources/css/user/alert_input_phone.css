@@ -1,0 +1,32 @@
+.alert_phone_input{
+	font-size:14px;
+	height:50px;
+	padding:10px 0;
+}
+
+.alert_phone_input .alert_phone_label{
+	width:165px;
+	float:left;
+	text-align: right;
+	font-size:14px;
+	line-height:40px;
+}
+
+.alert_phone_input .alert_phone_text{
+	width:155px;
+	float:left;
+	text-align: left;
+	font-size:20px;
+	height:24px;
+	padding:2px;
+	border:1px solid #c9c9c9;
+	margin-top:6px;
+	color:#333;
+	font-size:14px;
+	line-height:24px;
+	margin-left:5px;
+	
+	/*ie7 fix*/
+	*height:21px;
+	*padding-top:5px;
+}

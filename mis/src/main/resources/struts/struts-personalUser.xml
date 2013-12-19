@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="business.customerManage.personalUser" extends="footTraceInterceptor" namespace="/business/customerManage/personalUser">
+		<action name="queryIndentifyType" class="geUserPersonalAction" method="queryIndentifyType">
+			<result name="success">
+				/business/customerManage/personalUser/search/frmSearch.jsp
+			</result>
+		</action>
+		<action name="queryGeUserPersonalByDisPage" class="geUserPersonalAction" method="queryGeUserPersonalByDisPage">
+			<result name="success">
+				/business/customerManage/personalUser/search/search.jsp
+			</result>
+		</action>
+		<action name="queryGeUserPolicyByDisPage" class="geUserPersonalAction" method="queryGeUserPolicyByDisPage">
+			<result name="success">
+				/business/customerManage/personalUser/unbound/proOrPen/search.jsp
+			</result>
+		</action>
+		<action name="queryGeUserPersonalForUpdateOrShow" class="geUserPersonalAction" method="queryGeUserPersonalForUpdateOrShow">
+			<result name="update">
+				/business/customerManage/personalUser/update/index.jsp
+			</result>
+			<result name="show">
+				/business/customerManage/personalUser/show/index.jsp
+			</result>
+		</action>
+		<action name="updateGeUserPersonal" class="geUserPersonalAction" method="updateGeUserPersonal">
+			<result name="success">
+				/global/inc/tipInfo.jsp?type=update
+			</result>
+		</action>
+		<action name="unBoundPolicy" class="geUserPersonalAction" method="unBoundPolicy">
+			<result name="success">
+				/global/inc/tipInfo.jsp
+			</result>
+		</action>
+		<action name="unBoundCard" class="geUserPersonalAction" method="unBoundCard">
+			<result name="success">
+				/global/inc/tipInfo.jsp
+			</result>
+		</action>
+		<action name="findDepartment" class="geUserPersonalAction" method="findDepartment">
+		</action>
+	</package>
+</struts>

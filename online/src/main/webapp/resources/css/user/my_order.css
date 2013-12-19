@@ -1,0 +1,204 @@
+.right_content .title{
+	height:35px;
+	background: #e6e6e6;
+	line-height:35px;
+}
+.right_content .title .block{
+	width:4px;
+	height:35px;
+	float:left;
+	background: #3f67bf;
+	margin-right:18px;
+}
+
+.right_content .title p{
+	float:left;
+	color:#333;
+	font-size:14px;
+	font-weight: bold;
+}
+
+.right_content .title .more{
+	float:right;
+	margin-right:15px;
+}
+.right_content .title .more a{
+	color:#999999;
+}
+
+.order_list{
+	margin:25px 0 100px 28px;
+	overflow: hidden;
+	min-height:400px;
+}
+
+.order_list .order_item{
+	width:236px;
+	height:277px;
+	float:left;
+	margin-right:16px;
+	margin-bottom:30px;
+	background: url(../../image/user/member/policy_unselect_bg.png) no-repeat;
+	padding-top:15px;
+	position: relative;
+}
+
+.order_list .order_item .close{
+	display:none;
+	width:17px;
+	height:17px;
+	cursor: pointer;
+	position: absolute;
+	background: url(../../image/user/member/close_icon.png) no-repeat;
+	top:7px;
+	right:10px;
+}
+
+.order_list .order_item.select{
+	background: url(../../image/user/member/policy_select_bg.png) no-repeat;
+}
+.order_list .order_item.select .close{
+	display: block;
+}
+.order_row{
+	margin:0 14px;
+	height:40px;
+	border-bottom:1px dashed #cccccc;
+	color:#666;
+}
+.order_row.last{
+	border-bottom:0;
+}
+
+.order_row .name{
+	width:70px;
+	float:left;
+	text-align: right;
+	line-height:40px;
+	font-weight:bold;
+}
+.order_row .value{
+	float:left;
+	line-height:40px;
+	margin-left:5px;
+	width: 130px;
+	overflow: hidden;
+	text-overflow:ellipsis; 
+	white-space:nowrap;
+}
+
+.order_bottom{
+/* 	margin:0 14px; */
+/* 	margin-top:23px; */
+	border-top: 1px solid #ccc; 
+	line-height:36px;
+	color:#666;
+	text-align: center;
+	
+	width:208px;
+	height:37px;
+	position:absolute;
+	bottom:10px;
+	left:14px;
+}
+.order_bottom.operation{
+	text-align: right;
+	color:#999;
+	overflow: hidden;
+}
+.order_bottom a{
+	color:#999;
+	float:right;
+	margin-left:0;
+}
+.order_bottom .pay_action .pay_action_a{
+	float:none;
+	display: block;
+	color:#fff;
+}
+.order_item.select .order_bottom .pay_action .pay_action_a{
+	color:#fff;
+}
+.order_bottom .pay_action{
+	width:65px;
+	height:20px;
+	line-height:20px;
+	color:#fff;
+	text-align:center;
+	background:url(../../image/user/member/pay_btn.png) no-repeat;
+	float:right;
+	
+	margin-top:8px;
+	margin-right:17px;
+	cursor: pointer;
+}
+
+.order_bottom .fix_order{
+	margin-right:17px;
+	margin-left:5px;
+}
+
+.order_item.select .order_bottom.operation{
+	color:#ccc;
+}
+.order_item.select .order_bottom a{
+	color:#0066cc;
+}
+
+.order_item.select .order_bottom .pay_action{
+	background:url(../../image/btn/bind_bg.png) no-repeat;
+}
+
+.order_action{
+	height:169px;
+	padding-top:36px;
+}
+
+.order_action .action_icon{
+	width:121px;
+	height:121px;
+	margin:0 auto 20px;
+	cursor: pointer;
+}
+
+.order_item.add_order .action_icon{
+	background: url(../../image/user/member/add_policy.png) no-repeat;
+}
+
+.order_action p{
+	line-height:26px;
+	text-align:center;
+	color:#666666;
+}
+
+
+.product_list{
+	margin-top:22px;
+	overflow: hidden;
+	padding:0 2px;
+	margin-bottom:60px;
+}
+
+.product_list .product{
+	float:left;
+	width:240px;
+	height:120px;
+	background: #e6e6e6;
+	margin:0 13px;
+}
+
+
+.close{
+	display:none;
+	width:17px;
+	height:17px;
+	cursor: pointer;
+	position: absolute;
+	background: url(../../image/user/member/close_icon.png) no-repeat;
+	top:7px;
+	right:10px;
+}
+
+.close{
+	display: block;
+}

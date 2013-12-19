@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	
+	<bean id="interfaceInfoService"
+		class="cn.com.sinosoft.portalModule.interfacePortal.businessInterface.service.spring.InterfaceInfoServiceSpringImpl">
+	</bean>
+
+	<bean id="externalSysInfoService"
+		class="cn.com.sinosoft.portalModule.interfacePortal.businessInterface.service.spring.ExternalSysInfoServiceSpringImpl">
+	</bean>
+
+	<bean id="clientUserService"
+		class="cn.com.sinosoft.portalModule.interfacePortal.businessInterface.service.spring.ClientUserServiceSpringImpl">
+	</bean>
+
+	<bean id="transactionMessageService"
+		class="cn.com.sinosoft.portalModule.interfacePortal.xml.service.spring.TransactionMessageServiceSpringImpl">
+	</bean>
+
+	<bean id="webService" class="cn.com.sinosoft.portalModule.interfacePortal.webService.service.WebServiceImpl" destroy-method="cleanAxis2TempFiles">
+	</bean>
+	
+	<bean id="externalSystemsUserService"
+		class="cn.com.sinosoft.portalModule.interfacePortal.businessInterface.service.spring.ExternalSystemsUserServiceSpringImpl">
+	</bean>
+	
+	<bean id="extrlSysUserInterfaceInfoService"
+		class="cn.com.sinosoft.portalModule.interfacePortal.businessInterface.service.spring.ExternalSysUserInterfaceInfoServiceSpringImpl">
+	</bean>
+	
+	<bean id="gePortalInterfaceExtraService"
+		class="cn.com.sinosoft.portalModule.interfacePortal.businessInterface.service.spring.GePortalInterfaceExtraServiceSpringImpl">
+	</bean>
+	
+	<!-- portal Interface  begin-->
+	<bean id="portalInterfaceService" class="cn.com.sinosoft.portalModule.portalInterface.service.spring.PortalInterfaceServiceSpringImpl"></bean>
+	
+	<bean id="portalInterfaceSystemService" class="cn.com.sinosoft.portalModule.portalInterface.service.spring.PortalInterfaceSystemServiceSpringImpl"></bean>
+	
+	<bean id="portalInterfaceElementService" class="cn.com.sinosoft.portalModule.portalInterface.service.spring.PortalInterfaceElementServiceSpringImpl"></bean>
+	
+	<bean id="portalInterfaceAccountService" class="cn.com.sinosoft.portalModule.portalInterface.service.spring.PortalInterfaceAccountServiceSpringImpl"></bean>
+	
+	<bean id="portalInterfaceHandlerClassService" class="cn.com.sinosoft.portalModule.portalInterface.service.spring.PortalInterfaceHandlerClassServiceSpringImpl"></bean>
+	
+	<!-- portal Transaction  end -->
+	
+	<!-- portal Transaction  begin-->
+	<bean id="portalTransactionService" class="cn.com.sinosoft.portalModule.portalTransaction.service.spring.PortalTransactionServiceSpringImpl"></bean>
+	
+	<bean id="portalTransactionMessageService" class="cn.com.sinosoft.portalModule.portalTransaction.service.spring.PortalTransactionMessageServiceSpringImpl"></bean>
+	
+	<bean id="transactionTrackService" class="cn.com.sinosoft.portalModule.portalTransaction.service.spring.TransactionTrackServiceSpringImpl"></bean>
+	<!-- portal Transaction  end -->
+	<!-- interface Transport begin -->
+	<bean id="interfaceTransportService" class="cn.com.sinosoft.portalModule.transport.service.InterfaceTransportServiceImpl"></bean>
+	<!-- interface Transport end -->
+
+	<bean id="httpAgreementService" class="cn.com.sinosoft.portalModule.transport.service.spring.HttpAgreementServiceSpringImpl"></bean>
+	
+</beans>
+

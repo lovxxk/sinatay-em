@@ -1,0 +1,160 @@
+.head_mid .main_title{
+	display: none;
+}
+
+.middle .h_layout{
+	padding-bottom:58px;
+}
+
+.middle .nav_index{
+	height:42px;
+}
+.middle .nav_index li{
+	line-height:42px;
+	font-size:13px;
+	display:inline;
+}
+.middle .nav_index li a{
+	color:#535353;
+}
+
+.policy_instro{
+	font-size:16px;
+	line-height:18px;
+	text-align: center;
+}
+
+.policy_navbar{
+	background: url(../../image/policy/policy_nav_confirm.png) no-repeat;
+	height:40px;
+	margin-top:12px;
+}
+
+.policy_navbar div{
+	float:left;
+	line-height:40px;
+	font-size:14px;
+	width:333px;
+	text-align: center;
+	color:#666666;
+	cursor:default;
+}
+
+.policy_navbar div.active{
+	color:#fff;
+	font-weight: bold;
+}
+
+
+.policy_area{
+	background: #fff;
+}
+
+.policy_area .title{
+	background: #d1d1d1;
+	color:#333333;
+	font-size:14px;
+	font-weight:bold;
+	height:40px;
+	padding-left:26px;
+	line-height:40px;
+}
+
+.policy_detail{
+	margin-top:17px;
+	background: #FFF;
+}
+
+.policy_detail .detail_row{
+	height:35px;
+	border:1px solid #d1d1d1;
+	border-top:0;
+	line-height:35px;
+}
+
+.policy_detail .detail_row .name{
+	width:260px;
+	float:left;
+	height:35px;
+	border-right:1px solid #d1d1d1;
+	text-align: right;
+	padding-right:10px;
+}
+
+.policy_detail .detail_row .value{
+	height:35px;
+	margin-left:271px;
+	text-align: center;
+}
+
+.policy_area .info_row{
+	height:35px;
+	border:1px solid #d1d1d1;
+	border-top:0;
+	line-height:35px;
+}
+
+.policy_area .info_row .info_col{
+	width:50%;
+	float:left;
+}
+
+.policy_area .info_row .name{
+	width:150px;
+	border-right:1px solid #d1d1d1;
+	text-align: right;
+	padding-right: 10px;
+	float:left;
+}
+.policy_area .info_row .info_col.right_col .name{
+	border-left:1px solid #d1d1d1;
+}
+.policy_area .info_row .value{
+	padding-left: 10px;
+	float:left;
+}
+
+.declaration{
+	margin-top:25px;
+	padding-left:10px;
+}
+.declaration .tip{
+	line-height:28px;
+	color:#d01519;
+	font-weight:bold;
+}
+
+.declaration .text{
+	line-height:24px;
+	color:#666666;
+}
+.declaration .agree{
+	float:left;
+	margin-top:4px;
+	margin-right:5px;
+}
+
+.action{
+	margin-top:40px;
+	margin-left:431px;
+}
+
+.action .confirm_buy{
+	width:137px;
+	height:38px;
+	position:relative;
+	background: url(../../image/policy/next_step.png) no-repeat;
+	float:left;
+	font-size:16px;
+	color:#fff;
+	line-height:38px;
+	font-weight:bold;
+	text-align: center;
+	border:none;
+}
+
+.action a{
+	color:#0066ff;
+	line-height:38px;
+	margin-left:16px;
+}

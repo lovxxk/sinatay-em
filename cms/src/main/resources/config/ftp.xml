@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ftps>
+	<!-- 该节点支持多个 -->
+	<ftp>
+		<host>131.252.88.102</host>
+		<port>22</port>
+		<username>root</username>
+		<password>rootroot</password>
+		<webpath>/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/installedApps/localhostNode01Cell/chinapay.ear/chinapay.war/</webpath>
+	</ftp>
+</ftps>

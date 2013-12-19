@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="universal" extends="struts-default" namespace="/universal" >
+		<action name="addUniversal" class="universalRateAction" method="addUniversal" >
+			<result name="success">
+				/global/inc/cartipInfo.jsp?type=create
+			</result>
+		</action>
+		<action name="findUniversal" class="universalRateAction" method="findUniversal" >
+			<result name="success">
+				/business/universal/search/frmSearch.jsp
+			</result>
+		</action>
+		<action name="findUniversal2" class="universalRateAction" method="findUniversal2" >
+			<result name="success">
+				/business/universal/search/search.jsp
+			</result>
+		</action>
+		<action name="viewUniversal" class="universalRateAction" method="viewUniversal" >
+			<result name="success">
+				/business/universal/search/universalView.jsp
+			</result>
+		</action>
+		<action name="prepareUpdateUniversal" class="universalRateAction" method="prepareUpdateUniversal" >
+			<result name="success">
+				/business/universal/update/universalUpdate.jsp
+			</result>
+		</action>
+		<action name="updateUniversal" class="universalRateAction" method="updateUniversal" >
+			<result name="success">/global/inc/cartipInfo.jsp?type=update</result>
+		</action>
+		<action name="deleteUniversal" class="universalRateAction" method="deleteUniversal" >
+			<result name="success">/global/inc/cartipInfo.jsp</result>
+		</action>
+	</package>
+</struts>

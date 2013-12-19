@@ -1,0 +1,57 @@
+.fv_tip{ display:inline-block;}
+label.onShow div.onShow
+{
+    background:url(../images/onShow.gif) no-repeat left center; 
+    margin-top:5px;
+    margin-left:9px;
+}
+
+label.onCorrect div.onCorrect{
+	background:url(../images/onCorrect.gif) no-repeat left center;
+	border:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	height:19px;
+}
+
+div.onFocus
+{
+    background:#E9F0FF url(../images/onFocus.gif) no-repeat left center; 
+	border:#CDE0FA solid 1px;
+		/* outline radius for mozilla/firefox only */
+	-moz-box-shadow:0 0 2px #CDE0FA;
+	-webkit-box-shadow:0 0 2px #CDE0FA;
+}
+div.onError
+{
+    background:#FFF2E9 url(../images/onError.gif) no-repeat left center;
+	border:#FF0000 solid 1px;
+	/* outline radius for mozilla/firefox only */
+	-moz-box-shadow:0 0 2px #FF6A6A;
+	-webkit-box-shadow:0 0 2px #FF6A6A;
+}
+div.onCorrect
+{
+    background:#E9FFEB url(../images/onCorrect.gif) no-repeat left center;
+	border:#00FF00 solid 1px;
+	/* outline radius for mozilla/firefox only */
+	-moz-box-shadow:0 0 2px #8CFF8C;
+	-webkit-box-shadow:0 0 2px #8CFF8C;
+}
+
+div.onLoad
+{
+    background:#E9FFEB url(../images/onLoad.gif) no-repeat left center;
+    border:#CDE0FA solid 1px;
+		/* outline radius for mozilla/firefox only */
+	-moz-box-shadow:0 0 2px #CDE0FA;
+	-webkit-box-shadow:0 0 2px #CDE0FA;
+} 
+div.onShow,div.onFocus,div.onError,div.onCorrect,div.onLoad
+{
+	padding:4px 25px;
+	font-size: 12px;
+	margin-left:8px;
+	float:left;
+	margin-top:4px;
+}

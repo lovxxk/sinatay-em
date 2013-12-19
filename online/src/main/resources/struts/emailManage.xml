@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="email" extends="json-default" namespace="/email">
+		<!-- 检测用户是否完善 -->
+		<action name="checkerUserInfoComplete" class="emailSubscribedAction"
+			method="checkUserInfoComplete">
+			<result type="json"></result>
+		</action>
+		<!-- 检测用户是否有订阅 -->
+		<action name="myEmailSubscribe" class="emailSubscribedAction"
+			method="subscribedEmail">
+			<result name="open">/web/user/member/email/myEmail/notSubscribed/index.jsp
+			</result>
+			<result name="subscribed">/web/user/member/email/myEmail/subscribed/index.jsp
+			</result>
+			<result name="notSubscribed">/web/user/member/email/myEmail/notSubscribed/add/index.jsp
+			</result>
+		</action>
+		<!-- 订阅电子函件 -->
+		<action name="subscribed" class="emailSubscribedAction" method="subscribed">
+			<result type="json"></result>
+		</action>
+		<!-- 取消订阅电子函件 -->
+		<action name="cancelEmail" class="emailSubscribedAction"
+			method="cancelEmail">
+			<result type="json"></result>
+		</action>
+		<!-- 修改邮箱 -->
+		<action name="changeEmail" class="emailSubscribedAction"
+			method="changeEmail">
+			<result type="json"></result>
+		</action>
+		<!-- 发送手机验证 -->
+		<action name="sendPhoneDynamicNumber" class="emailSubscribedAction"
+			method="sendPhoneDynamicNumber">
+			<result type="json"></result>
+		</action>
+		<!-- 手机校验 -->
+			<action name="checkPhone" class="emailSubscribedAction"
+			method="checkPhone">
+			<result type="json"></result>
+		</action>
+		<!-- 订阅查询未订阅电子函件 -->
+		<action name="notSubscribe" class="emailSubscribedAction"
+			method="notSubscribe">
+			<result name="success">/web/user/member/email/myEmail/notSubscribed/add/index.jsp
+			</result>
+		</action>
+		<!-- 电子通知书查询 -->
+		<action name="noticeSearch" class="noticeSearchAction" method="search">
+			<result name="success">/web/user/member/email/myEmail/subscribed/query/index.jsp
+			</result>
+		</action>
+	
+		<!-- 检测是否能否下载：1 系统异常 2： 核心不能生产pdf原因 -->
+		
+		<action name="check" class="checkDownNoticeAction"
+			method="checkDownNotice">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 配置通知书下载 -->
+		<action name="downloadNotice" class="downloadNoticeAction">
+			<result name="success" type="stream">
+				<param name="contentType">text/pdf</param>
+				<param name="contentDisposition">attachment;fileName="${fileName}"</param>
+				<param name="inputName">downloadFile</param>
+				<param name="bufferSize">1024</param>
+			</result>
+		</action>
+	</package>
+	<include file="../spring/applicationContext-action.xml"></include>
+</struts>

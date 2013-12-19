@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="bqajax" extends="json-default" namespace="/bq">
+		<interceptors>
+			<interceptor name="tContCheckerInterceptor" class="contCheckerInterceptor"></interceptor>
+			<interceptor-stack name="contCheckerInterceptorStack">
+				<interceptor-ref name="tContCheckerInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		<action name="PartReceiveCalculate" class="partReceiveAction" method="calculate">
+			<result type="json" />
+			<interceptor-ref name="contCheckerInterceptorStack"></interceptor-ref>
+		</action>
+		
+		<action name="PartReceiveConfirm" class="partReceiveAction" method="confirm">
+			<result type="json" />
+			<interceptor-ref name="contCheckerInterceptorStack"></interceptor-ref>
+		</action>
+		
+		<action name="sendPhoneCheckNo" class="partReceiveAction" method="sendPhoneCheckNo">
+			<result type="json" />			
+		</action>		
+
+	</package>
+	<package name="dcenter" extends="struts-default" namespace="/dcenter">
+		<global-results>
+			<result name="all-exception">/global/ui/404.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping result="all-exception" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+	
+		<action name="downloadCenterInit" class="fileMngAction" method="init">
+			<result name="success">/web/service/download/index.jsp</result>
+		</action>
+
+		<action name="downloadFile" class="fileMngAction" >
+			<!--<param name="inputPath">/download/系统说明.doc</param>  -->
+			<!-- 初始文件名 -->
+			<!-- <param name="fileName">下载文件</param> -->
+			<result name="success" type="stream">
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">inputStream</param>
+				<!-- 使用经过转码的文件名作为下载文件名，downloadFileName属性 对应action类中的方法 getDownloadFileName() -->
+				<param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action> 
+	</package>
+</struts>

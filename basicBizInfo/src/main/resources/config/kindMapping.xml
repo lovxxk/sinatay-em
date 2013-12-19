@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="GBK"?>
+<mapping>
+<class name="cn.com.sinosoft.ebusiness.common.basicBizInfo.domain.GeKindFromConfig" auto-complete="false">
+		<map-to xml="GeKindFromConfig"/>
+		
+		<field name="synchCoreRiskCodes" collection="collection" type="cn.com.sinosoft.ebusiness.common.basicBizInfo.domain.GeRiskClassCodeAndRiskCode">
+			<bind-xml name="GeRiskClassCodeAndRiskCode" location="synchCoreRiskCodes"/>
+		</field>
+		
+		<field name="geKinds" collection="collection" type="cn.com.sinosoft.ebusiness.common.basicBizInfo.domain.RiskAndKind">
+			<bind-xml name="GeKind" location="riskAndKindList"/>
+		</field>		
+</class>
+
+<class name="cn.com.sinosoft.ebusiness.common.basicBizInfo.domain.RiskAndKind" auto-complete="false">
+  <field name="kindCode" type="string">
+  	 <bind-xml name="kindCode" node="element"/>
+  </field>
+  <field name="codeType" type="string">
+  	 <bind-xml name="codeType" node="element"/>
+  </field>
+  <field name="valueRange" type="string">
+  	 <bind-xml name="valueRange" node="element"/>
+  </field>
+</class>
+
+<class name="cn.com.sinosoft.ebusiness.common.basicBizInfo.domain.GeRiskClassCodeAndRiskCode" auto-complete="false">
+	 <field name="riskClassCode" type="string">
+  	 	<bind-xml name="riskClassCode" node="element"/>
+  	 </field>
+  	 
+	 <field name="riskCode" type="string">
+  	 	<bind-xml name="riskCode" node="element"/>
+  	 </field>
+</class>
+</mapping>

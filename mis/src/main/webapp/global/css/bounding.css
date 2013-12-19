@@ -1,0 +1,61 @@
+
+#bounding_main {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+#boundingTitle {
+	width: 100%;
+	height: 37px;
+	float: left;
+	background: url(../../images/labelbg.jpg) repeat-x;
+}
+
+#boundingTitle li {
+	height: 37px;
+	list-style: none;
+	float: left;
+	width: 90px;
+}
+
+#boundingTitle ul {
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+}
+
+.label_on {
+	text-decoration: none;
+	height: 37px;
+	width: 90px;
+	cursor: pointer;
+	color: #000000;
+	font-weight: bold;
+	font-size: 10pt;
+	text-align: center;
+	padding-top: 10px;
+	display: block;
+	background: url(../../images/labelbg_on.jpg) no-repeat;
+}
+
+.label_off {
+	text-decoration: none;
+	width: 90px;
+	height: 37px;
+	background: url(../../images/labelbg_off.jpg) no-repeat;
+	cursor: pointer;
+	color: #686868;
+	font-weight: bold;
+	font-size: 10pt;
+	text-align: center;
+	padding-top: 10px;
+	display: block;
+}
+
+#bounding_main iframe {
+	width: 100%;
+	min-height: 420px;
+	max-height: 700px;
+	height: auto;
+	border: none;
+}

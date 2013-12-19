@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="GBK"?>
+<mapping>
+
+
+    <!--大DTO-->
+	<class name="cn.com.sinosoft.ebusiness.payment.domain.PaymentConfigDto" auto-complete="false">
+		<map-to xml="Payment"/>
+		
+		<field name="paymentSelect" type="string">
+  	 		<bind-xml name="PaymentSelect" node="element"/>
+  		</field>
+  		
+		<field name="isProduct" type="string">
+  	 		<bind-xml name="isProduct" node="element"/>
+  		</field>	
+		<field name="paymentGuangDongDto" type="cn.com.sinosoft.ebusiness.payment.domain.PaymentGuangDongDto">
+			<bind-xml name="PaymentGang"/>
+		</field>
+		<field name="paymentShangHaiConfig" type="cn.com.sinosoft.ebusiness.payment.domain.PaymentShangHaiConfig">
+			<bind-xml name="PaymentShang"/>
+		</field>
+	</class>
+	
+	<!-- 广 银连DTO -->
+	<class name="cn.com.sinosoft.ebusiness.payment.domain.PaymentGuangDongDto" auto-complete="false">
+		<field name="merIdProduct" type="string">
+  	 		<bind-xml name="MerIdProduct" node="element"/>
+  		</field>
+  		<field name="callBackUrlProduct" type="string">
+  	 		<bind-xml name="CallBackUrlProduct" node="element"/>
+  		</field>		
+  		<field name="signMsgPasswordProduct" type="string">
+  	 		<bind-xml name="SignMsgPasswordProduct" node="element"/>
+  		</field>	
+  		<field name="paymentUrlProduct" type="string">
+  	 		<bind-xml name="PaymentUrlProduct" node="element"/>
+  		</field>	
+  		<field name="checkAccountUserNameProduct" type="string">
+  	 		<bind-xml name="CheckAccountUserNameProduct" node="element"/>
+  		</field>	
+  		<field name="checkAccountPasswordProduct" type="string">
+  	 		<bind-xml name="CheckAccountPasswordProduct" node="element"/>
+  		</field>
+  		<field name="beforeTimeProduct" type="string">
+  	 		<bind-xml name="BeforeTimeProduct" node="element"/>
+  		</field>	
+  		<field name="dataFeedFromChinaPayIpProduct" type="string">
+  	 		<bind-xml name="DataFeedFromChinaPayIpProduct" node="element"/>
+  		</field>		
+  		
+  		<field name="merIdProductTest" type="string">
+  	 		<bind-xml name="MerIdProductTest" node="element"/>
+  		</field>	
+  		<field name="callBackUrlTest" type="string">
+  	 		<bind-xml name="CallBackUrlTest" node="element"/>
+  		</field>	
+  		<field name="signMsgPasswordTest" type="string">
+  	 		<bind-xml name="SignMsgPasswordTest" node="element"/>
+  		</field>	
+  		<field name="paymentUrlTest" type="string">
+  	 		<bind-xml name="PaymentUrlTest" node="element"/>
+  		</field>	
+  		<field name="checkAccountUserNameTest" type="string">
+  	 		<bind-xml name="CheckAccountUserNameTest" node="element"/>
+  		</field>
+  		<field name="checkAccountPasswordTest" type="string">
+  	 		<bind-xml name="CheckAccountPasswordTest" node="element"/>
+  		</field>
+  		<field name="beforeTimeTest" type="string">
+  	 		<bind-xml name="BeforeTimeTest" node="element"/>
+  		</field>
+  		<field name="dataFeedFromChinaPayIpTest" type="string">
+  	 		<bind-xml name="DataFeedFromChinaPayIpTest" node="element"/>
+  		</field>
+	</class>
+	<!-- 上银连DTO -->
+	<class name="cn.com.sinosoft.ebusiness.payment.domain.PaymentShangHaiConfig" auto-complete="false">
+  		<!--生产-->
+  		<field name="merIdProduct" type="string">
+  	 		<bind-xml name="MerIdProduct" node="element"/>
+  		</field>
+  		
+  		<field name="keyDirectoryProduct" type="string">
+  	 		<bind-xml name="KeyDirectoryProduct" node="element"/>
+  		</field>
+  		<field name="payReturnPgurlProduct" type="string">
+  	 		<bind-xml name="PayReturnPgurlProduct" node="element"/>
+  		</field>
+  		
+  		<field name="payReturnBgurlProduct" type="string">
+  	 		<bind-xml name="PayReturnBgurlProduct" node="element"/>
+  		</field>
+  		
+  		<field name="queryBgUrlProduct" type="string">
+  	 		<bind-xml name="QueryBgUrlProduct" node="element"/>
+  		</field>
+  		
+  		<field name="paymentUrlProduct" type="string">
+  	 		<bind-xml name="PaymentUrlProduct" node="element"/>
+  		</field>
+  		
+  		<field name="gateIdProduct" type="string">
+  	 		<bind-xml name="GateIdProduct" node="element"/>
+  		</field>
+  		<!--测试-->
+  		<field name="merIdTest" type="string">
+  	 		<bind-xml name="MerIdTest" node="element"/>
+  		</field>
+  		
+  		<field name="keyDirectoryTest" type="string">
+  	 		<bind-xml name="KeyDirectoryTest" node="element"/>
+  		</field>
+  		
+  		<field name="payReturnPgurlTest" type="string">
+  	 		<bind-xml name="PayReturnPgurlTest" node="element"/>
+  		</field>
+  		
+  		<field name="payReturnBgurlTest" type="string">
+  	 		<bind-xml name="PayReturnBgurlTest" node="element"/>
+  		</field>
+  		
+  		<field name="queryBgUrlTest" type="string">
+  	 		<bind-xml name="QueryBgUrlTest" node="element"/>
+  		</field>
+  		
+  		<field name="paymentUrlTest" type="string">
+  	 		<bind-xml name="PaymentUrlTest" node="element"/>
+  		</field>
+  		
+  		<field name="gateIdTest" type="string">
+  	 		<bind-xml name="GateIdTest" node="element"/>
+  		</field>
+	</class>
+	
+</mapping>

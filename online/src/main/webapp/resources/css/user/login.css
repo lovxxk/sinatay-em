@@ -1,0 +1,202 @@
+.middle{
+	padding-bottom:17px;
+}
+.middle .h_layout{
+	background:#fff;
+}
+.login_main{
+	height:500px;
+	background: url(../../image/user/login_bg.png) left 20px no-repeat;
+	padding: 83px 0 0 624px;
+}
+
+.login_form{
+	width:290px;
+/* 	height:300px; */
+	border:1px solid #dedede;
+	padding-top:25px;
+	padding-bottom:20px;
+}
+
+.login_form label.input_label,.login_form input.input_field{
+	display:block;
+	margin:0;
+	margin-left:30px;
+}
+
+.login_form label.input_label #message{
+	font-weight: normal;
+	color: #ff3333; 
+	margin-left: 30px;
+	color:#ff0000;
+}
+
+.login_form label.input_label{
+	font-size:12px;
+	font-weight: bold;
+	color:#666;
+	line-height:26px;
+	margin-top:4px;
+}
+
+.login_form input.input_field{
+	width:218px;
+	height:31px;
+	border:1px solid #c8c8c8;
+	line-height:24px;
+	border-radius: 3px;
+	font-size:13px;
+	padding:1px 5px;
+	font-family:'Microsoft Yahei';
+	
+	/*ie7 fix*/
+	*height:28px;
+	*padding-top:5px;
+}
+
+.login_form .id_account{
+	display:none;
+}
+
+.login_form .id_account .top_arr{
+	height:9px;
+	background:url(../../image/user/top_arr.png) 65px bottom no-repeat;
+}
+.login_form .id_account .account_list{
+	background: #ededed;
+	padding:7px 0 7px 32px;
+}
+.login_form .id_account .account_list .account_choose{
+	line-height:28px;
+	color:#666;
+	font-weight:bold;
+}
+.login_form .id_account .account_list .account_item{
+	line-height:24px;
+	color:#666;
+}
+.login_form .id_account .account_list .account_item input{
+	float:left;
+	margin-top:5px;
+	
+	
+	margin-top:2px\9;
+}
+.login_form .id_account .account_list .account_item label{
+	margin-left:3px;
+}
+
+.login_form .action{
+	margin-left:30px;
+	margin-top:19px;
+	padding-left:2px;
+}
+
+.login_form .action input{
+	position:relative;
+	top:2px;
+	margin:0;
+}
+
+.login_form .action label{
+	padding: 0 8px 0 4px;
+}
+
+.login_form .action a{
+	display:inline-block;
+	line-height:14px;
+	border-left:1px solid #cccccc;
+	padding: 0 8px 0 12px;
+	text-align: center;
+}
+
+.login_form .action a.forget_password{
+	color:#333333;
+}
+.login_form .action a.forget_password:hover{
+	color:#3f67bf;
+}
+.login_form .action a.reg{
+	color:#3f67bf;
+	font-weight: bold;
+}
+.login_form .action a.reg:hover{
+	text-decoration: underline;
+}
+.login_form .login_submit{
+	margin-left:30px;
+	margin-top:22px;
+}
+
+.login_form .login_submit button{
+	width:232px;
+	height:42px;
+	border:none;
+	font-size:14px;
+	font-weight:bold;
+	color:#f0f4f5;
+	background: url(../../image/user/login_btn_bg.png) center no-repeat;
+	cursor: pointer;
+}
+
+.login_form .other_login{
+	margin-left:30px;
+	margin-top:15px;
+	overflow: hidden;
+}
+
+.login_form .other_login .login_type{
+	float:left;
+	padding-left:18px;
+	margin-right:9px;
+}
+
+.login_form .other_login .login_type a{
+	color:#333333;
+}
+.login_form .other_login .login_type a:hover{
+	color:#3f67bf;
+}
+.login_form .other_login .alipay{
+	background: url(../../image/user/alipay_icon.png) left no-repeat;
+}
+
+.login_form .other_login .tencent{
+	background: url(../../image/user/tencent_icon.png) left no-repeat;
+}
+
+.login_form .other_login .weibo{
+	background: url(../../image/user/weibo_icon.png) left no-repeat;
+}
+
+.alert_subscribe {
+    float: left;
+}
+.alert_subscribecss {
+    float: left;
+    font-size: 14px;
+    margin-top: -24px;
+}
+.main_content {
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 102px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+/* .alert_subscribe { */
+/*     float: left; */
+/* } */
+/* .alert_subscribecss { */
+/*     float: left; */
+/*     font-size: 14px; */
+/*     margin-top: -24px; */
+/* } */
+/* .main_content { */
+/*     float: left; */
+/*     margin-bottom: 20px; */
+/*     margin-left: 102px; */
+/*     margin-top: 15px; */
+/*     text-align: left; */
+/* } */

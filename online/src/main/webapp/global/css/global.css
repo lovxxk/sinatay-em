@@ -1,0 +1,123 @@
+html,body,address,blockquote,div,dl,form,h1,h2,h3,h4,h5,h6,ol,p,pre,table,ul,dd,dt,li,tbody,td,tfoot,th,thead,tr,button,del,ins,map,object,a,abbr,acronym,b,bdo,big,br,cite,code,dfn,em,i,img,kbd,q,samp,small,span,strong,sub,sup,tt,var,legend,fieldset,textarea
+{
+	margin: 0;
+	padding: 0;
+}
+
+img,fieldset {
+	border: 0;
+}
+
+/* set image max width to 100% */
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+}
+
+/* set html5 elements to block */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+{
+	display: block;
+}
+
+ul,li,p,h3,h2,h1,samp,label,dl,dt,dd,sup,sub{ 
+	list-style:none outside none;
+}
+
+body {
+	font-family:"Microsoft Yahei";
+	font-size:12px;
+}
+
+/* 页面横向边界 */
+.h_layout{
+	width:1000px;
+	margin:0 auto;
+	height:100%;
+}
+
+a{
+	text-decoration: none;
+}
+
+/*@font-face {*/
+/*	src: url(../font/FZLTHK_GBK.TTF);*/
+/*	font-family: "FZLTHK";  */
+/*} */
+
+
+.click_btn::selection { background-color:rgba(255,255,255,0);}
+.click_btn::-moz-selection {  background-color:rgba(255,255,255,0);} 
+.click_btn::-webkit-selection {  background-color:rgba(255,255,255,0);}
+
+
+#loading{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+}
+
+#loading .load_bg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	background-color: #000;
+	opacity:0.5;
+	filter:alpha(opacity=50);
+}
+
+#loading .cmsg{
+	width: 100%;
+	z-index: 1;
+	position: absolute;
+	font-size:14px;
+	margin-top:360px;
+	text-align:center;
+	color:#fff;
+}
+
+#loading .cmsg #load_percent{
+	margin-left:5px;
+}
+
+#loading .lpb{
+	margin:16px auto 0;
+	width:434px;
+	height:30px;
+	background: url(../image/loading_bg.png) center no-repeat;
+}
+
+#loading .lpb .lpt{
+	width:100%;
+	height:100%;
+}
+
+#loading .lpb .lpt .lptl{
+	width:13px;
+	height:100%;
+	background: url(../image/loading_bar_left.png) top left no-repeat;
+	float:left;
+}
+
+#loading .lpb .lpt .lptc{
+	height:100%;
+	background: url(../image/loading_bar_center.png) top left repeat-x;
+	float:left;
+}
+
+#loading .lpb .lpt .lptr{
+	width:13px;
+	height:100%;
+	background: url(../image/loading_bar_right.png) top left no-repeat;
+	float:left;
+}
+
+
+.click_btn{
+	font-family:"Microsoft Yahei";
+	cursor: pointer;
+	position:relative;
+}

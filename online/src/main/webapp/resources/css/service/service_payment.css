@@ -1,0 +1,153 @@
+
+.service_area{
+	background: #fff;
+}
+.service_area .title{
+	height:40px;
+	line-height:40px;
+	background: #3f67bf;
+}
+
+.service_area .title p{
+	float:left;
+	color:#fff;
+	font-size:14px;
+	font-weight: bold;
+	padding-left:23px;
+}
+
+.service_area .title .more{
+	float:right;
+	margin-right:15px;
+}
+.service_area .title .more a{
+	color:#fff;
+}
+
+.service_query_top{
+	overflow: hidden;
+}
+.policy_top{
+	margin-left:50px;
+	background:#dce6ff;
+	height:59px;
+	color:#000;
+	margin-top:23px;
+	float:left;
+}
+
+.policy_top p{
+	height:24px;
+	line-height:20px;
+	padding-top:35px;
+	padding-left:96px;
+	padding-right:5px;
+	background: url(../../image/service/service_payment.png) no-repeat;
+	float:left;
+}
+
+.payment_area{
+	margin:22px 48px 0 50px;
+	border-bottom:1px solid #dce6ff;
+}
+
+.payment_area .payment_title{
+	height:36px;
+}
+
+.payment_area .payment_type{
+	background: #dce6ff;
+}
+
+.payment_area .payment_type .payment_instro{
+	background: #fff;
+}
+.payment_area .payment_type.alipay .payment_title{
+	background: url(../../image/service/service_payment_alipay.png) 12px center no-repeat;
+}
+
+.payment_area .payment_type.bank .payment_title{
+	background: url(../../image/service/service_payment_bank.png) 12px center no-repeat;
+}
+
+.payment_area .payment_type.bank{
+	margin-bottom:20px;
+}
+
+.payment_instro .p1{
+	color:#3c3c3c;
+	padding-left:42px;
+	padding-top:20px;
+}
+
+.payment_instro .p1 a{
+	color:#ff3333;
+}
+.payment_instro .p1 a:hover{
+	text-decoration: underline;
+}
+.payment_instro .alipay_content{
+	font-size:14px;
+	margin-top:7px;
+	margin-bottom:30px;
+	color:#3c3c3c;
+}
+
+.payment_instro .alipay_content img{
+	float:left;
+	margin-left:40px;
+	margin-top:6px;
+}
+
+.payment_instro .alipay_content p{
+	margin-left:200px;
+	margin-bottom:10px;
+}
+.payment_instro .alipay_content p a{
+	font-size:12px;
+	color:#ff3333;
+}
+.payment_instro .alipay_content p a:hover{
+	text-decoration: underline;	
+}
+.payment_instro .bank_content{
+	font-size:14px;
+	color:#3c3c3c;
+	line-height:26px;
+	padding:6px 21px 6px 18px;
+	margin:0 24px;
+	border-bottom:1px dashed #ccc;
+}
+
+.payment_instro .bank_list{
+	margin:10px 0 0 45px;
+	overflow: hidden;
+}
+
+.payment_instro .bank_list img{
+	float:left;
+	width:114px;
+	height:34px;
+	margin-right:40px;
+	margin-bottom:16px;
+}
+
+.payment_notice{
+	padding-top:33px;
+	padding-bottom:54px;
+	margin: 0 45px 0 42px;
+	height:559px;  
+	background: url(../../image/service/payment_notice.png) center no-repeat;
+}
+
+.payment_notice p{
+	padding-top:55px;
+	text-align: right;
+}
+
+.payment_notice p a{
+	color:#ff3333;
+}
+.payment_notice p a:hover{
+	text-decoration: underline;	
+}

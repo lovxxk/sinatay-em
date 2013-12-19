@@ -1,0 +1,32 @@
+body{padding:0px; margin:0px; font-size:12px; color:#000; font-family:Arial; background:url(../images/login/body_bgimg.jpg) no-repeat #FFFFFF center top; text-align:center;}
+p,h3,h4{padding:0px; margin:0px;}
+ul,li{padding:0px; margin:0px; list-style-type:none;}
+a:link, a:visited{color:#002da1; text-decoration:underline;}
+a:hover, a:active{color:#002da1; text-decoration:underline;}
+a.lnk1:link, a.lnk1:visited{color:#363535; text-decoration:none;}
+a.lnk1:hover, a.lnk1:active{color:#363535; text-decoration:none;}
+
+.sign_warpper{clear:both; width:630px; height:420px; position:absolute; left:50%; top:50%; text-align:left; margin:-210px 0px 0px -315px;}
+.sign_newsbg{width:630px; height:420px; background:url(../images/login/sign_newsbg.png) no-repeat; position:absolute; top:0px; left:0px;}
+.sign_wel{width:630px; height:420px; position:absolute; left:0px; top:0px; clear:both; text-align:center;}
+.sign_border{width:516px; margin:32px auto 0px;}
+.sign_title{clear:both; height:49px; border-bottom:1px #1e9f68 solid;}
+.sign_title span.welcome{float:left; width:222px; height:49px; background:url(../images/login/sign_welcome.jpg) no-repeat;}
+.sign_title span.picss{float:right; width:68px; height:49px; background:url(../images/login/backstage_login_pic2.jpg) no-repeat left top;}
+.sign_wel_title{height:34px; clear:both; text-align:right; line-height:34px; padding-right:28px;}
+.sign_wel_title h4{font-size:18px; font-family:"Î¢ÈíÑÅºÚ"; color:#199a63; font-weight:lighter;}
+.sign_text_border{clear:both; height:212px; background:url(../images/login/sign_text_newsbg.jpg) no-repeat center bottom;}
+.backstage_login_en2{clear:both; padding-top:15px;}
+.backstage_login_prompt{clear:both; height:42px;}
+.backstage_login_prompt h3{font-size:18px; color:#c22525; text-align:center; line-height:42px; font-family:"Î¢ÈíÑÅºÚ";}
+.backstage_login_write1,.backstage_login_write2{clear:both; height:38px; padding-left:66px;}
+.backstage_login_write2{margin-top:10px;}
+.backstage_login_texname{float:left; width:85px; height:38px; line-height:38px; text-align:right; font-size:18px; font-family:"Î¢ÈíÑÅºÚ"; color:#616161; font-weight:bold;}
+.backstage_login_textext,.backstage_login_textext1{float:left; width:200px; height:35px; padding:3px 0px 0px 0px;}
+.backstage_login_textext1{width:100px;}
+.backstage_login_texyan{height:27px; float:left; width:78px; background-color:#e0e0e0; border:1px #adadad solid; margin:4px 0px 0px 13px; line-height:27px; text-align:center; font-size:24px; color:#515151;}
+.backstage_login_texchange{float:left; line-height:38px; color:#9a9a9a; width:108px;}
+.backstage_login_en3{clear:both; height:50px; text-align:center; padding-top:10px;}
+.backstage_login_input1{width:190px; height:30px; line-height:30px; padding:0px 1px; color:#616161;}
+.backstage_login_input2{width:90px; height:30px; line-height:30px; padding:0px 1px; color:#616161;}
+.backstage_login_input3{width:162px; height:50px; background:url(../images/login/backstage_login_botton1.jpg) no-repeat; border:0px; cursor:pointer;}

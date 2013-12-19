@@ -1,0 +1,264 @@
+.head_mid .main_title{
+	display: none;
+}
+
+.middle .h_layout{
+	padding-bottom:19px;
+}
+
+/*面包屑*/
+.middle .nav_index{
+	height:42px;
+}
+.middle .nav_index li{
+	line-height:42px;
+	font-size:13px;
+	display:inline;
+	color:#3c3c3c;
+}
+.middle .nav_index li a{
+	color:#3c3c3c;
+}
+
+.middle .nav_index li a:hover{
+	color:#3f67bf;
+}
+.product_main{
+	overflow: hidden;
+}
+
+/*左区域定位*/
+.left_dynamic{
+	width:225px;
+	float:left;
+}
+
+/*左区域框架*/
+.left_dynamic .dynamic_frame{
+	border-left:1px solid #d7d7d7;
+	border-right:1px solid #d7d7d7;
+	border-bottom:1px solid #d7d7d7;
+	border-top:2px solid #999999;
+	background: #fff;
+}
+
+.left_dynamic .dynamic_title{
+	font-size:14px;
+	line-height:34px;
+	color:#333;
+	padding-left:12px;
+}
+
+.left_dynamic .dynamic_list{
+	padding:7px;
+	padding-top:0;
+}
+
+.left_dynamic .dynamic_list li{
+	border-bottom:1px dashed #dedede;
+}
+
+.left_dynamic .dynamic_list li.last{
+	border-bottom:0;
+}
+
+/*左侧区域-产品推荐*/
+.product_commend .product_container{
+	overflow: hidden;
+	padding-left:12px;
+	padding-bottom:7px;
+}
+
+.product_commend .product_container a{
+	width:80px;
+	height:80px;
+	margin:5px 10px;
+	background: #aaa;
+	float:left;
+	font-size:14px;
+	background: url(../../image/product/product_recommend.png) no-repeat;
+	line-height:80px;
+	text-align: center;
+	text-indent: 999px;
+	display: block;
+}
+
+.product_commend .product_container a.car{
+	background-position: 0 0 ;
+}
+
+.product_commend .product_container a.female{
+	background-position: -80px 0 ;
+}
+
+.product_commend .product_container a.collar{
+	background-position: -80px -80px ;
+}
+
+.product_commend .product_container a.parent{
+	background-position: 0 -160px;
+}
+
+.product_commend .product_container a.travel{
+	background-position: 0 -80px ;
+}
+
+.product_commend .product_container a.child{
+	background-position: -80px -160px ;
+}
+
+.product_commend .product_container a.disable{
+	cursor: default;
+}
+
+/*左侧区域-产品销售排行*/
+.product_rank{
+	margin-top:10px;
+}
+
+.product_rank .rank_list{
+	overflow: hidden;
+}
+
+.product_rank .rank_list li .rank{
+	margin:0 5px;
+	padding:7px 0;
+	height:50px;
+}
+
+.product_rank .rank_list li .rank .rank_img{
+	width:50px;
+	height:50px;
+	background: #dddddd;
+	float:left;
+}
+
+.product_rank .rank_list li .rank .rank_img a{
+	display: block;
+	height:50px;
+}
+
+.product_rank .rank_list li .rank .rank_title{
+	float:left;
+	width:110px;
+	padding-left:8px;
+	padding-top:5px;
+	line-height:18px;
+}
+
+.product_rank .rank_list li .rank .rank_title a{
+	color:#333333;
+}
+.product_rank .rank_list li .rank .rank_title a:HOVER{
+	color:#3f67bf
+}
+/*左侧区域-展示图片*/
+.left_dynamic .display{
+	width:225px;
+	height:110px;
+	background: #eaeaea;
+	margin-top:10px;
+	display:none;
+}
+
+
+/*左侧区域-产品地图*/
+.product_map{
+	border:3px solid #3f67bf;
+	padding-bottom:10px;
+	margin-bottom:10px;
+	overflow: hidden;
+}
+
+.product_map .category{
+	margin:5px auto;
+	width:189px;
+	overflow: hidden;
+}
+
+.product_map .category a{
+	display: block;
+	float:left;
+	width:60px;
+	height:14px;
+	line-height:14px;
+	margin:3px 0;
+	border-right:1px solid #333;
+	text-align: center;
+	color:#333;
+}
+.product_map .category a:HOVER{
+	color: #ff3333;
+}
+.product_map .category a.last{
+	border-right:0;
+}
+
+.product_map .category.child a:HOVER{
+	color:#333;
+	cursor: default;
+}
+
+.product_map .category .cate_name{
+	font-size:14px;
+	line-height: 36px;
+	height: 36px;
+	color:#3f67bf;
+	border-bottom:1px dashed #999999;
+	margin-bottom:10px;
+}
+
+.product_map .category.child .cate_name{
+	color:#999;
+}
+
+.product_map .category .cate_name div{
+	background: url(../../image/product/category_icon.png) no-repeat;
+	width:24px;
+	height:24px;
+	float:left;
+	margin-top:8px;
+	margin-right:8px;
+}
+
+.product_map .category.child .cate_name div{
+	background-position: 0 0;
+}
+.product_map .category.traffic .cate_name div{
+	background-position: 0 -24px;
+}
+.product_map .category.finance .cate_name div{
+	background-position: 0 -48px;
+}
+.product_map .category.life .cate_name div{
+	background-position: 0 -72px;
+}
+
+
+/*左侧区域-常见问题*/
+.common_problem .dynamic_title{
+	background: url(../../image/problem.png) no-repeat 12px center;
+	text-indent: 23px;
+}
+.common_problem {
+	margin-top:10px;
+}
+
+.common_problem .dynamic_list li{
+	padding:7px 5px;
+}
+.common_problem .dynamic_list li a{
+	color:#3c3c3c;
+	line-height:16px;
+}
+.common_problem .dynamic_list li a:HOVER{
+	color:#3f67bf;
+}
+
+/*右侧区域定位*/
+
+.right_product{
+	width:760px;
+	float:right;
+	padding-left:15px;
+}

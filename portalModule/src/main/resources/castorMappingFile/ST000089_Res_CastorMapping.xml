@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="GBK"?>
+<mapping>
+	<description>支付查询接口应答</description>
+	<class name="cn.com.sinosoft.portalModule.transport.transactionObject.TXInsurance" auto-complete="false">
+		<map-to xml="TranData"/>
+		<field name="transExeDate" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TransrDate" location="BaseInfo"/>
+		</field>
+		<field name="transExeTime" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TransrTime" location="BaseInfo"/>
+		</field>
+		<field name="tellerNo" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TellerNo" location="BaseInfo"/>
+		</field>
+		<field name="transRefGUID" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TransrNo" location="BaseInfo"/>
+		</field>
+		<field name="saleChannel" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="SaleChannel" location="BaseInfo"/>
+		</field>
+		<field name="sellType" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="SellType" location="BaseInfo"/>
+		</field>
+		<field name="transType" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="FunctionFlag" location="BaseInfo"/>
+		</field>
+		<field name="source" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="Source" location="BaseInfo"/>
+		</field>
+		<field name="businessDatum" collection="arraylist"  type="cn.com.sinosoft.portalModule.transport.sinatay.TranResponse">
+			<bind-xml name="TranResponse"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.sinatay.TranResponse" auto-complete="false">
+		<field name="flag" type="string">
+			<bind-xml name="Flag"/>
+		</field>
+		<field name="desc" type="string">
+			<bind-xml name="Desc"/>
+		</field>
+	</class>
+</mapping>

@@ -1,0 +1,162 @@
+.right_content .title{
+	height:35px;
+	background: #e6e6e6;
+	line-height:35px;
+}
+.right_content .title .block{
+	width:4px;
+	height:35px;
+	float:left;
+	background: #3f67bf;
+	margin-right:18px;
+}
+
+.right_content .title p{
+	float:left;
+	color:#333;
+	font-size:14px;
+	font-weight: bold;
+}
+
+.right_content .title .more{
+	float:right;
+	margin-right:15px;
+}
+.right_content .title .more a{
+	color:#999999;
+}
+
+.right_content .tips{
+	font-weight:bold;
+	margin-left:30px;
+	line-height:24px;
+	height:24px;
+}
+
+.right_content .tips div{
+	float:left;
+	width:4px;
+	height:3px;
+	background: #333333;
+	margin-top:10px;
+	margin-right:5px;
+}
+
+.right_content .first_tip{
+	margin-top:18px;
+}
+
+.member_area{
+	margin: 0 20px;
+	border-bottom:1px solid #cccccc;
+}
+
+.member_area .input_area{
+	padding:20px 0;
+}
+
+.member_area .input_area .input_row{
+	height:36px;
+}
+
+.member_area .input_area .input_label{
+	width:140px;
+	float:left;
+	line-height:36px;
+	text-align: right;
+	margin-right: 14px;
+}
+.member_area .input_area .input_label .required{
+	color:#ff0000;
+	margin-right:14px;
+}
+.member_area .input_area .input_row .input_text{
+	height:23px;
+	border:1px solid #c9c9c9;
+	margin-top:5px;
+	padding-left:5px;
+	font-family:"Microsoft Yahei";
+}
+.member_area .input_area .input_row .info_label{
+	float:left;
+	padding:0 3px;
+	line-height:36px;
+	width:200px;
+}
+
+
+.input_row.associate_account .input_text,.input_row.associate_password .input_text{
+	width:183px;
+}
+
+.input_row.valicode .input_text{
+	width:93px;
+}
+
+
+
+
+
+.action{
+	margin-top:24px;
+	height:38px;
+	margin-bottom:45px;
+}
+
+.action .associate{
+	margin-left:158px;
+	width:137px;
+	height:38px;
+	position:relative;
+	background: url(../../image/policy/next_step.png) no-repeat;
+	border:none;
+	float:left;
+	font-size:16px;
+	color:#fff;
+	line-height:38px;
+	font-weight:bold;
+	font-family:"Microsoft Yahei";
+}
+
+
+.account_platform{
+	width:100%;
+	height:45px;
+	margin-top:15px;
+	padding-left:38px;
+	margin-bottom:130px;
+}
+
+.account_platform .platform{
+	width:110px;
+	height:45px;
+	float:left;
+	margin:0 25px;
+	background: url(../../image/user/member/other_account.png) no-repeat;
+}
+.account_platform .platform.alipay{
+	background-position: 0 0 ;
+}
+
+.account_platform .platform.weibo{
+	background-position: -110px 0 ;
+}
+.account_platform .platform.douban{
+	background-position: -220px 0 ;
+}
+
+
+.product_list{
+	margin-top:22px;
+	overflow: hidden;
+	padding:0 2px;
+	margin-bottom:60px;
+}
+
+.product_list .product{
+	float:left;
+	width:240px;
+	height:120px;
+	background: #e6e6e6;
+	margin:0 13px;
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	default-autowire="byName" default-lazy-init="false">
+
+	<!-- 消息Queue管理器 -->
+	<bean id="queuesHolder" class="cn.com.sinosoft.util.queue.QueuesHolder">
+		<property name="queueSize" value="1000" />
+	</bean>
+
+	<!-- 读出Queue中日志消息写入数据库的任务 -->
+	<bean id="jdbcLogWriter" class="cn.com.sinosoft.ebusiness.log.JdbcLogWriter">
+		<property name="queueName" value="dblog" />
+		<property name="appName" value="online" />
+		<property name="batchSize" value="1" />
+		<property name="sql">
+			<value>
+				insert into
+				GE_MONITOR_APPLOG(SERIALNO,APPNAME,TRACEID,METHODNAME,CLASSNAME,INPUTPARAM,OUTPARAM,BEGINTIME,ENDTIME,CONSUMETIME,LOGDESC,LOGGRADE,LOGTIME,LOGTYPE)
+				values(:serialNo,:appName,:traceId,:methodName,:className,:inputParam,:outParam,:beginTime,:endTime,:consumeTime,:logDesc,:logGrade,:logTime,:logType)
+			</value>
+		</property>
+	</bean>
+
+	<!-- 再调用log模块的模块打开aop <aop:aspectj-autoproxy/> -->
+	<!-- log切面 -->
+	<bean id="implTraceAspect" class="cn.com.sinosoft.ebusiness.log.ImplTraceAspect">
+		<property name="environment" value="TEST" />
+	</bean>
+	
+	<!-- 用户操作轨迹 -->
+	<bean id="userLogService" class="cn.com.sinosoft.ebusiness.log.service.spring.UserLogServiceImpl" 
+		>
+<!-- 		init-method="init" destroy-method="destory"> -->
+	</bean>
+	<bean id="actionTraceAspect" class="cn.com.sinosoft.ebusiness.log.ActionTraceAspect">
+	</bean>
+
+	<!-- 区别其它 DataSource -->
+	<bean id="monitorDataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<!-- Connection Info -->
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+	<!-- 事务管理器配置, DataSource单数据源事务 -->
+	<bean id="monitorTransactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="monitorDataSource" />
+	</bean>
+
+</beans>

@@ -1,0 +1,46 @@
+/*---tableÑùÊ½---*/
+.td_border_head{
+ 	 text-align:center;
+ 	 height:23px;
+ 	 background:#E9F8FF;
+ 	 border-left:1px solid #a1a29c;
+	 border-top:1px solid #a1a29c;
+	 border-right:1px solid #a1a29c;
+	 border-bottom:1px solid #000000;	
+ }
+ .td_border_head_top_none{
+ 	 text-align:center;
+ 	 height:23px;
+ 	 background:#318F5B;
+ 	 border-left:1px solid #a1a29c;
+	 border-top:none;
+	 border-right:1px solid #a1a29c;
+	 border-bottom:1px solid #000000;	
+ }
+ .td_border_head_left_top_none{
+ 	 text-align:center;
+ 	 height:23px;
+ 	 background:#318F5B;
+ 	 border-left:none;
+	 border-top:none;
+	 border-right:1px solid #a1a29c;
+	 border-bottom:1px solid #000000;	
+ }
+ .td_border_body_top_none{
+ 	 text-align:center;
+ 	 height:23px;
+ 	 color:#000000;
+ 	 border-left:1px solid #a1a29c;
+	 border-top:none;
+	 border-right:1px solid #a1a29c;
+	 border-bottom:1px solid #a1a29c;	
+ }
+ .td_border_body_left_top_none{
+ 	 text-align:center;
+ 	 height:23px;
+ 	 color:#000000;
+ 	 border-left:none;
+	 border-top:none;
+	 border-right:1px solid #a1a29c;
+	 border-bottom:1px solid #a1a29c;	
+ }

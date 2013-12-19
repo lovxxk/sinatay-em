@@ -1,0 +1,57 @@
+.select_header_top_center{
+	height:27px;
+	width:130px;
+	float:left;
+	line-height:27px;
+	cursor:pointer;
+	font-weight:bold;
+	color:536c94;
+}
+/*---------------------------------cms功能标题--------------------------------------*/
+.cms_header_top_bg{
+	height:50px;
+	width:100%;
+	background:#ecedee;
+	BACKGROUND-REPEAT: repeat-x;
+	clear:both;
+}
+.cms_header_top_button{
+	margin-top:11px;
+	height:21px;
+	line-height:21px;
+	width:99px;
+	background:url(../images/btn_bg.jpg);
+	BACKGROUND-REPEAT: no-repeat;
+	float:left;
+	cursor:pointer;
+}
+.cms_header_top_space{
+	float:left;
+	height:50px;
+	width:20px;
+}
+/*---------------------------------table样式--------------------------------------*/
+.td_in1{
+	height:50px;
+	width:120px;
+}
+.td_in2{
+	height:50px;
+	width:2px;
+}
+.td_in3{
+	height:50px;
+	width:250px;
+}
+/*---------------------------------提交按钮样式--------------------------------------*/
+.btn_ord2{
+	background:url(../images/cms_login_btn_login2.gif) no-repeat left top;
+	width:99px; 
+	height:21px; 
+	font-size:12px;
+	font-family:宋体;
+	vertical-align:middle;
+	text-align:left;
+	cursor:pointer;
+	padding-left:20px;
+}

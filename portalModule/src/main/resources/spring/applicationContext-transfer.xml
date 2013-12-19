@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/ng-context-3.0.xsd 
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	
+	<!-- 投保人基本资料变更 -->
+	<bean id="appntInfoChangeCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.AppntInfoChangeCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	<!-- 被保人基本资料变更 -->
+	<bean id="insuredInfoChangeCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.InsuredInfoChangeCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	<!-- 理赔报案-->
+	<bean id="claimReportCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.ClaimReportCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	<!-- 保单列表-->
+	<bean id="policyListCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.PolicyListCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	<!-- 保单查询客户5要素-->
+	<bean id="policyCustomerCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.PolicyCustomerCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	<!-- 客户查询有效保单-->
+	<bean id="customerPolicyCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.CustomerPolicyCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	<!-- 理赔列表-->
+	<bean id="claimListCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.ClaimListCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	<!-- 理赔详情-->
+	<bean id="claimDetailCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.ClaimDetailCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	
+	<bean id="subscribedCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.SubscribedCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	
+	<bean id="downloadNoticeCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.DownloadNoticeCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	
+	<bean id="downloadEdorCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.DownloadEdorCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	
+	<bean id="cashValueCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.CashValueCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	
+	<bean id="insuranceBenefitCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.InsuranceBenefitCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	<!-- 保单详情 -->
+	<bean id="policyDetailCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.PolicyDetailCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	<!-- 保全变更记录查询 -->
+	<bean id="edorCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.EdorCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	<!-- 电子函件查询 -->
+	<bean id="emailCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.EmailCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	
+	<!-- 通知书查询 -->
+	<bean id="noticeCreater"
+		class="cn.com.sinosoft.ebusiness.xmltransfer.NoticeCreater">
+		<property name="maxNoService" ref="maxNoService" />	
+	</bean>
+	
+</beans>

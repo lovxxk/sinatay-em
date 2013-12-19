@@ -1,0 +1,155 @@
+
+.head_mid .main_title{
+	display: none;
+}
+
+.middle .h_layout{
+	padding-bottom:66px;
+}
+
+.middle .nav_index{
+	height:42px;
+}
+.middle .nav_index li{
+	line-height:42px;
+	font-size:13px;
+	display:inline;
+}
+.middle .nav_index li a{
+	color:#535353;
+}
+
+.detail_main{
+	background: #fff;
+	padding:0 20px 100px;
+	margin:10px 10px 0;
+}
+
+.detail_main .base_info{
+	height:100px;
+}
+
+.detail_main .base_info .title{
+	line-height:100px;
+	font-size:22px;
+	color:#333;
+	float:left;
+	margin-left:25px;
+}
+
+
+.claims_info{
+	margin-bottom:10px;
+}
+.claims_info .claims_num{
+	height:69px;
+	border-top:2px solid #3f67bf;
+	background: #dbe6ff;
+	margin-bottom:3px;
+	color:#3f67bf;
+}
+.claims_info .claims_num span{
+	text-indent: 28px;
+	font-size:20px;
+	line-height: 69px;
+	float:left;
+}
+
+
+
+.info_area{
+}
+
+.info_area .title{
+	height:40px;
+	text-indent: 22px;
+	background: #3f67bf;
+	line-height:40px;
+	color:#fff;
+}
+
+.info_area .title .title_name{
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.info_area .sub_title{
+	height:35px;
+	text-indent: 22px;
+	background: #f0f0f0;
+	line-height:35px;v
+	color:#fff;
+	border:1px solid #d1d1d1;
+	border-top:0;
+}
+
+.info_area .sub_title .title_name{
+	float:left;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.info_area .sub_title .fold{
+	width:13px;
+	height:12px;
+	float:right;
+	margin-right:16px;
+	margin-top:13px;
+	background: url(../../image/user/member/claims_detail_fold.png) no-repeat;
+	cursor: pointer;
+}
+
+.info_area .sub_title .fold.open{
+	background-position: 0 0;
+}
+.info_area .sub_title .fold.close{
+	background-position: -13px 0;
+}
+
+.info_area .input_row{
+	height:35px;
+	border-bottom:1px solid #d1d1d1;
+	border-right:1px solid #d1d1d1;
+}
+
+.info_area .input_row.reason{
+	height:71px;
+}
+
+.info_area .input_row .input_col{
+	width: 469px;
+	float:left;
+}
+
+.info_area .input_row .input_col .input_label{
+	height:35px;
+	width:106px;
+	border-left:1px solid #d1d1d1;
+	float:left;
+	line-height:35px;
+	text-align: right;
+	margin-right: 14px;
+	font-weight:bold;
+}
+.info_area .input_row .input_col .input_text{
+	height:35px;
+	width:300px;
+	border-left:1px solid #d1d1d1;
+	float:left;
+}
+
+.info_area .input_row.reason .input_col .input_label{
+	height:71px;
+}
+.info_area .input_row.reason .input_col .input_text{
+	height:71px;
+}
+
+.info_area .input_row .input_col .input_text .text_show{
+	line-height:35px;
+	margin-left:20px;
+}
+.info_area .gray{
+	background-color:#e0e0e0;
+}

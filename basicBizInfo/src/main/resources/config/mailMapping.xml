@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GBK"?>
+<mapping>
+<class name="cn.com.sinosoft.ebusiness.common.basicBizInfo.domain.MailConfig" auto-complete="false">
+		<map-to xml="mail"/>
+		
+		<field name="mailHost" type="java.lang.String">
+			<bind-xml name="MAIL_HOST"/>
+		</field>
+		
+		<field name="mailAddress" type="java.lang.String">
+			<bind-xml name="MAIL_ADDRESS"/>
+		</field>
+		<field name="mailAddresssName" type="java.lang.String">
+			<bind-xml name="MAIL_ADDRESSNAME"/>
+		</field>
+		<field name="userPassword" type="java.lang.String">
+			<bind-xml name="MAIL_USER_PASSWORD"/>
+		</field>			
+</class>
+</mapping>

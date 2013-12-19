@@ -1,0 +1,98 @@
+.head_mid .main_title{
+	display: none;
+}
+
+.middle .h_layout{
+	padding-bottom:66px;
+}
+
+.middle .nav_index{
+	height:42px;
+}
+.middle .nav_index li{
+	line-height:42px;
+	font-size:13px;
+	display:inline;
+}
+.middle .nav_index li a{
+	color:#535353;
+}
+
+.agree_body{
+	background: #fff;
+	padding:50px 35px 60px;
+}
+
+.agree_body h1{
+	font-family:"Microsoft Yahei";
+	font-size:22px;
+	font-weight:normal;
+	text-align: center;
+	padding-bottom:36px;
+	margin-bottom:30px;
+	border-bottom:1px dashed #ccc;
+}
+
+.agree_body p{
+	line-height:22px;
+}
+
+.agree_body p.h4{
+	font-weight:bold;
+}
+
+.agree_body p.p2{
+	text-indent: 4em;
+}
+
+dl dt{
+	padding-top:10px;
+	padding-left: 34px;
+	padding-bottom: 10px;
+}
+dt.homepage{
+	background:url(../../image/map/homepage.png) 0 center no-repeat;
+}
+dt.product_buy{
+	background:url(../../image/map/product_buy.png) 0 center no-repeat;
+}
+dt.service_center{
+	background:url(../../image/map/service_center.png) 0 center no-repeat; 
+}
+dd{
+	border:1px solid #dddddd;
+	border-top: 2px solid #cccccc;
+	margin-bottom: 20px;
+	overflow: hidden;
+	line-height:30px;
+	min-height:110px;
+}
+dd div{
+	float: left;
+	width: 25%;
+}
+dd ul{
+	height: 110px;
+	padding-top: 12px;
+	border-right: 1px dashed #dddddd;
+	padding-left:2em;
+}
+dd ul li{
+	width:49%;
+	float:left;
+}
+
+dd ul li.long{
+	width:98%;
+}
+dd ul li a{
+	background:url(../../image/map/circle.png) 0 center no-repeat;
+	text-indent:10px;
+	float:left;
+	width: 100%;
+	text-align: left;
+	color: #000000;
+}
+dd ul li a:HOVER{
+	color: #3f67bf;
+}

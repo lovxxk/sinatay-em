@@ -1,0 +1,126 @@
+
+.detail_main .bottom_bg{
+	margin-left:21px;
+	margin-top:22px;
+}
+
+.detail_main .content_bg{
+	width:720px;
+	background: #f0f0ff;
+	padding-top:22px;
+	margin-bottom: 20px;
+}
+
+.detail_main.detail .content_bg{
+	height:1558px;
+	background: none;
+	padding-top:0;
+}
+
+.detail_main.buy_notice .content_bg{
+	height:1540px;
+}
+
+.detail_main.policy .content_bg{
+	height:1693px;
+}
+
+.detail_main.detail .content_bg .main_content{
+	height:1558px;
+	margin-left:-10px;
+	background: url(../../image/product/product_finance_detail.jpg) no-repeat;
+}
+
+.detail_main.buy_notice .content_bg .main_content{
+	height:1472px;
+	margin-left:-10px;
+	background: url(../../image/product/product_finance_notice.png) no-repeat;
+}
+
+.detail_main.policy .content_bg .main_content{
+	height:1495px;
+	margin-left:-10px;
+	background: url(../../image/product/product_finance_policy.png) no-repeat;
+}
+
+
+.detail_main.detail .interest_notice{
+	padding-left: 465px;
+	padding-top: 553px;
+}
+
+
+.detail_main.detail .interest_notice .click_btn{
+	position:relative;
+	width:202px;
+	height:41px;
+	cursor: pointer;
+	font-size:15px;
+	line-height:41px;
+	color:#fff;
+	font-weight:bold;
+	text-align: center;
+	
+}
+.detail_main.detail .interest_notice .view_income{
+	background: url(../../image/product/view_income_btn.png) no-repeat;
+	margin-top:25px;
+}
+
+.detail_main.detail .interest_notice .view_interest{
+	background: url(../../image/product/view_interest_btn.png) no-repeat;
+}
+
+
+
+.action {
+	color:#000;
+}
+
+.action a{
+	color:#3366cc;
+}
+.action.help_service a.more{
+	float:right;
+}
+
+.action a.more{
+	float:right;
+}
+
+.action.policy_service{
+	padding-left:83px;
+	padding-top:238px;
+} 
+
+.action.get_money{
+	padding-left:83px;
+	padding-top:282px;
+} 
+
+.action.claims_service{
+	padding-left:83px;
+	padding-top:286px;
+} 
+
+.action.help_service{
+	padding-left:83px;
+	padding-top:627px;
+	padding-right:100px;
+}
+
+
+.detail_main.buy_notice .action.p1{
+	padding-left:593px;
+	padding-top:953px;
+} 
+.detail_main.buy_notice .action.p1 a{
+	color:#ff3333;
+	text-decoration: underline;
+}
+
+.detail_main.buy_notice .action.p3{
+	padding-left:83px;
+	padding-top:520px;
+	padding-right:100px;
+}

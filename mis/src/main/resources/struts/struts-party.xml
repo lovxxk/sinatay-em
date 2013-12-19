@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="party" extends="struts-default" namespace="/party" >
+	<action name="selectCity" class="partyAction" method="selectCity" />
+		<action name="selectProvince" class="partyAction" method="selectProvince" />
+<!--		<action name="selectProvinceUp" class="partyAction" method="selectProvinceUp" />-->
+		
+		<action name="prepareAddThirdParterInfoAndThirdParterContact" class="partyAction" method="prepareAddThirdParterInfoAndThirdParterContact" >
+			<result name="success">
+				/business/customerManage/party/thirdParterInfo/create/frmCreate.jsp
+			</result>
+		</action>
+		<action name="addThirdParterInfoAndThirdParterContact" class="partyAction" method="addThirdParterInfoAndThirdParterContact" >
+			<result name="success">
+				/global/inc/alertInfo.jsp?type=create
+			</result>
+		</action>
+		<action name="findThirdParterInfo" class="partyAction" method="findThirdParterInfo">
+			<result name="success">
+				/business/customerManage/party/thirdParterInfo/search/search.jsp
+			</result>
+			<result name="dbfindThirdParterInfo">
+				/business/customerManage/party/thirdParterService/create/selectThirdParterInfo/search.jsp
+			</result>
+		</action>
+		<action name="prepareUpdateThirdParterInfo" class="partyAction" method="prepareUpdateThirdParterInfo">
+			<result name="success">
+				/business/customerManage/party/thirdParterInfo/update/index.jsp
+			</result>
+		</action>
+		<action name="updateThirdParterInfoAndThirdParterContact" class="partyAction" method="updateThirdParterInfoAndThirdParterContact">
+			<result name="success">
+				/global/inc/alertInfo.jsp?type=update
+			</result>
+		</action>
+		<action name="viewCom" class="partyAction" method="viewCom">
+			<result name="success">
+				/business/customerManage/party/thirdParterInfo/view/index.jsp
+			</result>
+		</action>
+		
+		<action name="viewNum" class="partyAction" method="viewNum">
+			<result name="success">
+				/business/customerManage/party/thirdParterServiceGiveManage/view/index.jsp
+			</result>
+		</action>
+		<action name="deleteThirdParterInfoAndThridParterContact" class="partyAction" method="deleteThirdParterInfoAndThridParterContact">
+			<result name="success">
+				/global/inc/tipInfo.jsp
+			</result>
+		</action>
+		<action name="prepareAddGeThirdParterService" class="partyAction" method="prepareAddGeThirdParterService">
+			<result name="success">
+				/business/customerManage/party/thirdParterService/create/frmCreate.jsp
+			</result>
+			<result name="userMarketing">
+			   /business/marketingManage/create/selectProduct/selectProductMore/importMoreProduct.jsp
+			</result>
+			<result name="updateUserMarketing">
+			   /business/marketingManage/create/selectProduct/selectProductMore/selectMoreProductUse.jsp
+			</result>
+			<result name="select">
+				/business/customerManage/party/thirdParterService/search/frmSearch.jsp
+			</result>
+		</action>
+		<action name="addGeThirdParterService" class="partyAction" method="addGeThirdParterService">
+			<result name="success">
+				/global/inc/alertInfo.jsp?type=create
+			</result>
+		</action>
+		<action name="deleteGeThirdParterContact" class="partyAction" method="deleteGeThirdParterContact" />
+		<action name="prepareFindThirdParterInfo" class="partyAction" method="prepareFindThirdParterInfo">
+			<result name="success">
+			/business/customerManage/party/thirdParterInfo/search/frmSearch.jsp
+			</result>
+			<result name="thirdService">
+			/business/customerManage/party/thirdParterService/create/selectThirdParterInfo/frmSearch.jsp
+			</result>
+			
+			<result name="marketing">
+			/business/marketingManage/create/selectGeThirdParterInfo/frmSearch.jsp
+			</result>
+		</action>
+		<action name="findGeThirdParterService" class="partyAction" method="findGeThirdParterService">
+			<result name="success">
+				/business/customerManage/party/thirdParterService/search/search.jsp
+			</result>
+			<result name="marketing">
+				/business/marketingManage/create/selectProduct/selectProductMore/leftMoreProductSearch.jsp
+			</result>
+		</action>
+		<action name="findGeThirdParterServiceNoPage" class="partyAction" method="findGeThirdParterServiceNoPage" />
+		<action name="prepareUpdateGeThirdParterService" class="partyAction" method="prepareUpdateGeThirdParterService">
+			<result name="success">
+				/business/customerManage/party/thirdParterService/update/index.jsp
+			</result>
+		</action>
+		<action name="updateGeThirdParterService" class="partyAction" method="updateGeThirdParterService">
+			<result name="success">
+				/global/inc/alertInfo.jsp?type=update
+			</result>
+		</action>
+		
+		<action name="view" class="partyAction" method="view">
+			<result name="success">
+				/business/customerManage/party/thirdParterService/view/index.jsp
+			</result>
+		</action>
+		
+		<action name="deleteGeThirdPartterService" class="partyAction" method="deleteGeThirdPartterService">
+			<result name="success">
+				/global/inc/tipInfo.jsp
+			</result>
+		</action>
+		
+		<action name="findGeThirdParterSerialNumber" class="partyAction" method="findGeThirdParterSerialNumber">
+			<result name="success">
+				/business/customerManage/party/thirdParterServiceGiveManage/search/search.jsp
+			</result>
+		</action>
+		
+		<action name="updateGeThirdParterSerialNumberValidInd" class="partyAction" method="updateGeThirdParterSerialNumberValidInd">
+			<result name="success">
+				/business/customerManage/party/thirdParterServiceGiveManage/search/tipInfo.jsp
+			</result>
+		</action>
+		
+		<action name="updateGeThirdParterSerialNumberInValidInd" class="partyAction" method="updateGeThirdParterSerialNumberInValidInd">
+			<result name="success">
+				/business/customerManage/party/thirdParterServiceGiveManage/search/tipInfo.jsp
+			</result>
+		</action>
+		
+		<action name="testSerialNo" class="partyAction" method="testSerialNo">
+			<result name="success">
+				/global/inc/alertInfo.jsp
+			</result>
+		</action>
+	</package>
+</struts>

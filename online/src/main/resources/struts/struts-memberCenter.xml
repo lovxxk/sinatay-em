@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="memberCenter" extends="struts-default" namespace="/memberCenter">
+		<action name="homePage" class="memberCenterAction" method="homePage">
+			<result name="success">/web/user/member/index.jsp</result>
+		</action>
+		<action name="searchClaimFolder" class="memberCenterAction" method="searchClaimFolder">
+			<result name="success" type="redirect">/claims/initClaimProcess.do</result>
+			<result name="error">/web/user/login/login.jsp</result>
+		</action>
+	</package>
+	<package name="memberCenterJson" extends="json-default" namespace="/memberCenterJson">
+		<action name="centerFindPolicy" class="policyListAction"
+			method="centerFindPolicy">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="centerBindPolicy" class="policyListAction"
+			method="centerBindPolicy">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="showUnbindPolicy" class="policyListAction"
+			method="showUnbindPolicy">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+	<include file="../spring/applicationContext-action.xml"></include>
+</struts>

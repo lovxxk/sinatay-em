@@ -1,0 +1,90 @@
+.head_mid .main_title{
+	display: none;
+}
+
+.middle .h_layout{
+	padding-bottom:19px;
+}
+
+.middle .nav_index{
+	height:42px;
+}
+.middle .nav_index li{
+	line-height:42px;
+	font-size:13px;
+	display:inline;
+}
+.middle .nav_index li a{
+	color:#535353;
+}
+
+.success_main{
+	background: #fff;
+}
+
+.success_main .top{
+	height:5px;
+	background: #3f67bf;
+}
+
+.success_result{
+	margin:0 110px;
+	overflow: hidden;
+}
+
+.success_result .tip{
+	width:243px;
+	float:left;
+	background: url(../../image/service/report_success.png) center no-repeat;
+	height:400px;
+}
+.success_result .info{
+	margin-left:243px;
+	padding-top:96px;
+}
+
+.success_result .info p{
+	margin-bottom:6px;
+}
+
+.success_result .info p span{
+	color:#ff3333;
+}
+
+.success_result .info p a{
+	color:#ff3333;
+	text-decoration: underline;
+}
+
+.success_result p.info_top{
+	line-height:75px;
+}
+
+.success_result .tip_left{
+	width:243px;
+	float:left;
+	background: url(../../image/service/report_success.png) center no-repeat;
+	height:360px;
+}
+
+.success_result p{
+	margin-left:55px;
+}
+
+.return_index{
+	margin:60px 0 60px 130px; 
+}
+.return_index a{
+	width:137px;
+	height:38px;
+	background: url(../../image/policy/return_index.png) no-repeat center;
+	border:none;
+	position:relative;
+	cursor: pointer;
+	display:block;
+	color:#fff;
+	font-size:16px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 38px;
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		">
+	
+	<!-- 定时扫未支付订单 -->
+	<bean id="sendOrderPayEmail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject">
+			<ref bean="sendEmailQuartzService" />
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod">
+			<value>sendOrderPayEmail</value>
+		</property>
+	</bean>
+	<!-- 定义触发时间 -->
+	<bean id="sendOrderPayEmailTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="sendOrderPayEmail" />
+		</property>
+		<!-- cron表达式 -->
+		<!-- 秒 0-59 , - * / 分 0-59 , - * / 小时 0-23 , - * / 日期 1-31 , - * ? / L W C 月份 1-12 或者 JAN-DEC , - * / 星期 1-7 或者 SUN-SAT , - * ? / L C # 年（可选） 留空, 1970-2099 , - * / -->
+		<property name="cronExpression">
+			<value>0 0/25 * * * ? *</value>
+		</property>
+	</bean>
+	<!-- 定时扫未支付订单 -->
+	
+	<!-- 定时扫待完善订单 -->
+	<bean id="sendOrderCompleteEmail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject">
+			<ref bean="sendEmailQuartzService" />
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod">
+			<value>sendOrderCompleteEmail</value>
+		</property>
+	</bean>
+	<!-- 定义触发时间 -->
+	<bean id="sendOrderCompleteEmailTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="sendOrderCompleteEmail" />
+		</property>
+		<!-- cron表达式 -->
+		<!-- 秒 0-59 , - * / 分 0-59 , - * / 小时 0-23 , - * / 日期 1-31 , - * ? / L W C 月份 1-12 或者 JAN-DEC , - * / 星期 1-7 或者 SUN-SAT , - * ? / L C # 年（可选） 留空, 1970-2099 , - * / -->
+		<property name="cronExpression">
+			<value>0 0/25 * * * ? *</value>
+		</property>
+	</bean>
+	<!-- 定时扫待完善订单 -->
+	
+	<!-- 总管理类 如果将lazy-init='false'那么容器启动就会执行调度程序 -->
+	<bean id="startQuertz" lazy-init="false" autowire="no" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+<!-- 				<ref bean="sendOrderPayEmailTrigger"/> -->
+<!-- 				<ref bean="sendOrderCompleteEmailTrigger"/> -->
+			</list>
+		</property>
+	</bean>
+</beans>

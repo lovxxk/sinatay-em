@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/ng-context-3.0.xsd 
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	
+	<bean id="geProductPictureAction" class="cn.com.sinosoft.ebusiness.mis.business.cmpProductManage.productPictureManage.web.GeProductPictureManageAction" scope="prototype"></bean>
+	
+	<bean id="exceptionAction" class="cn.com.sinosoft.ebusiness.mis.system.exception.ExceptionAction" scope="prototype"></bean>
+	<bean id="geKindManageAction" class="cn.com.sinosoft.ebusiness.mis.business.cmpProductManage.riskAndKindManage.web.GeKindManageAction" scope="prototype"></bean>
+	<bean id="partyAction" class="cn.com.sinosoft.ebusiness.mis.business.customerManage.party.web.PartyAction" scope="prototype"></bean>
+	<bean id="productDirectoryAction" class="cn.com.sinosoft.ebusiness.mis.business.cmpProductManage.productDirectory.web.ProductDirectoryAction" scope="prototype"></bean>
+	<bean id="productManageAction" class="cn.com.sinosoft.ebusiness.mis.business.cmpProductManage.productManage.web.ProductManageAction" scope="prototype"></bean>
+	<bean id="geBlackListAction" class="cn.com.sinosoft.ebusiness.mis.business.customerManage.blacklist.web.GeBlackListAction" scope="prototype"></bean>
+	<bean id="serviceNetworkAction" class="cn.com.sinosoft.ebusiness.mis.business.businessManage.serviceNetwork.web.ServiceNetworkAction" scope="prototype"></bean>
+	<bean id="geFunctionSwitchAction" class="cn.com.sinosoft.ebusiness.mis.system.configManage.feature.web.GeFunctionSwitchAction" scope="prototype"></bean>
+	<bean id="geCodeAction" class="cn.com.sinosoft.ebusiness.mis.system.configManage.dataDictionary.web.GeCodeAction" scope="prototype"></bean>
+	<bean id="geCodeTypeAction" class="cn.com.sinosoft.ebusiness.mis.system.configManage.dataDictionary.web.GeCodeTypeAction" scope="prototype"></bean>
+	<bean id="geUserPersonalAction" class="cn.com.sinosoft.ebusiness.mis.business.customerManage.personalUser.web.GeUserPersonalAction" scope="prototype"></bean>
+	<bean id="geSmsConfigAction" class="cn.com.sinosoft.ebusiness.mis.system.configManage.SMSConfig.web.GeSmsConfigAction" scope="prototype"></bean>
+	<bean id="marketingAction" class="cn.com.sinosoft.ebusiness.mis.business.marketingManage.addedServices.web.MarketingAction" scope="prototype"></bean>
+	<bean id="geDeptMailAction" class="cn.com.sinosoft.ebusiness.mis.system.configManage.emailConfig.web.GeDeptMailAction" scope="prototype"></bean>
+	
+	<bean id="groupAction" class="cn.com.sinosoft.ebusiness.mis.system.authorityManage.web.GroupAction" scope="prototype"></bean>
+	<bean id="geDepartmentAction" class="cn.com.sinosoft.ebusiness.mis.system.authorityManage.web.GeDepartmentAction" scope="prototype"></bean>
+	<bean id="geOperatorAction" class="cn.com.sinosoft.ebusiness.mis.system.authorityManage.web.GeOperatorAction" scope="prototype"></bean>
+	<bean id="geRoleAction" class="cn.com.sinosoft.ebusiness.mis.system.authorityManage.web.GeRoleAction" scope="prototype"></bean>
+	<bean id="geAuthorityAction" class="cn.com.sinosoft.ebusiness.mis.system.authorityManage.web.GeAuthorityAction" scope="prototype"></bean>
+	<bean id="deptAuthIdQueryAction" class="cn.com.sinosoft.ebusiness.mis.system.authorityManage.web.DeptAuthIdQueryAction" scope="prototype"></bean>
+	<bean id="loginAction" class="cn.com.sinosoft.ebusiness.mis.system.authorityManage.web.LoginAction" scope="prototype"></bean>
+    <bean id="geUserAuthorityAction" class="cn.com.sinosoft.ebusiness.mis.system.authorityManage.web.GeUserAuthorityAction" scope="prototype"></bean>
+    <bean id="geEnterpriseAuthorityAction" class="cn.com.sinosoft.ebusiness.mis.system.authorityManage.web.GeEnterpriseAuthorityAction" scope="prototype"></bean>
+	<bean id="geDiscountAction" class="cn.com.sinosoft.ebusiness.mis.business.marketingManage.addedServices.web.GeDiscountAction" scope="prototype"></bean>
+	<bean id="geAreaAction" class="cn.com.sinosoft.ebusiness.mis.system.authorityManage.web.GeAreaAction" scope="prototype"></bean>
+	<bean id="geDeptInfoAction" class="cn.com.sinosoft.ebusiness.mis.system.authorityManage.web.GeDeptInfoAction" scope="prototype"></bean>
+	<bean id="geDeptAttributeAction" class="cn.com.sinosoft.ebusiness.mis.system.authorityManage.web.GeDeptAttributeAction" scope="prototype"></bean>
+	
+	<!-- 险种RiskAction的配置 -->
+	<bean id="riskAction" class="cn.com.sinosoft.ebusiness.mis.business.riskManage.risk.web.RiskAction" scope="prototype"/>
+	
+	<!-- 接口PortalModuleAction开始 -->
+	<bean id="portalModuleAction" class="cn.com.sinosoft.ebusiness.mis.system.interfacePortal.web.PortalModuleAction" scope="prototype"/>
+	
+	<!-- 文件下载管理Action -->
+	<bean id="downloadFileMngAction" class="cn.com.sinosoft.ebusiness.mis.business.businessManage.downloadfile.web.DownloadFileMngAction" scope="prototype"/>
+	
+	<!-- 定点医院管理Action -->
+	<bean id="hospitalManageAction" class="cn.com.sinosoft.ebusiness.mis.business.businessManage.hospital.web.HospitalManageAction" scope="prototype"/>
+	
+	<!-- 万能险利率管理Action -->
+	<bean id="universalRateAction" class="cn.com.sinosoft.ebusiness.mis.business.businessManage.universal.web.UniversalRateAction" scope="prototype"/>
+	
+</beans>

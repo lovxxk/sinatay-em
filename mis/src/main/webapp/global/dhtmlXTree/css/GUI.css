@@ -1,0 +1,359 @@
+/*leftpanel背景*/
+.body_bg{
+	background:url(../images/cms_left_bg.jpg);
+	BACKGROUND-REPEAT: repeat-x;
+}
+/*leftpanel一级栏目样式*/
+.lefttab{
+	font-size:12px;
+	font-family:宋体;
+	font-weight:bold;
+	background:url(../images/left_top1_bg.jpg);
+	color:#ffffff;
+}
+/*menu按钮按下样式*/
+.tabOnFocus
+{
+    BACKGROUND-ATTACHMENT: fixed;
+    background:url(../images/menu_on.jpg);
+    BACKGROUND-REPEAT: repeat-x;
+    COLOR: black;
+    cursor:pointer;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    font-weight:bold;
+    LETTER-SPACING: 2pt;
+    MARGIN-TOP: 5px;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 2px;
+    PADDING-RIGHT: 2px;
+    PADDING-TOP: 2px;
+    TEXT-ALIGN: center;
+    WIDTH: 132px;
+    HEIGHT: 24px;
+}
+.tabOnFocus A
+{
+    COLOR: #b2e2ee;
+    FONT-FAMILY: 宋体;
+    TEXT-DECORATION: none
+}
+.tabOnFocus A:hover
+{
+    COLOR: #b2e2ee;
+    FONT-FAMILY: 宋体;
+    TEXT-DECORATION: none
+}
+/*menu按钮样式*/
+.tabOnBlur
+{
+    BACKGROUND-ATTACHMENT: fixed;
+    BACKGROUND-IMAGE: url(../images/menu_bg.jpg);
+    BACKGROUND-REPEAT: repeat-x;
+    COLOR: #FFFFFF;
+    cursor:pointer;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    font-weight:bold;
+    LETTER-SPACING: 2pt;
+    MARGIN-TOP: 5px;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 2px;
+    PADDING-RIGHT: 2px;
+    PADDING-TOP: 2px;
+    TEXT-ALIGN: center;
+    WIDTH: 132px;
+    HEIGHT: 24px;
+}
+.tabOnBlur A
+{
+    COLOR: #b2e2ee;
+    FONT-FAMILY: 宋体;
+    TEXT-DECORATION: none
+}
+.tabOnBlur A:hover
+{
+    COLOR: #FFFFFF;
+    FONT-FAMILY: 宋体;
+    TEXT-DECORATION: none
+}
+
+/*leftpanel二级栏目样式*/
+.lefttabOnFocus
+{
+    BACKGROUND-ATTACHMENT: fixed;
+    background:url(../images/left_menu_on.jpg);
+    BACKGROUND-REPEAT: repeat-x;
+    COLOR: #b2e2ec;
+    cursor:pointer;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+ /* font-weight:bold;
+    LETTER-SPACING: 2pt;*/
+    MARGIN-TOP: 0px;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 2px;
+    PADDING-RIGHT: 2px;
+    PADDING-TOP: 0px;
+    TEXT-ALIGN: left;
+    WIDTH: 132px;
+    HEIGHT: 27px;
+}
+.lefttabOnFocus A
+{
+    COLOR: black;
+    FONT-FAMILY: 宋体;
+    TEXT-DECORATION: none
+}
+.lefttabOnFocus A:hover
+{
+    COLOR: black;
+    FONT-FAMILY: 宋体;
+    TEXT-DECORATION: none
+}
+
+/*leftpanel三级栏目样式*/
+.lefttabOnBlur
+{
+    BACKGROUND-ATTACHMENT: fixed;
+    background:url(../images/left_menu_bg.jpg);
+    BACKGROUND-REPEAT: repeat-x;
+    COLOR: #516e96;
+    cursor:pointer;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+/*  font-weight:bold;
+    LETTER-SPACING: 2pt;  */
+    MARGIN-TOP: 0px;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 2px;
+    PADDING-RIGHT: 2px;
+    PADDING-TOP: 0px;
+    TEXT-ALIGN: left;
+    WIDTH: 132px;
+    HEIGHT: 27px;
+}
+.lefttabOnBlur A
+{
+    COLOR: black;
+    FONT-FAMILY: 宋体;
+    TEXT-DECORATION: none
+}
+.lefttabOnBlur A:hover
+{
+    COLOR: black;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    TEXT-DECORATION: none
+}
+/*leftpanel三级栏目样式*/
+.leftA
+{
+	COLOR: black;
+	FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+/*  background:#b2e2ee;
+    font-weight:bold;*/ 
+    TEXT-DECORATION: none
+}
+.leftA a
+{
+	COLOR: black;
+	FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+/*  font-weight:bold;*/ 
+    TEXT-DECORATION: none
+}
+.leftA a:hover
+{
+	COLOR: black;
+	FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+/*  font-weight:bold;*/
+    TEXT-DECORATION: none
+}
+.leftAon
+{
+	background:#dee6f3;
+	COLOR: black;
+	FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+ /* font-weight:bold;*/
+    TEXT-DECORATION: none
+}
+.leftAon a
+{
+	COLOR: black;
+	FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+/*  font-weight:bold; */
+    TEXT-DECORATION: none
+}
+.leftAon a:hover
+{
+	COLOR: black;
+	FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+/*  font-weight:bold;*/
+    TEXT-DECORATION: none
+}
+/*toolbar收起时，箭头样式*/
+.btnOnBlur
+{
+    BACKGROUND-ATTACHMENT: fixed;
+    BACKGROUND-IMAGE: url(../images/toolbar_ico_down.jpg);
+    BACKGROUND-REPEAT: no-repeat;
+    cursor:pointer;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    HEIGHT: 22px;
+    MARGIN-TOP: 2px;
+    PADDING-BOTTOM: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px;
+    TEXT-ALIGN: center;
+    WIDTH: 23px
+}
+.btnOnBlur A
+{
+    FONT-FAMILY: 宋体
+}
+.btnOnBlur A:hover
+{
+    FONT-FAMILY: 宋体
+}
+.btnOnFocus
+{
+    BACKGROUND-ATTACHMENT: fixed;
+    BACKGROUND-IMAGE: url(../images/toolbar_ico_down.jpg);
+    BACKGROUND-REPEAT: no-repeat;
+    cursor:pointer;
+    HEIGHT: 22px;
+    MARGIN-TOP: 2px;
+    PADDING-BOTTOM: 1px;
+    PADDING-LEFT: 1px;
+    PADDING-RIGHT: 1px;
+    PADDING-TOP: 1px;
+    TEXT-ALIGN: center;
+    WIDTH: 23px
+}
+.btnOnFocus A
+{
+}
+/*清空按钮样式*/
+.btnBigOnFocus
+{
+    BACKGROUND-ATTACHMENT: fixed;
+    BACKGROUND: url(../images/btn_clear.jpg);
+    BACKGROUND-REPEAT: no-repeat;
+    cursor:pointer;
+    FONT-SIZE: 9pt;
+    HEIGHT: 25px;
+    TEXT-ALIGN: center;
+    WIDTH: 99px
+}
+
+.btnWideOnBlur
+{
+    cursor:pointer;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    HEIGHT: 22px;
+    MARGIN-TOP: 2px;
+    PADDING-BOTTOM: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px;
+    TEXT-ALIGN: center;
+    WIDTH: 40px
+}
+.btnWideOnBlur A
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+}
+.btnWideOnBlur A:hover
+{
+    CURSOR: pointer;
+}
+/*表格样式*/
+.table_Show{
+	border: 0px solid #29a46d;
+	border-collapse:collapse; 
+/*	background:#d2d2d2;*/
+}
+/*查询条件，标签样式*/
+.tdleft
+{
+	background:#eaece1;
+	BORDER: #A0A0A0 1pt solid;
+    PADDING-LEFT: 10px;
+}
+/*查询条件，内容样式*/
+.tdright
+{
+	background:#FFFFFF;
+	BORDER: #A0A0A0 1pt solid;
+    PADDING-LEFT: 10px;
+}
+/*toolbar背景样式*/
+/*toolbar按钮没按时样式*/
+.toolbarOnBlur{
+	BACKGROUND-ATTACHMENT: fixed;
+    BACKGROUND-IMAGE: url(../images/toolbar_bg.jpg);
+    BACKGROUND-REPEAT: repeat-x;
+    cursor:pointer;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;   
+    font-weight:bold;
+    MARGIN-TOP: 2px;
+    color:536c94;
+    PADDING-BOTTOM: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px;
+    TEXT-ALIGN: center;
+    WIDTH: 90px
+}
+/*toolbar按钮按下时样式*/
+.toolbarOnFocus{
+	BACKGROUND-ATTACHMENT: fixed;
+    BACKGROUND-IMAGE: url(../images/toolbar_in_bg.jpg);
+    BACKGROUND-REPEAT: repeat-x;
+    cursor:pointer;
+    color:#ffffff;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;   
+    font-weight:bold;
+    MARGIN-TOP: 2px;
+    PADDING-BOTTOM: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px;
+    TEXT-ALIGN: center;
+    WIDTH: 90px
+}
+.norepeatbgbottom {
+background-position:bottom bottom; background-repeat:no-repeat; 
+} 
+a.a1:link { text-decoration: none; color: #000000}
+a.a1:visited { text-decoration: none; color: #000000} 
+a.a1:active { text-decoration: none; color: #000000} 
+a.a1:hover { text-decoration: underline; color:#000000}
+.Title1
+{
+    font-family:SimSun;
+    FONT-SIZE: 10pt;
+}
+.Title2
+{
+    FONT-FAMILY: Arial Black;
+    FONT-SIZE: 8pt;
+    FONT-COLOR:white;
+}
+.toolbar_btn{
+    CURSOR: pointer;
+	font-weight:bold;
+	color:#536c94;
+}

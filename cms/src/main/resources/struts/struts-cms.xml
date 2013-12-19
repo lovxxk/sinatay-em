@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- article manage -->
+	<package name="articleManage" extends="struts-default" namespace="/articleManage">
+		<action name="toGetChannelForHead" class="articleManageAction" method="getCmsChannelByChannelId">
+			<result name="success">/cms/article/head.jsp</result>
+		</action>
+		<action name="toGetChannelForFrmEdit" class="articleManageAction" method="getCmsChannelByChannelId">
+			<result name="success">/cms/article/edit/frmEdit.jsp</result>
+		</action>
+		<action name="toGetChannelForFrmEditLink" class="articleManageAction" method="getCmsChannelByChannelId">
+			<result name="success">/cms/article/edit/frmEditLink.jsp</result>
+		</action>
+		<action name="toGetChannelForFrmEditEnc" class="articleManageAction" method="getCmsChannelByChannelId">
+			<result name="success">/cms/article/edit/frmEditEnc.jsp</result>
+		</action>
+		<action name="toUploadeImage" class="articleManageAction" method="saveImage">
+			
+		</action>
+		<action name="toUploadeEdit" class="articleManageAction" method="saveEdit">
+			<result name="success">/cms/article/edit/edit.jsp</result>
+		</action>
+		<action name="toGetDocForSearch" class="articleManageAction" method="getCmsDocument">
+			<result name="success">/cms/article/search/search.jsp</result>
+		</action>
+		<action name="toDeleteArticle" class="articleManageAction" method="deleteArticle">
+			<result name="success">/cms/article/delete/delete.jsp</result>
+		</action>
+		<action name="frmUpdate" class="articleManageAction" method="frmUpdate">
+			<result name="success">/cms/article/updates/frmUpdate.jsp</result>
+		</action>
+		<action name="updateDocContent" class="articleManageAction" method="updateDocContent">
+			<result name="success">/cms/global/cms/examples/fulls.jsp</result>
+		</action>
+		<action name="toUpdateEdit" class="articleManageAction" method="updateEdit">
+			<result name="success">/cms/article/updates/updateEdit.jsp</result>
+		</action>
+		<action name="frmUpdateLink" class="articleManageAction" method="frmUpdateLink">
+			<result name="success">/cms/article/updates/frmUpdateLink.jsp</result>
+		</action>
+		<action name="toUpdateLink" class="articleManageAction" method="updateLink">
+			<result name="success">/cms/article/updates/updateEdit.jsp</result>
+		</action>
+		
+		<action name="updateImg" class="articleManageAction" method="updateImg">
+			<result name="img">/cms/global/cms/jscripts/tiny_mce/plugins/advimage/saveImage.jsp</result>
+			<result name="att">/cms/global/cms/jscripts/tiny_mce/plugins/template/saveImage.jsp</result>
+		</action>
+	</package>
+	
+	<!-- columns manage -->
+	<package name="columnsManage" extends="struts-default" namespace="/columnsManage">
+		<action name="toGetChannelForHead" class="columnsManageAction" method="getCmsChannelInfo">
+			<result name="success">/cms/columnsManage/head.jsp</result>
+		</action>
+		<action name="toAddNode" class="columnsManageAction" method="addNode">
+			<result name="success">/cms/columnsManage/createColumns/frmCreate.jsp</result>
+		</action>
+		<action name="toGetChannelForFrmUpdate" class="columnsManageAction" method="getCmsChannelByChannelId">
+			<result name="success">/cms/columnsManage/update/frmUpdate.jsp</result>
+		</action>
+		<action name="toUpdateNode" class="columnsManageAction" method="updateNode">
+			<result name="success">/cms/columnsManage/update/frmUpdate.jsp</result>
+		</action>
+		<action name="toGetChannelForOrderUpdate" class="columnsManageAction" method="getAllChildChannelID">
+			<result name="success">/cms/columnsManage/updateColumsOrder/frmUpdate.jsp</result>
+		</action>
+		<action name="toUpdateOrder" class="columnsManageAction" method="updateOrder">
+			<result name="success">/cms/columnsManage/updateColumsOrder/frmUpdate.jsp</result>
+		</action>
+		<action name="toDeleteNode" class="columnsManageAction" method="deleteNode">
+			<result name="success">/cms/columnsManage/deleteNode.jsp</result>
+		</action>
+	</package>
+	
+	<!-- templet manage -->
+	<package name="templetManage" extends="struts-default" namespace="/templetManage">
+		<action name="toHead" class="templetManageAction" method="toHead">
+			<result name="success">/cms/templet/head.jsp</result>
+		</action>
+		<action name="toCreateTemplet" class="templetManageAction" method="createTemplet">
+			<result name="success">/cms/templet/create/frmCreate.jsp</result>
+		</action>
+		<action name="toGetAllTempInfo" class="templetManageAction" method="getAllTempletInfo">
+			<result name="success">/cms/templet/bind/frmBind.jsp</result>
+		</action>
+		<action name="toBindTemplet" class="templetManageAction" method="createCmsChannelTemplet">
+			<result name="success">/cms/templet/bind/frmBind.jsp</result>
+		</action>
+		<action name="toGetTempletForSearch" class="templetManageAction" method="getCmsTemplet">
+			<result name="success">/cms/templet/upload/search.jsp</result>
+		</action>
+		<action name="toDeleteBind" class="templetManageAction" method="deleteTemplet">
+			<result name="success">/cms/templet/delete/delete.jsp</result>
+		</action>
+		<action name="toGetCmsTempletForUpdate" class="templetManageAction" method="getCmsTempletForUpdate">
+			<result name="success">/cms/templet/upload/frmUpdate.jsp</result>
+		</action>
+		<action name="toUpdateTemplet" class="templetManageAction" method="updateTemplet">
+			<result name="success">/cms/templet/upload/frmUpdate.jsp</result>
+		</action>
+		<action name="toCreateTpl" class="templetManageAction" method="createTpl">
+			<result name="success">/cms/templet/create/frmCreate.jsp</result>
+		</action>
+	</package>
+	
+	<!-- distribute manage -->
+	<package name="distributeManage" extends="struts-default" namespace="/distributeManage">
+		<action name="goPub" class="distributeManageAction" method="goPub">
+			<result name="success">/cms/distributeManage/pub/end.jsp</result>
+			<result name="TO_DOC_SELECT">/cms/distributeManage/pub/index.jsp</result>
+		</action>
+		<action name="goSearch" class="distributeManageAction" method="goSearch">
+			<result name="success">/cms/distributeManage/pub/search.jsp</result>
+		</action>
+	</package>
+	
+	<!-- 后台登陆 -->
+	<package name="cmsLogin" extends="struts-default" namespace="/cmsLogin">
+		<action name="login" class="loginAction" method="login">
+			<result name="success">/system/userManage/passport/loginSuccess.jsp</result>
+		</action>
+		<action name="checkAjax" class="loginAction" method="checkAjax" />
+	</package>
+</struts>
+
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	
+	<bean id="orderFormService" class="cn.com.sinosoft.businessModule.order.service.spring.OrderFormServiceSpringImpl">
+	</bean>
+	
+	<bean id="abnormalOrderFormService" class="cn.com.sinosoft.businessModule.order.service.spring.AbnormalOrderFormServiceSpringImpl">
+	</bean>
+	
+	
+	<bean id="insurancePolicyService" class="cn.com.sinosoft.businessModule.policy.service.spring.InsurancePolicyServiceSpringImpl">
+	</bean>
+
+	<bean id="insurancePolicyLiabilityService" class="cn.com.sinosoft.businessModule.policy.service.spring.InsurancePolicyLiabilityServiceSpringImpl">
+	</bean>
+	
+	<bean id="insuranceApplicantService" class="cn.com.sinosoft.businessModule.partyRoleInPolicy.service.spring.InsuranceApplicantServiceSpringImpl">
+	</bean>
+	
+	<bean id="insuredService" class="cn.com.sinosoft.businessModule.partyRoleInPolicy.service.spring.InsuredServiceSpringImpl">
+	</bean>
+	
+	<bean id="insuredLiabilityService" class="cn.com.sinosoft.businessModule.partyRoleInPolicy.service.spring.InsuredLiabilityServiceSpringImpl">
+	</bean>
+	
+	<bean id="paymentAccountService" class="cn.com.sinosoft.businessModule.bankAccount.service.spring.PaymentAccountServiceSpringImpl">
+	</bean>
+	
+	<bean id="fundsTransferService" class="cn.com.sinosoft.businessModule.bankAccount.service.spring.FundsTransferServiceSpringImpl">
+	</bean>
+	
+	<bean id="epolicyService" class="cn.com.sinosoft.businessModule.EPolicy.service.spring.EPolicyServiceSpringImpl">
+	</bean>
+	
+	<bean id="insurancePolicyProcessService" class="cn.com.sinosoft.businessModule.policy.service.spring.InsurancePolicyProcessServiceSpringImpl">
+	</bean>
+	
+	<bean id="insurancePolicyCacheService" class="cn.com.sinosoft.businessModule.policy.service.spring.InsurancePolicyCacheServiceSpringImpl">
+	</bean>
+	
+	<bean id="bindPolicyService" class="cn.com.sinosoft.businessModule.bindPolicy.service.spring.BindPolicyServiceSpringImpl">
+	</bean>
+	
+	<bean id="hospitalManageService" class="cn.com.sinosoft.businessModule.hospitalManage.service.spring.HospitalManageServiceSpringImpl">
+	</bean>
+	
+	<bean id="universalRateService" class="cn.com.sinosoft.businessModule.universalRate.service.spring.UniversalRateServiceSpringImpl">
+	</bean>
+	
+	<bean id="networkService" class="cn.com.sinosoft.businessModule.network.service.spring.NetworkServiceSpringImpl">
+	</bean>
+</beans>
+

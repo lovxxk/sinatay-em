@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="GE_CUSTOMER" class="Customer">
+		<column name="CUSTOMERID" property="customerId"></column>
+		<column name="CUSTOMERNAME" property="customerName"></column>
+		<column name="GENDER" property="gender"></column>
+		<column name="BIRTHDAY"></column>
+		<column name="IDENTIFYTYPE" property="identifyType"></column>
+		<column name="IDENTIFYNUMBER" property="identfyNumber"></column>
+		<column name="ZIPCODE"></column>
+		<column name="COMPANYPHONE" property="companyPhone"></column>
+		<column name="HOMEPHONE" property="homePhone"></column>
+		<column name="MOBILE"></column>
+		<column name="EMAIL"></column>
+		<column name="ADDRESS"></column>
+		<column name="OCCUPATION"></column>
+		<column name="OCCUPATIONTYPE" property="occupaTionType"></column>
+		<column name="REMARK"></column>
+		<column name="FLAG"></column>
+		<column name="OCCUPATIONM"></column>
+		<column name="OCCUPATIONTYPEM" property="occupationTypem"></column>
+		<column name="OCCUPATIONS"></column>
+		<column name="OCCUPATIONTYPES" property="occupationTypes"></column>
+		<column name="user_id"></column>
+		<column name="real_name"></column>
+		<column name="token"></column>
+		<column name="sign"></column>
+		<column name="is_success"></column>
+		<column name="sign_type"></column>
+		<column name="notify_id"></column>
+	</table>
+</hibernate-reverse-engineering>

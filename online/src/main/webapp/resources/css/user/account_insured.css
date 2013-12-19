@@ -1,0 +1,348 @@
+.right_content .title{
+	height:35px;
+	background: #e6e6e6;
+	line-height:35px;
+}
+.right_content .title .block{
+	width:4px;
+	height:35px;
+	float:left;
+	background: #3f67bf;
+	margin-right:18px;
+}
+
+.right_content .title p{
+	float:left;
+	color:#333;
+	font-size:14px;
+	font-weight: bold;
+}
+
+.right_content .title .more{
+	float:right;
+	margin-right:15px;
+}
+.right_content .title .more a{
+	color:#999999;
+}
+
+.right_content .tips{
+	font-weight:bold;
+	margin-left:30px;
+	line-height:24px;
+	height:24px;
+}
+
+.right_content .member_area .tips{
+	margin-left:10px;
+	margin-top:18px;
+}
+
+.right_content .member_area .tips span{
+	color:#ff3333;
+}
+
+.member_area{
+	margin: 0 20px;
+	border-bottom:1px solid #cccccc;
+}
+
+.member_area .input_area{
+	padding:20px 0;
+}
+
+.member_area .input_area .input_row{
+	height:36px;
+}
+
+.member_area .input_area .input_label{
+	width:140px;
+	float:left;
+	line-height:36px;
+	text-align: right;
+	margin-right: 14px;
+}
+.member_area .input_area .input_label .required{
+	color:#ff0000;
+	margin-right:14px;
+}
+.member_area .input_area .input_row .input_text{
+	height:23px;
+	border:1px solid #c9c9c9;
+	margin-top:5px;
+	padding-left:5px;
+	font-family:"Microsoft Yahei";
+	float:left;
+	
+	/*ie7 fix*/
+	*height:19px;
+	*line-height:16px;
+	*padding-top:4px;
+}
+.member_area .input_area .input_row .tip_label{
+	float:left;
+	padding:0 5px;
+	line-height:36px;
+}
+
+
+.input_row.name .input_text{
+	width:123px;
+}
+.input_row.id_type .input_text{
+	width:93px;
+}
+
+.input_row.id .input_text{
+	width:303px;
+}
+
+.input_row.birthday .input_text{
+	float:left;
+}
+
+.input_row.birthday .input_text.year{
+	width:53px;
+}
+.input_row.birthday .input_text.month{
+	width:33px;
+}
+.input_row.birthday .input_text.day{
+	width:33px;
+}
+
+.input_row.cellphone .input_text{
+	width:123px;
+}
+
+.input_row.telephone .input_text.areacode{
+	width:53px;
+}
+
+.input_row.telephone .input_text.phonenum{
+	width:113px;
+	margin-left:7px;
+}
+.input_row.email .input_text{
+	width:186px;
+}
+
+.input_row.contact_address .input_text{
+	width:423px;
+}
+
+.input_row.postcode .input_text{
+	width:93px;
+}
+.input_row.relation .input_text{
+	width:93px;
+}
+.input_row.job .input_text{
+	width:93px;
+}
+
+.sex .label_sex{
+	line-height:36px;
+	float:left;
+	width:24px;
+	margin-left:2px;
+}
+
+.sex .input_sex{
+	width:15px;
+	height:14px;
+	float:left;
+	margin-left:2px;
+	margin-top:11px;
+	background: url(../../image/policy/policy_radio.png) no-repeat;
+	background-position:-15px 0 ; 
+}
+
+.sex .input_sex.selected{
+	background-position:0 0 ;
+}
+
+
+.input_row.nickname .input_text{
+	width:123px;
+}
+
+.input_row.blood_type .input_text{
+	width:73px;
+}
+
+.input_row.hobby .input_text{
+	width:123px;
+}
+
+
+.action{
+	margin-top:24px;
+	height:38px;
+	margin-bottom:56px;
+	margin-left:158px;
+}
+
+.action .save{
+	width:137px;
+	height:38px;
+	position:relative;
+	background: url(../../image/policy/next_step.png) no-repeat;
+	border:none;
+	float:left;
+	font-size:16px;
+	color:#fff;
+	line-height:38px;
+	font-weight:bold;
+	text-align: center;
+	font-family:"Microsoft Yahei";
+}
+
+.saved_info{
+	margin:0 20px;
+	margin-bottom:50px;
+}
+
+.saved_info .info_title{
+	line-height:60px;
+	height:60px;
+	font-weight: bold;
+} 
+
+.saved_info .info_area .info_col{
+	float:left;
+	text-align: left;
+	position: relative;
+}
+
+.saved_info .info_row{
+	overflow: hidden;
+	padding:14px 0;
+}
+
+.saved_info .info_area .name{
+	width:90px;
+	margin-left:3px;
+}
+.saved_info .info_area .id_type{
+	width:96px;
+}
+.saved_info .info_area .id{
+	width:165px;
+}
+.saved_info .info_area .sex{
+	width:50px;
+	text-align: center;
+}
+.saved_info .info_area .birthday{
+	width:100px;
+	text-align: center;
+}
+.saved_info .info_area .relation{
+	width:90px;
+	text-align: center;
+}
+.saved_info .info_area .bind{
+	width:100px;
+}
+.saved_info .info_area .operation{
+	width:70px;
+	text-align: center;
+}
+
+.saved_info .info_area .area{
+	width:179px;
+}
+.saved_info .info_area .street_info{
+	width:335px;
+}
+.saved_info .info_area .postcode{
+	width:150px;
+	margin-left:25px;
+}
+
+.saved_info .info_area .info_name{
+	color:#333;
+}
+.saved_info .info_area .info_value{
+	border-top:1px dashed #cccccc;
+	color:#666666;
+}
+
+.saved_info .info_area .info_value.select{
+	background: #f0f0f0;
+}
+
+.saved_info .info_area .info_value .info_col.operation{
+	color:#0066cc;
+}
+.saved_info .info_area .operation a{
+	color:#0066cc;
+}
+
+.saved_info .info_area .default{
+	width:85px;
+	height:20px;
+	background: url(../../image/user/member/default_insured.png) no-repeat;
+	position: relative;
+	color:#fff;
+	text-align: center;
+	line-height:20px;
+}
+
+
+
+
+.product_list{
+	margin-top:22px;
+	overflow: hidden;
+	padding:0 2px;
+	margin-bottom:60px;
+}
+
+.product_list .product{
+	float:left;
+	width:240px;
+	height:120px;
+	background: #e6e6e6;
+	margin:0 13px;
+}
+
+.validateMessage{
+	color: red;
+}
+
+
+.input_row.provinceCity .input_text{
+	width:83px; 
+	margin-right:6px;
+}
+
+.input_row.provinceCity input{
+	border:1px solid #c9c9c9;
+	height:19px;
+	line-height:16px;
+	padding:2px;
+	float:left;
+	width:83px; 
+	margin-right:6px;
+}
+
+.alert_subscribe{
+	text-align: left;
+}
+
+.alert_subscribe .success{
+	width:100px;
+	float:left;
+	height:100px;
+	background: url(../../image/user/member/ok.png) no-repeat center; 
+}
+
+.alert_subscribe .main_content{
+	padding-top:20px;
+	font-size:16px;
+	line-height:60px;
+	margin-left:100px;
+	height:100px;
+}

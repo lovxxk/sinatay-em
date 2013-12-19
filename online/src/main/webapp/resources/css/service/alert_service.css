@@ -1,0 +1,97 @@
+.login_frame{
+	width:262px;
+	margin:0 auto 20px;
+	background: #fff;
+	z-index:2;
+	position: relative;
+	text-align: left;
+}
+
+.login_frame label.input_label,.login_form input.input_field{
+	display:block;
+}
+
+.login_frame label.input_label{
+	font-size:14px;
+	font-weight: bold;
+	color:#666;
+	line-height:26px;
+	text-align: left;
+}
+.login_frame label.input_label #message{
+	font-weight: normal;
+	color: #ff3333; 
+	margin-left: 30px;
+}
+
+.login_frame input.input_field{
+	width:212px;
+	height:31px;
+	border:1px solid #c8c8c8;
+	line-height:24px;
+	border-radius: 3px;
+	font-size:13px;
+	padding:1px 5px;
+	font-family:'Microsoft Yahei';
+	margin-top:15px;
+	padding-left:42px;
+}
+
+.login_frame .user_name{
+	background: url(../../image/index/input_user_bg.png) left center no-repeat;
+}
+.login_frame .password{
+	background: url(../../image/index/input_pwd_bg.png) left center no-repeat;
+}
+
+.login_frame .login_operation{
+	margin-top:24px;
+	text-align: left;
+	padding-left:2px;
+}
+
+.login_frame .login_operation input{
+	position:relative;
+	top:2px;
+	margin:0;
+}
+
+.login_frame .login_operation label{
+	padding: 0 8px 0 4px;
+}
+
+.login_frame .login_operation a{
+	display:inline-block;
+	line-height:14px;
+	border-left:1px solid #cccccc;
+	padding: 0 8px 0 12px;
+	text-align: center;
+}
+
+.login_frame .login_operation a.forget_password{
+	color:#333333;
+}
+.login_frame .login_operation a.forget_password:hover{
+	color:#3f67bf;
+}
+.login_frame .notice_login{
+	font-size:12px;
+	margin:0 20px;
+	line-height:60px;
+	border-bottom: none;
+	margin-top: 20px;
+	padding-left: 28px;
+}
+
+.login_frame .info_label1{
+	display: block;
+	margin-top:40px;
+}
+.login_frame .info_label2{
+	display: block;
+	margin-top:20px;
+}
+.login_frame .account{
+	color:#ff3333;
+	font-weight:bold;
+}

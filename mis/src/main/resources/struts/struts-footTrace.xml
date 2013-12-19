@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="footTraceInterceptor" extends="struts-default" namespace="/">
+		<interceptors>
+			<interceptor name="footTrace" class="cn.com.sinosoft.ebusiness.mis.business.interceptor.FootTraceInterceptor"></interceptor>
+			<interceptor-stack name="footTraceStack">
+				<interceptor-ref name="footTrace" />
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="footTraceStack" />
+	</package>
+</struts>

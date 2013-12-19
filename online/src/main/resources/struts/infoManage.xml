@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="info" extends="struts-default" namespace="/info">
+		<action name="initPolicyList" class="policyListAction"
+			method="initPolicyList">
+			<result name="success">/web/user/member/policy/myPolicy/index.jsp</result>
+			<result name="login">/web/user/login/index.jsp</result>
+		</action>
+	</package>
+	<package name="infoJson" extends="json-default" namespace="/infoJson">
+		<interceptors>
+			<interceptor name="tContCheckerInterceptor" class="contCheckerInterceptor"></interceptor>
+			<interceptor-stack name="contCheckerInterceptorStack">
+				<interceptor-ref name="tContCheckerInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+	
+		<action name="appntInfoChange" class="appntInfoChangeAction"
+			method="appntChange">
+			<result name="infoChange" type="json"></result>
+			<interceptor-ref name="contCheckerInterceptorStack"></interceptor-ref>
+		</action>
+		<action name="insuredInfoChange" class="insuredInfoChangeAction"
+			method="insuredChange">
+			<result name="infoChange" type="json"></result>
+			<interceptor-ref name="contCheckerInterceptorStack"></interceptor-ref>
+		</action>
+		<action name="sendPhoneDynamicNumber" class="appntInfoChangeAction"
+			method="sendPhoneDynamicNumber">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="checkPhone" class="appntInfoChangeAction"
+			method="checkPhone">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- <action name="appntSendCheckNum" class="appntInfoChangeAction"
+			method="sendCheckNum">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="insuredSendCheckNum" class="insuredInfoChangeAction"
+			method="sendCheckNum">
+			<result name="success" type="json"></result>
+		</action> -->
+ 		<action name="bindPolicy" class="policyListAction"
+			method="bindPolicy">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="delPolicy" class="policyListAction"
+			method="delBindPolicy">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="bindOtherPolicy" class="policyListAction"
+			method="bindOtherPolicy">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+	<package name="claims" extends="struts-default" namespace="/claims">
+		<action name="initClaimProcess" class="claimProcessAction"
+			method="initClaimProcess">
+			<result name="success">/web/user/member/claims/index.jsp</result>
+			<result name="login">/web/service/index.jsp</result>
+		</action>
+		<action name="claimDetail" class="claimProcessAction"
+			method="claimDetail">
+			<result name="success">/web/user/member/claims/claimDetail/index.jsp</result>
+		</action>
+		<action name="loadHospitals" class="claimReportAction" method="loadHospitals" ></action>
+	</package>
+	<package name="claimReportJson" extends="json-default" namespace="/claimReportJson">
+		<action name="reportClaim" class="claimReportAction"
+			method="reportClaim">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+	<package name="hosJson" extends="json-default" namespace="/hosJson">
+		<action name="initProvince" class="hospitalQueryAction"
+			method="initProvince">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="initCity" class="hospitalQueryAction"
+			method="initCity">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="queryHospital" class="hospitalQueryAction"
+			method="queryHospital">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+	
+	<!-- 网点信息查询 -->
+	<package name="webJson" extends="json-default" namespace="/webJson">
+		<action name="initProvince" class="websiteQueryAction"
+			method="initProvince">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="initCity" class="websiteQueryAction"
+			method="initCity">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="queryWebsite" class="websiteQueryAction"
+			method="queryWebsite">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+	
+	<package name="universal" extends="json-default" namespace="/universal">
+		<action name="initUniversalQuery" class="universalQueryAction"
+			method="initUniversalQuery">
+			<result name="success">/web/service/universalQuery/index.jsp</result>
+		</action>
+	</package>
+	<package name="universalJson" extends="json-default" namespace="/universalJson">
+		<action name="initRiskName" class="universalQueryAction"
+			method="initRiskName">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="queryUniversal" class="universalQueryAction"
+			method="queryUniversal">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="loadNewUniversal" class="universalQueryAction"
+			method="loadNewUniversal">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+	<package name="toolJson" extends="json-default" namespace="/toolJson">
+		<action name="initArea" class="areaAction"
+			method="initArea">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+	<include file="../spring/applicationContext-action.xml"></include>
+</struts>

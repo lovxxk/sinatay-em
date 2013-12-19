@@ -1,0 +1,128 @@
+
+.service_area{
+	background: #fff;
+	padding-bottom: 301px;
+}
+.service_area .title{
+	height:40px;
+	line-height:40px;
+	background: #3f67bf;
+}
+
+.service_area .title p{
+	float:left;
+	color:#fff;
+	font-size:14px;
+	font-weight: bold;
+	padding-left:23px;
+}
+
+.service_area .title .more{
+	float:right;
+	margin-right:15px;
+}
+.service_area .title .more a{
+	color:#fff;
+}
+
+.problem_cate{
+	overflow:hidden;
+	width:664px;
+	margin:22px auto 0;
+	padding-bottom:30px;
+	border-bottom:1px dashed #ccc;
+}
+
+.problem_cate .cate{
+	width:160px;
+	height:60px;
+	margin:3px;
+	float:left;
+	background: #cccccc;
+	cursor: pointer;
+}
+
+.problem_cate .cate:hover,.problem_cate .cate.select{
+	background: #3f67bf;
+}
+
+.problem_cate .cate div{
+	overflow:hidden;
+	margin-top:21px;
+	height:18px;
+	font-size:18px;
+	line-height:18px;
+	text-align:center;
+	color:#fff;
+/* 	text-indent: -999px; */
+/* 	background: url(../../image/service/problem_name.png) no-repeat; */
+}
+
+
+.problem_cate .cate.login div{
+	background-position: center 0;
+}
+.problem_cate .cate.insurance div{
+	background-position: center -18px;
+}
+.problem_cate .cate.pay div{
+	background-position: center -36px;
+}
+.problem_cate .cate.claims div{
+	background-position: center -54px;
+}
+.problem_cate .cate.account div{
+	background-position: center -72px;
+}
+.problem_cate .cate.policy div{
+	background-position: center -90px;
+}
+.problem_cate .cate.common_problem div{
+	background-position: center -108px;
+}
+.problem_cate .cate.other div{
+	background-position: center -126px;
+}
+
+.problem_main{
+	min-height:500px;
+	width:664px;
+	margin:16px auto 0;
+}
+/* .problem_list{
+	display: none;
+} */
+
+.problem_list .problem{
+	margin-top:4px;
+}
+
+.problem_list .problem .question{
+	line-height:40px;
+	cursor: pointer;
+}
+
+.problem_list .problem .question span{
+	float:left;
+	width:4px;
+	height:4px;
+	margin:18px 16px 0;
+	background: #3f67bf;	
+}
+
+.problem_list .problem .answer{
+	display: none;
+	margin-top:4px;
+	padding:9px 20px 9px 37px;
+	line-height:22px;
+}
+
+.problem_list .problem.open .question{
+	background: #f0f0f0;
+	color:#3f67bf;
+}
+
+.problem_list .problem.open .answer{
+	display:block;
+	background: #f0f0f0;
+}

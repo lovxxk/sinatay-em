@@ -1,0 +1,157 @@
+
+
+.email_list{
+	margin:60px auto;
+	width:550px;
+	background-color: white;
+	
+}
+.email_list .head{
+	height:40px;
+	background: #3f67bf;
+	line-height:40px;
+	font-size:14px;
+	font-weight:bold;
+	color:#fff;
+	padding-left:24px;
+}
+.email_list .content{
+	border-bottom:1px solid #d1d1d1;
+	border-right:1px solid #d1d1d1;
+	height:35px;
+	font-size:12px;
+	color:#666666;
+	text-align: left;
+	text-indent: 15px;
+}
+.email_list .content.tip{
+	font-weight:bold;
+	text-indent: 0;
+}
+
+.email_list .content .content_col{
+	float:left;
+	border-left:1px solid #d1d1d1;
+	height:35px;
+	line-height:35px;
+	text-align: center;;
+}
+
+.email_list .content.select .content_col {
+	background: #f3f3f3;
+}
+
+.email_list .content .content_col.time{
+	width:120px;
+}
+
+.email_list .content .content_col.num{
+	width:136px;
+}
+
+.email_list .content .content_col.name{
+	width:235px;
+}
+
+.email_list .content .content_col.email{
+	width:155px;
+}
+
+.email_list .content .content_col.operation{
+	width:118px;
+	cursor: pointer;
+	text-align: center;
+	text-indent: 0;
+}
+
+
+.email_list .content.select .content_col.operation{
+	color:#3f67bf;
+}
+
+
+
+.page_index{
+	height:35px;
+	text-align: center;
+	margin-top:60px;
+	margin-bottom:47px;
+}
+.page_index .page{
+	background: #e5e5e5;
+	color:#666666;
+	width:35px;
+	margin-left:2px;
+	margin-right:3px;
+	height:35px;
+	text-align: center;
+	line-height:35px;
+	display:inline-block;
+	
+	*zoom:1;
+	*display:inline;
+}
+
+.page_index .page a{
+	color:#666666;
+	display: block;
+	height:35px;
+}
+.page_index .page:hover{
+	background: #3f67bf;
+}
+
+.page_index .page:hover a{
+	color:#ffffff;
+}
+
+.page_index .page.now{
+	background: #3f67bf;
+}
+
+.page_index .page.now a{
+	color:#ffffff;
+}
+
+.page_index .next_page,.page_index .prev_page{
+	width:45px;
+}
+
+.page_index .next_page a,.page_index .prev_page a{
+	width:100%;
+	height:100%;
+	background: url(../../image/user/member/page.png) center no-repeat;
+}
+
+.page_index .next_page a{
+	background-position: -45px 0;
+}
+
+.page_index .prev_page a{
+	background-position: 0 0;
+}
+
+.page_index .next_page a:hover{
+	background-position: -45px -35px;
+}
+
+.page_index .prev_page a:hover{
+	background-position: 0 -35px;
+}
+
+
+
+.product_list{
+	margin-top:22px;
+	overflow: hidden;
+	padding:0 2px;
+	margin-bottom:60px;
+}
+
+.product_list .product{
+	float:left;
+	width:240px;
+	height:120px;
+	background: #e6e6e6;
+	margin:0 13px;
+}

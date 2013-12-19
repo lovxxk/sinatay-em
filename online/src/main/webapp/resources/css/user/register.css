@@ -1,0 +1,199 @@
+.middle{
+	padding-bottom:17px;
+}
+.middle .h_layout{
+	background:#fff;
+}
+
+.middle .register_main{
+	width:830px;
+	margin:0 auto;
+	padding-bottom:184px;
+}
+
+.middle .register_main .reg_title{
+	padding-top: 64px;
+	padding-bottom:16px;
+	font-size:14px;
+	font-weight: bold;
+}
+
+.register_main .main_frame{
+	border-top: 1px dashed #b1b1b1;
+	overflow: hidden;
+}
+
+.register_main .main_frame .reg_frame{
+	width:510px;
+	border-right:1px dashed #b1b1b1;
+	height:340px;
+	float:left;
+}
+
+.register_main .main_frame .reg_frame .reg_form{
+	margin-top:15px;
+}
+
+.reg_form .input_field{
+	height:42px;
+}
+
+.reg_form .input_field label{
+	display:block;
+	float:left;
+	width:140px;
+	line-height:42px;
+	font-size:14px;
+	text-align:right;
+}
+
+.reg_form .input_field input{
+	float:left;
+	width:160px;
+	height:22px;
+	border:1px solid #c9c9c9;
+	padding:1px 2px;
+	margin-top:8px;
+	font-family:'Microsoft Yahei';
+	line-height:16px;
+	
+	/*ie7 fix*/
+	*height:19px;
+	*padding-top:5px;
+}
+
+.reg_form .input_field input.vali{
+	width:80px;
+}
+
+.reg_form .input_field .required{
+	color:#ff0000;
+	float:left;
+	margin-left:40px;
+}
+
+.reg_form .input_field .name{
+	width:84px;
+	float:right;
+	text-align:right;
+}
+
+.reg_form .input_field .vali_img{
+	float:left;
+	width:80px;
+	margin-top:8px;
+	margin-left:8px;
+}
+
+.reg_form .input_field .vali_img img{
+	width:100%;
+	height:auto;
+}
+
+.reg_form .input_field .phone_vali{
+	width:85px;
+	height:22px;
+	background: url(../../image/btn/btn_vali_bg.png) center no-repeat;
+	float:left;
+	margin-top:9px;
+	margin-left:12px;
+	color:#fff;
+	border:none;
+	font-size:12px;
+	line-height:22px;
+	position:relative;
+	
+	*line-height:16px;
+}
+
+.reg_form .agree{
+	padding-left: 140px;
+	padding-top:20px;
+}
+.reg_form .agree input{
+	margin: 0;
+	top: 2px;
+	position: relative;
+}
+.reg_form .agree a{
+	color:#3366cc;
+}
+.reg_form .agree a:hover{
+	text-decoration: underline;
+}
+.reg_form .reg_btn{
+	padding-left:138px;
+	padding-top:38px;
+}
+
+.reg_form .reg_btn input#reg_btn{
+	width:137px;
+	height:38px;
+	border:none;
+	background: url(../../image/user/reg_bg.png) center no-repeat;
+	color:#f0f4f5;
+	font-size:16px;
+	font-weight:bold;
+}
+
+.register_main .main_frame .login_frame{
+	width:258px;
+	height:340px;
+	float:left;
+	padding-left:42px;
+}
+
+.login_frame .has_account{
+	margin-top:33px;
+	font-size:14px;
+}
+
+.login_frame .reg_login{
+	margin-top:20px;
+}
+
+.login_frame .reg_login button{
+	border:none;
+	width:137px;
+	height:38px;
+	font-size:14px;
+	font-weight:bold;
+	color:#f0f4f5;
+	background: url(../../image/user/reg_login_bg.png) center no-repeat;
+}
+
+.login_frame .other_login{
+	font-size:14px;
+	margin-top:28px;
+}
+.login_frame .login_type{
+	margin-top:18px;
+	padding-left:20px;
+}
+
+.login_frame .login_type a{
+	color:#333333;
+}
+.login_frame .login_type a:hover{
+	color:#3f67bf;
+}
+.login_frame .alipay{
+	background: url(../../image/user/alipay_icon.png) left no-repeat;
+}
+
+.login_frame .tencent{
+	background: url(../../image/user/tencent_icon.png) left no-repeat;
+}
+
+.login_frame .weibo{
+	background: url(../../image/user/weibo_icon.png) left no-repeat;
+}
+
+.errorMessag{
+	color:#ff0000;
+	float:left;
+	width:200px;
+	height:20px;
+	padding:2px 2px;
+	margin-top:10px;
+}

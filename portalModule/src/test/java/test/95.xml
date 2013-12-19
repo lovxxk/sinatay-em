@@ -1,0 +1,56 @@
+
+大黄蜂日终对账(ST000095)请求...
+<?xml version="1.0" encoding="GBK"?>
+<TranData>
+	<BaseInfo>
+		<TransrDate>20131216</TransrDate>
+		<TransrTime>08:05:30</TransrTime>
+		<TellerNo>0001</TellerNo>
+		<TransrNo>DHF20131216160500030097</TransrNo>
+		<SaleChannel>W</SaleChannel>
+		<SellType>20</SellType>
+		<FunctionFlag>ST000095</FunctionFlag>
+		<Source>DHF</Source>
+	</BaseInfo>
+	<TranRequest>
+		<BillDate>20131216</BillDate>
+		<TotalCount>2</TotalCount>
+		<TotalPrem>6000.5</TotalPrem>
+		<Detail_List>
+			<Detail>
+				<TransDate>20131216</TransDate>
+				<Prtno>340110000000067</Prtno>
+				<Prem>1.6</Prem>
+				<AppFlag>1</AppFlag>
+			</Detail>
+			<Detail>
+				<TransDate>20131216</TransDate>
+				<Prtno>340110000000068</Prtno>
+				<Prem>1.6</Prem>
+				<AppFlag>1</AppFlag>
+			</Detail>
+		</Detail_List>
+	</TranRequest>
+</TranData>
+	请求服务器开始时间===========2013-12-1616:05:31
+	服务器处理返回时间===========2013-12-1616:05:31
+	服务器处理时间（毫秒）：========================782
+	大黄蜂日终对账(ST000095)应答...
+<?xml version="1.0" encoding="GBK"?>
+	<TranData>
+		<BaseInfo>
+			<TransrDate>20131216</TransrDate>
+			<TransrTime>16:04:17</TransrTime>
+			<TellerNo>0001</TellerNo>
+			<TransrNo>DHF20131216160500030097</TransrNo>
+			<SaleChannel>W</SaleChannel>
+			<SellType>20</SellType>
+			<FunctionFlag>ST000095</FunctionFlag>
+			<Source>DHF</Source>
+		</BaseInfo>
+		<TranResponse>
+			<Flag>0</Flag>
+			<Desc>投保单号340110000000068的保费不一致。投保单号340110000000067的保费不一致。大黄蜂的记录未找到核心的投保单号340110000000075。大黄蜂的记录未找到核心的投保单号340110000000059。大黄蜂的记录未找到核心的投保单号340110000000066。大黄蜂的记录未找到核心的投保单号340110000000069。大黄蜂的记录未找到核心的投保单号340110000000070。大黄蜂的记录未找到核心的投保单号340110000000073。大黄蜂的记录未找到核心的投保单号340110000000074。
+			</Desc>
+		</TranResponse>
+	</TranData>

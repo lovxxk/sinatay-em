@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="GBK"?>
+<mapping>
+	<description>影像通知请求</description>
+	<class name="cn.com.sinosoft.portalModule.transport.transactionObject.TXInsurance" auto-complete="false">
+		<map-to xml="TranData"/>
+		<field name="transExeDate" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TransrDate" location="BaseInfo"/>
+		</field>
+		<field name="transExeTime" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TransrTime" location="BaseInfo"/>
+		</field>
+		<field name="tellerNo" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TellerNo" location="BaseInfo"/>
+		</field>
+		<field name="transRefGUID" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TransrNo" location="BaseInfo"/>
+		</field>
+		<field name="saleChannel" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="SaleChannel" location="BaseInfo"/>
+		</field>
+		<field name="sellType" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="SellType" location="BaseInfo"/>
+		</field>
+		<field name="transType" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="FunctionFlag" location="BaseInfo"/>
+		</field>
+		<field name="source" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="Source" location="BaseInfo"/>
+		</field>
+		<field name="businessDatum" collection="arraylist"  type="cn.com.sinosoft.portalModule.transport.sinatay.TranRequest">
+			<bind-xml name="TranRequest"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.sinatay.TranRequest" auto-complete="false">
+		<field name="attachmentCount" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.IntegerConverterString">
+			<bind-xml name="AttachmentCount" location="Attachments"/>
+		</field>
+		<field name="attachments" type="cn.com.sinosoft.portalModule.transport.sinatay.Attachment" collection="arraylist">
+			<bind-xml name="Attachment" location="Attachments"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.sinatay.Attachment" auto-complete="false">
+		<field name="subType" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="SubType"/>
+		</field>
+		<field name="pageCode" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="PageCode"/>
+		</field>
+		<field name="fileName" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="FileName"/>
+		</field>
+		<field name="picPath" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="PicPath"/>
+		</field>
+	</class>
+</mapping>

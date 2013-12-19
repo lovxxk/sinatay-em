@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="business.cmpProductManage.riskAndKindManage" extends="struts-default" namespace="/business/cmpProductManage/riskAndKindManage">
+		<action name="frmCreate" class="geKindManageAction" method="addKind">
+			<result name="success">
+			  /global/inc/tipInfo.jsp?type=create
+			</result>
+		</action>
+		<action name="businessAreaSearch" class="geKindManageAction" method="findBusinessArea">
+			<result name="success">
+			   /business/cmpProductManage/riskAndKindManage/kind/create/searchRiscode/frmSearch.jsp
+			</result>
+		</action>
+		<action name="findKindCode" class="geKindManageAction" method="findKindCode">
+			<result name="success">
+			    /business/cmpProductManage/riskAndKindManage/kind/create/searchRiscode/search.jsp
+			</result>
+		</action>
+		<action name="findKindList" class="geKindManageAction" method="findKindList">
+			<result name="success">
+			    /business/cmpProductManage/riskAndKindManage/kind/search/search.jsp
+			</result>
+		</action>
+		<action name="sortRiskKind" class="geKindManageAction" method="sortRiskKind">
+			<result name="success">
+			 /global/inc/cartipInfo.jsp?type=update
+			</result>
+		</action>
+		<action name="findGeKindList" class="geKindManageAction" method="findGeKindList">
+			<result name="success">
+			    /business/cmpProductManage/riskAndKindManage/sortRiskKind/search.jsp
+			</result>
+		</action>		
+		<action name="viewKind" class="geKindManageAction" method="viewKind">
+			<result name="success">
+			    /business/cmpProductManage/riskAndKindManage/kind/view/index.jsp
+			</result>
+		</action>
+		<action name="prepareUpdateGeKind" class="geKindManageAction" method="prepareUpdateGeKind">
+			<result name="success">
+			   /business/cmpProductManage/riskAndKindManage/kind/update/index.jsp
+			</result>
+		</action>
+		<action name="updateGeEnKind" class="geKindManageAction" method="updateGeEnKind">
+			<result name="success">
+			  /global/inc/tipInfo.jsp?type=update
+			</result>
+		</action>
+		<action name="deleteByCode" class="geKindManageAction" method="deleteByCode">
+			<result name="success">
+			 	/global/inc/tipInfo.jsp
+			</result>
+		</action>
+		
+		
+		<!-- 险种险别主附险 关系维护  -->
+		
+		  <action name="searchKindCode" class="geKindManageAction" method="searchKindCode" >
+		    <result name="success">
+		     /business/cmpProductManage/riskAndKindManage/riskKindRelate/create/searchKindCode/frmSearch.jsp
+		    </result>
+		  </action>
+		  <action name="findKindMainOrAdd" class="geKindManageAction" method="findKindMainOrAdd" >
+		    <result name="success">
+		       /business/cmpProductManage/riskAndKindManage/riskKindRelate/create/searchKindCode/search.jsp
+		    </result>
+		  </action>
+		   
+		 <action name="createCode" class="geKindManageAction" method="createCode">
+			<result name="success">
+			 	 /global/inc/tipInfo.jsp?type=create
+			</result>
+		</action>
+		
+		<action name="businessAreaCode" class="geKindManageAction" method="businessAreaCode">
+			<result name="success">
+			  /business/cmpProductManage/riskAndKindManage/riskKindRelate/create/frmCreate.jsp
+			</result>
+		</action>
+		
+		<action name="queryKindRelate" class="geKindManageAction" method="queryKindRelate">
+			<result name="success">
+			/business/cmpProductManage/riskAndKindManage/riskKindRelate/search/search.jsp
+			</result>
+		</action>
+		
+		<action name="viewKindRelate" class="geKindManageAction" method="viewKindRelate">
+			<result name="success">
+			  /business/cmpProductManage/riskAndKindManage/riskKindRelate/viewOrUpdate/index.jsp
+			</result>
+		</action>
+		
+		<action name="kindRelatef" class="geKindManageAction" method="kindRelatef">
+			<result name="success">
+			   /global/inc/tipInfo.jsp?type=update
+			</result>
+		</action>
+		
+		       <!--  附加险别列表      -->		
+		<action name="addKindList" class="geKindManageAction" method="addKindList">
+			<result name="success">
+			  /business/cmpProductManage/riskAndKindManage/kind/create/createGeRelate/addKindSearch.jsp
+			</result>
+		</action>
+		<action name="recommendKind" class="geKindManageAction" method="recommendKind">
+			<result name="success">
+			 /business/cmpProductManage/riskAndKindManage/kind/update/updateGeRelate/updateAddKindUse.jsp
+			</result>
+		</action>
+		
+		<!--  判断该附加险是否有主险关系     -->
+		<action name="vaildateRelateCode" class="geKindManageAction" method="vaildateRelateCode"></action>
+		
+		<action name="checkFlag" class="geKindManageAction" method="checkFlag"></action>
+		<action name="checkAddFlag" class="geKindManageAction" method="checkAddFlag"></action>
+		<action name="checkRelate" class="geKindManageAction" method="checkRelate"></action>
+		<action name="checkKindCodeUnique" class="geKindManageAction" method="checkKindCodeUnique"></action>
+		<action name="checkOrderNum" class="geKindManageAction" method="checkOrderNum"></action>
+	</package>
+</struts>

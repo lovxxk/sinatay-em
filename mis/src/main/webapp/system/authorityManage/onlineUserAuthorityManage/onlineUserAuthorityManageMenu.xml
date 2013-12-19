@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<menu>
+	<item id="muItem_ADD" text="新建子权限" img="new.gif"/>
+	<item type="separator"/>
+	<item id="muItem_EDIT" text="编辑权限" img="edit.gif"/>
+	<item type="separator"/>
+	<item id="muItem_DEL" text="删除权限" img="del.gif"/>
+
+</menu>

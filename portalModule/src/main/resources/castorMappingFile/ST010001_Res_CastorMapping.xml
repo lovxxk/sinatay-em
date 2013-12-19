@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="GBK"?>
+<mapping>
+	<description>身份证校验应答</description>
+	<class name="cn.com.sinosoft.portalModule.transport.transactionObject.TXInsurance" auto-complete="false">
+		<map-to xml="TranData"/>
+		<field name="transExeDate" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TransrDate" location="BaseInfo"/>
+		</field>
+		<field name="transExeTime" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TransrTime" location="BaseInfo"/>
+		</field>
+		<field name="tellerNo" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TellerNo" location="BaseInfo"/>
+		</field>
+		<field name="transRefGUID" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TransrNo" location="BaseInfo"/>
+		</field>
+		<field name="saleChannel" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="SaleChannel" location="BaseInfo"/>
+		</field>
+		<field name="sellType" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="SellType" location="BaseInfo"/>
+		</field>
+		<field name="transType" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="FunctionFlag" location="BaseInfo"/>
+		</field>
+		<field name="source" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="Source" location="BaseInfo"/>
+		</field>
+		<field name="tranRequest" type="cn.com.sinosoft.portalModule.transport.sinatay.TranRequest">
+			<bind-xml name="TranRequest"/>
+		</field>
+		<field name="businessDatum" collection="arraylist"  type="cn.com.sinosoft.portalModule.transport.sinatay.TranResponse">
+			<bind-xml name="TranResponse"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.sinatay.TranRequest" auto-complete="false">
+		<field name="idCardCheckes" type="cn.com.sinosoft.portalModule.transport.sinatay.IdCardChecks" collection="arraylist">
+			<bind-xml name="ROW" location="ROWS"/>
+		</field>
+		<field name="idCardCheckCode" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="code" node="attribute" location="ROWS"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.sinatay.IdCardChecks" auto-complete="false">
+		<field name="gmsfhm" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="GMSFHM"/>
+		</field>
+		<field name="xm" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="XM"/>
+		</field>
+		<field name="fsd" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="FSD"/>
+		</field>
+		<field name="ywlx" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="YWLX"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.sinatay.TranResponse" auto-complete="false">
+		<field name="flag" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="Flag"/>
+		</field>
+		<field name="desc" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="Desc"/>
+		</field>
+		<field name="idCardChecks" type="cn.com.sinosoft.portalModule.transport.sinatay.IdCardCheck" collection="arraylist">
+			<bind-xml name="ROW" location="ROWS"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.sinatay.IdCardCheck" auto-complete="false">
+		<field name="no" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="no" node="attribute"/>
+		</field>
+		<field name="gmsfhm" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="gmsfhm" location="INPUT"/>
+		</field>
+		<field name="xm" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="xm" location="INPUT"/>
+		</field>
+		<field name="items" type="cn.com.sinosoft.portalModule.transport.sinatay.IdCardCheckResult" collection="arraylist">
+			<bind-xml name="ITEM" location="OUTPUT"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.sinatay.IdCardCheckResult" auto-complete="false">
+		<field name="gmsfhm" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="gmsfhm"/>
+		</field>
+		<field name="result_gmsfhm" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="result_gmsfhm"/>
+		</field>
+		<field name="xm" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="xm"/>
+		</field>
+		<field name="result_xm" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="result_xm"/>
+		</field>
+		<field name="xp" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="xp"/>
+		</field>
+		<field name="errormesage" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="errormesage"/>
+		</field>
+		<field name="errormesagecol" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="errormesagecol"/>
+		</field>
+	</class>
+</mapping>

@@ -1,0 +1,94 @@
+.detail_main .bottom_bg{
+	margin-left:21px;
+	margin-top:22px;
+}
+
+.detail_main .content_bg{
+	width:720px;
+	background: #f0f0ff;
+	padding-top:22px;
+	margin-bottom: 20px;
+}
+.detail_main.detail .content_bg{
+	height:1852px;
+	background: none;
+	padding-top:0;
+}
+.detail_main.buy_notice .content_bg{
+	height:1536px;
+}
+
+.detail_main.policy .content_bg{
+	height:1694px;
+}
+
+.detail_main.detail .content_bg .main_content{
+	height:1852px;
+	margin-left:-10px;
+	background: url(../../image/product/product_auto_detail.jpg) no-repeat top;
+}
+
+.detail_main.buy_notice .content_bg .main_content{
+	height:1454px;
+	margin-left:-10px;
+	background: url(../../image/product/product_auto_notice.png) no-repeat;
+}
+
+.detail_main.policy .content_bg .main_content{
+	height:1617px;
+	margin-left:-10px;
+	background: url(../../image/product/product_auto_policy.png) no-repeat;
+}
+
+.action {
+	color:#000;
+}
+
+.action a{
+	color:#3366cc;
+}
+
+.action a.more{
+	float:right;
+}
+
+.detail_main.policy .action.policy_service{
+	padding-left:83px;
+	padding-top:238px;
+} 
+
+
+.detail_main.policy .action.claims_service{
+	padding-left:83px;
+	padding-top:740px;
+} 
+
+.detail_main.policy .action.help_service{
+	padding-left:83px;
+	padding-top:622px;
+	padding-right:100px;
+}
+
+.detail_main.buy_notice .action.p1{
+	padding-left:543px;
+	padding-top:936px;
+} 
+.detail_main.buy_notice .action.p1 a{
+	color:#ff3333;
+	text-decoration: underline;
+}
+
+.detail_main.buy_notice .action.p2{
+	padding-left:83px;
+	padding-top:450px;
+	color:#666;
+} 
+.detail_main.buy_notice .action.p2 a{
+	color:#ff3333;
+	text-decoration: underline;
+}
+.detail_main.buy_notice .action.p3{
+	padding-left:83px;
+	padding-top:55px;
+	padding-right:100px;
+}

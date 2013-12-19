@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="business.businessManage.feature" extends="footTraceInterceptor" namespace="/business/businessManage/feature">
+		<action name="queryGeFunctionSwitchPage" class="geFunctionSwitchAction" method="findAllGeFunctionSwitch">
+			<result name="success">/system/configManage/feature/search/search.jsp</result>
+		</action>
+		<action name="deleteAll" class="geFunctionSwitchAction" method="deleteAllGeFunctionSwitch">
+			<result name="success">/global/inc/tipInfo.jsp</result>
+		</action>
+		<action name="create" class="geFunctionSwitchAction" method="createGeFunctionSwitch">
+			<result name="success">/global/inc/tipInfo.jsp?type=create</result>
+		</action>
+		<action name="queryForShow" class="geFunctionSwitchAction" method="queryForShow">
+			<result name="success">/system/configManage/feature/show/index.jsp</result>
+		</action>
+		<action name="queryForUpdate" class="geFunctionSwitchAction" method="queryForUpdate">
+			<result name="success">/system/configManage/feature/update/index.jsp</result>
+		</action>
+		<action name="update" class="geFunctionSwitchAction" method="updateGeFunctionSwitch">
+			<result name="success">/global/inc/tipInfo.jsp?type=update</result>
+		</action>
+	</package>
+</struts>

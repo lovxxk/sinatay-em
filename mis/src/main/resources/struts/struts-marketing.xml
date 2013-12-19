@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="marketing" extends="struts-default" namespace="/marketing" >
+		<action name="selectCity" class="marketingAction" method="selectCity" />
+		<action name="selectProvince" class="marketingAction" method="selectProvince" />
+		<action name="prepareSelectAddShopping" class="marketingAction" method="prepareSelectAddShopping" >
+			
+			<result name="addShoppingroduct">
+				/business/marketingManage/create/addShoppingProduct/frmSearch.jsp
+			</result>
+	
+			<result name="success">
+				/business/marketingManage/create/selectProduct/zzSelectProduct.jsp
+			</result>
+			<result name="addProduct">
+				/business/marketingManage/create/selectProduct/frmSearch.jsp
+			</result>
+		</action>
+		<action name="findRecommendProduct" class="MarketingAction" method="findRecommendProduct">
+			<result name="success">/business/marketingManage/update/selectProduct/upSelectProductUse.jsp</result>
+		</action>
+		<action name="prepareSelectAddShopping1" class="marketingAction" method="prepareSelectAddShopping1" >
+			<!--  
+			<result name="success">
+				/business/marketingManage/create/addShoppingProduct/frmSearch.jsp
+			</result>
+			-->
+			<result name="success">
+				/business/marketingManage/update/selectProduct/upSelectProduct.jsp
+			</result>
+			<result name="addProduct">
+				/business/marketingManage/create/selectProduct/frmSearch.jsp
+			</result>
+		</action>
+		<action name="findGeRisk" class="marketingAction" method="findGeRisk" >
+		<!--  
+			<result name="success">
+				/business/marketingManage/create/addShoppingProduct/carProductSearch.jsp
+			</result>
+		-->
+			<result name="success">
+				/business/marketingManage/create/selectProduct/zzSelectProductSearch.jsp
+			</result>
+			<result name="addProduct">
+				/business/marketingManage/create/selectProduct/carProductSearch.jsp
+			</result>
+		</action>
+		
+		
+		<action name="findGeProductMain" class="marketingAction" method="findGeProductMain" >
+		<!--  
+			<result name="success">
+				/business/marketingManage/create/addShoppingProduct/netsalesProductSearch.jsp
+			</result>
+		-->
+			<result name="success">
+				/business/marketingManage/create/selectProduct/zzSelectProductSearch.jsp
+			</result>
+			<result name="addProduct">
+				/business/marketingManage/create/selectProduct/netsalesProductSearch.jsp
+			</result>
+		</action>
+		
+		<action name="findGeCardProduct" class="marketingAction" method="findGeCardProduct">
+		<!--
+			<result name="success">
+				/business/marketingManage/create/addShoppingProduct/cardProductSearch.jsp
+			</result>
+		-->
+			<result name="success">
+				/business/marketingManage/create/selectProduct/zzSelectProductSearch.jsp
+			</result>
+			
+			<result name="addProduct">
+				/business/marketingManage/create/selectProduct/cardProductSearch.jsp
+			</result>
+		</action>
+		
+		
+		
+		<action name="prepareAddGeAddServiceActivity" class="marketingAction" method="prepareAddGeAddServiceActivity" >
+			<result name="success">
+				/business/marketingManage/create/frmCreate.jsp
+			</result>
+		</action>
+		
+		<action name="isProductAddServiceExist" class="marketingAction" method="isProductAddServiceExist" />
+		<action name="addAddGeAddServiceActivityAndRule" class="marketingAction" method="addAddGeAddServiceActivityAndRule" >
+			<result name="repeatInformation">
+				/business/marketingManage/create/repeat/repeatInformation.jsp?type=create
+			</result>
+			<result name="success">
+			/business/marketingManage/create/repeat/repeatInformation.jsp?type=create
+<!--				/global/inc/alertInfo.jsp?type=create-->
+			</result>
+		</action>
+		<action name="findAddGeAddServiceActivity" class="marketingAction" method="findAddGeAddServiceActivity" >
+			<result name="success">
+				/business/marketingManage/search/search.jsp
+			</result>
+		</action>
+		
+		<action name="prepareUpdateAddGeAddServiceActivity" class="marketingAction" method="prepareUpdateAddGeAddServiceActivity" >
+			<result name="success">
+				/business/marketingManage/update/index.jsp
+			</result>
+		</action>
+		<action name="view" class="marketingAction" method="view" >
+			<result name="success">
+				/business/marketingManage/view/index.jsp
+			</result>
+		</action>
+		<action name="findGeActivitiesProduct" class="marketingAction" method="findGeActivitiesProduct" >
+			<result name="success">
+				/business/marketingManage/create/selectProduct/zzSelectProductUse.jsp
+			</result>
+		</action>
+		
+		
+		<action name="updateAddGeAddServiceActivity" class="marketingAction" method="updateAddGeAddServiceActivity" >
+			<result name="repeatInformationByUpdate">
+				/business/marketingManage/update/repeat/repeatInformation.jsp?type=create
+			</result>
+			<result name="success">
+				/global/inc/alertInfo.jsp?type=update
+			</result>
+		</action>
+		<action name="deleteAddGeAddServiceActivity" class="marketingAction" method="deleteAddGeAddServiceActivity" >
+			<result name="success">
+				  /global/inc/tipInfo.jsp
+			</result>
+		</action>
+		<action name="selectSingleTask" class="marketingAction" method="selectSingleTask" >
+			<result>/business/marketingManage/update/index.jsp</result>
+		</action>
+		<action name="auditActivity" class="marketingAction" method="auditActivity" >
+			<result>/global/inc/alertInfo.jsp?type=create</result>
+		</action>
+		<action name="failureAutit" class="marketingAction" method="failureAutit" >
+			<result>/global/inc/alertInfo.jsp?type=create</result>
+		</action>
+		<action name="findProvince" class="marketingAction" method="findProvince" />
+		<action name="findCity" class="marketingAction" method="findCity" />
+		<action name="selectDeptAuthId" class="marketingAction" method="selectDeptAuthId" >
+			<result name="success">/business/marketingManage/tree/authRadioDeptQuery.jsp</result><!--用于营销活动的-->
+			<result name="thirdPartterInfo">/business/customerManage/party/thirdParterInfo/tree/authRadioDeptQuery.jsp</result><!--用于营销活动的-->
+		</action>
+		<action name="findNetSalesProduct" class="marketingAction" method="findNetSalesProduct" >
+			<result name="success">/business/marketingManage/create/selectProduct/netsalesProductSearch.jsp</result>
+		</action>
+		<action name="findCardProduct" class="marketingAction" method="findCardProduct" >
+			<result name="success">/business/marketingManage/create/selectProduct/cardProductSearch.jsp</result>
+		</action>
+		<action name="findCarProduct" class="marketingAction" method="findCarProduct" >
+			<result name="fmCreateAddShopping">/business/marketingManage/create/addShoppingProduct/carProductSearch.jsp</result>
+			<result name="fmCreateSelectProduct">/business/marketingManage/create/selectProduct/carProductSearch.jsp</result>
+		</action>
+		
+		<action name="prepareFindGeThirdParterService" class="marketingAction" method="prepareFindGeThirdParterService" >
+			<result name="success">/business/marketingManage/create/selectGeThirdParterService/frmSearch.jsp</result>
+		</action>
+		
+		<!--workFlow  start-->
+		<action name="findGeAddServiceActivityWorkFlow" class="marketingAction" method="findGeAddServiceActivityWorkFlow">
+			<result name="success">
+				/business/marketingManage/search/searchWorkFlow.jsp
+			</result>
+		</action>
+		<action name="submitApplyMarketing" class="marketingAction" method="submitApplyMarketing" />
+		<action name="doFinish" class="marketingAction" method="doFinish" />
+		<action name="doRoolBack" class="marketingAction" method="doRoolBack" />
+		<action name="doGiveUp" class="marketingAction" method="doGiveUp" />
+		<action name="doQuit" class="marketingAction" method="doQuit" />
+		<action name="testOnline" class="marketingAction" method="testOnline" />
+		<action name="testPicture" class="marketingAction" method="testPicture" />
+		<!--workFlow  end-->
+		
+		<!--GeActivitiesConfig start -->
+		<action name="findGeActivitiesConfig" class="marketingAction" method="findGeActivitiesConfig" >
+			<result name="success">/business/marketingManage/create/selectProduct/search.jsp</result>
+		</action>
+		<!--GeActivitiesConfig end -->
+		
+		
+		
+		<action name="findProductDirectory" class="productDirectoryAction" method="findProductDirectory">
+			<result name="success">
+				/business/marketingManage/create/selectProduct/search.jsp
+			</result>
+		</action>
+		<action name="findProductDirectoryForAddShopping" class="productDirectoryAction" method="findProductDirectory">
+			<result name="success">
+				/business/marketingManage/create/addShoppingProduct/search.jsp
+			</result>
+		</action>
+		
+		<action name="addGeDiscountManage" class="geDiscountAction" method="addGeDiscountManage">
+			<result name="success">
+				/business/marketingManage/discountManage/create/frmCreate.jsp
+			</result>
+		</action>
+		<action name="delGeDiscountManage" class="geDiscountAction" method="delGeDiscountManage">
+				<result name="success">/global/inc/alertInfo.jsp</result>
+		</action>
+		<action name="findGeDiscountManage" class="geDiscountAction" method="findGeDiscountManage">
+			<result name="success">
+				/business/marketingManage/discountManage/search/search.jsp
+			</result>
+		</action>
+		<action name="findGeDiscountManageByDiscountId" class="geDiscountAction" method="findGeDiscountManageByDiscountId">
+			<result name="success">
+				/business/marketingManage/discountManage/update/update.jsp
+			</result>
+		</action>
+		<action name="findGeDiscountManageForUpdate" class="geDiscountAction" method="findGeDiscountManageForUpdate">
+			<result name="success">
+				/business/marketingManage/discountManage/update/update.jsp
+			</result>
+		</action>
+		<action name="updateGeDiscountManageForUpdate" class="geDiscountAction" method="findGeDiscountManageForUpdate">
+			<result name="success">
+				/business/marketingManage/discountManage/update/update.jsp
+			</result>
+		</action>
+		<action name="updateGeDiscountManage" class="geDiscountAction" method="updateGeDiscountManage">
+			<result name="success">
+				/global/inc/alertInfo.jsp?type=update
+			</result>
+		</action>
+		<action name="getWaitMarketDoCount" class="marketingAction" method="getWaitMarketDoCount">
+		</action>
+		
+	</package>
+</struts>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="risk" extends="struts-default" namespace="/risk" >
+		
+		
+		<action name="findBusinessArea" class="riskAction" method="findBusinessArea" >
+			<result name="success">
+				/business/riskManage/create/riskAdd.jsp
+			</result>
+		</action>
+		<action name="findBusinessArea2" class="riskAction" method="findBusinessArea2" >
+			<result name="success">
+				/business/riskManage/search/frmSearch.jsp
+			</result>
+		</action>
+		<action name="addGeRisk" class="riskAction" method="addGeRisk" >
+			<result name="success">
+				/global/inc/cartipInfo.jsp?type=create
+			</result>
+		</action>	
+		<action name="findGeRiskList" class="riskAction" method="findGeRiskList" >
+			<result name="success">
+				/business/riskManage/search/search.jsp
+			</result>
+		</action>
+		<action name="viewGeRisk" class="riskAction" method="viewGeRisk" >
+			<result name="success">
+				/business/riskManage/search/geRiskView.jsp
+			</result>
+		</action>
+		<action name="prepareUpdateGeRisk" class="riskAction" method="prepareUpdateGeRisk" >
+			<result name="success">
+				/business/riskManage/update/geRiskUpdate.jsp
+			</result>
+		</action>
+		<action name="updateGeRisk" class="riskAction" method="updateGeRisk" >
+			<result name="success">/global/inc/cartipInfo.jsp?type=update</result>
+		</action>
+		<action name="deleteGeRiskList" class="riskAction" method="deleteGeRiskList" >
+			<result name="success">/global/inc/cartipInfo.jsp</result>
+		</action>
+	</package>
+</struts>

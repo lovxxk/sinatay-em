@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="interfacePortalManage" extends="struts-default" namespace="/interfacePortal">
+		<!--TransactionMessage部分开始-->
+		<action name="searchTransactionMessagePage" class="portalModuleAction" method="searchTransactionMessagePage">
+			<result name="success">/system/interfacePortalManage/transactionMessage/search/search.jsp</result>
+		</action>
+		<action name="viewTransactionMessageDetail" class="portalModuleAction" method="searchTransactionMessage">
+			<result name="success">/system/interfacePortalManage/transactionMessage/search/transactionMessageDetail.jsp</result>
+		</action>
+		<!--ExternalSysInfo部分开始-->
+		<action name="findExternalGeCodeAjax" class="portalModuleAction" method="findExternalGeCodeAjax">
+		</action>
+		
+		<action name="saveExternalSysInfo" class="portalModuleAction" method="saveExternalSysInfo">
+			<result name="success">/system/interfacePortalManage/externalSysInfo/create/index.jsp</result>
+		</action>
+		<action name="isHaveExternalSysId" class="portalModuleAction" method="isHaveExternalSysId"></action>
+		<action name="isHaveExternalSysName" class="portalModuleAction" method="isHaveExternalSysName"></action>
+		<action name="viewExternalSysInfoDetail" class="portalModuleAction" method="searchExternalSysInfo">
+			<result name="success">/system/interfacePortalManage/externalSysInfo/search/externalSysInfoDetail.jsp</result>
+		</action>
+		<action name="searchExternalSysInfo" class="portalModuleAction" method="searchExternalSysInfo">
+			<result name="success">/system/interfacePortalManage/externalSysInfo/update/index.jsp</result>
+		</action>
+		<action name="updateExternalSysInfo" class="portalModuleAction" method="updateExternalSysInfo">
+			<result name="success">
+				/global/inc/alertInfo.jsp?type=update
+			</result>
+		</action>
+		<action name="deleteExternalSysInfo" class="portalModuleAction" method="deleteExternalSysInfo">
+			<result name="success">
+				/global/inc/alertInfo.jsp
+			</result>
+		</action>
+		<action name="searchExternalSysInfoPage" class="portalModuleAction" method="searchExternalSysInfoPage">
+			<result name="success">/system/interfacePortalManage/externalSysInfo/search/search.jsp</result>
+		</action>
+		<!--ClientUser部分开始-->
+		<action name="isHaveExIdAndName" class="portalModuleAction" method="isHaveExIdAndName">
+		</action>
+		<action name="findExternalSysInfo" class="portalModuleAction" method="findExternalSysInfo" >
+			<result name="success">/system/interfacePortalManage/clientUser/create/selectExternalSysIdList/externalSysInfoSearch.jsp</result>
+		</action>
+		<action name="findExternalSysInfoList" class="portalModuleAction" method="findExternalSysInfoList" >
+		</action>		
+		<action name="saveClientUser" class="portalModuleAction" method="saveClientUser">
+			<result name="success">/system/interfacePortalManage/clientUser/create/index.jsp</result>
+		</action>
+		<action name="searchClientUserPage" class="portalModuleAction" method="searchClientUserPage">
+			<result name="success">/system/interfacePortalManage/clientUser/search/search.jsp</result>
+		</action>
+		<action name="viewClientUserDetail" class="portalModuleAction" method="searchUniqueClientUser">
+			<result name="success">/system/interfacePortalManage/clientUser/search/clientUserDetail.jsp</result>
+		</action>
+		<action name="deleteClientUser" class="portalModuleAction" method="deleteClientUser">
+			<result name="success">
+				/global/inc/alertInfo.jsp
+			</result>
+		</action>
+		<action name="searchUniqueClientUser" class="portalModuleAction" method="searchUniqueClientUser">
+			<result name="success">/system/interfacePortalManage/clientUser/update/index.jsp</result>
+		</action>
+		<action name="updateClientUser" class="portalModuleAction" method="updateClientUser">
+			<result name="success">
+				/global/inc/alertInfo.jsp?type=update
+			</result>
+		</action>
+		
+		<!--InterfaceInfo部分开始-->
+		<action name="isHaveTransCode" class="portalModuleAction" method="isHaveTransCode">
+		</action>
+		<action name="saveInterfaceInfo" class="portalModuleAction" method="saveInterfaceInfo">
+			<result name="success">/system/interfacePortalManage/interfaceInfo/create/index.jsp</result>
+		</action>
+		<action name="searchInterfaceInfoPage" class="portalModuleAction" method="searchInterfaceInfoPage">
+			<result name="success">/system/interfacePortalManage/interfaceInfo/search/search.jsp</result>
+		</action>
+		<action name="viewInterfaceInfoDetail" class="portalModuleAction" method="searchInterfaceInfo">
+			<result name="success">/system/interfacePortalManage/interfaceInfo/search/InterfaceInfoDetail.jsp</result>
+		</action>
+		<action name="searchInterfaceInfo" class="portalModuleAction" method="searchInterfaceInfo">
+			<result name="success">/system/interfacePortalManage/interfaceInfo/update/index.jsp</result>
+		</action>
+		<action name="deleteInterfaceInfo" class="portalModuleAction" method="deleteInterfaceInfo">
+			<result name="success">
+				/global/inc/alertInfo.jsp
+			</result>
+		</action>
+		<action name="updateInterfaceInfo" class="portalModuleAction" method="updateInterfaceInfo">
+			<result name="success">
+				/global/inc/alertInfo.jsp?type=update
+			</result>
+		</action>
+		<!--ExternalSystemsUser部分开始-->
+		<action name="saveExternalSystemsUser" class="portalModuleAction" method="saveExternalSystemsUser">
+			<result name="success">/system/interfacePortalManage/externalSystemsUser/create/index.jsp</result>
+		</action>
+		<action name="isHaveIpAndName" class="portalModuleAction" method="isHaveIpAndName">
+		</action>
+		<action name="searchExternalSystemsUserPage" class="portalModuleAction" method="searchExternalSystemsUserPage">
+			<result name="success">/system/interfacePortalManage/externalSystemsUser/search/search.jsp</result>
+		</action>
+		<action name="viewExternalSystemsUserDetail" class="portalModuleAction" method="searchExternalSystemsUser">
+			<result name="success">/system/interfacePortalManage/externalSystemsUser/search/externalSystemsUserDetail.jsp</result>
+		</action>
+		<action name="searchUniqueExternalSystemsUser" class="portalModuleAction" method="searchUniqueExternalSystemsUser">
+			<result name="success">/system/interfacePortalManage/externalSystemsUser/update/index.jsp</result>
+		</action>
+		<action name="deleteExternalSystemsUser" class="portalModuleAction" method="deleteExternalSystemsUser">
+			<result name="success">
+				/global/inc/alertInfo.jsp
+			</result>
+		</action>
+		<action name="isHaveIpAddressAndName" class="portalModuleAction" method="isHaveIpAddressAndName">
+		</action>
+		<action name="updateExternalSystemsUser" class="portalModuleAction" method="updateExternalSystemsUser">
+			<result name="success">
+				/global/inc/alertInfo.jsp?type=update
+			</result>
+		</action>
+		<!--ExternalSysUserInterfaceInfo部分开始-->
+		<action name="isHaveIdAndTransCode" class="portalModuleAction" method="isHaveIdAndTransCode">
+		</action>
+		<action name="searchExternalSystemsUserPageNew" class="portalModuleAction" method="searchExternalSystemsUserPage">
+			<result name="success">/system/interfacePortalManage/externalSysUserInterfaceInfo/create/externalSystemsUserList/externalSysInfoUserSearch.jsp</result>
+		</action>
+		<action name="searchInterfaceInfoPageNew" class="portalModuleAction" method="searchInterfaceInfoPage">
+			<result name="success">/system/interfacePortalManage/externalSysUserInterfaceInfo/create/interfaceInfoList/interfaceInfoSearch.jsp</result>
+		</action>
+		<action name="saveExternalSysUserInterfaceInfo" class="portalModuleAction" method="saveExternalSysUserInterfaceInfo">
+			<result name="success">/system/interfacePortalManage/externalSysUserInterfaceInfo/create/index.jsp</result>
+		</action>
+		<action name="searchExternalSysUserInterfaceInfoPage" class="portalModuleAction" method="searchExternalSysUserInterfaceInfoPage">
+			<result name="success">/system/interfacePortalManage/externalSysUserInterfaceInfo/search/search.jsp</result>
+		</action>
+		<action name="viewExternalSysUserInterfaceInfoDetail" class="portalModuleAction" method="searchExternalSysUserInterfaceInfoById">
+			<result name="success">/system/interfacePortalManage/externalSysUserInterfaceInfo/search/externalSysUserInterfaceInfoDetail.jsp</result>
+		</action>
+		<action name="searchUniqueExternalSysUserInterfaceInfo" class="portalModuleAction" method="searchExternalSysUserInterfaceInfoById">
+			<result name="success">/system/interfacePortalManage/externalSysUserInterfaceInfo/update/index.jsp</result>
+		</action>
+		<action name="deleteExternalSysUserInterfaceInfo" class="portalModuleAction" method="deleteExternalSysUserInterfaceInfo">
+			<result name="success">
+				/global/inc/alertInfo.jsp
+			</result>
+		</action>
+		<action name="updateExternalSysUserInterfaceInfo" class="portalModuleAction" method="updateExternalSysUserInterfaceInfo">
+			<result name="success">
+				/global/inc/alertInfo.jsp?type=update
+			</result>
+		</action>
+		<!--ClientSysUserInterfaceInfo部分开始-->
+		<action name="searchClientUserPageInterface" class="portalModuleAction" method="searchClientUserPage">
+			<result name="success">/system/interfacePortalManage/clientSysUserInterfaceInfo/create/clientSystemsUserList/clientSysInfoUserSearch.jsp</result>
+		</action>
+		<action name="updateClientInterfaceInfo" class="portalModuleAction" method="updateClientInterfaceInfo">
+			<result name="success">/system/interfacePortalManage/clientSysUserInterfaceInfo/create/index.jsp</result>
+		</action>
+		<action name="searchInterfaceInfoClientUserIdPage" class="portalModuleAction" method="searchInterfaceInfoPageNew">
+			<result name="success">/system/interfacePortalManage/clientSysUserInterfaceInfo/search/search.jsp</result>
+		</action>
+		<action name="viewInterfaceInfoDetailNew" class="portalModuleAction" method="searchInterfaceInfo">
+			<result name="success">/system/interfacePortalManage/clientSysUserInterfaceInfo/search/InterfaceInfoDetail.jsp</result>
+		</action>
+		<action name="searchInterfaceInfoNew" class="portalModuleAction" method="searchInterfaceInfo">
+			<result name="success">/system/interfacePortalManage/clientSysUserInterfaceInfo/update/index.jsp</result>
+		</action>
+		<action name="deleteInterfaceInfoNew" class="portalModuleAction" method="deleteInterfaceInfoNew">
+			<result name="success">
+				/global/inc/alertInfo.jsp
+			</result>
+		</action>
+		<!--更新接口部分开始-->
+		<action name="changeInterface" class="portalModuleAction" method="changeInterface">
+			<result name="success">/system/interfacePortalManage/changeInterface/changeInterface.jsp</result>
+		</action>
+		
+	</package>
+</struts>

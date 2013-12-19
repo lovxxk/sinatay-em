@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="business.businessManage.dataDictionary" extends="footTraceInterceptor" namespace="/business/businessManage/dataDictionary">
+		<action name="queryGeCodeTypePage" class="geCodeTypeAction" method="findAllGeCodeType">
+			<result name="success">/system/configManage/dataDictionary/create/selectType/search.jsp</result>
+		</action>
+		
+		
+		<action name="queryGeCodeTypePageForListSon" class="geCodeTypeAction" method="findAllGeCodeType">
+			<result name="success">/system/configManage/dataDictionary/search/search.jsp</result>
+		</action>
+		<action name="queryGeCodeTypePageForList" class="geCodeTypeAction" method="findAllGeCodeType">
+			<result name="success">/system/configManage/dataDictionaryType/search/search.jsp</result>
+		</action>
+		<action name="queryForShowType" class="geCodeTypeAction" method="queryForShow">
+			<result name="success">/system/configManage/dataDictionaryType/show/index.jsp</result>
+		</action>
+		<action name="frmCreate" class="geCodeTypeAction" method="frmCreate">
+			<result name="success">/system/configManage/dataDictionaryType/create/frmCreate.jsp</result>
+		</action>
+		<action name="frmSearchType" class="geCodeTypeAction" method="frmCreate">
+			<result name="success">/system/configManage/dataDictionaryType/search/frmSearch.jsp</result>
+		</action>
+		<action name="frmSearchTypeSon" class="geCodeTypeAction" method="frmCreate">
+			<result name="success">/system/configManage/dataDictionary/search/frmSearch.jsp</result>
+		</action>
+		<action name="createType" class="geCodeTypeAction" method="createGeCodeType">
+			<result name="success">/global/inc/tipInfo.jsp?type=create</result>
+		</action>
+		<action name="queryForUpdateType" class="geCodeTypeAction" method="queryForShow">
+			<result name="success">/system/configManage/dataDictionaryType/update/index.jsp</result>
+		</action>
+		<action name="updateGeCodeType" class="geCodeTypeAction" method="updateGeCodeType">
+			<result name="success">/global/inc/tipInfo.jsp?type=update</result>
+		</action>
+		<action name="deleteGeCodeTypeById" class="geCodeTypeAction" method="deleteGeCodeTypeById">
+			<result name="success">/global/inc/tipInfo.jsp</result>
+		</action>
+		<action name="deleteGeCodeById" class="geCodeAction" method="deleteGeCodeById">
+			<result name="success">/global/inc/tipInfo.jsp</result>
+		</action>
+		<action name="frmSearch" class="geCodeAction" method="frmSearch">
+			<result name="success">/system/configManage/dataDictionary/search/searchSon/frmSearch.jsp?geCodeType.codeType=${geCodeType.codeType}</result>
+		</action>
+		<!-- 
+		<action name="queryGeCodePage" class="geCodeAction" method="findAllGeCode">
+			<result name="success">/system/configManage/dataDictionary/search/searchSon/search.jsp</result>
+		</action>
+		 -->
+		<action name="queryGeCodePage" class="geCodeAction" method="findAllGeCodeList">
+			<result name="success">/system/configManage/dataDictionary/search/searchSon/index.jsp</result>
+		</action>
+		<action name="create" class="geCodeAction" method="createGeCode">
+			<result name="success">/global/inc/tipInfo.jsp?type=create</result>
+		</action>
+		<action name="createInType" class="geCodeAction" method="createGeCodeNew">
+			<result name="success">/global/inc/tipInfo.jsp</result>
+		</action>
+		<action name="queryForShow" class="geCodeAction" method="queryForShow">
+			<result name="success">/system/configManage/dataDictionary/show/index.jsp</result>
+		</action>
+		<action name="queryForUpdate" class="geCodeAction" method="queryForUpdate">
+			<result name="success">/system/configManage/dataDictionary/update/index.jsp</result>
+		</action>
+		<action name="update" class="geCodeAction" method="updateGeCode">
+			<result name="success">/global/inc/tipInfo.jsp?type=update</result>
+		</action>
+	</package>
+</struts>

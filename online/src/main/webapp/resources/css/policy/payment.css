@@ -1,0 +1,451 @@
+.head_mid .main_title{
+	display: none;
+}
+
+.middle .h_layout{
+	padding-bottom:19px;
+}
+
+.middle .nav_index{
+	height:42px;
+}
+.middle .nav_index li{
+	line-height:42px;
+	font-size:13px;
+	display:inline;
+}
+.middle .nav_index li a{
+	color:#535353;
+}
+
+.policy_instro{
+	font-size:16px;
+	line-height:18px;
+	text-align: center;
+}
+
+.policy_navbar{
+	background: url(../../image/policy/policy_nav_payment.png) no-repeat;
+	height:40px;
+	margin-top:12px;
+}
+
+.policy_navbar div{
+	float:left;
+	line-height:40px;
+	font-size:14px;
+	width:333px;
+	text-align: center;
+	color:#666666;
+	cursor:default;
+}
+
+.policy_navbar div.active{
+	color:#fff;
+	font-weight: bold;
+}
+
+.policy_area{
+	background: #fff;
+	border:1px #d1d1d1 solid;
+}
+
+.policy_area .title{
+	background: #d1d1d1;
+	color:#333333;
+	font-size:14px;
+	font-weight:bold;
+	height:40px;
+	padding-left:26px;
+	line-height:40px;
+}
+
+.payment_area{
+	margin-top:19px;
+}
+
+.policy_area .base_info{
+	height:35px;
+	border-bottom:1px solid #d1d1d1;
+	line-height:35px;
+}
+
+.policy_area .base_info div{
+	float:left;
+}
+
+.policy_area .base_info .info_body{
+	width:50%;
+}
+
+.policy_area .base_info .info_body .name{
+	width:160px;
+	text-align: right;
+	border-right:1px solid #d1d1d1;
+}
+
+.policy_area .base_info .info_body .value{
+	padding-left:10px;
+}
+
+.policy_area .base_info .info_right .name{
+	border-left:1px solid #d1d1d1;
+}
+
+.policy_area .base_info .info_body .main_name{
+	color:#cc3333;
+}
+
+.total_price{
+	margin:25px 0;
+	color:#333333;
+	line-height:30px;
+	height: 24px;
+	padding-left:620px;
+
+}
+.total_price span{
+	float:left;
+	font-size:12px;
+}
+.total_price .name{
+	color:#666666;
+	font-size:14px;
+}
+.total_price .value{
+	color:#fc0000;
+	font-size:22px;
+	font-weight:bold;
+	margin-left:20px;
+	margin-right:6px;
+	line-height:24px;
+}
+
+.payment_select{
+	margin-top:24px;
+	border:1px solid #cccccc;
+	border-top:2px solid #3f67bf;
+		
+}
+
+
+.pay_tab_bar{
+	height:37px;
+	background: #e6e6e6;
+	padding-top:4px;
+	line-height:36px;
+	color:#000;
+	overflow: hidden;
+}
+
+.pay_tab_bar .tab_tip{
+	float:left;
+	padding:0 90px 0 26px;
+	border-bottom:1px solid #cccccc;
+}
+
+.pay_tab_bar .tab_item{
+	float:left;
+	border-bottom:1px solid #cccccc;
+	width:156px;
+	color:#666666;
+	font-size:16px;
+	text-align: center;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.pay_tab_bar .tab_item.select{
+	border:1px solid #cccccc;
+	border-bottom:0;
+	color:#3366cc;
+	background: #fff;
+	
+}
+
+.payment_type{
+	padding-left: 26px;
+	padding-right: 26px;
+}
+.payment_type .tip_info{
+	border-bottom: 1px dashed #b1b1b1;
+	line-height:42px;
+	margin-bottom:24px;
+}
+
+.payment_type .tip_info span{
+	font-weight:bold;
+	color:#ff3333;
+}
+
+.payment_type.payment_bank{
+	
+}
+.payment_type.payment_withholding{
+	padding-bottom:40px;
+}
+.payment_type.payment_platform{
+}
+
+.payment_select .tip{
+	width:115px;
+	float:left;
+	font-size:14px;
+	color:#666666;
+	padding-top:5px;
+	padding-left:5px;
+}
+
+.payment_select .select_area{
+	overflow: hidden;
+	
+	width:650px;
+	*padding-bottom:16px;
+}
+
+.payment_select .more{
+	color:#0066ff;
+	text-align: right;
+	line-height:24px;
+	margin: 10px 0 20px;
+	width: 100%;
+	cursor: pointer;
+}
+
+.payment_select .select_area .pay_box{
+	float:left;
+	margin-left:22px;
+	margin-bottom:16px;
+	width: 140px;
+}
+
+.payment_select .select_area .pay_box input{
+	float:left;
+	margin-top:8px;
+}
+
+.payment_select .select_area .pay_box .type{
+	float:left;
+	width:114px;
+	height:34px;
+/* 	background: url(../../image/policy/payment_select.jpg) no-repeat; */
+	margin-left:3px; 
+	cursor: pointer;
+}
+
+/* .payment_select .select_area .pay_box .ccb{ */
+/* 	background-position: 0 0; */
+/* } */
+/* .payment_select .select_area .pay_box .icbc{ */
+/* 	background-position: -114px 0; */
+/* } */
+/* .payment_select .select_area .pay_box .cmb{ */
+/* 	background-position: -228px 0; */
+/* } */
+/* .payment_select .select_area .pay_box .boc{ */
+/* 	background-position: -342px 0; */
+/* } */
+/* .payment_select .select_area .pay_box .psbc{ */
+/* 	background-position: 0 -34px; */
+/* } */
+/* .payment_select .select_area .pay_box .cgb{ */
+/* 	background-position: -114px -34px; */
+/* } */
+/* .payment_select .select_area .pay_box .cib{ */
+/* 	background-position: -228px -34px; */
+/* } */
+/* .payment_select .select_area .pay_box .abc{ */
+/* 	background-position: -342px -34px; */
+/* } */
+/* .payment_select .select_area .pay_box .cmbc{ */
+/* 	background-position: 0 -68px; */
+/* } */
+/* .payment_select .select_area .pay_box .citic{ */
+/* 	background-position: -114px -68px; */
+/* } */
+/* .payment_select .select_area .pay_box .shbank{ */
+/* 	background-position: -228px -68px; */
+/* } */
+/* .payment_select .select_area .pay_box .cebbank{ */
+/* 	background-position: -342px -68px; */
+/* } */
+/* .payment_select .select_area .pay_box .hzcbb2c{ */
+/* 	background-position: 0 -102px; */
+/* } */
+/* .payment_select .select_area .pay_box .nbbank{ */
+/* 	background-position: -114px -102px; */
+/* } */
+/* .payment_select .select_area .pay_box .spabank{ */
+/* 	background-position: -228px -102px; */
+/* } */
+/* .payment_select .select_area .pay_box .bjrcb{ */
+/* 	background-position: -342px -102px; */
+/* } */
+/* .payment_select .select_area .pay_box .fdb{ */
+/* 	background-position: 0px -136px; */
+/* } */
+/* .payment_select .select_area .pay_box .spdb{ */
+/* 	background-position: -114px -136px; */
+/* } */
+
+
+
+/* .payment_select .select_area .pay_box .ali{ */
+/* 	background-position: -228px -136px; */
+/* } */
+
+
+.payment_withholding .input_area{
+	border-bottom: 1px dashed #b1b1b1;
+	padding-bottom:23px;
+}
+
+.policy_area .input_row{
+	height:36px;
+}
+
+.policy_area .input_row .input_label{
+	width:100px;
+	float:left;
+	line-height:36px;
+	text-align: right;
+	margin-right: 14px;
+}
+
+.policy_area.renewal_area .input_row .input_label{
+	width:115px;
+}
+
+.policy_area .input_row .info_label{
+	float:left;
+	padding:0 5px;
+	line-height:36px;
+}
+
+.policy_area .input_row .tip_label{
+	float:left;
+	padding:0 5px;
+	line-height:36px;
+	color:#ff3333;
+}
+
+.policy_area .input_row .input_text{
+	height:23px;
+	border:1px solid #c9c9c9;
+	margin-top:5px;
+	padding-left:5px;
+	font-family:"Microsoft Yahei";
+	float:left;
+}
+
+.policy_area .input_row.bank .input_text{
+	width:147px;
+}
+
+.policy_area .input_row.account .input_text{
+	width:253px;
+}
+
+
+.policy_area.renewal_area .authorisation{
+	padding:0 57px 28px;
+	border:1px solid #d1d1d1;
+	border-top:2px solid #3f67bf;
+	background: #fff;
+	margin-top:20px;
+}
+
+.policy_area.renewal_area .authorisation .author_title{
+	padding-top:25px;
+}
+.policy_area .authorisation .author_title{
+	font-size:14px;
+	font-weight: bold;
+	color:#333;
+	text-align: center;
+	padding:35px 0 15px;
+}
+.policy_area .authorisation p{
+	line-height:24px;
+	color:#999999;
+	margin:3px 0;
+}
+
+.policy_area .authorisation p span{
+	color:#ff3333;
+}
+
+.policy_area .agree_check{
+	margin-top:20px;
+}
+
+.policy_area .agree_check .agree{
+	float:left;
+	margin-right:15px;
+}
+
+.policy_area.renewal_area .agree_check{
+	margin-left:33px;
+}
+
+.renewal_area{
+	margin-top:22px;
+	background: none;
+	border:none;
+}
+
+.renewal_area .title div{
+	float:left;
+}
+
+.renewal_area .title .doubt{
+	width:24px;
+	height:24px;
+	margin-top:8px;
+	margin-left:10px;
+	background: url(../../image/policy/doubt_icon.png) no-repeat;
+	position: relative;
+}
+
+.renewal_area .title .doubt .doubt_info{
+	display: none;
+	position:absolute;
+	width:298px;
+	height:40px;
+	background: #aaa;
+	left:33px;
+	background: url(../../image/policy/doubt_info_bg.png) no-repeat;
+	color:#999;
+	line-height:20px;
+	padding:4px 12px 4px 18px;
+	font-size:12px;
+	font-weight:normal;
+	word-wrap:break-all;
+}
+
+.renewal_area .title .doubt:hover .doubt_info{
+	display: block;
+}
+
+
+
+
+.payment_confirm{
+	width: 137px;
+	margin: 45px auto 16px;
+	margin-bottom: 16px;
+}
+
+.payment_confirm button{
+	width:137px;
+	height:38px;
+	background: url(../../image/policy/payment_confirm.png) no-repeat center;
+	border:none;
+	position:relative;
+	margin:0 auto;
+	cursor: pointer;
+	
+	color:#fff;
+	font-size:16px;
+	font-weight: bold;
+}

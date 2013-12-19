@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:s="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd"
+	default-lazy-init="true">
+	
+	<description>SpringSecurity安全配置</description>
+	<s:http auto-config="false" use-expressions="true" entry-point-ref="authenticationProcessingFilterEntryPoint">
+		<s:intercept-url pattern="/system/userManage/**" filters="none" />
+		<s:intercept-url pattern="/global/**" filters="none" />
+		<s:intercept-url pattern="/cmsLogin/checkAjax.do" filters="none" />
+		
+		<s:intercept-url pattern="*.do" access="hasAnyRole('ROLE_PERSONALUSER')" />
+		<s:intercept-url pattern="/**" access="hasAnyRole('ROLE_PERSONALUSER')" />
+		<s:custom-filter  position="FORM_LOGIN_FILTER" ref="activeAuthenticationFilter"/>
+		<s:logout logout-success-url="/system/userManage/passport/login/index.jsp" />
+	</s:http>
+	
+	<bean id="activeAuthenticationFilter" class="cn.com.sinosoft.ebusiness.sys.permission.service.spring.ActiveAuthenticationFilter">
+	  <property name="authenticationManager" ref="authenticationManager"/>
+	  <property name="authenticationSuccessHandler" ref="successHandler"></property>
+	  <property name="authenticationFailureHandler" ref="failureHandler"></property>
+	</bean>
+	
+	
+	<bean id="successHandler" class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+ 		<property name="defaultTargetUrl" value="/cmsLogin/login.do"/>
+ 		<property name="alwaysUseDefaultTargetUrl" value="true" />
+	</bean>
+
+	<bean id="failureHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+ 		<property name="defaultFailureUrl" value="/system/userManage/passport/login/index.jsp?error=yes"/>
+	</bean>
+
+	<s:authentication-manager alias="authenticationManager">
+		<s:authentication-provider user-service-ref="userDetailsService">
+			<s:password-encoder ref="md5"/> 
+		</s:authentication-provider>
+	</s:authentication-manager>
+
+	<bean id="userDetailsService" class="cn.com.sinosoft.ebusiness.sys.permission.service.spring.UserDetailsServiceImpl" />
+	<bean id="md5" class="cn.com.sinosoft.ebusiness.sys.permission.service.spring.MD5CapitalPasswordEncoder"/>
+	
+    <bean id="authenticationProcessingFilterEntryPoint" class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">  
+         <property name="loginFormUrl" value="/system/userManage/passport/login/loginOutTime.jsp"></property>  
+    </bean>  
+</beans>
+	
+	

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="GBK"?>
+<mapping>
+	<description>发送手机短信请求</description>
+	<class name="cn.com.sinosoft.portalModule.transport.transactionObject.TXInsurance" auto-complete="false">
+		<map-to xml="TranData"/>
+		<field name="transExeDate" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TransrDate" location="BaseInfo"/>
+		</field>
+		<field name="transExeTime" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TransrTime" location="BaseInfo"/>
+		</field>
+		<field name="tellerNo" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TellerNo" location="BaseInfo"/>
+		</field>
+		<field name="transRefGUID" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TransrNo" location="BaseInfo"/>
+		</field>
+		<field name="saleChannel" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="SaleChannel" location="BaseInfo"/>
+		</field>
+		<field name="sellType" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="SellType" location="BaseInfo"/>
+		</field>
+		<field name="transType" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="FunctionFlag" location="BaseInfo"/>
+		</field>
+		<field name="source" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="Source" location="BaseInfo"/>
+		</field>
+		<field name="businessDatum" collection="arraylist"  type="cn.com.sinosoft.portalModule.transport.sinatay.TranRequest">
+			<bind-xml name="TranRequest"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.sinatay.TranRequest" auto-complete="false">
+		<field name="messages" type="cn.com.sinosoft.portalModule.transport.sinatay.SMS" collection="arraylist">
+			<bind-xml name="SMS" location="Messages"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.sinatay.SMS" auto-complete="false">
+		<field name="id" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="id" node="attribute"/>
+		</field>
+		<field name="phoneNo" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="PhoneNo"/>
+		</field>
+		<field name="msgComment" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="MsgComment"/>
+		</field>
+		<field name="sender" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="Sender"/>
+		</field>
+		<field name="planTime" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="PlanTime"/>
+		</field>
+		<field name="busiSerialNo" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="BusiSerialNo"/>
+		</field>
+	</class>
+</mapping>

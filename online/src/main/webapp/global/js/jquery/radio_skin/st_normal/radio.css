@@ -1,0 +1,25 @@
+.st_normal.radio_main{
+	height:30px;
+	text-align: center;
+	cursor: pointer;
+	color:#333;
+	background: url(radio_unselect.png) 2px center no-repeat;
+	padding-left:20px;
+}
+
+.st_normal.radio_main.checked{
+	background: url(radio_select.png) 2px center no-repeat;
+}
+.st_normal.radio_main.disabled{
+	background: #c9c9c9;
+	color:#fff;
+}
+
+.st_normal.radio_main::selection { background-color:rgba(255,255,255,0);}
+.st_normal.radio_main::-moz-selection {  background-color:rgba(255,255,255,0);} 
+.st_normal.radio_main::-webkit-selection {  background-color:rgba(255,255,255,0);}
+
+.st_normal.radio_main .radio_label{
+	line-height:30px;
+	text-align: left;
+}

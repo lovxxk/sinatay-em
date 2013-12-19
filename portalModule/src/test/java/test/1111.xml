@@ -1,0 +1,53 @@
+
+MessageType: ST000028
+TransRefGUID: 20130917044700059049
+TransCode: Req
+XML: <?xml version="1.0" encoding="GBK"?>
+<TranData>
+	<BaseInfo>
+		<TransrDate>20130917</TransrDate>
+		<TransrTime>044759</TransrTime>
+		<TellerNo></TellerNo>
+		<TransrNo>20130917044700059049</TransrNo>
+		<SaleChannel>W</SaleChannel>
+		<SellType>20</SellType>
+		<FunctionFlag>ST000028</FunctionFlag>
+		<Source>WEB</Source>
+	</BaseInfo>
+	<TranRequest>
+		<LCCont>
+			<LCAppnt>
+				<AppntName>刘晨</AppntName>
+				<AppntIDType>0</AppntIDType>
+				<AppntIDNo>370921198605231516</AppntIDNo>
+				<AppntMobile>15800760896</AppntMobile>
+			</LCAppnt>
+		</LCCont>
+	</TranRequest>
+</TranData>
+--------------------------------------
+
+
+--------------------------------------
+
+MessageType: ST000028
+TransRefGUID:
+20130917044700059049
+TransCode: Res
+XML: <?xml version="1.0" encoding="GBK"?>
+<TranData>
+	<BaseInfo><!-- 交易日期 CD01 -->
+		<TransrDate>20130917</TransrDate><!-- 交易时间 CD02 -->
+		<TransrTime>044759</TransrTime><!-- 柜员代码 -->
+		<TellerNo /><!-- 交易流水号 -->
+		<TransrNo>20130917044700059049</TransrNo><!-- 销售渠道 CD03 -->
+		<SaleChannel>W</SaleChannel><!-- 销售方式 CD26 -->
+		<SellType>20</SellType><!-- 处理标志 CD04 -->
+		<FunctionFlag>ST000028</FunctionFlag><!-- 信息来源 CD28 -->
+		<Source>WEB</Source>
+	</BaseInfo>
+	<TranResponse><!-- 返回标志 CD25 -->
+		<Flag>1</Flag><!-- 返回信息 -->
+		<Desc>交易成功！</Desc>
+	</TranResponse>
+</TranData>

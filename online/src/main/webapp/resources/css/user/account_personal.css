@@ -1,0 +1,213 @@
+.right_content .title{
+	height:35px;
+	background: #e6e6e6;
+	line-height:35px;
+}
+.right_content .title .block{
+	width:4px;
+	height:35px;
+	float:left;
+	background: #3f67bf;
+	margin-right:18px;
+}
+
+.right_content .title p{
+	float:left;
+	color:#333;
+	font-size:14px;
+	font-weight: bold;
+}
+
+.right_content .title .more{
+	float:right;
+	margin-right:15px;
+}
+.right_content .title .more a{
+	color:#999999;
+}
+
+
+.member_area{
+	min-height:400px;
+	padding: 0 20px;
+}
+
+.member_area .input_area{
+	padding:20px 0;
+	border-bottom:1px dashed #b1b1b1; 
+}
+
+.member_area .input_area .input_row{
+	height:36px;
+}
+
+.member_area .input_area .input_label{
+	width:140px;
+	float:left;
+	line-height:36px;
+	text-align: right;
+	margin-right: 14px;
+}
+.member_area .input_area .input_label .required{
+	color:#ff0000;
+	margin-right:14px;
+}
+.member_area .input_area .input_row .input_text{
+	height:23px;
+	border:1px solid #c9c9c9;
+	margin-top:5px;
+	padding-left:5px;
+	font-family:"Microsoft Yahei";
+	
+	float:left;
+	/*ie7 fix*/
+	*height:21px;
+	*padding-top:3px;
+}
+.member_area .input_area .input_row .tip_label{
+	float:left;
+	padding:0 5px;
+	line-height:36px;
+}
+
+
+.input_row.name .input_text{
+	width:123px;
+}
+
+.input_row.id_type .input_text{
+	width:93px;
+}
+
+.input_row.id .input_text{
+	width:303px;
+}
+
+.input_row.birthday .input_text{
+	float:left;
+}
+
+.input_row.birthday .input_text.year{
+	width:53px;
+}
+.input_row.birthday .input_text.month{
+	width:33px;
+}
+.input_row.birthday .input_text.day{
+	width:33px;
+}
+
+
+
+.input_row.validity .input_text{
+	float:left;
+}
+
+.input_row.validity .input_text.year{
+	width:53px;
+}
+.input_row.validity .input_text.month{
+	width:33px;
+}
+.input_row.validity .input_text.day{
+	width:33px;
+}
+
+.sex .label_sex{
+	line-height:36px;
+	float:left;
+	width:24px;
+	margin-left:2px;
+}
+
+.sex .input_sex{
+	width:15px;
+	height:14px;
+	float:left;
+	margin-left:2px;
+	margin-top:11px;
+	background: url(../../image/policy/policy_radio.png) no-repeat;
+	background-position:-15px 0 ; 
+}
+
+.sex .input_sex.selected{
+	background-position:0 0 ;
+}
+
+
+.input_row.nickname .input_text{
+	width:123px;
+}
+
+.input_row.blood_type .input_text{
+	width:73px;
+}
+
+.input_row.hobby .input_text{
+	width:123px;
+}
+
+
+.action{
+	margin-top:24px;
+	height:38px;
+	margin-bottom:56px;
+	margin-left:158px;
+}
+
+.action .next_step{
+	width:137px;
+	height:38px;
+	position:relative;
+	background: url(../../image/policy/next_step.png) no-repeat;
+	border:none;
+	float:left;
+	font-size:16px;
+	color:#fff;
+	line-height:38px;
+	font-weight:bold;
+	text-align: center;
+	font-family:"Microsoft Yahei";
+}
+
+.validateMessage {
+	color: red;	
+}
+
+.input_row.provinceCity .input_text{
+	width:83px; 
+	margin-right:6px;
+}
+
+.input_row.provinceCity input{
+	border:1px solid #c9c9c9;
+	height:19px;
+	line-height:16px;
+	padding:2px;
+	float:left;
+	width:83px; 
+	margin-right:6px;
+}
+
+.input_row.address .input_text{
+	width:508px;
+}
+
+.input_row.postcode .input_text{
+	width:128px;
+}
+
+.product_list{
+	margin-top:22px;
+	overflow: hidden;
+	padding:0 2px;
+	margin-bottom:60px;
+}
+
+.product_list .product{
+	float:left;
+	width:240px;
+	height:120px;
+	background: #e6e6e6;
+	margin:0 13px;
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="GBK"?>
+<mapping>
+	<description>实时代收应答</description>
+	<class name="cn.com.sinosoft.portalModule.transport.chinapay.Gzelink" auto-complete="false">
+		<map-to xml="GZELINK"/>
+		<field name="info" type="cn.com.sinosoft.portalModule.transport.chinapay.Info">
+			<bind-xml name="INFO"/>
+		</field>
+		<field name="body" type="cn.com.sinosoft.portalModule.transport.chinapay.Body">
+			<bind-xml name="BODY"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.chinapay.Info" auto-complete="false">
+		<field name="trx_Code" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TRX_CODE"/>
+		</field>
+		<field name="version" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="VERSION"/>
+		</field>
+		<field name="data_Type" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="DATA_TYPE" />
+		</field>
+		<field name="ret_Code" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="RET_CODE" />
+		</field>
+		<field name="err_Msg" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="ERR_MSG"/>
+		</field>
+		<field name="req_Sn" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="REQ_SN"/>
+		</field>
+		<field name="signed_Msg" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="SIGNED_MSG"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.chinapay.Body" auto-complete="false">
+		<field name="transDetails" collection="arraylist"  type="cn.com.sinosoft.portalModule.transport.chinapay.TransDetail">
+			<bind-xml name="TRANS_DETAIL" location="TRANS_DETAILS"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.chinapay.TransDetail" auto-complete="false">
+		<field name="sn" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="SN"/>
+		</field>
+		<field name="account_No" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="ACCOUNT_NO"/>
+		</field>
+		<field name="account_Name" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="ACCOUNT_NAME"/>
+		</field>
+		<field name="amount" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="AMOUNT"/>
+		</field>
+		<field name="cust_Userid" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="CUST_USERID"/>
+		</field>
+		<field name="remark" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="REMARK"/>
+		</field>
+		<field name="ret_Code" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="RET_CODE"/>
+		</field>
+		<field name="err_Msg" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="ERR_MSG"/>
+		</field>
+		<field name="reserved1" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="RESERVED1"/>
+		</field>
+		<field name="reserved2" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="RESERVED2"/>
+		</field>
+	</class>
+</mapping>

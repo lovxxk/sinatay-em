@@ -1,0 +1,80 @@
+.service_area{
+	background: #fff;
+	height:935px;
+}
+.service_area .title{
+	height:40px;
+	line-height:40px;
+	background: #3f67bf;
+}
+
+.service_area .title p{
+	float:left;
+	color:#fff;
+	font-size:14px;
+	font-weight: bold;
+	padding-left:23px;
+}
+
+.service_area .title .more{
+	float:right;
+	margin-right:15px;
+}
+.service_area .title .more a{
+	color:#fff;
+}
+
+.download_list{
+	padding:25px 48px 4px 50px;
+}
+.download_list h4{
+	line-height:36px;
+	border-bottom:1px dashed #cccccc;
+}
+
+.download_list h4 a{
+	float:right;
+	font-weight: normal;
+	color:#999;
+}
+
+.download_list h4 span{
+	float:right;
+	font-weight: normal;
+	color:#999;
+}
+
+
+.download_list ul{
+	padding-top:13px;
+	line-height:30px;
+	width:100%;
+
+}
+.download_list li{
+	line-height:30px;
+	height:30px;
+	color:#999;
+}
+
+.download_list li a{
+/* 	color:#999; */
+	color: #333;
+	float:left;
+}
+
+.download_list li a:hover{
+	color:#3f67bf;
+}
+.download_list li .block{
+	float:left;
+	width:4px;
+	height:4px;
+	margin:13px 15px 0 16px;
+	background: #3f67bf;
+}
+.download_list li .date{
+	float:right;
+	clear:right;
+	
+}

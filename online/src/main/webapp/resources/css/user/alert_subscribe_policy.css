@@ -1,0 +1,88 @@
+.subscribe_policy {
+	
+}
+
+.subscribe_policy .subscribe_policy_list {
+	margin: 18px 15px 40px;
+	overflow: hidden;
+	border-bottom: 1px dashed #cccccc;
+}
+
+.subscribe_policy .subscribe_policy_item {
+	line-height: 24px;
+	float: left;
+	width: 50%;
+	margin-bottom: 30px;
+}
+
+.subscribe_policy .subscribe_check {
+	float: left;
+	margin-top: 4px;
+}
+
+.subscribe_policy .number {
+	text-align: left;
+	margin-left: 28px;
+}
+
+.subscribe_policy .insurance_name {
+	text-align: left;
+	margin-left: 28px;
+}
+
+.send_vali {
+	text-align: left;
+	line-height: 32px;
+	font-size: 16px;
+	margin: 22px 27px 0;
+	padding-bottom: 22px;
+	border-bottom: 1px dashed #ccc;
+}
+
+.send_vali p span {
+	color: #ff3333;
+}
+
+.vali_input {
+	margin: 22px 27px 42px;
+	text-align: left;
+	overflow: hidden;
+}
+
+.vali_input input {
+	height: 24px;
+	width: 143px;
+	border: 1px solid #c9c9c9;
+	padding: 2px;
+}
+
+.vali_input input,.vali_input label {
+	float: left;
+	line-height: 30px;
+}
+
+.vali_input .resend {
+	width: 65px;
+	height: 20px;
+	background: url(../../image/user/member/bind_bg.png) no-repeat;
+	line-height: 20px;
+	color: #fff;
+	text-align: center;
+	margin-left: 11px;
+	float: left;
+	margin-top: 5px;
+	position: relative;
+	cursor: pointer;
+}
+
+.phone {
+	height: 500px;
+}
+
+.amount_num {
+	color: #ff5243;
+	position: absolute;
+	margin-top: -40px;
+	margin-left: 76px;
+	display:none;
+}

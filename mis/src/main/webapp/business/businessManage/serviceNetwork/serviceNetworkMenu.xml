@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<menu>
+	<item id="serviceNetwork_ADD" text="添加服务网点" img="new.gif"/>
+	<item type="separator"/>
+	<item id="serviceNetwork_EDIT" text="编辑服务网点" img="edit.gif"/>
+	<item type="separator"/>
+	<item id="serviceNetwork_DEL" text="删除服务网点" img="del.gif"/>
+	<item type="separator"/>
+</menu>

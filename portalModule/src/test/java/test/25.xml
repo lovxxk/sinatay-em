@@ -1,0 +1,65 @@
+
+大黄蜂保单状态查询(ST000025)请求...
+<?xml version="1.0" encoding="GBK"?>
+<TranData>
+	<BaseInfo>
+		<TransrDate>20131216</TransrDate>
+		<TransrTime>073740</TransrTime>
+		<TellerNo>0001</TellerNo>
+		<TransrNo>DHF20131216153700040000</TransrNo>
+		<SaleChannel>W</SaleChannel>
+		<SellType>20</SellType>
+		<FunctionFlag>ST000025</FunctionFlag>
+		<Source>DHF</Source>
+	</BaseInfo>
+	<TranRequest>
+		<QueryData>
+			<PageNo>1</PageNo>
+			<PageRowNum>50</PageRowNum>
+			<QueryType>04</QueryType>
+			<Params>
+				<ParamCount>1</ParamCount>
+				<Param>
+					<Key>ProposalContNo</Key>
+					<Value>340110000000075</Value>
+				</Param>
+			</Params>
+		</QueryData>
+	</TranRequest>
+</TranData>
+	请求服务器开始时间===========2013-12-1615:37:41
+	服务器处理返回时间===========2013-12-1615:37:42
+	服务器处理时间（毫秒）：========================1531
+	大黄蜂保单状态查询(ST000025)应答...
+<?xml version="1.0" encoding="GBK"?>
+	<TranData>
+		<BaseInfo>
+			<TransrDate>20131216</TransrDate>
+			<TransrTime>073740</TransrTime>
+			<TellerNo>0001</TellerNo>
+			<TransrNo>DHF20131216153700040000</TransrNo>
+			<SaleChannel>W</SaleChannel>
+			<SellType>20</SellType>
+			<FunctionFlag>ST000025</FunctionFlag>
+			<Source>DHF</Source>
+		</BaseInfo>
+		<TranResponse>
+			<Flag>1</Flag>
+			<Desc>Suc</Desc>
+			<QueryData>
+				<PageNo>1</PageNo>
+				<PageRowNum>50</PageRowNum>
+				<PageTotal>0</PageTotal>
+				<TotalRowNum>0</TotalRowNum>
+				<QueryType>04</QueryType>
+				<Datas>
+					<DataCount>1</DataCount>
+					<Data>
+						<Col01>2</Col01>
+						<Col02>已承保</Col02>
+						<Col03>D00000000411</Col03>
+					</Data>
+				</Datas>
+			</QueryData>
+		</TranResponse>
+	</TranData>

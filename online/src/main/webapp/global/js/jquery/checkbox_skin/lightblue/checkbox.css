@@ -1,0 +1,28 @@
+.checkbox_check{
+	background: url("check_back.png") center no-repeat;
+}
+
+.checkbox_uncheck{
+	background: url("uncheck_back.png") center no-repeat;
+}
+
+.checkbox_hover{
+	background: url("check_back.png") center no-repeat;
+}
+
+.checked{
+	height:24px;
+	width:24px;
+	cursor: pointer;
+	position:relative;
+	background: url("checked.png") center no-repeat;
+}
+
+.unchecked{
+	height:24px;
+	width:24px;
+	cursor: pointer;
+	position:relative;
+	background: none;
+}
+

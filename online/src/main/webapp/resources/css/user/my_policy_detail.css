@@ -1,0 +1,608 @@
+.head_mid .main_title {
+	display: none;
+}
+
+.middle .h_layout {
+	padding-bottom: 66px;
+}
+
+.middle .nav_index {
+	height: 42px;
+}
+
+.middle .nav_index li {
+	line-height: 42px;
+	font-size: 13px;
+	display: inline;
+}
+
+.middle .nav_index li a {
+	color: #3c3c3c;
+}
+.middle .nav_index li a:hover {
+	color:#3f67bf;
+}
+.detail_main {
+	background: #fff;
+	padding: 0 20px 100px;
+	margin: 10px 10px 0;
+}
+
+.detail_main .base_info {
+	height: 100px;
+}
+
+.detail_main .base_info .title {
+	line-height: 100px;
+	font-size: 22px;
+	color: #333;
+	float: left;
+	margin-left: 25px;
+}
+
+.detail_main .base_info .balance {
+	float: right;
+	height: 80px;
+	padding-top: 20px;
+}
+
+.detail_main .base_info .balance .money {
+	float: right;
+	margin-top: 14px;
+	margin-right: 10px;
+}
+
+.detail_main .base_info .balance .label {
+	color: #333;
+}
+
+.detail_main .base_info .balance .int {
+	color: #e4393c;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.detail_main .base_info .balance .decimal {
+	color: #e4393c;
+	font-weight: bold;
+}
+
+.detail_main .base_info .balance .receive {
+	width: 137px;
+	height: 38px;
+	position: relative;
+	background: url(../../image/user/member/receive.png) no-repeat;
+	float: right;
+	font-size: 16px;
+	color: #fff;
+	line-height: 38px;
+	font-weight: bold;
+	font-family: "Microsoft Yahei";
+	text-align: center;
+	cursor: pointer;
+	margin-top: 4px;
+}
+
+.policy_info {
+	margin-bottom: 10px;
+}
+
+.policy_info .policy_num {
+	height: 69px;
+	border-top: 2px solid #3f67bf;
+	background: #dbe6ff;
+	margin-bottom: 3px;
+	color: #3f67bf;
+}
+
+.policy_info .policy_num span {
+	text-indent: 28px;
+	font-size: 20px;
+	line-height: 69px;
+	float: left;
+}
+
+.policy_info .policy_num div {
+	float: right;
+	line-height: 20px;
+	margin-top: 14px;
+	text-align: right;
+	padding-right: 18px;
+}
+
+.policy_info .info1 {
+	margin-bottom: 8px;
+}
+
+.policy_info .info1 .info_row {
+	height: 41px;
+	margin-bottom: 2px;
+}
+
+.policy_info .info1 .info_row .info_col {
+	height: 41px;
+	width: 312px;
+	float: left;
+	background: #dbe6ff;
+	margin-right: 2px;
+}
+
+.policy_info .info1 .info_row .info_col.last {
+	margin-right: 0px;
+}
+
+.policy_info .info1 .info_row .info_col.first {
+	text-indent: 28px;
+}
+
+.policy_info .info1 .info_row .info_col.visit {
+	width: 626px;
+}
+
+.policy_info .info1 .info_row {
+	line-height: 41px;
+	text-indent: 16px;
+}
+
+.policy_info .info1 .info_row span.tip {
+	font-weight: bold;
+}
+
+.policy_info .info2{
+	overflow: hidden;
+}
+
+.policy_info .info2 .info_row {
+	height: 41px;
+	margin-bottom: 2px;
+	line-height: 41px;
+	text-indent: 16px;
+	float:left;
+}
+
+.policy_info .info2 .info_row.name {
+	font-weight: bold;
+}
+
+.policy_info .info2 .info_row .info_col {
+	height: 41px;
+	float: left;
+	margin-right: 2px;
+}
+
+.policy_info .info2 .info_row.name .info_col {
+	background: #dbe6ff;
+}
+
+.policy_info .info2 .info_row.value .info_col {
+	background: #efefef;
+}
+
+.policy_info .info2 .info_row .info_col.last {
+	margin-right: 0px;
+}
+
+.policy_info .info2 .info_row .info_col.insure_name {
+	text-indent: 28px;
+	width: 292px;
+}
+
+.policy_info .info2 .info_row .info_col.insure_amount {
+	width: 132px;
+}
+
+.policy_info .info2 .info_row .info_col.premium {
+	width: 102px;
+}
+
+.policy_info .info2 .info_row .info_col.period {
+	width: 162px;
+}
+
+.policy_info .info2 .info_row .info_col.effective_date {
+	width: 132px;
+}
+
+.policy_info .info2 .info_row .info_col.status {
+	width: 110px;
+	margin-right:-2px;
+}
+
+.policy_info .info_more {
+	line-height: 36px;
+	text-align: right;
+}
+
+.policy_info .info_more a {
+	margin: 0 9px;
+	font-weight: bold;
+	font-size: 12px;
+	color: #3f67bf;
+}
+.policy_info .info_more a:hover{
+	text-decoration: underline;
+}
+.info_area {
+	margin-bottom: 20px;
+}
+
+.info_area .title {
+	height: 40px;
+	text-indent: 22px;
+	background: #3f67bf;
+	line-height: 40px;
+	color: #fff;
+}
+
+.info_area .title .title_name {
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.info_area .title .edit {
+	float: right;
+}
+
+.info_area .title .edit .to_edit {
+	display: block;
+	margin-right: 35px;
+	cursor: pointer;
+}
+
+.info_area .title .edit .cancel_edit {
+	float: left;
+	display: none;
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+.info_area .title .edit .save_edit {
+	float: left;
+	display:none;
+	width: 88px;
+	height: 26px;
+	background: url(../../image/user/member/save_edit.png) no-repeat;
+	line-height: 26px;
+	margin-top: 7px;
+	margin-left: 0px;
+	position: relative;
+	cursor: pointer;
+}
+
+.info_area .input_row {
+	height: 35px;
+	border-bottom: 1px solid #d1d1d1;
+	border-right: 1px solid #d1d1d1;
+	width: 100%;
+}
+
+.info_area .input_row .input_col {
+	width: 469px;
+	float: left;
+}
+
+.info_area .input_row .input_col .input_label {
+	height: 35px;
+	width: 106px;
+	border-left: 1px solid #d1d1d1;
+	float: left;
+	line-height: 35px;
+	text-align: right;
+	margin-right: 14px;
+	font-weight: bold;
+}
+
+.info_area .input_row .input_col .input_text {
+	height: 35px;
+	width: 300px;
+	border-left: 1px solid #d1d1d1;
+	float: left;
+}
+
+.info_area .input_row .input_col .input_text .text_show {
+	line-height: 35px;
+	margin-left: 20px;
+}
+
+.info_area .input_row .input_col .input_text .edit_input {
+	line-height: 18px;
+	padding: 2px;
+	padding-left: 6px;
+	margin-left: 14px;
+	/*border-top:1px solid #cfcfcf;
+	border-left:1px solid #cfcfcf;
+	border-bottom:0;
+	border-right:0;
+	background: #ededed;*/
+	width: 230px;
+	margin-top: 6px;
+	display: none;
+}
+
+.info_area .input_row .input_col .input_text .edit_option {
+	line-height: 18px;
+	padding: 2px;
+	padding-left: 6px;
+	margin-left: 14px;
+	/* border-top:1px solid #cfcfcf;
+	border-left:1px solid #cfcfcf;
+	border-bottom:0;
+	border-right:0;
+	background: #ededed;*/
+	width: 240px;
+	margin-top: 6px;
+	display: none;
+}
+
+.info_area .input_row.address .input_col {
+	width: 100%;
+}
+
+.info_area .input_row.address .input_col .input_text {
+	width: 450px;
+}
+
+.info_area.beneficiary_info {
+	margin-bottom: 46px;
+}
+
+.info_area.beneficiary_info .input_row.name {
+	font-weight: bold;
+}
+
+.info_area.beneficiary_info .input_row .input_col.sequence {
+	width: 150px;
+}
+
+.info_area.beneficiary_info .input_row .input_col.beneficiary_name {
+	width: 150px;
+}
+
+.info_area.beneficiary_info .input_row .input_col.quotient {
+	width: 160px;
+}
+
+.info_area.beneficiary_info .input_row .input_col {
+	text-align: center;
+	line-height: 35px;
+	border-left: 1px solid #d1d1d1;
+}
+
+.security_info {
+	
+}
+
+.security_info .title {
+	height: 39px;
+	border-top: 2px solid #3f67bf;
+	background: #dbe6ff;
+	text-indent: 28px;
+	font-size: 20px;
+	line-height: 39px;
+	color: #3f67bf;
+	margin-bottom: 17px;
+}
+
+.security_list {
+	overflow: hidden;
+}
+
+.security_list .edors_item .security_item {
+	width: 304px;
+	height: 233px;
+	float: left;
+	margin-right: 13px;
+	margin-bottom: 20px;
+	background: url(../../image/user/member/security_bg.png) no-repeat;
+	padding-top: 15px;
+	position: relative;
+}
+
+.security_list .edors_item .security_item.last {
+	margin-right: 0;
+}
+
+.security_list .edors_item .security_item .accept_no {
+	width: 274px;
+	height: 28px;
+	line-height: 28px;
+	background: url(../../image/user/member/accept_bg.png) no-repeat;
+	margin: 0 auto;
+	text-align: center;
+	color: #3c3c3c;
+}
+
+.security_list .edors_item .security_item .accept_no .name {
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+.security_row {
+	margin: 0 14px;
+	height: 40px;
+	border-bottom: 1px dashed #cccccc;
+	color: #3c3c3c;
+}
+
+.security_row.last {
+	border-bottom: 0;
+}
+
+.security_row .name {
+	width: 100px;
+	float: left;
+	text-align: right;
+	line-height: 40px;
+	font-weight: bold;
+}
+
+.security_row .value {
+	float: left;
+	line-height: 40px;
+	margin-left: 5px;
+}
+
+.security_bottom {
+	margin: 0 14px;
+	margin-top: 23px;
+	border-top: 1px solid #ccc;
+	line-height: 36px;
+	color: #666;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.security_bottom a {
+	color: #3c3c3c;
+}
+.security_bottom a:hover {
+	color: #3f67bf;
+}
+
+.page_index {
+	height: 35px;
+	margin-left: 340px;
+}
+
+.page_index .page {
+	float: left;
+	background: #e5e5e5;
+	color: #666666;
+	width: 35px;
+	margin-left: 2px;
+	margin-right: 3px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	
+	*zoom:1;
+	*display:inline;
+}
+
+.page_index .page a {
+	color: #666666;
+	display: block;
+	height: 35px;
+}
+
+.page_index .page:hover {
+	background: #3f67bf;
+}
+
+.page_index .page:hover a {
+	color: #ffffff;
+}
+
+.page_index .page.now {
+	background: #3f67bf;
+}
+
+.page_index .page.now a {
+	color: #ffffff;
+}
+
+.page_index .next_page,.page_index .prev_page {
+	width: 45px;
+}
+
+.page_index .next_page a,.page_index .prev_page a {
+	width: 100%;
+	height: 100%;
+	background: url(../../image/user/member/page.png) center no-repeat;
+}
+
+.page_index .next_page a {
+	background-position: -45px 0;
+}
+
+.page_index .prev_page a {
+	background-position: 0 0;
+}
+
+.page_index .next_page a:hover {
+	background-position: -45px -35px;
+}
+
+.page_index .prev_page a:hover {
+	background-position: 0 -35px;
+}
+
+.selected_job {
+	line-height: 35px;
+	margin-left: 20px;
+}
+
+.selected_job_edit {
+	color: #3f67bf;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+
+
+.mobileCheckDiv .message {
+	line-height: 24px;
+	font-size: 14px;
+	padding-bottom: 20px;
+	margin:0 30px;
+	text-align: left;
+	border-bottom:1px dashed #ccc;
+}
+.mobileCheckDiv .message span{
+	color:#ff3333;
+}
+.mobileCheckDiv {
+	margin: 20px;
+}
+
+.mobileCheckDiv .input {
+	float:left;
+	padding:0 30px;
+	line-height:36px;
+	font-size:14px;
+}
+.mobileCheckDiv .input label {
+	width:100px;
+	float:left;
+	text-align: right;
+	font-size:14px;
+	line-height:40px;
+}
+.mobileCheckDiv .input #inputPhoneNo {
+	width:100px;
+	float:left;
+	text-align: left;
+	font-size:20px;
+	height:24px;
+	padding:2px;
+	border:1px solid #c9c9c9;
+	margin-top:6px;
+	color:#333;
+	font-size:14px;
+	line-height:24px;
+	margin-left:5px;
+	
+	/*ie7 fix*/
+	*height:21px;
+	*padding-top:5px;
+}
+.mobileCheckDiv .alert_input_row{
+	overflow: hidden;
+	margin-top:20px;
+	padding-bottom:20px;
+}
+.mobileCheckDiv .resendBtn {
+	width:85px;
+	height:22px;
+	background: url(../../image/btn/btn_vali_bg.png) center no-repeat;
+	float:left;
+	margin-top:10px;
+	margin-left:12px;
+	color:#fff;
+	border:none;
+	font-size:12px;
+	line-height:22px;
+	position:relative;
+	cursor:pointer;
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="system.configManage.SMSConfig" extends="footTraceInterceptor" namespace="/system/configManage/SMSConfig">
+	    <action name="addSmsPrepare" class="geSmsConfigAction" method="addSmsPrepare">
+			<result name="success">/system/configManage/SMSConfig/create/smsConfigAdd.jsp</result>
+		</action>
+		<action name="add" class="geSmsConfigAction" method="addSms">
+			<result name="success">/global/inc/alertInfo.jsp?type=create</result>
+			<result name="error">/global/inc/alertInfo.jsp?type=create</result>
+		</action>
+		<action name="findSmsPrepare" class="geSmsConfigAction" method="findSmsPrepare">
+			<result name="success">/system/configManage/SMSConfig/search/frmSearch.jsp</result>
+		</action>
+		<action name="findSms" class="geSmsConfigAction" method="findSms">
+			<result name="success">/system/configManage/SMSConfig/search/search.jsp</result>
+		</action>
+		<action name="updatePrepare" class="geSmsConfigAction" method="updatePrepareSms">
+			<result name="success">/system/configManage/SMSConfig/update/index.jsp</result>
+		</action>
+		<action name="update" class="geSmsConfigAction" method="updateSms">
+			<result name="success">/global/inc/alertInfo.jsp?type=update</result>
+		</action>
+		<action name="deleteSms" class="geSmsConfigAction" method="deleteSms">
+			<result name="success">/global/inc/tipInfo.jsp</result>
+		</action>
+		<action name="viewSms" class="geSmsConfigAction" method="viewSms">
+			<result name="success">/system/configManage/SMSConfig/search/smsConfigView.jsp</result>
+			<result name="error">/system/configManage/SMSConfig/delete/index.jsp</result>
+		</action>
+	</package>
+</struts>

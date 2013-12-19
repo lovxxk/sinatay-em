@@ -1,0 +1,300 @@
+.table_Show{
+	border: 0px solid #29a46d;
+	border-collapse:collapse; 
+/*	background:#d2d2d2;*/
+}
+.td_head{
+	text-align:center;
+	height:23px;
+	font-size:12px;
+	font-family:宋体;
+	background:#eaece1;
+	color:#000000;
+	border-left: 1px solid #a1a29c;
+	border-right: 1px solid #a1a29c; 
+	border-top: 1px solid #a1a29c; 
+	border-bottom: 1px solid #a1a29c;
+}
+.td_body{
+	text-align:center;
+	height:23px;
+	font-size:12px;
+	font-family:宋体;
+	color:#000000;
+	border-left: 1px solid #a1a29c;
+	border-right: 1px solid #a1a29c; 
+	border-top: 1px solid #a1a29c; 
+	border-bottom: 1px solid #a1a29c;
+}
+.td_body1{
+	text-align:left;
+	height:23px;
+	font-size:12px;
+	font-family:宋体;
+	color:#000000;
+	border-left: 1px solid #a1a29c;
+	border-right: 1px solid #a1a29c; 
+	border-top: 1px solid #a1a29c; 
+	border-bottom: 1px solid #a1a29c;
+	padding-left:15px;
+}
+.TableCol2
+{
+    BACKGROUND-COLOR: silver;
+    BORDER-BOTTOM: black 1pt solid;
+    BORDER-LEFT: white 1pt solid;
+    BORDER-RIGHT: black 1pt solid;
+    BORDER-TOP: white 1pt solid;
+    COLOR: black;
+    CURSOR: default;
+    FONT: 9pt 宋体;
+    MARGIN: 3px 3px 3px 20px;
+    TEXT-ALIGN: center;
+    TEXT-DECORATION: none
+}
+.TableGrid
+{
+    font-size:12px;
+	font-family:宋体;
+	height:23px;
+	color:#000000;
+	border-left: 1px solid #a1a29c;
+	border-right: 1px solid #a1a29c; 
+	border-top: 1px solid #a1a29c; 
+	border-bottom: 1px solid #a1a29c;
+}
+.FlatBorder
+{
+	BORDER: BLACK 1pt solid;
+}
+
+.TableInfo
+{
+    BACKGROUND-COLOR: yellow;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    PADDING-LEFT: 4px
+}
+.TableGrid_hidden
+{
+    BACKGROUND-COLOR: lightsteelblue;
+    BORDER-BOTTOM: slategray 1pt solid;
+    BORDER-LEFT: slategray 1pt;
+    BORDER-RIGHT: slategray 1pt solid;
+    BORDER-TOP: slategray 1pt;
+    CURSOR: auto;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    HEIGHT: 16pt;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 5pt;
+    PADDING-TOP: 2px
+}
+.TableGrid2
+{
+    BACKGROUND-COLOR: #99ccff;
+    BORDER-BOTTOM: black 1pt solid;
+    BORDER-RIGHT: black 1pt solid;
+    COLOR: black;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    MARGIN-LEFT: 2px;
+    MARGIN-RIGHT: 2px;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 6px;
+    PADDING-RIGHT: 4px;
+    PADDING-TOP: 2px
+}
+.TableGrid_checked
+{
+    BACKGROUND-COLOR: #afd2ff;
+    COLOR: black;
+    FONT-SIZE: 9pt;
+    HEIGHT: 16pt;
+/*
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 5px;
+    PADDING-TOP: 2px
+*/
+}
+.TableGrid_active
+{
+    BACKGROUND-COLOR: indigo;
+    COLOR: white;
+    FONT-SIZE: 9pt;
+    HEIGHT: 16pt;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 5px;
+    PADDING-TOP: 2px
+}
+.head
+{
+    font-size:12px;
+	font-family:宋体;
+	height:23px;
+	color:#000000;
+    BACKGROUND-COLOR: #eaece1;
+	border-left: 1px solid #a1a29c;
+	border-right: 1px solid #a1a29c; 
+	border-top: 1px solid #a1a29c; 
+	border-bottom: 1px solid #a1a29c;
+}
+.head2
+{
+    BORDER-BOTTOM: gray 1pt solid;
+    BORDER-LEFT: #f3f3ee 1pt solid;
+    BORDER-RIGHT: gray 1pt solid;
+    BORDER-TOP: gray 1pt solid;
+    COLOR: black;
+    FONT-SIZE: 9pt 宋体;
+    HEIGHT: 14pt;
+    LETTER-SPACING: 3pt;
+    MARGIN: 0px;
+    PADDING-BOTTOM: 1pt;
+    PADDING-LEFT: 3pt;
+    PADDING-RIGHT: 3pt;
+    PADDING-TOP: 1pt;
+    TEXT-DECORATION: none
+}
+.head_common
+{
+    BACKGROUND-COLOR: #EEAC0E; 
+    BORDER-BOTTOM: #cccccc 1pt solid;
+    BORDER-LEFT: #f3f3ee 1pt solid;
+    BORDER-RIGHT: #cccccc 1pt solid;
+    BORDER-TOP: #f3f3ee 1pt solid;
+    COLOR: black;
+    FONT: 9pt 宋体;
+    HEIGHT: 14pt;
+    LETTER-SPACING: 3pt;
+    MARGIN: 0px;
+    PADDING-BOTTOM: 1pt;
+    PADDING-LEFT: 3pt;
+    PADDING-RIGHT: 3pt;
+    PADDING-TOP: 1pt;
+    TEXT-DECORATION: none
+}
+.head_common2
+{
+    BACKGROUND-COLOR: #888888; 
+    BORDER-BOTTOM: #cccccc 1pt solid;
+    BORDER-LEFT: #f3f3ee 1pt solid;
+    BORDER-RIGHT: #cccccc 1pt solid;
+    BORDER-TOP: #f3f3ee 1pt solid;
+    COLOR: black;
+    FONT: 9pt 宋体;
+    HEIGHT: 14pt;
+    LETTER-SPACING: 3pt;
+    MARGIN: 0px;
+    PADDING-BOTTOM: 1pt;
+    PADDING-LEFT: 3pt;
+    PADDING-RIGHT: 3pt;
+    PADDING-TOP: 1pt;
+    TEXT-DECORATION: none
+}
+.TableGrid_common
+{
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: #dbfe7e 1pt solid;
+    BORDER-RIGHT: #dbfe7e 1pt solid;
+    COLOR: black;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    MARGIN-LEFT: 2px;
+    MARGIN-RIGHT: 2px;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 6px;
+    PADDING-RIGHT: 4px;
+    PADDING-TOP: 2px
+}
+.TableGrid_sms
+{
+    BORDER-BOTTOM: #dbfe7e 1pt solid;
+    BORDER-RIGHT: #dbfe7e 1pt solid;
+    COLOR: black;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    MARGIN-LEFT: 2px;
+    MARGIN-RIGHT: 2px;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 6px;
+    PADDING-RIGHT: 4px;
+    PADDING-TOP: 2px
+}
+.TableGrid_common2
+{
+    BACKGROUND-COLOR: #FCFCFC;
+    BORDER-BOTTOM: #cccccc 1pt solid;
+    BORDER-RIGHT: #cccccc 1pt solid;
+    COLOR: black;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    MARGIN-LEFT: 2px;
+    MARGIN-RIGHT: 2px;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 6px;
+    PADDING-RIGHT: 4px;
+    PADDING-TOP: 2px
+}
+.TableGrid_common3
+{
+    BORDER-BOTTOM: #dbfe7e 1pt solid;
+    BORDER-RIGHT: #dbfe7e 1pt solid;
+    COLOR: black;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    MARGIN-LEFT: 2px;
+    MARGIN-RIGHT: 2px;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 6px;
+    PADDING-RIGHT: 4px;
+    PADDING-TOP: 2px
+}
+.Grid_strong
+{
+    BACKGROUND-COLOR: white;
+    BORDER-BOTTOM: #cccccc 1pt solid;
+    BORDER-LEFT: white 1pt solid;
+    BORDER-RIGHT: #999999 1pt solid;
+    BORDER-TOP: white 1pt solid;
+    CURSOR: pointer;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    HEIGHT: 16pt;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 4pt;
+    PADDING-RIGHT: 4pt;    
+    PADDING-TOP: 2px
+}
+.statuscolor_bf
+{
+    BACKGROUND-COLOR: #E8E9EA;
+   
+}
+.button1
+{
+	CURSOR: pointer;
+    FONT: 9pt 宋体;
+	color:#000000;
+	text-decoration:underline;
+}
+.TableGrid2
+{
+    BORDER-BOTTOM: #cccccc 1pt solid;
+    BORDER-LEFT: slategray 1pt;
+    BORDER-RIGHT: #cccccc 1pt solid;
+    BORDER-TOP: slategray 1pt;
+    CURSOR: pointer;
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt;
+    HEIGHT: 16pt;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 5pt;
+    PADDING-TOP: 2px
+}
+a.a1:link { text-decoration: none; color:black}
+a.a1:visited { text-decoration: none; color:black} 
+a.a1:active { text-decoration: none; color:black} 
+a.a1:hover { text-decoration: underline; color:black} 
+INPUT.input1{font-family:Verdana,Tahoma,宋体; font-size: 12px; line-height: 15px;border: 1px #000000 solid;}
+

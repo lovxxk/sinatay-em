@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="myPolicyDetail" extends="json-default"
+		namespace="/myPolicyDetail">
+		<!-- 配置拦截 器定义，验证五要素 -->
+		<interceptors>
+			<interceptor name="tPolicyNoCheckerInterceptor" class="policyNoCheckerInterceptor"></interceptor>
+			<interceptor-stack name="policyNoCheckerInterceptorStack">
+				<interceptor-ref name="tPolicyNoCheckerInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<action name="myPolicyDetail" class="policyDetailAction"
+			method="viewMyPolicyDetail">
+			<result name="success">/web/user/member/policy/myPolicyDetail/index.jsp</result>
+			<interceptor-ref name="policyNoCheckerInterceptorStack"></interceptor-ref>
+		</action>
+
+		<!-- 通知书下载校验：从核心获得url -->
+		<action name="check" class="checkDownloadEdorAction" method="check">
+			<result type="json"></result>
+		</action>
+
+		<!-- 配置通知书下载 -->
+		<action name="downloadEdor" class="downloadEdorAction">
+			<result name="success" type="stream">
+				<param name="contentType">text/pdf</param>
+				<param name="contentDisposition">attachment;fileName="${fileName}"</param>
+				<param name="inputName">downloadFile</param>
+				<param name="bufferSize">1024</param>
+			</result>
+		</action>
+
+		<!-- 检测是否有现金价值 -->
+		<action name="checkCashValue" class="cashValueAction" method="check">
+			<result type="json"></result>
+		</action>
+
+		<!-- 现金价值 -->
+		<action name="cashValue" class="cashValueAction" method="cashValue">
+			<result name="success">/web/user/member/policy/myPolicyDetail/CashValue/index.jsp</result>
+		</action>
+
+		<!-- 检测是否有保险利益 -->
+		<action name="checkInBnf" class="insuranceBenefitAction"
+			method="check">
+			<result type="json"></result>
+		</action>
+
+		<!-- 现金价值 -->
+		<action name="inBnf" class="insuranceBenefitAction" method="inBnf">
+			<result name="success">/web/user/member/policy/myPolicyDetail/InsuranceBenefit/index.jsp</result>
+		</action>
+	</package>
+	<include file="../spring/applicationContext-action.xml"></include>
+</struts>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="sale" extends="struts-default" namespace="/sale">
+		<action name="toQuote" class="saleAction" method="toQuote" >
+			<result name="success">/web/product/detail/index.jsp</result>
+			<result name="productCenter" type="redirect">/productsDisplay/onlineShop.do</result>
+		</action>
+		<action name="appliUpdate" class="saleAction" method="appliUpdate" ></action>
+		<action name="saveQuoteAndExit" class="saleAction" method="saveQuoteAndExit" ></action>
+		<action name="updateQuoteStep" class="saleAction" method="updateQuoteStep" ></action>
+		<action name="toInputInsuranceInfo" class="saleAction" method="toInputInsuranceInfo" >
+			<result name="success">/web/policy/insure/index.jsp</result>
+		</action>
+		<action name="obtainDataForInput" class="saleAction" method="obtainDataForInput" >
+			<result name="success">/web/policy/insure/index.jsp</result>
+			<result name="productCenter" type="redirect">/productsDisplay/onlineShop.do</result>
+			<result name="error">/global/ui/404.jsp</result>
+		</action>
+		<action name="requireInsure" class="saleAction" method="requireInsure" >
+		</action>
+		<action name="obtainDataForConfirm" class="saleAction" method="obtainDataForConfirm" >
+			<result name="success">/web/policy/confirm/index.jsp</result>
+			<result name="productCenter" type="redirect">/productsDisplay/onlineShop.do</result>
+		</action>
+		<action name="toConfirmInsuranceInfo" class="saleAction" method="toConfirmInsuranceInfo" >
+			<result name="success">/web/policy/confirm/index.jsp</result>
+		</action>
+		<action name="toReturnEditInsuranceInfo" class="saleAction" method="toReturnEditInsuranceInfo" >
+			<result name="success">/web/policy/insure/index.jsp</result>
+		</action>
+		<action name="toPayConfirmInfo" class="saleAction" method="toPayConfirmInfo" >
+			<result name="success">/web/policy/payment/index.jsp</result>
+		</action>
+		<action name="underwriting" class="saleAction" method="underwriting" ></action>
+		<action name="underwritingByorder" class="saleAction" method="underwritingByorder" ></action>
+		<action name="obtainOccupation" class="saleAction" method="obtainOccupation" ></action>
+		<action name="obtainEndDate" class="saleAction" method="obtainEndDate" ></action>
+		<action name="obtainTopInsured" class="saleAction" method="obtainTopInsured"></action>
+		<action name="checkAppAgeByQuote" class="saleAction" method="checkAppAgeByQuote"></action>
+		<action name="checkIsCustomer" class="saleAction" method="checkIsCustomer"></action>
+		<action name="obtainContinueInsuranceData" class="saleAction" method="obtainContinueInsuranceData" >
+			<result name="success">/web/policy/insure/index.jsp</result>
+			<result name="productCenter" type="redirect">/productsDisplay/onlineShop.do</result>
+			<result name="500">/global/ui/404.jsp</result>
+		</action>
+		<action name="obtainCity" class="saleAction" method="obtainCity" ></action>
+		
+		<action name="verificationIdCard" class="saleAction" method="verificationIdCard" ></action>
+		<action name="verificationMobilePhoneNumber" class="saleAction" method="verificationMobilePhoneNumber" ></action>
+		<action name="countMobilePhoneNumber" class="saleAction" method="countMobilePhoneNumber" ></action>
+		
+		<action name="doSendJSON" class="jsonstatusAction" method="doSendJSON">
+			<result name="inputInsure">
+				<param name="namespace">/sale</param>
+            	<param name="actionName">obtainDataForInput</param>
+            	<param name="JsonSTR">${JsonSTR}</param>
+            	<param name="productCode">${productCode}</param>
+			</result>
+			<result name="confirmInsure">
+				<param name="namespace">/sale</param>
+            	<param name="actionName">obtainDataForConfirm</param>
+            	<param name="JsonSTR">${JsonSTR}</param>
+            	<param name="productCode">${productCode}</param>
+            </result>
+		</action>
+		<action name="doSendURL" class="jsonstatusAction" method="doSendURL"></action>
+		
+		<action name="showOrderList" class="saleAction" method="showOrderList">
+			<result name="succ" type="chain">
+				<param name="namespace">/order</param>
+            	<param name="actionName">orders</param>
+            	<param name="orderSerialNo">${orderSerialNo}</param>
+            	<param name="status">${status}</param>
+            	<param name="proposalSID">${proposalSID}</param>
+            	<param name="type">email</param>
+			</result>
+			<result name="fail">/order/orders.do</result>
+		</action>
+		
+		<!-- 邮件链接完善订单中转 -->
+		<action name="obtainContinueInsuranceDataEmail" class="saleAction" method="obtainContinueInsuranceDataEmail">
+			<result name="succ" type="chain">
+				<param name="namespace">/sale</param>
+            	<param name="actionName">obtainContinueInsuranceData</param>
+            	<param name="quoteNo">${quoteNo}</param>
+            	<param name="productCode">${productCode}</param>
+            	<param name="proposalSID">${proposalSID}</param>
+            	<param name="type">email</param>
+			</result>
+			<result name="fail" type="redirect">/web/user/login/index.jsp</result>
+		</action>
+	</package>
+	
+	<package name="saleAjax" extends="json-default" namespace="/saleAjax">
+		<action name="saleRecords" class="saleAction" method="saleRecords">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/ng-context-3.0.xsd 
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="policyNoCheckerInterceptor"
+		class="cn.com.sinosoft.ebusiness.interceptor.PolicyNoCheckerInterceptor" />
+
+	<bean id="contCheckerInterceptor"
+		class="cn.com.sinosoft.ebusiness.interceptor.ContCheckerInterceptor" />
+
+	<bean id="userPersonalRegisterAction"
+		class="cn.com.sinosoft.ebusiness.userPersonal.action.UserPersonalRegisterAction" scope="prototype"/>
+
+	<bean id="userPersonalLoginAction"
+		class="cn.com.sinosoft.ebusiness.userPersonal.action.UserPersonalLoginAction" scope="prototype"/>
+
+	<bean id="userPersonalEditAction"
+		class="cn.com.sinosoft.ebusiness.userPersonal.action.UserPersonalEditAction" scope="prototype"/>
+
+	<bean id="resetPasswordAction"
+		class="cn.com.sinosoft.ebusiness.userPersonal.action.ResetPasswordAction" scope="prototype"/>
+
+	<bean id="insuredManagementAction"
+		class="cn.com.sinosoft.ebusiness.userPersonal.action.InsuredManagementAction"></bean>
+	<!-- 保单详情 -->
+	<bean id="policyDetailAction"
+		class="cn.com.sinosoft.ebusiness.member.policyDetail.web.PolicyDetailAction"
+		scope="prototype" />
+
+
+	<!-- 部分领取 -->
+	<bean id="partReceiveAction"
+		class="cn.com.sinosoft.ebusiness.online.biz.bq.web.PartReceiveAction"
+		scope="prototype" />
+	<!-- 下载中心 -->
+	<bean id="fileMngAction"
+		class="cn.com.sinosoft.ebusiness.online.biz.dcenter.web.FileMngAction"
+		scope="prototype" />
+	<!-- 投保人基本资料更变 -->
+	<bean id="appntInfoChangeAction"
+		class="cn.com.sinosoft.ebusiness.edor.action.AppntBaseInfoChangeAction"
+		scope="prototype" />
+	<!-- 被保人基本资料更变 -->
+	<bean id="insuredInfoChangeAction"
+		class="cn.com.sinosoft.ebusiness.edor.action.InsuredBaseInfoChangeAction"
+		scope="prototype" />
+	<!-- 保单列表 -->
+	<bean id="policyListAction"
+		class="cn.com.sinosoft.ebusiness.infomanage.action.PolicyListAction"
+		scope="prototype" />
+	<!-- 理赔报案 -->
+	<bean id="claimReportAction"
+		class="cn.com.sinosoft.ebusiness.claim.action.ClaimReportAction"
+		scope="prototype" />
+	<!-- 理赔查询 -->
+	<bean id="claimProcessAction"
+		class="cn.com.sinosoft.ebusiness.claim.action.ClaimProcessAction"
+		scope="prototype" />
+	<!-- 定点医院查询 -->
+	<bean id="hospitalQueryAction"
+		class="cn.com.sinosoft.ebusiness.hospital.action.HospitalQueryAction"
+		scope="prototype" />
+	<!-- 万能险利率查询 -->
+	<bean id="universalQueryAction"
+		class="cn.com.sinosoft.ebusiness.universal.action.UniversalQueryAction"
+		scope="prototype" />
+	<!-- 地域查询 -->
+	<bean id="areaAction" class="cn.com.sinosoft.ebusiness.tools.AreaAction"
+		scope="prototype" />
+	<!-- 电子函件 -->
+
+	<bean id="emailSubscribedAction"
+		class="cn.com.sinosoft.ebusiness.member.emailManage.web.EmailSubscribedAction"
+		scope="prototype" />
+
+	<!-- 通知书查询 -->
+	<bean id="noticeSearchAction"
+		class="cn.com.sinosoft.ebusiness.member.emailManage.web.NoticeSearchAction"
+		scope="prototype" />
+
+	<!-- 通知书下载检验 -->
+	<bean id="checkDownNoticeAction"
+		class="cn.com.sinosoft.ebusiness.member.emailManage.web.CheckDownNoticeAction"
+		scope="prototype" />
+
+	<!-- 通知书下载 -->
+	<bean id="downloadNoticeAction"
+		class="cn.com.sinosoft.ebusiness.member.emailManage.web.DownloadNoticeAction"
+		scope="prototype" />
+	<!-- 保全批单检验 -->
+	<bean id="checkDownloadEdorAction"
+		class="cn.com.sinosoft.ebusiness.member.policyDetail.web.CheckDownloadEdorAction"
+		scope="prototype" />
+
+	<!-- 批单下载 -->
+	<bean id="downloadEdorAction"
+		class="cn.com.sinosoft.ebusiness.member.policyDetail.web.DownloadEdorAction"
+		scope="prototype" />
+	<!-- 现金价值 -->
+	<bean id="cashValueAction"
+		class="cn.com.sinosoft.ebusiness.member.policyDetail.web.CashValueAction"
+		scope="prototype" />
+	<!-- 保险利益 -->
+	<bean id="insuranceBenefitAction"
+		class="cn.com.sinosoft.ebusiness.member.policyDetail.web.InsuranceBenefitAction"
+		scope="prototype" />
+
+	<bean id="jsonstatusAction" class="cn.com.sinosoft.ebusiness.sale.web.JsonstatusAction" scope="prototype"></bean>
+	<bean id="saleAction" class="cn.com.sinosoft.ebusiness.sale.web.SaleAction" scope="prototype" />
+	<bean id="productDisplayAction" class="cn.com.sinosoft.ebusiness.sale.web.ProductDisplayAction" scope="prototype" />
+	<bean id="paymentAction" class="cn.com.sinosoft.ebusiness.payment.web.PaymentAction" scope="prototype" />
+
+	<!-- 订单管理 -->
+	<bean id="orderFormAction" class="cn.com.sinosoft.ebusiness.order.OrderFormAction" scope="prototype"></bean>
+
+	<!-- 会员中心 -->
+	<bean id="memberCenterAction"
+		class="cn.com.sinosoft.ebusiness.member.account.MemberCenterAction" scope="prototype"></bean>
+	<!-- 服务网点 -->
+	<bean id="websiteQueryAction"
+		class="cn.com.sinosoft.ebusiness.website.action.WebsiteQueryAction"></bean>
+		
+	<!-- 手机管理-->
+	<bean id="mobileLoonAction" class="cn.com.sinosoft.ebusiness.mobile.web.LoonAction"
+		scope="prototype" />
+		
+</beans>

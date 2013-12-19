@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="order" extends="struts-default" namespace="/order">
+	<action name="orders" class="orderFormAction" method="orders">
+		<result name="success">/web/user/member/order/index.jsp?status={status}</result>
+	</action>
+	<action name="deleteOrder" class="orderFormAction" method="deleteOrder">
+		</action>
+	<!-- 订单详情页面 -->
+	<action name="orderDetail" class="orderFormAction" method="orderDetail">
+		<result name="success">/web/user/member/account/order/detail/index.jsp</result>
+	</action>
+	<!-- 在保单详情页面保存保单生效日 -->
+	<action name="saveInitEffectStartDate" class="orderFormAction" method="saveInitEffectStartDate">
+		<result name="success" type="redirect">/order/orderDetail.do?id=${orderForm.serialNo }</result>
+	</action>
+	</package>
+	
+	<package name="orderAjax" extends="json-default" namespace="/orderAjax">
+		<action name="ordersAjax" class="orderFormAction" method="ordersAjax">
+			<result type="json"></result>
+		</action>
+	</package>
+	
+	<include file="../spring/applicationContext-action.xml"></include>
+	
+</struts>

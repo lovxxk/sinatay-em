@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="serviceNetwork" extends="struts-default" namespace="/serviceNetwork">
+		<action name="addServiceNetwork" class="serviceNetworkAction" method="addServiceNetwork" >
+			<result name="success">
+				/global/inc/cartipInfo.jsp?type=create
+			</result>
+		</action>
+		<action name="findServiceNetwork" class="serviceNetworkAction" method="findServiceNetwork" >
+			<result name="success">
+				/business/serviceNetworkManage/search/frmSearch.jsp
+			</result>
+		</action>
+		<action name="findServiceNetwork2" class="serviceNetworkAction" method="findServiceNetwork2" >
+			<result name="success">
+				/business/serviceNetworkManage/search/search.jsp
+			</result>
+		</action>
+		<action name="viewServiceNetwork" class="serviceNetworkAction" method="viewServiceNetwork" >
+			<result name="success">
+				/business/serviceNetworkManage/search/serviceNetworkView.jsp
+			</result>
+		</action>
+		<action name="prepareUpdateServiceNetwork" class="serviceNetworkAction" method="prepareUpdateServiceNetwork" >
+			<result name="success">
+				/business/serviceNetworkManage/update/serviceNetworkUpdate.jsp
+			</result>
+		</action>
+		<action name="updateServiceNetwork" class="serviceNetworkAction" method="updateServiceNetwork" >
+			<result name="success">/global/inc/cartipInfo.jsp?type=update</result>
+		</action>
+		<action name="deleteServiceNetwork" class="serviceNetworkAction" method="deleteServiceNetwork" >
+			<result name="success">/global/inc/cartipInfo.jsp</result>
+		</action>
+		<action name="loadArea" class="serviceNetworkAction" method="loadArea" />
+	</package>
+</struts>

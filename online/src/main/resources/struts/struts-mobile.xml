@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="mobile" extends="struts-default,json-default" namespace="/mobile">
+		<action name="loonIndex" class="mobileLoonAction" method="loonIndex" >
+			<result name="success">/web/mobile/product/loon/index.jsp</result>
+		</action>
+		
+		<action name="loonDeclares" class="mobileLoonAction" method="loonDeclares" >
+			<result name="success">/web/mobile/product/loon/declares.jsp</result>
+		</action>
+		
+		<action name="loonProductInfo" class="mobileLoonAction" method="loonProductInfo" >
+			<result name="success">/web/mobile/product/loon/productInfo.jsp</result>
+		</action>
+		
+		<action name="loonServices" class="mobileLoonAction" method="loonServices" >
+			<result name="success">/web/mobile/product/loon/services.jsp</result>
+		</action>
+		
+		<action name="loonQuestions" class="mobileLoonAction" method="loonQuestions" >
+			<result name="success">/web/mobile/product/loon/questions.jsp</result>
+		</action>
+		
+		<action name="loonCustomInfoInput" class="mobileLoonAction" method="loonCustomInfoInput" >
+			<result name="success">/web/mobile/product/loon/customInfoInput.jsp</result>
+		</action>
+		
+		<action name="loonConfirm" class="mobileLoonAction" method="loonConfirm" >
+			<result name="success">/web/mobile/product/loon/confirm.jsp</result>
+		</action>
+		
+		<action name="loonPay" class="mobileLoonAction" method="loonPay" >
+			<result name="success">/web/mobile/product/loon/pay.jsp</result>
+		</action>
+		
+		<action name="toAliPay" class="mobileLoonAction" method="toAliPay" >
+			<result name="success">/web/mobile/product/loon/pay.jsp</result>
+			<result name="error">/web/mobile/product/loon/error.jsp</result>
+		</action>
+		
+		<!-- 支付宝支付，支付成功后，同步处理请求 -->
+		<action name="alipaySuccess" class="mobileLoonAction" method="alipaySuccess">
+			<result name="success">/web/mobile/product/loon/paySuccess.jsp</result>
+		</action>
+		<!-- 支付宝支付，支付成功后，异步处理请求 -->
+		<action name="notifySuccess" class="mobileLoonAction" method="notifySuccess">
+			<result name="success">/web/mobile/product/loon/paySuccess.jsp</result>
+		</action>
+		
+		<action name="loonCheckUpdatePayfees" class="mobileLoonAction" method="loonCheckUpdatePayfees" >
+			<result type="json"/>
+		</action>
+		
+		<action name="loonVerifyCustomInfo" class="mobileLoonAction" method="loonVerifyCustomInfo" >
+			<result type="json"/>
+		</action>
+		
+		<action name="loonConfirmCustomInfo" class="mobileLoonAction" method="loonConfirmCustomInfo" >
+			<result type="json"/>
+		</action>
+		
+		<action name="provincesCode" class="mobileLoonAction" method="provincesCode" >
+			<result type="json"/>
+		</action>
+		
+		<action name="citiesCode" class="mobileLoonAction" method="citiesCode" >
+			<result type="json"/>
+		</action>
+		
+		<action name="countiesCode" class="mobileLoonAction" method="countiesCode" >
+			<result type="json"/>
+		</action>
+		
+		<action name="banksCode" class="mobileLoonAction" method="banksCode" >
+			<result type="json"/>
+		</action>
+		
+		<action name="loonCheckPayPayfees" class="mobileLoonAction" method="loonCheckPayPayfees" >
+			<result type="json"/>
+		</action>
+		
+	</package>
+</struts>

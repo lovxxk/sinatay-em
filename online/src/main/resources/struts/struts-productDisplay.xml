@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="productsDisplay" extends="struts-default" namespace="/productsDisplay">
+		<action name="personal" class="productDisplayAction" method="findDirectoryAttributeInfo" >
+			<result name="success">/web/sale/productInfo/personal/personal.jsp</result>
+		</action>
+		<action name="personalProductDisplay" class="productDisplayAction" method="findDirectoryByEids" >
+			<result name="success">/web/product/onlineShop/index.jsp</result>
+		</action>
+		<action name="findDirectoryAttributeInfo2" class="productDisplayAction" method="findDirectoryAttributeInfo" >
+			<result name="success">/web/sale/productInfo/common/attributeInfo.jsp</result>
+		</action>
+		<action name="onlineShop" class="productDisplayAction" method="findDirectoryAttributeInfo" >
+			<result name="success">/web/product/index.jsp</result>
+		</action>
+		<action name="onlineShopDisplay" class="productDisplayAction" method="findDirectoryByEids" >
+			<result name="success">/web/product/onlineShop/index.jsp</result>
+		</action>
+		<action name="findDirectoryByEidAndParent" class="productDisplayAction" method="findDirectoryByEidAndParent" ></action>
+		<action name="onlineShopIndexTop" class="productDisplayAction" method="findDirectoryAttributeInfoAndProductInfo" >
+			<result name="success">/web/sale/productInfo/onlineShop/onlineShoppingIndexTop.jsp</result>
+		</action>
+		<action name="onlineShopIndexMid" class="productDisplayAction" method="findDirectoryAttributeInfoAndProductInfo" >
+			<result name="success">/web/sale/productInfo/onlineShop/onlineShoppingIndexMid.jsp</result>
+		</action>
+		<action name="onlineShopIndexEnd" class="productDisplayAction" method="findDirectoryAttributeInfoAndProductInfo" >
+			<result name="success">/web/sale/productInfo/onlineShop/onlineShoppingIndexEnd.jsp</result>
+		</action>
+		
+		<action name="productDisplayOnlineShopIndex" class="productDisplayAction" method="findDirectoryByEids" >
+			<result name="success">/web/sale/productInfo/onlineShop/onlineShoppingIndexProductsDisplay.jsp</result>
+		</action>
+		<action name="company" class="productDisplayAction" method="findDirectoryAttributeInfo" >
+			<result name="success">/web/sale/productInfo/company/company.jsp</result>
+		</action>
+		<action name="companyProductAttributeInfo" class="productDisplayAction" method="findDirectoryAttributeInfo" >
+			<result name="success">/web/sale/productInfo/common/companyProductAttributeInfo.jsp</result>
+		</action>
+		<action name="initCompanyProductAttributeInfo" class="productDisplayAction" method="findCompanyProductDirectoryByEids" >
+			<result name="success">/web/sale/productInfo/company/companyProductList.jsp</result>
+		</action>
+		<action name="findCompanyProductDirectoryAndParentAttributeByChildEids" class="productDisplayAction" method="findCompanyProductDirectoryAndParentAttributeByChildEids" >
+			<result name="success">/web/sale/productInfo/company/companyProductList.jsp</result>
+		</action>
+		<action name="productInfoIndex" class="productDisplayAction" method="findDirectoryAttributeInfoAndProductInfo" >
+			<result name="success">/web/sale/productInfo/productInfoIndex.jsp</result>
+		</action>
+		<action name="findGeDirectoryTop2ByType" class="productDisplayAction" method="findGeDirectoryTop2ByType" >
+			<result name="success">/web/sale/productInfo/hp.jsp</result>
+		</action>
+		<action name="findGeDirectoryTopTwoByType" class="productDisplayAction" method="findGeDirectoryTopTwoByType" >
+			<result name="success">/web/sale/productInfo/hp.jsp</result>
+		</action>
+		<action name="findGeDirectoryTop4ByRecommendDesc" class="productDisplayAction" method="findGeDirectoryTop4ByRecommendDesc" >
+			<result name="success">/web/sale/productInfo/productAfterRegister.jsp</result>
+		</action>
+		<action name="insuranceCar" class="productDisplayAction" method="findDirectoryAttributeInfo" >
+			<result name="success">/web/sale/productInfo/insuranceCar.jsp</result>
+		</action>
+		<action name="findUniqueGeDirectory" class="productDisplayAction" method="findUniqueGeDirectory" >
+			<result name="success">/web/sale/productInfo/detailTop.jsp</result>
+		</action>
+		
+		<action name="getTopNCorrelationProductByEid" class="productDisplayAction" method="getTopNCorrelationProductByEid" >
+			<result name="success">/web/sale/productInfo/onlineShop/hisReadForIframe.jsp</result>
+		</action>
+		<action name="mobile" class="productDisplayAction" method="findUniqueGeDirectory" >
+			<result name="success">/web/sale/productInfo/mobile/index.jsp</result>
+		</action>
+		<action name="lift_HotProduct" class="productDisplayAction" method="lift_HotProduct" ></action>
+	</package>
+</struts>

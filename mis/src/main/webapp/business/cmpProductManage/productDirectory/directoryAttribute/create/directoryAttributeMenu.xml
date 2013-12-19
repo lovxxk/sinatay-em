@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<menu>
+	<item id="attribute_ADD" text="添加属性" img="new.gif"/>
+	<item type="separator"/>
+	<item id="attribute_EDIT" text="编辑属性" img="edit.gif"/>
+	<item type="separator"/>
+	<item id="attributeValue_DEL" text="删除属性值" img="del.gif"/>
+	<item type="separator"/>
+</menu>

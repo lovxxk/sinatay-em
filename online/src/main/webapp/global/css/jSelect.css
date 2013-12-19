@@ -1,0 +1,77 @@
+.selector{
+	background: #fff;
+	position:relative;
+	cursor: default;
+}
+
+.selector.disabled{
+	background: #EBEBE4;
+}
+
+.selector .text{
+	padding-right:17px;
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+.selector.disabled .text{
+	background: #EBEBE4;
+}
+
+
+.selector .text>div{
+	overflow: hidden;
+	text-overflow:ellipsis; 
+	white-space:nowrap;
+}
+
+.selector .text.hover{
+	z-index:10002;
+}
+
+.selector b{
+	width: 17px;
+	height: 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: url(selector.png) no-repeat 0 center;
+}
+
+.selector.disabled b{
+	background-position: -17px center;
+}
+
+.selector .list{
+	display:none;
+	position: absolute;
+	left: 0;
+	border: 1px solid #CECBCE;
+	background: #fff;
+	padding:10px 0;
+	max-height: 400px;
+	overflow-y: auto;
+	z-index: 10001;
+}
+
+.list .list-item{
+	white-space: nowrap;
+	overflow: hidden;
+	height:30px;
+	line-height:30px;
+	border-bottom: 1px solid #d1d1d1;
+	margin:0 10px;
+	display:block;
+	text-align: center;
+}
+
+.list .list-item:hover{
+	color:#fff;
+	background: #005ea7;
+}
+
+.list .list-item.last{
+	border-bottom:0;
+}

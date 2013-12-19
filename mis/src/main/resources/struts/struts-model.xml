@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="business.nonBusinessManager.model" extends="struts-default" namespace="/business/nonBusinessManager/model">
+		<!-- 走向列表搜索页 -->
+		<action name="frmSearch" class="geSurveyModelAction" method="frmSearch">
+			<result name="success">
+				/business/nonBusinessManager/surveyModel/search/frmSearch.jsp
+			</result>
+		</action>
+		
+		<!-- 保存模板 -->
+		<action name="addModel" class="geSurveyModelAction" method="addModel">
+			<result name="success">
+				/business/nonBusinessManager/surveyModel/update/updateInfo.jsp
+			</result>
+		</action>
+		
+		<!-- 模板列表 -->
+		<action name="list" class="geSurveyModelAction" method="list">
+			<result name="success">
+				/business/nonBusinessManager/surveyModel/search/search.jsp
+			</result>
+		</action>
+		
+		<!-- 走向编辑页面 -->
+		<action name="toEdit" class="geSurveyModelAction" method="toEdit">
+			<result name="success">
+				/business/nonBusinessManager/surveyModel/update/frmUpdate.jsp
+			</result>
+		</action>
+		
+		<!-- 删除模板 -->
+		<action name="doDelete" class="geSurveyModelAction" method="doDelete">
+			<result name="success">
+				/global/inc/alertInfo.jsp?type=delete
+			</result>
+			<result name="error">
+				/business/nonBusinessManager/surveyModel/view/view.jsp
+			</result>
+		</action>
+		
+		<!-- 查看详细 -->
+		<action name="doGet" class="geSurveyModelAction" method="doGet">
+			<result name="success">
+				/business/nonBusinessManager/surveyModel/view/view.jsp
+			</result>
+		</action>
+	</package>
+</struts>

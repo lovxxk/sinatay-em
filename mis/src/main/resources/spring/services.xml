@@ -1,0 +1,18 @@
+<serviceGroup>
+<service name="geEnterpriseForLDAP" targetNamespace="cn.com.sinosoft.ebusiness.service.user.enterprice.service.facade">
+	<description>geEnterpriseForLDAP</description>
+	  <parameter name="ServiceObjectSupplier">
+	    org.apache.axis2.extensions.spring.receivers.SpringServletContextObjectSupplier
+	  </parameter>
+	<parameter name="SpringBeanName">webGeEnterpriseForLDAPService</parameter>
+	<parameter name="ServiceClass">cn.com.sinosoft.ebusiness.service.user.enterprice.service.facade.WebGeEnterpriseForLDAPService</parameter>
+	
+	<!-- 设置消息接收器 -->
+	<messageReceivers>
+		<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+			class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+		<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only"
+			class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+	</messageReceivers>
+</service>
+</serviceGroup>

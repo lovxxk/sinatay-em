@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 网销支付 -->
+	<package name="payment" extends="struts-default" namespace="/payment">
+		<action name="showPaymentPlatForm" class="paymentAction" method="showPaymentPlatForm" >
+			<result name="success">/web/policy/payment/index.jsp</result>
+		</action>
+		<!-- 根据投保单创建对应的订单信息，并去支付 -->
+		<action name="toAliPay" class="paymentAction" method="toAliPay">
+			<result name="success">/web/payment/alipay/alipayapi.jsp</result>
+			<result name="underwriting">/web/policy/payment/success/index.jsp</result>
+			<result name="orderStatusError" type="redirect">/order/orders.do</result>
+		</action>
+		<!-- 订单已创建完成，直接支付 -->
+		<action name="alipay" class="paymentAction" method="alipay">
+<!-- 			<result name="success">/web/payment/alipay/alipayapi.jsp</result> -->
+			<result name="success" type="redirect">/sale/toPayConfirmInfo.do?proposalSID=${orderForm.insurancePolicy.serialNo }</result>
+			<result name="error">/web/user/member/account/order/detail/index.jsp</result>
+		</action>
+		<!-- 支付宝支付，支付成功后，同步处理请求 -->
+		<action name="alipaySuccess" class="paymentAction" method="alipaySuccess">
+			<result name="success">/web/policy/payment/success/index.jsp</result>
+		</action>
+		<!-- 支付宝支付，支付成功后，异步处理请求 -->
+		<action name="notifySuccess" class="paymentAction" method="notifySuccess">
+			<result name="success">/web/policy/payment/success/index.jsp</result>
+		</action>
+		<!-- 纯网银支付 -->
+		<action name="paymentToBank" class="paymentAction" method="paymentToBank">
+			<result name="success">/web/payment/bank/alipayapi.jsp</result>
+			<result name="underwriting">/web/policy/payment/success/index.jsp</result>
+			<result name="orderStatusError" type="redirect">/order/orders.do</result>
+		</action>
+		<!-- 纯网银支付 同步回调接口 -->
+		<action name="synBank" class="paymentAction" method="synBank">
+			<result name="success">/web/policy/payment/success/index.jsp</result>
+		</action>
+		<!-- 纯网银支付 异步回调接口 -->
+		<action name="nosynBank" class="paymentAction" method="nosynBank">
+			<result name="success">/web/policy/payment/success/index.jsp</result>
+		</action>
+		<!-- 订单详情页面，直接去支付 -->
+		<action name="toPayment" class="paymentAction" method="toPayment">
+			<result name="success" type="redirect">/payment/alipay.do?id=${orderForm.serialNo }</result>
+			<result name="error">/web/user/member/account/order/detail/index.jsp</result>
+			<result name="500">/global/ui/404.jsp</result>
+		</action>
+		<!-- 支付成功 -->
+		<action name="paymentSuccess" class="paymentAction" method="paymentSuccess">
+			<result name="success">/web/user/member/account/order/detail/index.jsp</result>
+		</action>
+		<!-- 邮件链接支付中转 -->
+		<action name="toPaymentEmail" class="paymentAction" method="toPaymentEmail">
+			<result name="succ" type="chain">
+				<param name="namespace">/payment</param>
+            	<param name="actionName">toPayment</param>
+            	<param name="id">${id}</param>
+            	<param name="source">email</param>
+			</result>
+			<result name="fail" type="redirect">/web/user/login/index.jsp</result>
+		</action>
+	</package>
+</struts>

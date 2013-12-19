@@ -1,0 +1,83 @@
+
+大黄蜂在线承保(ST000052)请求...
+<?xml version="1.0" encoding="GBK"?>
+<TranData>
+	<BaseInfo>
+		<TransrDate>20131216</TransrDate>
+		<TransrTime>07:36:14</TransrTime>
+		<TellerNo>0001</TellerNo>
+		<TransrNo>DHF20131216153614059</TransrNo>
+		<SaleChannel>W</SaleChannel>
+		<SellType>20</SellType>
+		<FunctionFlag>ST000052</FunctionFlag>
+		<Source>DHF</Source>
+	</BaseInfo>
+	<TranRequest>
+		<LCCont>
+			<PolApplyDate>20131216</PolApplyDate>
+			<Prem>1000</Prem>
+			<AccBankCode>103</AccBankCode>
+			<BankAccNo>1234567890</BankAccNo>
+			<IsPaySucc>1</IsPaySucc>
+			<PayMessage>Succ</PayMessage>
+			<PaySerialNo>201312130004</PaySerialNo>
+			<OrderId>201312130004</OrderId>
+			<CarNo>沪A1213D</CarNo>
+			<StartDate>20131216</StartDate>
+			<StartTime>07:36:14</StartTime>
+			<EndDate>20131216</EndDate>
+			<EndTime>07:36:14</EndTime>
+			<StartPlace>上海虹桥火车站</StartPlace>
+			<AcrossFlag>B</AcrossFlag>
+			<LCAppnt>
+				<AppntName>王零四</AppntName>
+				<AppntMobile>13843838438</AppntMobile>
+				<RelaToInsured>00</RelaToInsured>
+			</LCAppnt>
+			<LCInsureds>
+				<LCInsured>
+					<Name>王零四</Name>
+					<Mobile>13843838438</Mobile>
+					<Risks>
+						<Risk>
+							<RiskCode>00136400</RiskCode>
+							<MainRiskCode>00136400</MainRiskCode>
+							<RiskName>信泰客运汽车意外伤害保险</RiskName>
+							<Amnt>200000</Amnt>
+							<Prem>1.6</Prem>
+						</Risk>
+						<RiskCount>1</RiskCount>
+					</Risks>
+				</LCInsured>
+				<LCInsuredCount>1</LCInsuredCount>
+			</LCInsureds>
+		</LCCont>
+	</TranRequest>
+</TranData>
+
+	请求服务器开始时间===========2013-12-1615:36:15
+	服务器处理返回时间===========2013-12-1615:36:30
+	服务器处理时间（毫秒）：========================15328
+	大黄蜂在线承保(ST000052)应答...
+<?xml version="1.0" encoding="GBK"?>
+	<TranData>
+		<BaseInfo><!-- 交易日期 CD01 -->
+			<TransrDate>20131216</TransrDate><!-- 交易时间 CD02 -->
+			<TransrTime>07:36:14</TransrTime><!-- 柜员代码 -->
+			<TellerNo>0001</TellerNo><!-- 交易流水号 -->
+			<TransrNo>DHF20131216153614059</TransrNo><!-- 销售渠道 CD03 -->
+			<SaleChannel>W</SaleChannel><!-- 销售方式 CD26 -->
+			<SellType>20</SellType><!-- 处理标志 CD04 -->
+			<FunctionFlag>ST000052</FunctionFlag><!-- 信息来源 CD28 -->
+			<Source>DHF</Source>
+		</BaseInfo>
+		<TranResponse><!-- 返回标志 CD25 -->
+			<Flag>0</Flag><!-- 返回信息 -->
+			<Desc>交易成功!</Desc>
+			<LCCont><!-- 保单号 -->
+				<ContNo>D00000000411</ContNo><!-- 投保单号 -->
+				<ProposalContNo>340110000000075</ProposalContNo><!-- 总保费 -->
+				<Prem>1.6</Prem>
+			</LCCont>
+		</TranResponse>
+	</TranData>

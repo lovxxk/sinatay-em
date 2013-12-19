@@ -1,0 +1,349 @@
+.product_quote{
+	float:left;
+	padding:4px 20px 4px 4px;
+	margin-bottom:10px;
+	background: #fff;
+	width:736px;
+}
+
+.product_quote .product_img{
+	width:320px;
+	height:320px;
+	border: 1px solid #cccccc;
+	background: #ececec;
+	float:left;
+}
+
+.product_quote .product_img img{
+	width:100%;
+}
+
+.product_quote .quote_info{
+	width:400px;
+	float:right;
+	height:320px;
+	position:relative;
+}
+.product_quote .quote_info .product_title{
+	padding-bottom:2px;
+	border-bottom:1px dashed #cccccc;
+}
+.product_quote .quote_info .main_title{
+	color:#333;
+	font-size:16px;
+	line-height:18px;
+	font-weight: bold;
+}
+
+.product_quote .quote_info .sub_title{
+	color:#e4393c;
+	font-size:15px;
+	line-height:26px;
+	font-weight: bold;
+}
+
+.product_quote .quote_info .input_field{
+/* 	height:37px; */
+	line-height:36px;
+	margin-top:2px;
+	margin-bottom:2px;
+	overflow:hidden;
+}
+
+.quote_info .input_field label{
+	display: block;
+	float:left;
+	width:60px;
+	text-align: right;
+	color:#333;
+}
+
+.quote_info .input_field .price{
+	font-size:19px;
+	color:#e4393c;
+}
+
+.quote_info .input_field .suit{
+	color:#005aa0;
+}
+
+.quote_info .input_field .amount{
+	height:19px;
+	width:59px;
+	height:13px;
+	padding:2px;
+	border:1px solid #c9c9c9;
+	float: left;
+	margin-top: 8px;
+}
+
+
+.product_quote .quote_info .action{
+	position:absolute;
+	bottom:5px;
+	left:60px;
+}
+
+.product_quote .quote_info .action .buy{
+	width:137px;
+	height:38px;
+	color:#fff;
+	font-size:16px;
+	font-weight:bold;
+	background: url(../../image/product/buy.png) no-repeat;
+	border:none;
+	position: relative;
+	cursor: pointer;
+}
+
+.quote_info .input_field .calculate{
+	float:left;
+	margin-left:2px;
+}
+
+.quote_info .input_field .calculate div{
+	float:left;
+}
+
+.quote_info .input_field .calculate ::selection { background-color:rgba(255,255,255,0);}
+.quote_info .input_field .calculate ::-moz-selection {  background-color:rgba(255,255,255,0);} 
+.quote_info .input_field .calculate ::-webkit-selection {  background-color:rgba(255,255,255,0);}
+
+.quote_info .input_field .minus ,.quote_info .input_field .plus{
+	width:13px;
+	height:13px;
+	border:1px solid #c9c9c9;
+	margin:0 3px;
+	margin-top:10px;
+	line-height:13px;
+	text-align: center;
+	color:#333333;
+	cursor: pointer;
+	background: #fff;
+	position: relative;
+}
+
+.quote_info .input_field .num{
+	width:33px;
+	height:20px;
+	border:1px solid #c9c9c9;
+	margin-top:6px;
+	text-align: center;
+	line-height:21px;
+	background: #fff;
+}
+
+.quote_info .input_field ul.select_box  li{
+	height:30px;
+	float:left;
+	text-align: center;
+	margin-top:4px;
+	margin-right:12px;
+	cursor: pointer;
+}
+
+.quote_info .input_field ul li ::selection { background-color:rgba(255,255,255,0);}
+.quote_info .input_field ul li ::-moz-selection {  background-color:rgba(255,255,255,0);} 
+.quote_info .input_field ul li ::-webkit-selection {  background-color:rgba(255,255,255,0);}
+
+.quote_info .input_field .traffic>div{
+	width:55px;
+	float:left;
+	margin-top:4px;
+	margin-right:12px;
+}
+
+.quote_info .input_field .days>div{
+	width:45px;
+	margin-top:4px;
+	margin-right:12px;
+	float:left;
+}
+
+
+.quote_info .input_field ul li{
+	height:30px;
+	float:left;
+	text-align: center;
+	margin-top:4px;
+	margin-right:12px;
+	cursor: pointer;
+}
+
+.quote_info .input_field ul li div{
+	border:1px solid #c9c9c9;
+	line-height:28px;
+}
+
+.quote_info .input_field ul li.select div{
+	border:2px solid #cc3333;
+	line-height:26px;
+	background: url(../../image/option_select.png) right bottom no-repeat;
+}
+
+.quote_info .input_field ul.select_box.traffic li{
+	width:55px;
+}
+
+.quote_info .input_field ul.select_box.days li{
+	width:45px;
+}
+
+
+
+
+
+
+
+
+.product_detail{
+	background: #fff;
+	float:left;
+	min-height:900px;
+	width:100%;
+}
+
+.product_detail .detail_tab{
+	height:38px;
+	border-top:2px solid #3f67bf;
+	background: #e6e6e6;
+	padding-left:19px;
+}
+
+.detail_tab li{
+	line-height:32px;
+	height:32px;
+	width:101px;
+	color:#3c3c3c;
+	margin: 6px 3px 0;
+	float:left;
+	text-align: center;
+	font-weight:bold;
+	cursor: pointer;
+}
+
+.detail_tab li.select{
+	color:#3366cc;
+	background: url(../../image/service/customer_tab.png) no-repeat top center;
+}
+
+.detail_container{
+	
+}
+
+.detail_container .detail_main{
+	display: none;
+}
+
+.detail_container .detail{
+	display: block;
+}
+.detail_container .service{
+	padding-left:26px;
+	padding-top:10px;
+}
+
+.detail_container .detail_main p{
+	line-height:28px;
+}
+
+.detail_container .detail_main p.title{
+	color:#ff0000;
+	font-weight: bold;
+}
+.detail_container .detail_main p.content{
+	color:#000;
+}
+
+.quick_help{
+	width:100%;
+	margin-top:22px;
+	overflow: hidden;	
+}
+
+.help{
+	width:249px;
+	float:left;
+	margin-left:1px;
+	background: #fff;
+}
+
+.help .help_title{
+	height:40px;
+	font-size:14px;
+	font-weight:bold;
+	line-height:40px;
+	color:#333333;
+	background: #c5c5c5;
+	text-align: center;
+	cursor: default;
+}
+
+.quick_help .help:hover .help_title{
+	color:#fff;
+	background: #3f67bf;
+}
+
+.quick_help .help .help_content{
+	padding: 12px 0;
+}
+
+.quick_help .help p{
+	padding-left:28px;
+	line-height:28px;
+}
+.quick_help .help p a{
+	color:#3c3c3c;
+}
+
+.quick_help .help p a:hover{
+	color:#3f67bf;
+}
+
+.purchaseHistory{
+	padding:15px 24px 20px 28px;
+}
+
+.purchaseHistory .text_row{
+	height:45px;
+	line-height:45px;
+	color:#666;
+	text-align: left;
+	border-bottom:1px dashed #ccc;
+}
+
+.purchaseHistory .text_row.label{
+	font-weight:bold;
+}
+
+.purchaseHistory .text_row .text_col{
+	float:left;
+	height:45px;
+}
+
+.purchaseHistory .text_row .text_col.no{
+	width:132px;
+}
+.purchaseHistory .text_row .text_col.name{
+	width:260px;
+}
+.purchaseHistory .text_row .text_col.price{
+	width:90px;
+}
+.purchaseHistory .text_row .text_col.quota{
+	width:60px;
+}
+.purchaseHistory .text_row .text_col.time{
+	width:150px;
+}
+
+.purchaseHistory .text_row .text_col.no span{
+	color:#999;
+}
+.purchaseHistory .text_row .text_col.price span{
+	color:#ff3333;
+}
+
+.action a:hover{
+	text-decoration: underline;
+}

@@ -1,0 +1,64 @@
+.bind_info{
+	overflow: hidden;
+	margin: 0 20px;
+	margin-bottom:30px;
+}
+
+.bind_info #alertMessage{
+	display: block;
+	text-align: left;
+	margin-bottom: 20px;
+	padding-left: 30px;
+}
+
+.bind_info .bind_input{
+	overflow: hidden;
+}
+
+.bind_info .bind_input .bind_label{
+	width:165px;
+	float:left;
+	text-align: right;
+	font-size:14px;
+	line-height:40px;
+}
+
+.bind_info .bind_input .bind_text{
+	width:155px;
+	float:left;
+	text-align: left;
+	font-size:20px;
+	height:24px;
+	padding:2px;
+	border:1px solid #c9c9c9;
+	margin-top:6px;
+	color:#333;
+	font-size:14px;
+	line-height:24px;
+	margin-left:5px;
+	
+	/*ie7 fix*/
+	*height:21px;
+	*padding-top:5px;
+}
+
+.bind_info .bind_input .bind_text.vali{
+	width:90px;
+}
+
+.bind_info .bind_input .send_vali{
+	width:85px;
+	height:22px;
+	background: url(../../image/btn/btn_vali_bg.png) center no-repeat;
+	float:left;
+	margin-top:10px;
+	margin-left:12px;
+	color:#fff;
+	border:none;
+	font-size:12px;
+	line-height:22px;
+	position:relative;
+	cursor:pointer;
+	
+	*line-height:16px;
+}

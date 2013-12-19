@@ -1,0 +1,78 @@
+.head_mid .main_title{
+	display: none;
+}
+
+.middle .h_layout{
+	padding-bottom:19px;
+}
+
+.middle .nav_index{
+	height:42px;
+}
+.middle .nav_index li{
+	line-height:42px;
+	font-size:13px;
+	display:inline;
+}
+.middle .nav_index li a{
+	color:#535353;
+}
+
+.success_result .tip_left{
+	width:243px;
+	float:left;
+	background: url(../../image/user/reset_success.png) center no-repeat;
+	height:300px;
+}
+.success_result p.info_top{
+	line-height:75px;
+}
+.success_result p{
+	margin-left:55px;
+}
+
+
+.success_main{
+	background: #fff;
+}
+
+.success_main .top{
+	height:5px;
+	background: #3f67bf;
+}
+
+.success_result{
+	margin:0 110px;
+	overflow: hidden;
+}
+.success_result .info{
+	margin-left:243px;
+	padding-top:76px;
+	width: 400px;
+}
+.success_result .info p span{
+	color:#ff3333;
+}
+
+.success_result .info p a{
+	color:#ff3333;
+	text-decoration: underline;
+}
+
+
+.return_index{
+	margin:60px 0 60px 130px; 
+}
+.return_index button{
+	width:137px;
+	height:38px;
+	background: url(../../image/policy/return_index.png) no-repeat center;
+	border:none;
+	position:relative;
+	margin:0 auto;
+	cursor: pointer;
+	
+	color:#fff;
+	font-size:16px;
+	font-weight: bold;
+}

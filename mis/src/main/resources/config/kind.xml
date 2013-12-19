@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="GBK"?>
+<GeKindFromConfig>
+<!--要向核心同步的险种代码-->
+<synchCoreRiskCodes>
+	<GeRiskClassCodeAndRiskCode>
+		<riskClassCode>05</riskClassCode>
+		<riskCode>0510</riskCode>
+	</GeRiskClassCodeAndRiskCode>
+	
+	<GeRiskClassCodeAndRiskCode>
+		<riskClassCode>05</riskClassCode>
+		<riskCode>0507</riskCode>
+	</GeRiskClassCodeAndRiskCode>
+</synchCoreRiskCodes>
+
+<!--配置好的固定的险别代码-->
+<riskAndKindList>
+	<!--第三者责任保险-->
+	<GeKind>
+		<kindCode>B</kindCode>
+		<codeType>0</codeType>
+		<valueRange>责任限额@{50000:5万,100000:10万,200000:20万,300000:30万,500000:50万,1000000:100万}</valueRange>
+	</GeKind>
+	
+	<!--玻璃单独破碎险-->
+	<GeKind>
+		<kindCode>F</kindCode>
+		<codeType>0</codeType>
+		<valueRange>@{00:进口,01:国产}</valueRange>
+	</GeKind>
+	
+	<!--车身划痕损失险-->
+	<GeKind>
+		<kindCode>L</kindCode>
+		<codeType>0</codeType>
+		<valueRange>保险金额@{2000:2千,5000:5千,10000:1万,20000:2万}</valueRange>
+	</GeKind>
+	
+	<!--可选免赔额特约-->
+	<GeKind>
+		<kindCode>M1</kindCode>
+		<codeType>0</codeType>
+		<valueRange>免赔额@{300:300,500:500,1000:1000,2000:2000}</valueRange>
+	</GeKind>
+	</riskAndKindList>
+</GeKindFromConfig>
+
+
