@@ -1,43 +1,118 @@
-
---------------------------------------
-
-MessageType: ST000034
-TransRefGUID: 20131219202900054035
-TransCode: Res
-XML: <?xml version="1.0" encoding="GBK"?>
+<?xml version="1.0" encoding="GBK"?>
 <TranData>
 	<BaseInfo>
-		<TransrDate>20131219</TransrDate>
-		<TransrTime>202954</TransrTime>
-		<TellerNo>86010000</TellerNo>
-		<TransrNo>20131219202900054035</TransrNo>
+		<TransrDate>20131221</TransrDate>
+		<TransrTime>072837</TransrTime>
+		<TellerNo>0001</TellerNo>
+		<TransrNo>TBJ20131221152837079</TransrNo>
 		<SaleChannel>W</SaleChannel>
 		<SellType>20</SellType>
-		<FunctionFlag>ST000034</FunctionFlag>
-		<Source>WEB_PERSON</Source>
+		<FunctionFlag>ST000029</FunctionFlag>
+		<Source>TBJ</Source>
 	</BaseInfo>
 	<TranResponse>
 		<Flag>1</Flag>
-		<Desc></Desc>
+		<Desc>���׳ɹ�!</Desc>
 		<LCCont>
-			<ProposalContNo></ProposalContNo>
-			<AccName></AccName>
+			<ContNo></ContNo>
+			<ContState></ContState>
+			<CValiDate></CValiDate>
 			<Prem></Prem>
+			<PayRemain></PayRemain>
+			<PayPrem></PayPrem>
+			<AccBankCode></AccBankCode>
+			<BankAccNo></BankAccNo>
+			<TransState></TransState>
+			<TransDate>20131221</TransDate>
+			<PayCount></PayCount>
+			<AgentCode></AgentCode>
+			<AgentName></AgentName>
+			<AgentMobile></AgentMobile>
+			<AgentGroup></AgentGroup>
+			<AgentOWDate></AgentOWDate>
+			<NewAgentName></NewAgentName>
+			<SupervisorName></SupervisorName>
+			<SupervisorCode></SupervisorCode>
+			<ComName></ComName>
+			<ComAddress></ComAddress>
+			<IsVisit></IsVisit>
+			<RiskName></RiskName>
+			<SourceFlag></SourceFlag>
+			<WNFlag></WNFlag>
+			<CountBala></CountBala>
 			<LCAppnt>
-				<AppntIDType></AppntIDType>
-				<AppntIDNo></AppntIDNo>
-				<AppntMobile></AppntMobile>
+				<AppntName>����</AppntName>
+				<AppntSex>0</AppntSex>
+				<AppntBirthday>19860523</AppntBirthday>
+				<AppntIDType>0</AppntIDType>
+				<AppntIDNo>370921198605231516</AppntIDNo>
+				<AppntPhone></AppntPhone>
+				<AppntOfficePhone></AppntOfficePhone>
+				<AppntMobile>15800760896</AppntMobile>
+				<AppntFax></AppntFax>
+				<Marriage></Marriage>
+				<Province>440000</Province>
+				<City>440300</City>
+				<County></County>
+				<MailAddress></MailAddress>
+				<MailZipCode></MailZipCode>
+				<GrpName></GrpName>
+				<Email>lovxxk@163.com</Email>
+				<JobCode></JobCode>
+				<JobName></JobName>
+				<Nationality></Nationality>
+				<LicenseType></LicenseType>
 			</LCAppnt>
 			<LCInsureds>
 				<LCInsuredCount>1</LCInsuredCount>
 				<LCInsured>
+					<Name>����</Name>
+					<Sex>0</Sex>
+					<Birthday>19860523</Birthday>
+					<IDType>0</IDType>
+					<IDNo>370921198605231516</IDNo>
+					<HomePhone></HomePhone>
+					<OfficePhone></OfficePhone>
+					<Mobile>15800760896</Mobile>
+					<Fax></Fax>
+					<Marriage></Marriage>
+					<Province>440000</Province>
+					<City>440307</City>
+					<County></County>
+					<MailAddress></MailAddress>
+					<MailZipCode></MailZipCode>
+					<GrpName></GrpName>
+					<Email>lovxxk@163.com</Email>
+					<JobCode>1050104</JobCode>
+					<JobName></JobName>
+					<Nationality></Nationality>
+					<LicenseType></LicenseType>
 					<Risks>
 						<RiskCount>1</RiskCount>
 						<Risk>
-							<RiskCode></RiskCode>
-							<MainRiskCode></MainRiskCode>
-							<Amnt></Amnt>
-							<Prem>500.00</Prem>
+							<RiskCode>00136600</RiskCode>
+							<MainRiskCode>00116600</MainRiskCode>
+							<RiskAccType></RiskAccType>
+							<RiskDutyType></RiskDutyType>
+							<PolNo></PolNo>
+							<RiskName></RiskName>
+							<InsuYearFlag>Y</InsuYearFlag>
+							<InsuYear>30</InsuYear>
+							<PayEndYearFlag>Y</PayEndYearFlag>
+							<PayEndYear>5</PayEndYear>
+							<PayIntv>12</PayIntv>
+							<Prem></Prem>
+							<Amnt>1000000</Amnt>
+							<CValiDate></CValiDate>
+							<State></State>
+							<LCBnfs>
+								<LCBnfCount>1</LCBnfCount>
+								<LCBnf>
+									<BnfGrade></BnfGrade>
+									<Name></Name>
+									<BnfLot></BnfLot>
+								</LCBnf>
+							</LCBnfs>
 						</Risk>
 					</Risks>
 				</LCInsured>
@@ -45,55 +120,3 @@ XML: <?xml version="1.0" encoding="GBK"?>
 		</LCCont>
 	</TranResponse>
 </TranData>
---------------------------------------
-
-
-
-
---------------------------------------
-
-MessageType: ST000022
-TransRefGUID: 20131219203000006037
-TransCode: Res
-XML: <?xml version="1.0" encoding="GBK"?>
-<TranData>
-	<BaseInfo><!-- 交易日期 CD01 -->
-		<TransrDate>20131219</TransrDate><!-- 交易时间 CD02 -->
-		<TransrTime>203006</TransrTime><!-- 柜员代码 -->
-		<TellerNo>86010000</TellerNo><!-- 交易流水号 -->
-		<TransrNo>20131219203000006037</TransrNo><!-- 销售渠道 CD03 -->
-		<SaleChannel>W</SaleChannel><!-- 销售方式 CD26 -->
-		<SellType>20</SellType><!-- 处理标志 CD04 -->
-		<FunctionFlag>ST000022</FunctionFlag><!-- 信息来源 CD28 -->
-		<Source>WEB_PERSON</Source>
-	</BaseInfo>
-	<TranResponse><!-- 返回标志 CD25 -->
-		<Flag>1</Flag><!-- 返回信息 -->
-		<Desc>Suc</Desc>
-		<LCCont><!-- 投保书号 -->
-			<ProposalContNo>310010000001598</ProposalContNo><!-- 账户姓名 -->
-			<AccName /><!-- 总保费 -->
-			<Prem>500</Prem>
-			<LCAppnt><!-- 投保人证件类型 CD14 -->
-				<AppntIDType>0</AppntIDType><!-- 投保人证件号码 -->
-				<AppntIDNo>33010119900506007X</AppntIDNo><!-- 投保人移动电话 -->
-				<AppntMobile>13511111111</AppntMobile>
-			</LCAppnt>
-			<LCInsureds>
-				<LCInsuredCount>1</LCInsuredCount>
-				<LCInsured>
-					<Risks>
-						<RiskCount>1</RiskCount>
-						<Risk><!-- 险种代码 -->
-							<RiskCode>00115500</RiskCode><!-- 主险险种代码 -->
-							<MainRiskCode>00115500</MainRiskCode><!-- 保额 -->
-							<Amnt>0</Amnt><!-- 保险费 -->
-							<Prem>500</Prem>
-						</Risk>
-					</Risks>
-				</LCInsured>
-			</LCInsureds>
-		</LCCont>
-	</TranResponse>
-</TranData>
---------------------------------------

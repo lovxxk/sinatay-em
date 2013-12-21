@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="GBK"?>
+<mapping>
+	<description>大黄蜂保单状态查询</description>
+	<class name="cn.com.sinosoft.portalModule.transport.transactionObject.TXInsurance" auto-complete="false">
+		<map-to xml="TranData"/>
+		<field name="transExeDate" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TransrDate" location="BaseInfo"/>
+		</field>
+		<field name="transExeTime" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TransrTime" location="BaseInfo"/>
+		</field>
+		<field name="tellerNo" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TellerNo" location="BaseInfo"/>
+		</field>
+		<field name="transRefGUID" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="TransrNo" location="BaseInfo"/>
+		</field>
+		<field name="saleChannel" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="SaleChannel" location="BaseInfo"/>
+		</field>
+		<field name="sellType" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="SellType" location="BaseInfo"/>
+		</field>
+		<field name="transType" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="FunctionFlag" location="BaseInfo"/>
+		</field>
+		<field name="source" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="Source" location="BaseInfo"/>
+		</field>
+		<field name="businessDatum" collection="arraylist"  type="cn.com.sinosoft.portalModule.transport.sinatay.TranRequest">
+			<bind-xml name="TranRequest"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.sinatay.TranRequest" auto-complete="false">
+		<field name="queryData" type="cn.com.sinosoft.portalModule.transport.dhf100.QueryData">
+			<bind-xml name="QueryData"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.dhf100.QueryData" auto-complete="false">
+		<field name="pageNo" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.IntegerConverterString">
+			<bind-xml name="PageNo"/>
+		</field>
+		<field name="pageRowNum" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.IntegerConverterString">
+			<bind-xml name="PageRowNum"/>
+		</field>
+		<field name="queryType" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="QueryType"/>
+		</field>
+		<field name="params" type="cn.com.sinosoft.portalModule.transport.dhf100.Params">
+			<bind-xml name="Params"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.dhf100.Params" auto-complete="false">
+		<field name="paramCount" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.IntegerConverterString">
+			<bind-xml name="ParamCount"/>
+		</field>
+		<field name="param" collection="arraylist"  type="cn.com.sinosoft.portalModule.transport.dhf100.Param">
+			<bind-xml name="Param"/>
+		</field>
+	</class>
+	
+	<class name="cn.com.sinosoft.portalModule.transport.dhf100.Param" auto-complete="false">
+		<field name="key" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="Key"/>
+		</field>
+		<field name="value" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="Value"/>
+		</field>
+	</class>	
+
+</mapping>
