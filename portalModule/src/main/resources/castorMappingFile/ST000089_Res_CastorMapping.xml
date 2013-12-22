@@ -33,10 +33,10 @@
 	</class>
 	
 	<class name="cn.com.sinosoft.portalModule.transport.sinatay.TranResponse" auto-complete="false">
-		<field name="flag" type="string">
+		<field name="flag" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="Flag"/>
 		</field>
-		<field name="desc" type="string">
+		<field name="desc" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="Desc"/>
 		</field>
 	</class>

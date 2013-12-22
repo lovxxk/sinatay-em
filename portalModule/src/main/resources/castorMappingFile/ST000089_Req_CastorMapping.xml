@@ -33,7 +33,7 @@
 	</class>
 	
 	<class name="cn.com.sinosoft.portalModule.transport.sinatay.TranRequest" auto-complete="false">
-		<field name="tradeNo" type="string">
+		<field name="tradeNo" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="TradeNo"/>
 		</field>
 	</class>
