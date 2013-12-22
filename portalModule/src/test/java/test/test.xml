@@ -1,69 +1,27 @@
-
-客服系统通知请求...
-<?xml version="1.0" encoding="GBK"?>
 <TranData>
 	<BaseInfo>
-		<TransrDate>20130831</TransrDate>
-		<TransrTime>132144</TransrTime>
-		<TellerNo>044093</TellerNo>
-		<TransrNo>20130831212100044093</TransrNo>
-		<SaleChannel>1</SaleChannel>
-		<FunctionFlag>ST020001</FunctionFlag>
+		<!-- 交易日期 CD01 -->
+		<TransrDate>20121101</TransrDate>
+		<!-- 交易时间 CD02 -->
+		<TransrTime>18:34:23</TransrTime>
+		<!-- 柜员代码 -->
+		<TellerNo>0001</TellerNo>
+		<!-- 交易流水号 -->
+		<TransrNo>201211010003</TransrNo>
+		<!-- 销售渠道 CD03 -->
+		<SaleChannel>W</SaleChannel>
+		<!-- 销售方式 CD26 -->
+		<SellType>20</SellType>
+		<!-- 处理标志 CD04 -->
+		<FunctionFlag>ST000038</FunctionFlag>
+		<!-- 信息来源 CD28 -->
+		<Source>TBJ</Source>
 	</BaseInfo>
 	<TranRequest>
-		<ServiceInfos>
-			<ServiceCount>1</ServiceCount>
-			<ServiceInfo id="1">
-				<Type></Type>
-				<CUSTOMER_NAME></CUSTOMER_NAME>
-				<CUSTOMER_02_001></CUSTOMER_02_001>
-				<CUSTOMER_03_001></CUSTOMER_03_001>
-				<CUSTOMER_05_001></CUSTOMER_05_001>
-				<CUSTOMER_11_001></CUSTOMER_11_001>
-				<CUSTOMER_12_001></CUSTOMER_12_001>
-				<CUSTOMER_14_001></CUSTOMER_14_001>
-				<CUSTOMER_17_001></CUSTOMER_17_001>
-				<CUSTOMER_19_001></CUSTOMER_19_001>
-				<CUSTOMER_20_001></CUSTOMER_20_001>
-				<CUSTOMER_21_001></CUSTOMER_21_001>
-				<CUSTOMER_27_001></CUSTOMER_27_001>
-				<CUSTOMER_28_001></CUSTOMER_28_001>
-				<CUSTOMER_31_001></CUSTOMER_31_001>
-				<CUSTOMER_60_001></CUSTOMER_60_001>
-				<CUSTOMER_61_001></CUSTOMER_61_001>
-				<CUSTOMER_73_001></CUSTOMER_73_001>
-				<CUSTOMER_74_001></CUSTOMER_74_001>
-				<CUSTOMER_75_001></CUSTOMER_75_001>
-				<CUSTOMER_76_001></CUSTOMER_76_001>
-				<CUSTOMER_97_001></CUSTOMER_97_001>
-				<CUSTOMER_98_001></CUSTOMER_98_001>
-				<CUSTOMER_99_001></CUSTOMER_99_001>
-				<CUSTOMER_100_001></CUSTOMER_100_001>
-				<CUSTOMER_101_001></CUSTOMER_101_001>
-				<CUSTOMER_102_001></CUSTOMER_102_001>
-				<CUSTOMER_103_001></CUSTOMER_103_001>
-				<CUSTOMER_104_001></CUSTOMER_104_001>
-				<CUSTOMER_105_001></CUSTOMER_105_001>
-			</ServiceInfo>
-		</ServiceInfos>
+		<LCCont>
+			<!-- 订单号 -->
+			<OrderId></OrderId>				<!-- 保单号 -->
+			<ContNo>201211010004</ContNo>
+		</LCCont>
 	</TranRequest>
 </TranData>
-txi: cn.com.sinosoft.portalModule.transport.transactionObject.TXInsurance@5a9de6
-*********
-客服系统通知应答...
-<?xml version="1.0" encoding="GBK"?>
-<TranData>
-	<BaseInfo>
-		<TransrDate>20130831</TransrDate>
-		<TransrTime>132144</TransrTime>
-		<TellerNo>20130831212100044017</TellerNo>
-		<TransrNo>20130831212100044018</TransrNo>
-		<SaleChannel>1</SaleChannel>
-		<FunctionFlag>ST020001</FunctionFlag>
-	</BaseInfo>
-	<TranResponse>
-		<Flag>1</Flag>
-		<Desc></Desc>
-	</TranResponse>
-</TranData>
-txi: cn.com.sinosoft.portalModule.transport.transactionObject.TXInsurance@1551d7f

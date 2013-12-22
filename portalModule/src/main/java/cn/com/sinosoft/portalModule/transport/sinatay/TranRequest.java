@@ -61,6 +61,16 @@ public class TranRequest implements java.io.Serializable {
 	private BigDecimal totalPrem;
 	private List<ReconciliationDetail> detailList;
 	private String orderId;
+	
+	private PayInfo payInfo;
+	
+	public PayInfo getPayInfo() {
+		return payInfo;
+	}
+
+	public void setPayInfo(PayInfo payInfo) {
+		this.payInfo = payInfo;
+	}
 
 	public String getBillDate() {
 		return billDate;

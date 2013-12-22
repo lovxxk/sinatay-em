@@ -1,122 +1,18 @@
 <?xml version="1.0" encoding="GBK"?>
 <TranData>
 	<BaseInfo>
-		<TransrDate>20131221</TransrDate>
-		<TransrTime>072837</TransrTime>
+		<TransrDate>20131222</TransrDate>
+		<TransrTime>165128</TransrTime>
 		<TellerNo>0001</TellerNo>
-		<TransrNo>TBJ20131221152837079</TransrNo>
+		<TransrNo>TBJ20131223005128030</TransrNo>
 		<SaleChannel>W</SaleChannel>
 		<SellType>20</SellType>
-		<FunctionFlag>ST000029</FunctionFlag>
+		<FunctionFlag>ST000096</FunctionFlag>
 		<Source>TBJ</Source>
 	</BaseInfo>
 	<TranResponse>
 		<Flag>1</Flag>
 		<Desc>交易成功!</Desc>
-		<LCCont>
-			<ContNo></ContNo>
-			<ContState></ContState>
-			<CValiDate></CValiDate>
-			<Prem></Prem>
-			<PayRemain></PayRemain>
-			<PayPrem></PayPrem>
-			<AccBankCode></AccBankCode>
-			<BankAccNo></BankAccNo>
-			<TransState></TransState>
-			<TransDate>20131221</TransDate>
-			<PayCount></PayCount>
-			<AgentCode></AgentCode>
-			<AgentName></AgentName>
-			<AgentMobile></AgentMobile>
-			<AgentGroup></AgentGroup>
-			<AgentOWDate></AgentOWDate>
-			<NewAgentName></NewAgentName>
-			<SupervisorName></SupervisorName>
-			<SupervisorCode></SupervisorCode>
-			<ComName></ComName>
-			<ComAddress></ComAddress>
-			<IsVisit></IsVisit>
-			<RiskName></RiskName>
-			<SourceFlag></SourceFlag>
-			<WNFlag></WNFlag>
-			<CountBala></CountBala>
-			<LCAppnt>
-				<AppntName>刘晨</AppntName>
-				<AppntSex>0</AppntSex>
-				<AppntBirthday>19860523</AppntBirthday>
-				<AppntIDType>0</AppntIDType>
-				<AppntIDNo>370921198605231516</AppntIDNo>
-				<AppntPhone></AppntPhone>
-				<AppntOfficePhone></AppntOfficePhone>
-				<AppntMobile>15800760896</AppntMobile>
-				<AppntFax></AppntFax>
-				<Marriage></Marriage>
-				<Province>440000</Province>
-				<City>440300</City>
-				<County></County>
-				<MailAddress></MailAddress>
-				<MailZipCode></MailZipCode>
-				<GrpName></GrpName>
-				<Email>lovxxk@163.com</Email>
-				<JobCode></JobCode>
-				<JobName></JobName>
-				<Nationality></Nationality>
-				<LicenseType></LicenseType>
-			</LCAppnt>
-			<LCInsureds>
-				<LCInsuredCount>1</LCInsuredCount>
-				<LCInsured>
-					<Name>刘晨</Name>
-					<Sex>0</Sex>
-					<Birthday>19860523</Birthday>
-					<IDType>0</IDType>
-					<IDNo>370921198605231516</IDNo>
-					<HomePhone></HomePhone>
-					<OfficePhone></OfficePhone>
-					<Mobile>15800760896</Mobile>
-					<Fax></Fax>
-					<Marriage></Marriage>
-					<Province>440000</Province>
-					<City>440307</City>
-					<County></County>
-					<MailAddress></MailAddress>
-					<MailZipCode></MailZipCode>
-					<GrpName></GrpName>
-					<Email>lovxxk@163.com</Email>
-					<JobCode>1050104</JobCode>
-					<JobName></JobName>
-					<Nationality></Nationality>
-					<LicenseType></LicenseType>
-					<Risks>
-						<RiskCount>1</RiskCount>
-						<Risk>
-							<RiskCode>00136600</RiskCode>
-							<MainRiskCode>00116600</MainRiskCode>
-							<RiskAccType></RiskAccType>
-							<RiskDutyType></RiskDutyType>
-							<PolNo></PolNo>
-							<RiskName></RiskName>
-							<InsuYearFlag>Y</InsuYearFlag>
-							<InsuYear>30</InsuYear>
-							<PayEndYearFlag>Y</PayEndYearFlag>
-							<PayEndYear>5</PayEndYear>
-							<PayIntv>12</PayIntv>
-							<Prem></Prem>
-							<Amnt>1000000</Amnt>
-							<CValiDate></CValiDate>
-							<State></State>
-							<LCBnfs>
-								<LCBnfCount>1</LCBnfCount>
-								<LCBnf>
-									<BnfGrade></BnfGrade>
-									<Name></Name>
-									<BnfLot></BnfLot>
-								</LCBnf>
-							</LCBnfs>
-						</Risk>
-					</Risks>
-				</LCInsured>
-			</LCInsureds>
-		</LCCont>
+		<Url></Url>
 	</TranResponse>
 </TranData>
