@@ -39,49 +39,49 @@
 	</class>
 	
 	<class name="cn.com.sinosoft.portalModule.transport.sinatay.PayInfo" auto-complete="false">
-		<field name="proposalContNo" type="string">
+		<field name="proposalContNo" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="ProposalContNo"/>
 		</field>
-		<field name="payType" type="string">
+		<field name="payType" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="PayType"/>
 		</field>
-		<field name="orderId" type="string">
+		<field name="orderId" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="orderId"/>
 		</field>
-		<field name="prem" type="big-decimal">
+		<field name="prem" type="big-decimal" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="Prem"/>
 		</field>
-		<field name="accName" type="string">
+		<field name="accName" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="AccName"/>
 		</field>
-		<field name="accBankCode" type="string">
+		<field name="accBankCode" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="AccBankCode"/>
 		</field>
-		<field name="accProvince" type="string">
+		<field name="accProvince" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="AccProvince"/>
 		</field>
-		<field name="accCity" type="string">
+		<field name="accCity" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="AccCity"/>
 		</field>
-		<field name="accType" type="string">
+		<field name="accType" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="AccType"/>
 		</field>
-		<field name="creditValid" type="string">
+		<field name="creditValid" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="CreditValid"/>
 		</field>
-		<field name="creditCvv2" type="string">
+		<field name="creditCvv2" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="CreditCvv2"/>
 		</field>
-		<field name="bankAccNo" type="string">
+		<field name="bankAccNo" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="BankAccNo"/>
 		</field>
-		<field name="appntIDType" type="string">
+		<field name="appntIDType" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="AppntIDType"/>
 		</field>
-		<field name="appntIDNo">
+		<field name="appntIDNo" type="string"  handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="appntIDNo"/>
 		</field>
-		<field name="appntMobile">
+		<field name="appntMobile" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="AppntMobile"/>
 		</field>
 	</class>
