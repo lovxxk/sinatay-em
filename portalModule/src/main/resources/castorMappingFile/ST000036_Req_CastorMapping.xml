@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="GBK"?>
 <mapping>
 	<description>部份领取试算</description>
-	<class
-		name="cn.com.sinosoft.portalModule.transport.transactionObject.TXInsurance"
-		auto-complete="false">
+	<class name="cn.com.sinosoft.portalModule.transport.transactionObject.TXInsurance" auto-complete="false">
 		<map-to xml="TranData" />
 		<field name="transExeDate" type="string"
 			handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
@@ -52,13 +50,13 @@
 	</class>
 	<class name="cn.com.sinosoft.portalModule.transport.sinatay.LCCont"
 		auto-complete="false">
-		<field name="orderId" type="string">
+		<field name="orderId" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="OrderId" />
 		</field>
-		<field name="contNo" type="string">
+		<field name="contNo" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="ContNo" />
 		</field>
-		<field name="applyMoney" type="string">
+		<field name="applyMoney" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="ApplyMoney" />
 		</field>
 	</class>

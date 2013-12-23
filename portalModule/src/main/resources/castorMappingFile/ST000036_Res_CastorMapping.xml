@@ -33,10 +33,10 @@
 	</class>
 	
 	<class name="cn.com.sinosoft.portalModule.transport.sinatay.TranResponse" auto-complete="false">
-		<field name="flag" type="string">
+		<field name="flag" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="Flag"/>
 		</field>
-		<field name="desc" type="string">
+		<field name="desc" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="Desc"/>
 		</field>
 		<field name="lcCont" type="cn.com.sinosoft.portalModule.transport.sinatay.LCCont">
@@ -44,22 +44,22 @@
 		</field>
 	</class>
 	<class name="cn.com.sinosoft.portalModule.transport.sinatay.LCCont" auto-complete="false">
-		<field name="contNo" type="string">
+		<field name="contNo" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="ContNo"/>
 		</field>
-		<field name="getMoney" type="string">
+		<field name="getMoney" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="GetMoney"/>
 		</field>
-		<field name="pdSxFee" type="string">
+		<field name="pdSxFee" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="PdSxFee"/>
 		</field>
-		<field name="loanBJ" type="string">
+		<field name="loanBJ" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="LoanBJ"/>
 		</field>
-		<field name="loanLX" type="string">
+		<field name="loanLX" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="LoanLX"/>
 		</field>
-		<field name="leavaAccBala" type="string">
+		<field name="leavaAccBala" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="LeavaAccBala"/>
 		</field>
 	</class>

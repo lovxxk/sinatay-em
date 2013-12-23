@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="GBK"?>
 <mapping>
-	<description>退保试算请求</description>
+	<description>退保试算请求</description>	
 	<class name="cn.com.sinosoft.portalModule.transport.transactionObject.TXInsurance" auto-complete="false">
 		<map-to xml="TranData"/>
 		<field name="transExeDate" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
@@ -38,7 +38,7 @@
 		</field>
 	</class>
 	<class name="cn.com.sinosoft.portalModule.transport.sinatay.LCCont" auto-complete="false">
-		<field name="contNo" type="string">
+		<field name="contNo" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="ContNo"/>
 		</field>
 	</class>

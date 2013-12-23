@@ -36,14 +36,14 @@
 	</class>
 	
 	<class name="cn.com.sinosoft.portalModule.transport.sinatay.TranResponse" auto-complete="false">
-		<field name="flag" type="string">
-			<bind-xml name="Flag"/>
+		<field name="flag" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="Flag" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler"/>
 		</field>
-		<field name="desc" type="string">
-			<bind-xml name="Desc"/>
+		<field name="desc" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="Desc" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler"/>
 		</field>
-		<field name="detailArray" type="string">
-			<bind-xml name="DetailArray"/>
+		<field name="detailArray" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
+			<bind-xml name="DetailArray" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler"/>
 		</field>
 	</class>
 </mapping>

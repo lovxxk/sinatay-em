@@ -38,13 +38,13 @@
 		</field>
 	</class>
 	<class name="cn.com.sinosoft.portalModule.transport.sinatay.LCCont" auto-complete="false">
-		<field name="contNo" type="string">
+		<field name="contNo" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="ContNo"/>
 		</field>
-		<field name="reason" type="string">
+		<field name="reason" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="Reason"/>
 		</field>
-		<field name="relaToAgent" type="string">
+		<field name="relaToAgent" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="RelaToAgent"/>
 		</field>
 	</class>
