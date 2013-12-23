@@ -87,6 +87,9 @@ public class PartyRolePolicyDTO implements java.io.Serializable{
 	/** 国籍 CD16 */
 	private String nationality;
 	
+	/* 投保人驾照(取转义字符) */
+	private String licenseType;
+	
 	/** 年收入(万元) */
 	private String inCome;
 	
@@ -469,20 +472,20 @@ public class PartyRolePolicyDTO implements java.io.Serializable{
 		return jobCode;
 	}
 
-	public String getJobName() {
-		return jobName;
-	}
-
-	public void setJobName(String jobName) {
-		this.jobName = jobName;
-	}
-
 	/**
 	 * 属性 jobCode 的 setter 方法
 	 * @param jobCode the jobCode to set
 	 */
 	public void setJobCode(String jobCode) {
 		this.jobCode = jobCode;
+	}
+	
+	public String getJobName() {
+		return jobName;
+	}
+
+	public void setJobName(String jobName) {
+		this.jobName = jobName;
 	}
 
 	/**
@@ -525,4 +528,11 @@ public class PartyRolePolicyDTO implements java.io.Serializable{
 		this.fax = fax;
 	}
 	
+	public String getLicenseType() {
+		return licenseType;
+	}
+
+	public void setLicenseType(String licenseType) {
+		this.licenseType = licenseType;
+	}
 }
