@@ -284,6 +284,8 @@ public class LCCont implements java.io.Serializable {
 
 	private String acrossFlag;
 
+	private String ComName;
+	
 	private String comAddress;
 
 	private String isVisit;
@@ -291,10 +293,12 @@ public class LCCont implements java.io.Serializable {
 	private String riskName;
 
 	private String sourceFlag;
-
+	
 	private String wnFlag;
 
 	private String countBala;
+
+	private String invoiceFlag;
 
 	// …Í«Î¡Ï»°Ω∂Ó
 	private String applyMoney;
@@ -911,4 +915,21 @@ public class LCCont implements java.io.Serializable {
 	public void setRelaToAgent(String relaToAgent) {
 		this.relaToAgent = relaToAgent;
 	}
+
+	public String getInvoiceFlag() {
+		return invoiceFlag;
+	}
+
+	public void setInvoiceFlag(String invoiceFlag) {
+		this.invoiceFlag = invoiceFlag;
+	}
+
+	public String getComName() {
+		return ComName;
+	}
+
+	public void setComName(String comName) {
+		ComName = comName;
+	}
+	
 }
