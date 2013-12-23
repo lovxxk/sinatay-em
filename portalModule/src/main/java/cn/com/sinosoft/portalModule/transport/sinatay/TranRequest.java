@@ -61,7 +61,20 @@ public class TranRequest implements java.io.Serializable {
 	private BigDecimal totalPrem;
 	private List<ReconciliationDetail> detailList;
 	private String orderId;
+	
+	private PayInfo payInfo;
+	
+	public PayInfo getPayInfo() {
+		return payInfo;
+	}
 
+	public void setPayInfo(PayInfo payInfo) {
+		this.payInfo = payInfo;
+	}
+	//分段开始日期
+	private Date qStartDate;
+	//分段截至日期
+	private Date qEndDate;
 	public String getBillDate() {
 		return billDate;
 	}
@@ -284,6 +297,22 @@ public class TranRequest implements java.io.Serializable {
 
 	public void setOrderId(String orderId) {
 		this.orderId = orderId;
+	}
+
+	public Date getqStartDate() {
+		return qStartDate;
+	}
+
+	public void setqStartDate(Date qStartDate) {
+		this.qStartDate = qStartDate;
+	}
+
+	public Date getqEndDate() {
+		return qEndDate;
+	}
+
+	public void setqEndDate(Date qEndDate) {
+		this.qEndDate = qEndDate;
 	}
 
 }
