@@ -10,8 +10,6 @@ import java.util.List;
 public class LCAppnt extends PartyRolePolicyDTO implements java.io.Serializable{
 	
 	private static final long serialVersionUID = 1L;
-	/* 投保人驾照(取转义字符) */
-	private String licenseType;
 	
 	/** 与被保人关系 CD17 */
 	private String relaToInsured;
@@ -21,14 +19,6 @@ public class LCAppnt extends PartyRolePolicyDTO implements java.io.Serializable{
 	
 	/** 告知 */
 	private List<TellInfo> tellInfos = new ArrayList<TellInfo>(0);
-
-	public String getLicenseType() {
-		return licenseType;
-	}
-
-	public void setLicenseType(String licenseType) {
-		this.licenseType = licenseType;
-	}
 
 	public String getRelaToInsured() {
 		return relaToInsured;
