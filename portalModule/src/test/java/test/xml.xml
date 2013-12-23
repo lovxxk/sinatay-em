@@ -1,99 +1,18 @@
-
---------------------------------------
-
-MessageType: ST000034
-TransRefGUID: 20131219202900054035
-TransCode: Res
-XML: <?xml version="1.0" encoding="GBK"?>
+<?xml version="1.0" encoding="GBK"?>
 <TranData>
 	<BaseInfo>
-		<TransrDate>20131219</TransrDate>
-		<TransrTime>202954</TransrTime>
-		<TellerNo>86010000</TellerNo>
-		<TransrNo>20131219202900054035</TransrNo>
+		<TransrDate>20131222</TransrDate>
+		<TransrTime>165128</TransrTime>
+		<TellerNo>0001</TellerNo>
+		<TransrNo>TBJ20131223005128030</TransrNo>
 		<SaleChannel>W</SaleChannel>
 		<SellType>20</SellType>
-		<FunctionFlag>ST000034</FunctionFlag>
-		<Source>WEB_PERSON</Source>
+		<FunctionFlag>ST000096</FunctionFlag>
+		<Source>TBJ</Source>
 	</BaseInfo>
 	<TranResponse>
 		<Flag>1</Flag>
-		<Desc></Desc>
-		<LCCont>
-			<ProposalContNo></ProposalContNo>
-			<AccName></AccName>
-			<Prem></Prem>
-			<LCAppnt>
-				<AppntIDType></AppntIDType>
-				<AppntIDNo></AppntIDNo>
-				<AppntMobile></AppntMobile>
-			</LCAppnt>
-			<LCInsureds>
-				<LCInsuredCount>1</LCInsuredCount>
-				<LCInsured>
-					<Risks>
-						<RiskCount>1</RiskCount>
-						<Risk>
-							<RiskCode></RiskCode>
-							<MainRiskCode></MainRiskCode>
-							<Amnt></Amnt>
-							<Prem>500.00</Prem>
-						</Risk>
-					</Risks>
-				</LCInsured>
-			</LCInsureds>
-		</LCCont>
+		<Desc>���׳ɹ�!</Desc>
+		<Url></Url>
 	</TranResponse>
 </TranData>
---------------------------------------
-
-
-
-
---------------------------------------
-
-MessageType: ST000022
-TransRefGUID: 20131219203000006037
-TransCode: Res
-XML: <?xml version="1.0" encoding="GBK"?>
-<TranData>
-	<BaseInfo><!-- 交易日期 CD01 -->
-		<TransrDate>20131219</TransrDate><!-- 交易时间 CD02 -->
-		<TransrTime>203006</TransrTime><!-- 柜员代码 -->
-		<TellerNo>86010000</TellerNo><!-- 交易流水号 -->
-		<TransrNo>20131219203000006037</TransrNo><!-- 销售渠道 CD03 -->
-		<SaleChannel>W</SaleChannel><!-- 销售方式 CD26 -->
-		<SellType>20</SellType><!-- 处理标志 CD04 -->
-		<FunctionFlag>ST000022</FunctionFlag><!-- 信息来源 CD28 -->
-		<Source>WEB_PERSON</Source>
-	</BaseInfo>
-	<TranResponse><!-- 返回标志 CD25 -->
-		<Flag>1</Flag><!-- 返回信息 -->
-		<Desc>Suc</Desc>
-		<LCCont><!-- 投保书号 -->
-			<ProposalContNo>310010000001598</ProposalContNo><!-- 账户姓名 -->
-			<AccName /><!-- 总保费 -->
-			<Prem>500</Prem>
-			<LCAppnt><!-- 投保人证件类型 CD14 -->
-				<AppntIDType>0</AppntIDType><!-- 投保人证件号码 -->
-				<AppntIDNo>33010119900506007X</AppntIDNo><!-- 投保人移动电话 -->
-				<AppntMobile>13511111111</AppntMobile>
-			</LCAppnt>
-			<LCInsureds>
-				<LCInsuredCount>1</LCInsuredCount>
-				<LCInsured>
-					<Risks>
-						<RiskCount>1</RiskCount>
-						<Risk><!-- 险种代码 -->
-							<RiskCode>00115500</RiskCode><!-- 主险险种代码 -->
-							<MainRiskCode>00115500</MainRiskCode><!-- 保额 -->
-							<Amnt>0</Amnt><!-- 保险费 -->
-							<Prem>500</Prem>
-						</Risk>
-					</Risks>
-				</LCInsured>
-			</LCInsureds>
-		</LCCont>
-	</TranResponse>
-</TranData>
---------------------------------------

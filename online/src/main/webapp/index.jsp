@@ -3,7 +3,7 @@
 <%@ include file="/global/ui/taglibs_data.jsp"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<!-- QQ快捷登录验证码 -->
+		<!-- QQ快捷登录验证码qqq -->
 		<meta property="qc:admins" content="242574675514454146316141163757764165" />
 		<!-- 新浪微博快捷登录验证码 -->
 		<meta property="wb:webmaster" content="b7dc8546ff1a7778" />

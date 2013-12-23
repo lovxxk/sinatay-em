@@ -10,6 +10,9 @@ public class GeneratorTransSerialNumber {
 
 	private static final DateFormat dateFormat = new SimpleDateFormat(
 			"yyyyMMddHHmmsssss");
+	
+	private static final DateFormat dateFormat_yyyyMMddHHmmss = new SimpleDateFormat(
+			"yyyyMMddHHmmss");
 
 	private static final DecimalFormat decimalFormat = new DecimalFormat("000");
 	
@@ -17,6 +20,11 @@ public class GeneratorTransSerialNumber {
 
 	public static synchronized String generatorTransSerialNumber() {
 		return dateFormat.format(new Date())
+				+ decimalFormat.format(random.nextInt(100));
+	}
+	
+	public static synchronized String generatorTransSerialNumberyyyyMMddHHmmss() {
+		return dateFormat_yyyyMMddHHmmss.format(new Date())
 				+ decimalFormat.format(random.nextInt(100));
 	}
 }
