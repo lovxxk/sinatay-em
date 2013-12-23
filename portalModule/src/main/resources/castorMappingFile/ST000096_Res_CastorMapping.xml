@@ -27,19 +27,19 @@
 		<field name="source" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="Source" location="BaseInfo"/>
 		</field>
-		<field name="businessDatum" collection="arraylist"  type="cn.com.sinosoft.portalModule.transport.sinatay.TranResponse">
+		<field name="businessDatum" collection="arraylist" type="cn.com.sinosoft.portalModule.transport.sinatay.TranResponse">
 			<bind-xml name="TranResponse"/>
 		</field>
 	</class>
 	
 	<class name="cn.com.sinosoft.portalModule.transport.sinatay.TranResponse" auto-complete="false">
-		<field name="flag" type="string">
+		<field name="flag" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="Flag"/>
 		</field>
-		<field name="desc" type="string">
+		<field name="desc" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="Desc"/>
 		</field>
-		<field name="url" type="string">
+		<field name="url" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="Url"/>
 		</field>
 	</class>
