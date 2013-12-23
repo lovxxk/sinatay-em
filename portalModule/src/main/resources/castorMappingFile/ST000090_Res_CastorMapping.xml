@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="GBK"?>
 <mapping>
-	<description>支付查询接口应答</description>
+	<description>支付应答</description>
 	<class name="cn.com.sinosoft.portalModule.transport.transactionObject.TXInsurance" auto-complete="false">
 		<map-to xml="TranData"/>
 		<field name="transExeDate" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
@@ -33,13 +33,13 @@
 	</class>
 	
 	<class name="cn.com.sinosoft.portalModule.transport.sinatay.TranResponse" auto-complete="false">
-		<field name="outTradeNo" type="string">
+		<field name="outTradeNo" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="OutTradeNo"/>
 		</field>
-		<field name="flag" type="string">
+		<field name="flag" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler"> 
 			<bind-xml name="Flag"/>
 		</field>
-		<field name="desc" type="string">
+		<field name="desc" type="string" handler="cn.com.sinosoft.portalModule.interfacePortal.xml.convertMessage.castorMapping.StringFieldHandler">
 			<bind-xml name="Desc"/>
 		</field>
 	</class>
