@@ -40,6 +40,10 @@ public class TranResponse implements java.io.Serializable{
 	
 	private String url;
 	
+	private Integer universalRateCount;
+	
+	private List<UniversalRate> universalRates = new ArrayList<UniversalRate>();
+	
 	public QueryData getQueryData() {
 		return queryData;
 	}
@@ -174,6 +178,22 @@ public class TranResponse implements java.io.Serializable{
 
 	public void setUrl(String url) {
 		this.url = url;
+	}
+
+	public Integer getUniversalRateCount() {
+		return universalRateCount;
+	}
+
+	public void setUniversalRateCount(Integer universalRateCount) {
+		this.universalRateCount = universalRateCount;
+	}
+
+	public List<UniversalRate> getUniversalRates() {
+		return universalRates;
+	}
+
+	public void setUniversalRates(List<UniversalRate> universalRates) {
+		this.universalRates = universalRates;
 	}
 
 }
