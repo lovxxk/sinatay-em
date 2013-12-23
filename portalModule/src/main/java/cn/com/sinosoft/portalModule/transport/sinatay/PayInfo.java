@@ -18,6 +18,24 @@ public class PayInfo {
 	private String appntIDType;
 	private String appntIDNo;
 	private String appntMobile;
+	private String callbackMode;
+	private String callbackUrl;
+
+	public String getCallbackMode() {
+		return callbackMode;
+	}
+
+	public void setCallbackMode(String callbackMode) {
+		this.callbackMode = callbackMode;
+	}
+
+	public String getCallbackUrl() {
+		return callbackUrl;
+	}
+
+	public void setCallbackUrl(String callbackUrl) {
+		this.callbackUrl = callbackUrl;
+	}
 
 	public String getPayType() {
 		return payType;
