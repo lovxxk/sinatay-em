@@ -19,6 +19,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.GenericGenerator;
 
 import cn.com.sinosoft.enums.EnumDataUtils;
@@ -57,7 +59,7 @@ public class PortalInterfaceSystem implements java.io.Serializable {
 	private String operatorID;
 
 	/** 属性接口账号信息 */
-	private List<PortalInterfaceAccount> portalInterfaceAccounts = new ArrayList<PortalInterfaceAccount>(0);
+	private PortalInterfaceAccount portalInterfaceAccount;
 	
 	/** 属性接口账号信息 */
 	private PortalInterface portalInterface;
@@ -67,6 +69,8 @@ public class PortalInterfaceSystem implements java.io.Serializable {
 
 	/** 属性更新时间 */
 	private Date updateTime = new Date();
+	
+	private List<PortalInterfaceRuleFactor> portalInterfaceRuleFactors = new ArrayList<PortalInterfaceRuleFactor>(0);
 	
 	/**
 	 * 类PortalInterfaceSystem的默认构造方法
@@ -273,37 +277,18 @@ public class PortalInterfaceSystem implements java.io.Serializable {
 	/**
 	 * 属性接口账号信息的getter方法
 	 */
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "portalInterfaceSystem")
-	public List<PortalInterfaceAccount> getPortalInterfaceAccounts() {
-		return portalInterfaceAccounts;
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "portalInterfaceSystem")
+	public PortalInterfaceAccount getPortalInterfaceAccount() {
+		return portalInterfaceAccount;
 	}
-	
+
 	/**
 	 * 属性接口账号信息的setter方法
 	 */
-	public void setPortalInterfaceAccounts(
-			List<PortalInterfaceAccount> portalInterfaceAccounts) {
-		this.portalInterfaceAccounts = portalInterfaceAccounts;
+	public void setPortalInterfaceAccount(PortalInterfaceAccount portalInterfaceAccount) {
+		this.portalInterfaceAccount = portalInterfaceAccount;
 	}
-	/**
-	 * 属性添加所有接口账号信息
-	 */
-	public void addPortalInterfaceAccounts(List<PortalInterfaceAccount> portalInterfaceAccounts) {
-		
-		for (PortalInterfaceAccount portalInterfaceAccount:portalInterfaceAccounts) {
-			if (!getPortalInterfaceAccounts().contains(portalInterfaceAccount)) {
-				getPortalInterfaceAccounts().add(portalInterfaceAccount);
-			}
-		}
-		
-		for (PortalInterfaceAccount portalInterfaceAccount:getPortalInterfaceAccounts()) {
-			if (portalInterfaceAccount.getPortalInterfaceSystem() == null) {
-				portalInterfaceAccount.setPortalInterfaceSystem(this);
-			}
-			
-		}
-	}
-	
+
 	/**
 	 * 属性接口的getter方法
 	 */
@@ -353,5 +338,36 @@ public class PortalInterfaceSystem implements java.io.Serializable {
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
 	}
+
+	/**
+	 * @return the portalInterfaceRuleFactors
+	 */
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "portalInterfaceSystem")
+	@Fetch(FetchMode.SUBSELECT)
+	public List<PortalInterfaceRuleFactor> getPortalInterfaceRuleFactors() {
+		return portalInterfaceRuleFactors;
+	}
+
+	/**
+	 * @param portalInterfaceRuleFactors the portalInterfaceRuleFactors to set
+	 */
+	public void setPortalInterfaceRuleFactors(List<PortalInterfaceRuleFactor> portalInterfaceRuleFactors) {
+		this.portalInterfaceRuleFactors = portalInterfaceRuleFactors;
+	}
 	
+	public void addPortalInterfaceRuleFactors(List<PortalInterfaceRuleFactor> portalInterfaceRuleFactors) {
+		
+		for (PortalInterfaceRuleFactor portalInterfaceRuleFactor : portalInterfaceRuleFactors) {
+			if (!getPortalInterfaceRuleFactors().contains(portalInterfaceRuleFactor)) {
+				getPortalInterfaceRuleFactors().add(portalInterfaceRuleFactor);
+			}
+		}
+		
+		for (PortalInterfaceRuleFactor portalInterfaceRuleFactor : getPortalInterfaceRuleFactors()) {
+			if (portalInterfaceRuleFactor.getPortalInterfaceSystem() == null) {
+				portalInterfaceRuleFactor.setPortalInterfaceSystem(this);
+			}
+			
+		}
+	}
 }

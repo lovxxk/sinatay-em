@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.id.insert.InsertGeneratedIdentifierDelegate;
+
+import cn.com.sinosoft.portalModule.transport.sinatay.InsuranceVerifiable;
 import cn.com.sinosoft.portalModule.transport.sinatay.SMS;
 import cn.com.sinosoft.portalModule.transport.sinatay.TranRequest;
 
@@ -12,7 +15,7 @@ import cn.com.sinosoft.portalModule.transport.sinatay.TranRequest;
  *  
  *
  */
-public class TXInsurance implements Serializable {
+public class TXInsurance implements Serializable,InsuranceVerifiable {
 
 	/**
 	 * 
@@ -280,6 +283,12 @@ public class TXInsurance implements Serializable {
 
 	public void setTranRequest(TranRequest tranRequest) {
 		this.tranRequest = tranRequest;
+	}
+
+	@Override
+	public boolean isSuccess() {
+		boolean isSuc =false;
+		return "1".equals();
 	}
 
 }

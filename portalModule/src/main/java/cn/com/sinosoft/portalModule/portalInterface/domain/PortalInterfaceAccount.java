@@ -281,13 +281,10 @@ public class PortalInterfaceAccount implements java.io.Serializable {
 	}
 	
 	/**
-	 * 属性接口交互系统的setter方法
+	 * @param portalInterfaceSystem the portalInterfaceSystem to set
 	 */
 	public void setPortalInterfaceSystem(PortalInterfaceSystem portalInterfaceSystem) {
 		this.portalInterfaceSystem = portalInterfaceSystem;
-		if (getPortalInterfaceSystem() != null && !getPortalInterfaceSystem().getPortalInterfaceAccounts().contains(this)) {
-			getPortalInterfaceSystem().getPortalInterfaceAccounts().add(this);
-		}
 	}
 
 	/**

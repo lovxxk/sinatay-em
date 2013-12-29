@@ -67,13 +67,6 @@ public class TranRequest implements java.io.Serializable {
 	public PayInfo getPayInfo() {
 		return payInfo;
 	}
-<<<<<<< HEAD
-=======
-
-	public void setPayInfo(PayInfo payInfo) {
-		this.payInfo = payInfo;
-	}
->>>>>>> branch 'master' of https://github.com/lovxxk/sinatay-em.git
 
 	public void setPayInfo(PayInfo payInfo) {
 		this.payInfo = payInfo;

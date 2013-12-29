@@ -137,6 +137,9 @@ public class PortalInterface implements java.io.Serializable {
 	private List<PortalInterfaceElement> portalInterfaceElements = new ArrayList<PortalInterfaceElement>(
 			0);
 
+	/** 属性 接口规则信息 */
+	private List<PortalInterfaceRuleFactor> portalInterfaceRuleFactors = new ArrayList<PortalInterfaceRuleFactor>(0);
+	
 	/** 属性创建时间 */
 	private Date createTime = new Date();
 
@@ -612,13 +615,20 @@ public class PortalInterface implements java.io.Serializable {
 		}
 	}
 
+	
 	/**
 	 * 属性设置将数据写入URL连接的getter方法
 	 */
-
 	@Column(name = "DOOUTPUT")
-	public Integer getdoOutput() {
-		return this.doOutput;
+	public Integer getDoOutput() {
+		return doOutput;
+	}
+
+	/**
+	 * 属性设置将数据写入URL连接的setter方法
+	 */
+	public void setDoOutput(Integer doOutput) {
+		this.doOutput = doOutput;
 	}
 
 	/**
@@ -626,11 +636,11 @@ public class PortalInterface implements java.io.Serializable {
 	 */
 	@Transient
 	public BooleanStatus getEnumdoOutput() {
-		if (getdoOutput() == null) {
+		if (getDoOutput() == null) {
 			return null;
 		}
 		BooleanStatus doOutput = (BooleanStatus) EnumDataUtils
-				.getEnumDictionaryByValue(BooleanStatus.class, getdoOutput());
+				.getEnumDictionaryByValue(BooleanStatus.class, getDoOutput());
 		return doOutput;
 	}
 
@@ -639,11 +649,11 @@ public class PortalInterface implements java.io.Serializable {
 	 */
 	@Transient
 	public String getdoOutputByCoreValue() {
-		if (getdoOutput() == null) {
+		if (getDoOutput() == null) {
 			return "";
 		}
 		BooleanStatus doOutput = (BooleanStatus) EnumDataUtils
-				.getEnumDictionaryByValue(BooleanStatus.class, getdoOutput());
+				.getEnumDictionaryByValue(BooleanStatus.class, getDoOutput());
 		return doOutput.getCoreValue();
 	}
 
@@ -652,19 +662,12 @@ public class PortalInterface implements java.io.Serializable {
 	 */
 	@Transient
 	public String getdoOutputByMerchantValue() {
-		if (getdoOutput() == null) {
+		if (getDoOutput() == null) {
 			return "";
 		}
 		BooleanStatus doOutput = (BooleanStatus) EnumDataUtils
-				.getEnumDictionaryByValue(BooleanStatus.class, getdoOutput());
+				.getEnumDictionaryByValue(BooleanStatus.class, getDoOutput());
 		return doOutput.getMerchantValue();
-	}
-
-	/**
-	 * 属性设置将数据写入URL连接的setter方法
-	 */
-	public void setdoOutput(Integer doOutput) {
-		this.doOutput = doOutput;
 	}
 
 	/**
@@ -1285,4 +1288,35 @@ public class PortalInterface implements java.io.Serializable {
 		this.updateTime = updateTime;
 	}
 
+	/**
+	 * @return the portalInterfaceRuleFactors
+	 */
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "portalInterface")
+	public List<PortalInterfaceRuleFactor> getPortalInterfaceRuleFactors() {
+		return portalInterfaceRuleFactors;
+	}
+
+	/**
+	 * @param portalInterfaceRuleFactors the portalInterfaceRuleFactors to set
+	 */
+	public void setPortalInterfaceRuleFactors(List<PortalInterfaceRuleFactor> portalInterfaceRuleFactors) {
+		this.portalInterfaceRuleFactors = portalInterfaceRuleFactors;
+	}
+	
+	public void addPortalInterfaceRuleFactors(List<PortalInterfaceRuleFactor> portalInterfaceRuleFactors) {
+		
+		for (PortalInterfaceRuleFactor portalInterfaceRuleFactor : portalInterfaceRuleFactors) {
+			if (!getPortalInterfaceRuleFactors().contains(portalInterfaceRuleFactor)) {
+				getPortalInterfaceRuleFactors().add(portalInterfaceRuleFactor);
+			}
+		}
+		
+		for (PortalInterfaceRuleFactor portalInterfaceRuleFactor : getPortalInterfaceRuleFactors()) {
+			if (portalInterfaceRuleFactor.getPortalInterface() == null) {
+				portalInterfaceRuleFactor.setPortalInterface(this);
+			}
+			
+		}
+	}
+	
 }

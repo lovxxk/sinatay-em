@@ -67,5 +67,11 @@
 
 	<bean id="httpAgreementService" class="cn.com.sinosoft.portalModule.transport.service.spring.HttpAgreementServiceSpringImpl"></bean>
 	
+	<bean id="portalInterfacePaymentService" class="cn.com.sinosoft.portalModule.portalInterface.service.spring.PortalInterfacePaymentServiceSpringImpl"></bean>
+	
+	<bean id="portalInterfaceRuleFactorService" class="cn.com.sinosoft.portalModule.portalInterface.service.spring.PortalInterfaceRuleFactorServiceSpringImpl"></bean>
+	
+	<bean id="portalInterfaceRuleFactorValueService" class="cn.com.sinosoft.portalModule.portalInterface.service.spring.PortalInterfaceRuleFactorValueServiceSpringImpl"></bean>
+	
 </beans>
 
