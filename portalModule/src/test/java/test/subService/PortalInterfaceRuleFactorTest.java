@@ -11,6 +11,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 import cn.com.sinosoft.portalModule.enumUtil.AllowValuesType;
 import cn.com.sinosoft.portalModule.enumUtil.FactorType;
+import cn.com.sinosoft.portalModule.enumUtil.SaveMessageType;
 import cn.com.sinosoft.portalModule.portalInterface.domain.PortalInterface;
 import cn.com.sinosoft.portalModule.portalInterface.domain.PortalInterfaceRuleFactor;
 import cn.com.sinosoft.portalModule.portalInterface.domain.PortalInterfaceSystem;
@@ -50,6 +51,7 @@ public class PortalInterfaceRuleFactorTest {
 		pirf.setFactorName(factorName);
 		pirf.setFactorDesc(factorDesc);
 		pirf.setFactorType(FactorType.SYSTEM_INTERFACE.getValue());
+		pirf.setSaveMessageType(SaveMessageType.DATABASE.getValue());
 		pirf.setFactorLevel(1);
 		pirf.setStatus("1");
 		//查找ST000022接口并关联

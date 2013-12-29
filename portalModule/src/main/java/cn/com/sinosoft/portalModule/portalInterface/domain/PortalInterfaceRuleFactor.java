@@ -44,6 +44,9 @@ public class PortalInterfaceRuleFactor implements Serializable {
 	/** 属性 允许值类型 */
 	private Integer allowValuesType;
 
+	/** 属性 报文存储类型 */
+	private Integer saveMessageType;
+	
 	/** 属性 介绍 */
 	private String factorDesc;
 
@@ -182,6 +185,21 @@ public class PortalInterfaceRuleFactor implements Serializable {
 	 */
 	public void setAllowValuesType(Integer allowValuesType) {
 		this.allowValuesType = allowValuesType;
+	}
+
+	/**
+	 * @return the saveMessageType
+	 */
+	@Column(name = "SAVEMESSAGETYPE")
+	public Integer getSaveMessageType() {
+		return saveMessageType;
+	}
+
+	/**
+	 * @param saveMessageType the saveMessageType to set
+	 */
+	public void setSaveMessageType(Integer saveMessageType) {
+		this.saveMessageType = saveMessageType;
 	}
 
 	/**
