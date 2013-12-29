@@ -39,6 +39,22 @@ public interface PortalInterfaceRuleFactorService {
 	public abstract PortalInterfaceRuleFactor findPortalInterfaceRuleFactorByQueryMap(Map propertyMap);
 	
 	public abstract void deletePortalInterfaceRuleFactor(PortalInterfaceRuleFactor portalInterfaceRuleFactor);
+	
+	/**
+	 * 根据functionFlag、source查找当前接口规则处理类
+	 * @param functionFlag
+	 * @param source
+	 * @return 处理类完整类名集合
+	 */
+	public abstract List<String> findPortalInterfaceRuleFactorProcessClass(String transCode, String systemCode);
+	
+	/**
+	 * 根据functionFlag、source查找当前接口规则校验器
+	 * @param functionFlag
+	 * @param source
+	 * @return 校验器完整类名集合
+	 */
+	public abstract List<String> findPortalInterfaceRuleFactorVerificationProcessClass(String transCode, String systemCode);
 
 	/***
 	 * 更新接口交互规则信息和接口关系信息

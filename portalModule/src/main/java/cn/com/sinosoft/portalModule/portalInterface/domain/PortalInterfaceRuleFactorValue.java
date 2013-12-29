@@ -29,6 +29,9 @@ public class PortalInterfaceRuleFactorValue implements Serializable {
 	/** 属性 因子值名称 */
 	private String valueName;
 	
+	/** 属性 因子值类型名称 */
+	private Integer factorValueType;
+	
 	/** 属性 因子值 */
 	private String cvalue;
 	
@@ -98,6 +101,21 @@ public class PortalInterfaceRuleFactorValue implements Serializable {
 	 */
 	public void setValueName(String valueName) {
 		this.valueName = valueName;
+	}
+	
+	/**
+	 * @return the factorValueType
+	 */
+	@Column(name = "FACTORVALUETYPE")
+	public Integer getFactorValueType() {
+		return factorValueType;
+	}
+
+	/**
+	 * @param factorValueType the factorValueType to set
+	 */
+	public void setFactorValueType(Integer factorValueType) {
+		this.factorValueType = factorValueType;
 	}
 
 	/**

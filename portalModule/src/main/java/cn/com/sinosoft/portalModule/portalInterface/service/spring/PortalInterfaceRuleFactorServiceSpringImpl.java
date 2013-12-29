@@ -5,10 +5,14 @@ import ins.framework.common.QueryRule;
 import ins.framework.common.QueryRule.Rule;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import cn.com.sinosoft.portalModule.enumUtil.FactorType;
+import cn.com.sinosoft.portalModule.enumUtil.FactorValueType;
 import cn.com.sinosoft.portalModule.portalInterface.domain.PortalInterfaceRuleFactor;
+import cn.com.sinosoft.portalModule.portalInterface.domain.PortalInterfaceRuleFactorValue;
 import cn.com.sinosoft.portalModule.portalInterface.service.fascade.AbstractInterfaceService;
 import cn.com.sinosoft.portalModule.portalInterface.service.fascade.PortalInterfaceRuleFactorService;
 
@@ -143,6 +147,69 @@ public class PortalInterfaceRuleFactorServiceSpringImpl extends AbstractInterfac
 	@Override
 	public PortalInterfaceRuleFactor findPortalInterfaceRuleFactorByQueryMap(Map propertyMap) {
 		return super.findUnique(propertyMap);
+	}
+
+	/**
+	 * 根据functionFlag、systemCode查找当前接口规则处理类
+	 * @param functionFlag
+	 * @param systemCode
+	 * @return 处理类完整类名集合
+	 */
+	@Override
+	public List<String> findPortalInterfaceRuleFactorProcessClass(String transCode, String systemCode) {
+		return findPortalInterfaceRuleFactorValues(transCode, systemCode, FactorType.SYSTEM_INTERFACE.getValue());
+	}
+
+	/**
+	 * 根据functionFlag、systemCode查找当前接口规则校验器
+	 * @param functionFlag
+	 * @param systemCode
+	 * @return 校验器完整类名集合
+	 */
+	@Override
+	public List<String> findPortalInterfaceRuleFactorVerificationProcessClass(String transCode, String systemCode) {
+		return findPortalInterfaceRuleFactorValues(transCode, systemCode, FactorType.INTERFACE_VERIFICATION.getValue());
+	}
+	
+	public List<String> findPortalInterfaceRuleFactorValues(String transCode, String systemCode, int factorType) {
+		List<String> lists = new ArrayList<String>(0);
+		if(factorType == FactorType.SYSTEM_INTERFACE.getValue()){
+			Map<String, Object> propertyMap = new HashMap<String, Object>();
+			propertyMap.put("systemCode", systemCode);
+			propertyMap.put("transCode", transCode);
+			propertyMap.put("factorType", factorType);
+			PortalInterfaceRuleFactor pifrf = this.findPortalInterfaceRuleFactorByQueryMap(propertyMap);
+			if(pifrf != null){
+				List<PortalInterfaceRuleFactor> pifrfs = new ArrayList<PortalInterfaceRuleFactor>(0);
+				pifrfs.add(pifrf);
+				lists = load(pifrfs, FactorValueType.INTERFACE_PROCESS.getValue());
+			}
+		}else if(factorType == FactorType.INTERFACE_VERIFICATION.getValue()){
+			QueryRule queryRule = QueryRule.getInstance();
+			queryRule.addEqual("systemCode", systemCode);
+			queryRule.addEqual("transCode", transCode);
+			queryRule.addEqual("factorType", factorType);
+			List<PortalInterfaceRuleFactor> pifrfs = findPortalInterfaceRuleFactorByQueryRule(queryRule);
+			lists = load(pifrfs, FactorValueType.INTERFACE_VERIFICATION_PROCESS.getValue());
+		}
+		return lists;
+	}
+	
+	public List<String> load(List<PortalInterfaceRuleFactor> pifrfs, int factorValueType){
+		List<String> lists = new ArrayList<String>(0);
+		if(pifrfs != null && !pifrfs.isEmpty()){
+			for(PortalInterfaceRuleFactor pifrf : pifrfs){
+				List<PortalInterfaceRuleFactorValue> pifrfvs = pifrf.getPortalInterfaceRuleFactorValues();
+				if(pifrfvs != null && !pifrfvs.isEmpty()){
+					for(PortalInterfaceRuleFactorValue pifrfv : pifrfvs){
+						if(factorValueType == pifrfv.getFactorValueType()){
+							lists.add(pifrfv.getCvalue());
+						}
+					}
+				}
+			}
+		}
+		return lists;
 	}
 
 }
