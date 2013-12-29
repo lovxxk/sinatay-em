@@ -7,9 +7,11 @@ import java.util.Stack;
 
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import cn.com.sinosoft.portalModule.interfacePortal.xml.factory.TXInsuranceFactory;
+import cn.com.sinosoft.portalModule.portalInterface.service.fascade.PortalInterfaceRuleFactorService;
 import cn.com.sinosoft.portalModule.transport.sinatay.InsuranceVerifiable;
 import cn.com.sinosoft.portalModule.transport.transactionObject.TXInsurance;
 
@@ -20,7 +22,9 @@ import cn.com.sinosoft.portalModule.transport.transactionObject.TXInsurance;
 
 @Component(value="defaultInsValidator")
 public class DefaultInsuranceValidator implements InsuranceValidator {
-
+	
+	@Autowired
+	private PortalInterfaceRuleFactorService portalInterfaceRuleFactorService;
 	/* (non-Javadoc)
 	 * @see insuretest.InsuranceValidation#validate(java.lang.Object)
 	 * 接受一个校验规则链，此校验链从数据库查询，此接口方法充当模板方法
@@ -49,7 +53,7 @@ public class DefaultInsuranceValidator implements InsuranceValidator {
 		String source = baseInfo.elementText("Source");
 		//解析xml得到待验证的对象。
 		
-		List<String> validatorTypes = findPortalInterfaceRuleFactorVerificationProcessClass(functionFlag,source);
+		List<String> validatorTypes = portalInterfaceRuleFactorService.findPortalInterfaceRuleFactorVerificationProcessClass(functionFlag,source);
 		List<InsuranceValidator> validatorChain = new LinkedList<InsuranceValidator>();
 		for(String type : validatorTypes){
 			InsuranceValidator validator =  InsuranceValidatorFactory.getInstance().getInsuranceValidator(type);

@@ -6,13 +6,13 @@ import cn.com.sinosoft.portalModule.transport.sinatay.InsuranceVerifiable;
 public class UnderwritingServiceSpringImpl extends InsuranceService {
 
 	@Override
-	public InsuranceVerifiable beforeProcess(InsuranceVerifiable ins) {
+	public InsuranceVerifiable savaInfoBeforeRequest(InsuranceVerifiable ins) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public InsuranceVerifiable afterProcess(InsuranceVerifiable ins) {
+	public InsuranceVerifiable savaInfoAfterResponse(InsuranceVerifiable ins) {
 		// TODO Auto-generated method stub
 		return null;
 	}
