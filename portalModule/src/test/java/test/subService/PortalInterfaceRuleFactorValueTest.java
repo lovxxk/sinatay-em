@@ -66,10 +66,12 @@ public class PortalInterfaceRuleFactorValueTest {
 		Map<String, Object> propertyMap = new HashMap<String, Object>();
 		if(factorType == FactorType.INTERFACE_VERIFICATION.getValue()){
 			pirfv.setFactorValueType(FactorValueType.INTERFACE_VERIFICATION_PROCESS.getValue());
+			propertyMap.put("status", "1");
 			propertyMap.put("factorType", factorType);
 			propertyMap.put("factorCode", factorCode);
 		}else{
 			pirfv.setFactorValueType(FactorValueType.INTERFACE_PROCESS.getValue());
+			propertyMap.put("status", "1");
 			propertyMap.put("factorType", factorType);
 			propertyMap.put("systemCode", systemCode);
 			propertyMap.put("transCode", transCode);

@@ -9,8 +9,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import cn.com.sinosoft.enums.EnumDataUtils;
 import cn.com.sinosoft.portalModule.enumUtil.FactorType;
 import cn.com.sinosoft.portalModule.enumUtil.FactorValueType;
+import cn.com.sinosoft.portalModule.enumUtil.SaveMessageType;
 import cn.com.sinosoft.portalModule.portalInterface.domain.PortalInterfaceRuleFactor;
 import cn.com.sinosoft.portalModule.portalInterface.domain.PortalInterfaceRuleFactorValue;
 import cn.com.sinosoft.portalModule.portalInterface.service.fascade.AbstractInterfaceService;
@@ -175,6 +177,7 @@ public class PortalInterfaceRuleFactorServiceSpringImpl extends AbstractInterfac
 		List<String> lists = new ArrayList<String>(0);
 		if(factorType == FactorType.SYSTEM_INTERFACE.getValue()){
 			Map<String, Object> propertyMap = new HashMap<String, Object>();
+			propertyMap.put("status", "1");
 			propertyMap.put("systemCode", systemCode);
 			propertyMap.put("transCode", transCode);
 			propertyMap.put("factorType", factorType);
@@ -186,6 +189,7 @@ public class PortalInterfaceRuleFactorServiceSpringImpl extends AbstractInterfac
 			}
 		}else if(factorType == FactorType.INTERFACE_VERIFICATION.getValue()){
 			QueryRule queryRule = QueryRule.getInstance();
+			queryRule.addEqual("status", "1");
 			queryRule.addEqual("systemCode", systemCode);
 			queryRule.addEqual("transCode", transCode);
 			queryRule.addEqual("factorType", factorType);
@@ -210,6 +214,27 @@ public class PortalInterfaceRuleFactorServiceSpringImpl extends AbstractInterfac
 			}
 		}
 		return lists;
+	}
+
+	/**
+	 * 根据functionFlag、source查找当前接口规则报文存储类型
+	 * @param transCode
+	 * @param systemCode
+	 * @return 报文存储类型枚举对象（1-数据库;2-文件;3-数据库and文件）
+	 */
+	@Override
+	public SaveMessageType findPortalInterfaceRuleFactorSaveMessageType(String transCode, String systemCode) {
+		Map<String, Object> propertyMap = new HashMap<String, Object>();
+		propertyMap.put("status", "1");
+		propertyMap.put("factorType", FactorType.SYSTEM_INTERFACE.getValue());
+		propertyMap.put("transCode", transCode);
+		propertyMap.put("systemCode", systemCode);
+		PortalInterfaceRuleFactor pifrf = findPortalInterfaceRuleFactorByQueryMap(propertyMap);
+		if(pifrf != null){
+			return (SaveMessageType) EnumDataUtils.getEnumDictionaryByValue(SaveMessageType.class, pifrf.getSaveMessageType());
+		}else{
+			return SaveMessageType.DATABASE;
+		}
 	}
 
 }

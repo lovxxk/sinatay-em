@@ -6,6 +6,7 @@ import ins.framework.common.QueryRule;
 import java.util.List;
 import java.util.Map;
 
+import cn.com.sinosoft.portalModule.enumUtil.SaveMessageType;
 import cn.com.sinosoft.portalModule.portalInterface.domain.PortalInterfaceRuleFactor;
 
 @SuppressWarnings("rawtypes")
@@ -55,6 +56,14 @@ public interface PortalInterfaceRuleFactorService {
 	 * @return 校验器完整类名集合
 	 */
 	public abstract List<String> findPortalInterfaceRuleFactorVerificationProcessClass(String transCode, String systemCode);
+	
+	/**
+	 * 根据functionFlag、source查找当前接口规则报文存储类型
+	 * @param transCode
+	 * @param systemCode
+	 * @return 报文存储类型枚举对象（1-数据库;2-文件;3-数据库and文件）
+	 */
+	public abstract SaveMessageType findPortalInterfaceRuleFactorSaveMessageType(String transCode, String systemCode);
 
 	/***
 	 * 更新接口交互规则信息和接口关系信息

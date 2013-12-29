@@ -10,9 +10,9 @@ public class SaveMessageType extends EnumDictionary {
 	
 	public static final SaveMessageType DATABASE = new SaveMessageType("DATABASE", "数据库", "DATABASE", 1);
 	
-	public static final SaveMessageType FILE = new SaveMessageType("FILE", "文件", "FILE", 2);
+	public static final SaveMessageType FILESYSTEM = new SaveMessageType("FILESYSTEM", "文件", "FILE", 2);
 	
-	public static final SaveMessageType DATABASE_FILE = new SaveMessageType("DATABASE_FILE", "数据库and文件", "DATABASE_FILE", 3);
+	public static final SaveMessageType DATABASE_FILESYSTEM = new SaveMessageType("DATABASE_FILESYSTEM", "数据库and文件", "DATABASE_FILESYSTEM", 3);
 	
 	
 	public SaveMessageType(String enumName, String dataName, String dataENName,

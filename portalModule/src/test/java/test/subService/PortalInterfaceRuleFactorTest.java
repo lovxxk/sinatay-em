@@ -102,9 +102,11 @@ public class PortalInterfaceRuleFactorTest {
 		pirfc.setFactorLevel(1);
 		pirfc.setStatus("1");
 		
-		Map<String, String> propertyMap = new HashMap<String, String>();
+		Map<String, Object> propertyMap = new HashMap<String, Object>();
 		propertyMap.put("systemCode", "TBJ");
 		propertyMap.put("transCode", "ST000022");
+		propertyMap.put("status", "1");
+		propertyMap.put("factorType", FactorType.SYSTEM_INTERFACE.getValue());
 		PortalInterfaceRuleFactor oldPirf = portalInterfaceRuleFactorService.findPortalInterfaceRuleFactorByQueryMap(propertyMap);
 		if(oldPirf != null)
 			pirfc.setPortalInterfaceRuleFactor(oldPirf);
@@ -129,6 +131,11 @@ public class PortalInterfaceRuleFactorTest {
 		
 		
 		
+		//测试查询接口规则报文存储类型
+		systemCode = "TBJ";
+		transCode = "ST000022";
+		SaveMessageType smt = portalInterfaceRuleFactorService.findPortalInterfaceRuleFactorSaveMessageType(transCode, systemCode);
+		System.out.println("saveMessageType: "+smt.getValue()+", "+smt.getDataName());
 	}
 
 }
