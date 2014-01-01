@@ -26,6 +26,6 @@ public class ValidationResult {
 		this.desc = desc;
 	}
 	public boolean isSuccess(){
-		return "1".equals(flag);
+		return !"0".equals(flag);
 	}
 }
