@@ -37,7 +37,7 @@ public class DefaultInsuranceValidator implements InsuranceValidator {
 		for(InsuranceValidator validator : context.getValidatorChain()){
 			context = validator.validate(context);
 			//短路校验或者非短路校验
-			if(context.getValidationResults().peek().isSuccess()){
+			if(!context.getValidationResults().peek().isSuccess()){
 				break;
 			}
 		}
