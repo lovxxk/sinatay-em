@@ -32,6 +32,7 @@ public class InsuranceServiceFactorySpringImpl implements InsuranceServiceFactor
 	    List<String> handleClazzs = portalInterfaceRuleFactorService.findPortalInterfaceRuleFactorProcessClass(txIns.getTransType(),txIns.getSource());
 	    
 		InsuranceService is = (InsuranceService) Class.forName(handleClazzs.get(0)).newInstance();
+		
 		return is;
 	}
 	public static InsuranceServiceFactorySpringImpl getInstance(){
