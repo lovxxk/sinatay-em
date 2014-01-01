@@ -6,6 +6,7 @@ package cn.com.sinosoft.ebusiness.common.bizConfig.service.spring;
 import ins.framework.common.Page;
 import ins.framework.common.QueryRule;
 import ins.framework.dao.GenericDaoHibernate;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.Map;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.springframework.beans.BeanUtils;
+
 import cn.com.sinosoft.ebusiness.common.bizConfig.domain.GeCode;
 import cn.com.sinosoft.ebusiness.common.bizConfig.domain.GeCodeId;
 import cn.com.sinosoft.ebusiness.common.bizConfig.service.facade.GeCodeService;
@@ -215,5 +217,17 @@ public class GeCodeServiceSpringImpl extends
 		}
 		
 		return true;
+	}
+	
+	@Override
+	public String getCodeCoreRelation(String codeCode, String geCodeType) throws BizConfigCommonException{
+		QueryRule queryRule = QueryRule.getInstance();
+		queryRule.addEqual("id.codeType", geCodeType);
+		queryRule.addEqual("id.codeCode", codeCode);
+		GeCode geCode = findGeCode(queryRule);
+		if(geCode!=null){
+			return geCode.getCodeCoreRelation();
+		}
+		return "";
 	}
 }
