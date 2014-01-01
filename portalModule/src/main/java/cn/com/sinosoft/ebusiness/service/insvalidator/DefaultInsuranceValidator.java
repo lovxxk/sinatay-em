@@ -1,6 +1,5 @@
 package cn.com.sinosoft.ebusiness.service.insvalidator;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
@@ -10,7 +9,6 @@ import org.dom4j.Element;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import cn.com.sinosoft.portalModule.interfacePortal.xml.factory.TXInsuranceFactory;
 import cn.com.sinosoft.portalModule.portalInterface.service.fascade.PortalInterfaceRuleFactorService;
 import cn.com.sinosoft.portalModule.transport.sinatay.InsuranceVerifiable;
 import cn.com.sinosoft.portalModule.transport.transactionObject.TXInsurance;
