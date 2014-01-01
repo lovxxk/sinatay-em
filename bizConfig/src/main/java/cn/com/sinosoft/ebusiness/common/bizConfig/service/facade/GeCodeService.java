@@ -124,4 +124,7 @@ public interface GeCodeService {
 	 * @param userCode
 	 */
 	public boolean deleteAllGeCode(List<GeCode> geCodeList) throws BizConfigCommonException ;
+	
+	public String getCodeCoreRelation(String codeCode, String geCodeType) throws BizConfigCommonException;
+	
 }
