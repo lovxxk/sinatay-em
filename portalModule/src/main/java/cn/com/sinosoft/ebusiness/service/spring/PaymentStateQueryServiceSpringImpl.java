@@ -21,7 +21,7 @@ public class PaymentStateQueryServiceSpringImpl extends InsuranceService{
 	}
 
 	@Override
-	protected InsuranceVerifiable savaInfoAfterResponse(InsuranceVerifiable ins) {
+	protected InsuranceVerifiable savaInfoBeforeResponse(InsuranceVerifiable ins) {
 		// TODO Auto-generated method stub
 		return null;
 	}

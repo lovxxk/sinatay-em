@@ -17,7 +17,7 @@ public class PremiumCalculationServiceSpringImpl extends InsuranceService {
 	}
 
 	@Override
-	public InsuranceVerifiable savaInfoAfterResponse(InsuranceVerifiable ins) {
+	public InsuranceVerifiable savaInfoBeforeResponse(InsuranceVerifiable ins) {
 		// TODO Auto-generated method stub
 		return null;
 	}

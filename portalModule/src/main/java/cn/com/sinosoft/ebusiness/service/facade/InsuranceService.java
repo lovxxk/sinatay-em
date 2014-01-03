@@ -44,10 +44,6 @@ public abstract class InsuranceService {
         
 		//存储内部系统响应客户端的报文
 		saveXmlMessage(ins, responseXmlToClient, MessageType.FRONTRESPONSE,getRequestProcessStatus(insConvertFromReturn));
-		
-		//响应客户端之前存数据库的操作未实现
-		savaInfoAfterResponse(insConvertFromReturn);
-		
 		return responseXmlToClient;
 	}
 
@@ -86,12 +82,6 @@ public abstract class InsuranceService {
 
 	}
 	
-	@Async
-	protected abstract InsuranceVerifiable savaInfoBeforeRequest(InsuranceVerifiable ins);
-	
-	@Async
-	protected abstract InsuranceVerifiable savaInfoAfterResponse(InsuranceVerifiable ins);
-	
 	protected InsuranceVerifiable handleRequest(InsuranceVerifiable ins){
 		TXInsurance txIns = (TXInsurance) ins;
 		String requestXmlToCore = createRequestOrResponseXml(ins,MessageType.REQUEST.getDataENName());
@@ -115,17 +105,27 @@ public abstract class InsuranceService {
 		//存核心响应报文
 		saveXmlMessage(ins, responseXmlFromCore, MessageType.RESPONSE,getRequestProcessStatus(insConvertFromReturn));
 		
+		//响应客户端之前存数据库的操作未实现
+		savaInfoBeforeResponse(insConvertFromReturn);
+		
 		return insConvertFromReturn;
 	}
 	
 	//判断是否交易成功
-		protected RequestProcessStatus getRequestProcessStatus(InsuranceVerifiable ins){
-			
-			TXInsurance txIns = (TXInsurance) ins;
-			TranResponse tranRes = (TranResponse) txIns.getBusinessDatum().get(0);
-			if("1".equals(tranRes.getFlag())){
-				return RequestProcessStatus.SUCCESS;
-			}
-			return RequestProcessStatus.FAIL;
+	protected RequestProcessStatus getRequestProcessStatus(InsuranceVerifiable ins){
+		
+		TXInsurance txIns = (TXInsurance) ins;
+		TranResponse tranRes = (TranResponse) txIns.getBusinessDatum().get(0);
+		if("1".equals(tranRes.getFlag())){
+			return RequestProcessStatus.SUCCESS;
 		}
+		return RequestProcessStatus.FAIL;
+	}
+	
+	@Async
+	protected abstract InsuranceVerifiable savaInfoBeforeRequest(InsuranceVerifiable ins);
+	
+	@Async
+	protected abstract InsuranceVerifiable savaInfoBeforeResponse(InsuranceVerifiable ins);
+		
 }
