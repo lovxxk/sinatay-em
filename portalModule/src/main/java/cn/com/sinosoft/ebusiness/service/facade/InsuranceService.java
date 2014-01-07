@@ -1,16 +1,15 @@
 package cn.com.sinosoft.ebusiness.service.facade;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.GenericXmlApplicationContext;
 import org.springframework.scheduling.annotation.Async;
 
+import cn.com.sinosoft.ebusiness.service.spring.SaveMsgService;
 import cn.com.sinosoft.portalModule.enumUtil.MessageType;
 import cn.com.sinosoft.portalModule.enumUtil.RequestProcessStatus;
-import cn.com.sinosoft.portalModule.enumUtil.SaveMessageType;
 import cn.com.sinosoft.portalModule.interfacePortal.xml.factory.TXInsuranceFactory;
 import cn.com.sinosoft.portalModule.portalInterface.domain.PortalInterface;
-import cn.com.sinosoft.portalModule.portalInterface.service.fascade.PortalInterfaceRuleFactorService;
 import cn.com.sinosoft.portalModule.portalInterface.service.fascade.PortalInterfaceService;
-import cn.com.sinosoft.portalModule.portalTransaction.service.fascade.PortalTransactionService;
 import cn.com.sinosoft.portalModule.transport.service.InterfaceTransportService;
 import cn.com.sinosoft.portalModule.transport.sinatay.InsuranceVerifiable;
 import cn.com.sinosoft.portalModule.transport.sinatay.TranResponse;
@@ -22,25 +21,22 @@ public abstract class InsuranceService {
 	protected PortalInterfaceService portalInterfaceService;
 
 	@Autowired
-	private PortalInterfaceRuleFactorService portalInterfaceRuleFactorService;
-	
-	@Autowired
-	private PortalTransactionService portalTransactionService;
-	
-	@Autowired
 	private InterfaceTransportService interfaceTransportService;
+	
+	@Autowired
+	private SaveMsgService saveMsgService;
 
 	// 编组
 	private TXInsuranceFactory txFactory = TXInsuranceFactory.getInstance();
 
-	protected String process(InsuranceVerifiable ins) {
+	public String process(InsuranceVerifiable ins) {
 		
 		savaInfoBeforeRequest(ins);
 		
 		InsuranceVerifiable insConvertFromReturn = handleRequest(ins);
 		
 		//再编组返回给客户端
-		String responseXmlToClient = createRequestOrResponseXml(insConvertFromReturn,MessageType.RESPONSE.getDataENName());
+		String responseXmlToClient = createRequestOrResponseXml(insConvertFromReturn,MessageType.FRONTRESPONSE.getDataENName());
         
 		//存储内部系统响应客户端的报文
 		saveXmlMessage(ins, responseXmlToClient, MessageType.FRONTRESPONSE,getRequestProcessStatus(insConvertFromReturn));
@@ -49,6 +45,17 @@ public abstract class InsuranceService {
 
 	protected String createRequestOrResponseXml(InsuranceVerifiable ins,
 			String reqOrRes) {
+		if (portalInterfaceService == null) {
+			GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
+			ctx.load(new String[]{
+					"classpath:/spring/applicationContext.xml"
+					,"classpath:/spring/applicationContext-dataAccess.xml"
+					,"classpath:/spring/applicationContext-hibernate.xml"
+					,"classpath:/spring/applicationContext-interfacePortal.xml"
+				});
+			ctx.refresh();
+			portalInterfaceService = ctx.getBean("portalInterfaceService", PortalInterfaceService.class);
+		}
 		TXInsurance txIns = (TXInsurance) ins;
 		PortalInterface portalInterface = portalInterfaceService
 				.findPortalInterfaceByTransCode(txIns.getTransType());
@@ -62,27 +69,32 @@ public abstract class InsuranceService {
 	@Async
 	protected void saveXmlMessage(InsuranceVerifiable ins, String requestXml,
 			MessageType messageType, RequestProcessStatus status) {
-		
-		TXInsurance txIns = (TXInsurance) ins;
-		// 查询存储报文的类型
-		SaveMessageType saveMsgType = portalInterfaceRuleFactorService
-				.findPortalInterfaceRuleFactorSaveMessageType(
-						txIns.getTransType(), txIns.getSource());
-
-		if (saveMsgType == SaveMessageType.DATABASE) {
-			portalTransactionService.insertAndUpdatePortalTransaction(
-					txIns.getSource(), txIns.getTransType(), requestXml,
-					txIns.getTransRefGUID(), null, null, MessageType.REQUEST,
-					status);
-		} else if (saveMsgType == SaveMessageType.FILESYSTEM) {
-
-		} else {
-
+		if (saveMsgService == null) {
+			GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
+			ctx.load(new String[]{
+					"classpath:/spring/applicationContext.xml"
+					,"classpath:/spring/applicationContext-dataAccess.xml"
+					,"classpath:/spring/applicationContext-hibernate.xml"
+					,"classpath:/spring/applicationContext-interfacePortal.xml"
+				});
+			ctx.refresh();
+			saveMsgService = ctx.getBean("saveMsgService", SaveMsgService.class);
 		}
-
+		saveMsgService.saveXmlMessage(requestXml, messageType, status);
 	}
 	
 	protected InsuranceVerifiable handleRequest(InsuranceVerifiable ins){
+		if (interfaceTransportService == null) {
+			GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
+			ctx.load(new String[]{
+					"classpath:/spring/applicationContext.xml"
+					,"classpath:/spring/applicationContext-dataAccess.xml"
+					,"classpath:/spring/applicationContext-hibernate.xml"
+					,"classpath:/spring/applicationContext-interfacePortal.xml"
+				});
+			ctx.refresh();
+			interfaceTransportService = ctx.getBean("interfaceTransportService", InterfaceTransportService.class);
+		}
 		TXInsurance txIns = (TXInsurance) ins;
 		String requestXmlToCore = createRequestOrResponseXml(ins,MessageType.REQUEST.getDataENName());
 

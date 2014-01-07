@@ -27,7 +27,7 @@ public class InsuranceMessageValidator implements InsuranceValidator{
 		String msg = (String) context.getRelatedObj();
 		Element baseInfo = DocumentHelper.parseText(msg).getRootElement().element("BaseInfo");
 		String functionFlag = baseInfo.elementText("FunctionFlag");
-		InsuranceVerifiable ins = (TXInsurance) txFactory.getConvertMessageService().unMarshall(msg,functionFlag,MessageType.REQUEST.getDataENName());
+		InsuranceVerifiable ins = (TXInsurance) txFactory.getConvertMessageService().unMarshall(msg,functionFlag,MessageType.FRONTREQUEST.getDataENName());
 		context.setRelatedObj(ins);
 		context.getValidationResults().push(new ValidationResult("1","报文合法！"));
 		return context;

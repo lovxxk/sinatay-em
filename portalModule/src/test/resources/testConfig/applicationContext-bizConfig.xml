@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	<bean id="geCodeService" class="cn.com.sinosoft.ebusiness.common.bizConfig.service.spring.GeCodeServiceSpringImpl"  scope="prototype" />
+	<bean id="geCodeTypeService" class="cn.com.sinosoft.ebusiness.common.bizConfig.service.spring.GeCodeTypeServiceSpringImpl"  scope="prototype" />
+	<bean id="geFunctionSwitchService" class="cn.com.sinosoft.ebusiness.common.bizConfig.service.spring.GeFunctionSwitchServiceSpringImpl"  scope="prototype" />
+	<bean id="geSmsConfigService" class="cn.com.sinosoft.ebusiness.common.bizConfig.service.spring.GeSmsConfigServiceSpringImpl"  scope="prototype" />
+	<bean id="geDeptMailService" class="cn.com.sinosoft.ebusiness.common.bizConfig.service.spring.GeDeptMailServiceSpringImpl"  scope="prototype" />
+	<bean id="geOccupationService" class="cn.com.sinosoft.ebusiness.common.bizConfig.service.spring.GeOccupationServiceSpringImpl" scope="prototype" />
+</beans>
