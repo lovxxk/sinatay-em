@@ -1,0 +1,19 @@
+<serviceGroup>
+	<service name="portal" targetNamespace="cn.com.sinosoft.ebusiness.dhf.service.fascade">
+		<description>portal</description>
+		<parameter name="ServiceObjectSupplier">
+			org.apache.axis2.extensions.spring.receivers.SpringServletContextObjectSupplier
+		</parameter>
+		<parameter name="SpringBeanName">portalWebService</parameter>
+		<parameter name="ServiceClass">cn.com.sinosoft.ebusiness.dhf.service.fascade.PortalWebService</parameter>
+		<messageReceivers>
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+				class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only"
+				class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+		</messageReceivers>
+	</service>
+	
+</serviceGroup>
+
+
