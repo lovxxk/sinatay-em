@@ -57,8 +57,7 @@ public class DefaultInsuranceValidator implements InsuranceValidator {
 			InsuranceValidator validator =  InsuranceValidatorFactory.getInstance().getInsuranceValidator(type);
 			validatorChain.add(validator);
 		}
-		InsuranceVerifiable ins = new TXInsurance();
-		ValidationContext context = new ValidationContext(ins,validatorChain,new Stack<ValidationResult>());
+		ValidationContext context = new ValidationContext(msg,validatorChain,new Stack<ValidationResult>());
 		return context; 
 	}
 }
