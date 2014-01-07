@@ -1,6 +1,6 @@
 package cn.com.sinosoft.ebusiness.service.spring;
 
-//退保试算
+//退保确认
 public class WithdrawInsuranceConfirmServiceSpringImpl {
 	
 }

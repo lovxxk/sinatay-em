@@ -39,7 +39,7 @@ public class PaymentServiceSpringImpl extends InsuranceService {
 		params.put("applicationNumber",proposalContNo);
 		//根据投保单号取保单对象
 		InsurancePolicy insPol = insPolService.findInsurancePolicyByQueryMap(params);
-		//取得保单对象关联的订单对象
+		//取得保单对象关联的订单对象,不处理inspol null
 		orderForm = insPol.getOrderForm();
 		BigDecimal orderAmount = orderForm.getOrderAmount();
 		
